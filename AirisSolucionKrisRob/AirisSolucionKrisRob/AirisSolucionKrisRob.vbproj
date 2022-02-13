@@ -85,10 +85,10 @@
       <DependentUpon>inicio.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="m.Designer.vb">
-      <DependentUpon>m.vb</DependentUpon>
+    <Compile Include="gestion_datos.Designer.vb">
+      <DependentUpon>gestion_datos.vb</DependentUpon>
     </Compile>
-    <Compile Include="m.vb">
+    <Compile Include="gestion_datos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -111,8 +111,8 @@
     <EmbeddedResource Include="inicio.resx">
       <DependentUpon>inicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="m.resx">
-      <DependentUpon>m.vb</DependentUpon>
+    <EmbeddedResource Include="gestion_datos.resx">
+      <DependentUpon>gestion_datos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
