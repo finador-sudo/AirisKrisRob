@@ -145,7 +145,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BBDD\airis.accdb">
+    <Content Include="BBDD\airis_db.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
