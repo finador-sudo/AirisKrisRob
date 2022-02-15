@@ -24,6 +24,8 @@ Partial Class inicio
     Private Sub InitializeComponent()
         Me.pan_presentacion = New System.Windows.Forms.Panel()
         Me.pan_inicio = New System.Windows.Forms.Panel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btn_entrar = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -33,8 +35,6 @@ Partial Class inicio
         Me.lbl_pulsar = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.pan_presentacion.SuspendLayout()
         Me.pan_inicio.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +66,26 @@ Partial Class inicio
         Me.pan_inicio.Name = "pan_inicio"
         Me.pan_inicio.Size = New System.Drawing.Size(371, 311)
         Me.pan_inicio.TabIndex = 1
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Location = New System.Drawing.Point(157, 285)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(70, 13)
+        Me.LinkLabel2.TabIndex = 7
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Página oficial"
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(150, 255)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(77, 13)
+        Me.LinkLabel1.TabIndex = 6
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "ACERCA DE..."
         '
         'PictureBox2
         '
@@ -146,26 +166,6 @@ Partial Class inicio
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "PRESENTACION DE LA EMPRESA"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(157, 268)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(77, 13)
-        Me.LinkLabel1.TabIndex = 6
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "ACERCA DE..."
-        '
-        'LinkLabel2
-        '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(157, 285)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(70, 13)
-        Me.LinkLabel2.TabIndex = 7
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Página oficial"
         '
         'inicio
         '
