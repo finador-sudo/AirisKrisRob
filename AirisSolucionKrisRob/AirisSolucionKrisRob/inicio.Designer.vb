@@ -26,15 +26,15 @@ Partial Class inicio
         Me.pan_inicio = New System.Windows.Forms.Panel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btn_entrar = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lbl_cont = New System.Windows.Forms.Label()
         Me.lbl_usuario = New System.Windows.Forms.Label()
         Me.lbl_pulsar = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pan_presentacion.SuspendLayout()
         Me.pan_inicio.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,9 +62,9 @@ Partial Class inicio
         Me.pan_inicio.Controls.Add(Me.TextBox1)
         Me.pan_inicio.Controls.Add(Me.lbl_cont)
         Me.pan_inicio.Controls.Add(Me.lbl_usuario)
-        Me.pan_inicio.Location = New System.Drawing.Point(132, 48)
+        Me.pan_inicio.Location = New System.Drawing.Point(93, 11)
         Me.pan_inicio.Name = "pan_inicio"
-        Me.pan_inicio.Size = New System.Drawing.Size(371, 311)
+        Me.pan_inicio.Size = New System.Drawing.Size(486, 457)
         Me.pan_inicio.TabIndex = 1
         '
         'LinkLabel2
@@ -86,16 +86,6 @@ Partial Class inicio
         Me.LinkLabel1.TabIndex = 6
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "ACERCA DE..."
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo
-        Me.PictureBox2.Location = New System.Drawing.Point(169, 22)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 79)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
         '
         'btn_entrar
         '
@@ -147,16 +137,6 @@ Partial Class inicio
         Me.lbl_pulsar.TabIndex = 2
         Me.lbl_pulsar.Text = "Pulsar cualquier tecla para continuar:"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(149, 59)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(306, 188)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -167,14 +147,36 @@ Partial Class inicio
         Me.Label1.Text = "PRESENTACION DE LA EMPRESA"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
+        Me.PictureBox2.Location = New System.Drawing.Point(169, 22)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 79)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
+        Me.PictureBox1.Location = New System.Drawing.Point(149, 59)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(306, 188)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
         'inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1016, 752)
         Me.Controls.Add(Me.pan_presentacion)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "inicio"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Airis Managment Application"
         Me.pan_presentacion.ResumeLayout(False)
         Me.pan_presentacion.PerformLayout()

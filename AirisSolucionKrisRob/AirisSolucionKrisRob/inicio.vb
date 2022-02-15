@@ -4,7 +4,7 @@
         pan_inicio.Hide()
     End Sub
 
-    Private Sub pan_presentacion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress, pan_presentacion.MouseClick
+    Private Sub pan_presentacion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress, pan_presentacion.KeyPress
         pan_inicio.Show()
     End Sub
 
