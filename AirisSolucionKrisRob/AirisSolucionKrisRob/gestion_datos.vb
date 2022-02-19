@@ -29,11 +29,29 @@ Public Class gestion_datos
         dg_emple.DataMember = "Tabla_empleados"
 
         dg_roles.DataSource = dataset_roles
-        dg_roles.DataSource = "Tabla_roles"
+        dg_roles.DataMember = "Tabla_roles"
 
+        dg_clientes.DataSource = dataset_clientes
+        dg_clientes.DataMember = "Tabla_clientes"
 
+        dg_proveedores.DataSource = dataset_proveedores
+        dg_proveedores.DataMember = "Tabla_proveedores"
 
+        dg_productos.DataSource = dataset_productos
+        dg_productos.DataMember = "Tabla_productos"
 
+        dg_categorias.DataSource = dataset_categoria_productos
+        dg_categorias.DataMember = "Tabla_categoria_productos"
+
+        tb_emple_id.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_id")
+        tb_emple_nom.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_nom")
+        tb_emple_ape1.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_ape1")
+        tb_emple_ape2.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_ape2")
+        tb_emple_rol.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.rol_id")
+        tb_emple_tlf.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_telefono")
+        tb_emple_correo.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_correo")
+        tb_emple_usu.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.usuario")
+        tb_emple_cont.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.password")
 
 
     End Sub
@@ -50,4 +68,24 @@ Public Class gestion_datos
         Me.Close()
     End Sub
 
+    Private Sub ts_busqueda_Click(sender As Object, e As EventArgs) Handles ts_busqueda.Click
+        Busqueda_avanzada.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
+
+    End Sub
+
+    Private Sub tb_proveedores_Click(sender As Object, e As EventArgs) Handles tb_proveedores.Click
+
+    End Sub
+
+    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles lbl_empleados_password.Click
+
+    End Sub
+
+    Private Sub tab_productos_Click(sender As Object, e As EventArgs) Handles tab_productos.Click
+
+    End Sub
 End Class
