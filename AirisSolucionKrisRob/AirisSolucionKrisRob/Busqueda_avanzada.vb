@@ -87,6 +87,7 @@ Public Class Busqueda_avanzada
                 miAdapter.Fill(auxDataset, "busquedaCliente")
                 dg_busqueda.DataSource = auxDataset
                 dg_busqueda.DataMember = "busquedaCliente"
+
             Case "Productos"
                 Dim _prod_id As String = tb_id_productos.Text
                 Dim _prod_nom As String = tb_nombre_productos.Text
@@ -112,17 +113,51 @@ Public Class Busqueda_avanzada
                 dg_busqueda.DataMember = "busquedaProducto"
 
             Case "Provedores"
+                Dim _pro_id As String = tb_id_provedores.Text
+                Dim _pro_nom As String = tb_nombre_provedores.Text
+                Dim _pro_dir As String = tb_direccion_provedores.Text
+                Dim _pro_telefono As String = tb_telefono_provedores.Text
+
+                Dim preStateProv As New OleDbCommand(("SELECT * FROM proveedores 
+                WHERE (pro_id LIKE @pro_id) AND (pro_nom LIKE @pro_nom) AND (pro_dir LIKE @pro_dir) AND (pro_telefono LIKE @pro_telefono)"), conexion)
+
+                preStateProv.Parameters.AddWithValue("@pro_id", If(_pro_id = "", "%", _pro_id))
+                preStateProv.Parameters.AddWithValue("@pro_nom", If(_pro_nom = "", "%", _pro_nom))
+                preStateProv.Parameters.AddWithValue("@pro_dir", If(_pro_telefono = "", "%", _pro_dir))
+                preStateProv.Parameters.AddWithValue("@pro_telefono", If(_pro_telefono = "", "%", _pro_telefono))
+
+                miAdapter.SelectCommand = preStateProv
+                auxDataset.Clear()
+                miAdapter.Fill(auxDataset, "busquedaProveedores")
+                dg_busqueda.DataSource = auxDataset
+                dg_busqueda.DataMember = "busquedaProveedores"
 
             Case "Roles"
+                Dim _rol_id As String = tb_rol_id_emple.Text
+                Dim _rol_nom As String = tb_rol_nombre.Text
+
+                Dim preStateRoles As New OleDbCommand(("select * from roles where (rol_id LIKE @rol_id) and (rol_nom LIKE @rol_nom)"), conexion)
+                preStateRoles.Parameters.AddWithValue("@rol_id", If(_rol_id = "", "%", _rol_id))
+                preStateRoles.Parameters.AddWithValue("@rol_nom", If(_rol_nom = "", "%", "%" + _rol_nom + "%"))
+
+                miAdapter.SelectCommand = preStateRoles
+                auxDataset.Clear()
+                miAdapter.Fill(auxDataset, "busquedaRol")
+                dg_busqueda.DataSource = auxDataset
+                dg_busqueda.DataMember = "busquedaRol"
 
             Case "Categorias de producto"
                 Dim _cat_id As String = tb_id_cat.Text
                 Dim _cat_nom As String = tb_nom_cat.Text
-                Dim _cat_description As String = tb_desc_cat.Text
 
-                Dim preStateCatProd As New OleDbCommand(("select * from categorias_prod where (cat_id LIKE @cat_id) and (cat_nom LIKE @cat_nom) and (cat_descrip LIKE @cat_descrip)"), conexion)
+                Dim preStateCatProd As New OleDbCommand(("select * from categorias_prod where (cat_id LIKE @cat_id) and (cat_nom LIKE @cat_nom)"), conexion)
                 preStateCatProd.Parameters.AddWithValue("@cat_id", If(_cat_id = "", "%", _cat_id))
-                preStateCatProd.Parameters.AddWithValue("@cat_nom", If(_cat_nom = "", "%", _cat_nom))
+                preStateCatProd.Parameters.AddWithValue("@cat_nom", If(_cat_nom = "", "%", "%" + _cat_nom + "%"))
+                miAdapter.SelectCommand = preStateCatProd
+                auxDataset.Clear()
+                miAdapter.Fill(auxDataset, "busquedaCategoria")
+                dg_busqueda.DataSource = auxDataset
+                dg_busqueda.DataMember = "busquedaCategoria"
 
             Case "Empleados"
 

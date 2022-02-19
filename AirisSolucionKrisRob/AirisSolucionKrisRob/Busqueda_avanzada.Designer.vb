@@ -46,10 +46,8 @@ Partial Class Busqueda_avanzada
         Me.tb_id_emple = New System.Windows.Forms.TextBox()
         Me.pan_categorias = New System.Windows.Forms.Panel()
         Me.lbl_categorias = New System.Windows.Forms.Label()
-        Me.lbl_desc_categoria = New System.Windows.Forms.Label()
         Me.lbl_nom_categoria = New System.Windows.Forms.Label()
         Me.lbl_id_categoria = New System.Windows.Forms.Label()
-        Me.tb_desc_cat = New System.Windows.Forms.TextBox()
         Me.tb_nom_cat = New System.Windows.Forms.TextBox()
         Me.tb_id_cat = New System.Windows.Forms.TextBox()
         Me.pan_productos = New System.Windows.Forms.Panel()
@@ -268,6 +266,7 @@ Partial Class Busqueda_avanzada
         Me.pan_empleados.Name = "pan_empleados"
         Me.pan_empleados.Size = New System.Drawing.Size(604, 191)
         Me.pan_empleados.TabIndex = 14
+        Me.pan_empleados.Visible = False
         '
         'lbl_empleados
         '
@@ -338,10 +337,8 @@ Partial Class Busqueda_avanzada
         'pan_categorias
         '
         Me.pan_categorias.Controls.Add(Me.lbl_categorias)
-        Me.pan_categorias.Controls.Add(Me.lbl_desc_categoria)
         Me.pan_categorias.Controls.Add(Me.lbl_nom_categoria)
         Me.pan_categorias.Controls.Add(Me.lbl_id_categoria)
-        Me.pan_categorias.Controls.Add(Me.tb_desc_cat)
         Me.pan_categorias.Controls.Add(Me.tb_nom_cat)
         Me.pan_categorias.Controls.Add(Me.tb_id_cat)
         Me.pan_categorias.Location = New System.Drawing.Point(73, 117)
@@ -349,6 +346,7 @@ Partial Class Busqueda_avanzada
         Me.pan_categorias.Name = "pan_categorias"
         Me.pan_categorias.Size = New System.Drawing.Size(604, 191)
         Me.pan_categorias.TabIndex = 15
+        Me.pan_categorias.Visible = False
         '
         'lbl_categorias
         '
@@ -359,17 +357,6 @@ Partial Class Busqueda_avanzada
         Me.lbl_categorias.Size = New System.Drawing.Size(76, 17)
         Me.lbl_categorias.TabIndex = 7
         Me.lbl_categorias.Text = "Categorias"
-        '
-        'lbl_desc_categoria
-        '
-        Me.lbl_desc_categoria.AutoSize = True
-        Me.lbl_desc_categoria.Font = New System.Drawing.Font("Ebrima", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_desc_categoria.Location = New System.Drawing.Point(179, 129)
-        Me.lbl_desc_categoria.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbl_desc_categoria.Name = "lbl_desc_categoria"
-        Me.lbl_desc_categoria.Size = New System.Drawing.Size(90, 20)
-        Me.lbl_desc_categoria.TabIndex = 5
-        Me.lbl_desc_categoria.Text = "Descripción:"
         '
         'lbl_nom_categoria
         '
@@ -392,14 +379,6 @@ Partial Class Busqueda_avanzada
         Me.lbl_id_categoria.Size = New System.Drawing.Size(27, 20)
         Me.lbl_id_categoria.TabIndex = 3
         Me.lbl_id_categoria.Text = "ID:"
-        '
-        'tb_desc_cat
-        '
-        Me.tb_desc_cat.Location = New System.Drawing.Point(312, 127)
-        Me.tb_desc_cat.Margin = New System.Windows.Forms.Padding(4)
-        Me.tb_desc_cat.Name = "tb_desc_cat"
-        Me.tb_desc_cat.Size = New System.Drawing.Size(132, 22)
-        Me.tb_desc_cat.TabIndex = 2
         '
         'tb_nom_cat
         '
@@ -437,6 +416,7 @@ Partial Class Busqueda_avanzada
         Me.pan_productos.Name = "pan_productos"
         Me.pan_productos.Size = New System.Drawing.Size(604, 191)
         Me.pan_productos.TabIndex = 17
+        Me.pan_productos.Visible = False
         '
         'lbl_marca_productos
         '
@@ -576,6 +556,7 @@ Partial Class Busqueda_avanzada
         Me.pan_clientes.Name = "pan_clientes"
         Me.pan_clientes.Size = New System.Drawing.Size(604, 191)
         Me.pan_clientes.TabIndex = 18
+        Me.pan_clientes.Visible = False
         '
         'lbl_id_empleado_clientes
         '
@@ -713,6 +694,7 @@ Partial Class Busqueda_avanzada
         Me.pan_provedores.Name = "pan_provedores"
         Me.pan_provedores.Size = New System.Drawing.Size(604, 191)
         Me.pan_provedores.TabIndex = 19
+        Me.pan_provedores.Visible = False
         '
         'lbl_contacto_provedores
         '
@@ -826,6 +808,7 @@ Partial Class Busqueda_avanzada
         Me.pan_roles.Name = "pan_roles"
         Me.pan_roles.Size = New System.Drawing.Size(604, 191)
         Me.pan_roles.TabIndex = 20
+        Me.pan_roles.Visible = False
         '
         'lbl_rol_nombre
         '
@@ -883,12 +866,12 @@ Partial Class Busqueda_avanzada
         Me.Controls.Add(Me.dg_busqueda)
         Me.Controls.Add(Me.lbl_tabla)
         Me.Controls.Add(Me.cb_tablas)
+        Me.Controls.Add(Me.pan_empleados)
+        Me.Controls.Add(Me.pan_roles)
         Me.Controls.Add(Me.pan_clientes)
         Me.Controls.Add(Me.pan_provedores)
         Me.Controls.Add(Me.pan_productos)
         Me.Controls.Add(Me.pan_categorias)
-        Me.Controls.Add(Me.pan_empleados)
-        Me.Controls.Add(Me.pan_roles)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Busqueda_avanzada"
         Me.Text = "Busqueda_avanzada"
@@ -931,10 +914,8 @@ Partial Class Busqueda_avanzada
     Friend WithEvents tb_nom_emple As TextBox
     Friend WithEvents tb_id_emple As TextBox
     Friend WithEvents pan_categorias As Panel
-    Friend WithEvents tb_desc_cat As TextBox
     Friend WithEvents tb_nom_cat As TextBox
     Friend WithEvents tb_id_cat As TextBox
-    Friend WithEvents lbl_desc_categoria As Label
     Friend WithEvents lbl_nom_categoria As Label
     Friend WithEvents lbl_id_categoria As Label
     Friend WithEvents pan_productos As Panel
