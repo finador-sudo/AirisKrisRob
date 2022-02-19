@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class gestion_datos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class gestion_datos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestion_datos))
@@ -41,6 +41,31 @@ Partial Class gestion_datos
         Me.tss_fechahora = New System.Windows.Forms.ToolStripStatusLabel()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.tab_empleados = New System.Windows.Forms.TabPage()
+        Me.pan_datos_emple = New System.Windows.Forms.Panel()
+        Me.pan_btns_emple = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.tb_emple_usu = New System.Windows.Forms.TextBox()
+        Me.tb_emple_cont = New System.Windows.Forms.TextBox()
+        Me.tb_emple_nom = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.tb_emple_rol = New System.Windows.Forms.TextBox()
+        Me.tb_emple_ape1 = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.tb_emple_correo = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.tb_emple_tlf = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.tb_emple_id = New System.Windows.Forms.TextBox()
+        Me.tb_emple_ape2 = New System.Windows.Forms.TextBox()
+        Me.dg_emple = New System.Windows.Forms.DataGridView()
         Me.ts_empleados = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
@@ -81,6 +106,7 @@ Partial Class gestion_datos
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel9 = New System.Windows.Forms.ToolStripLabel()
         Me.tab_productos = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -107,43 +133,9 @@ Partial Class gestion_datos
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel12 = New System.Windows.Forms.ToolStripLabel()
         Me.tb_clientes = New System.Windows.Forms.TabPage()
-        Me.ToolStrip4 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel13 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel14 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel15 = New System.Windows.Forms.ToolStripLabel()
-        Me.tb_proveedores = New System.Windows.Forms.TabPage()
-        Me.ToolStrip5 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel16 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator15 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel17 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator16 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel18 = New System.Windows.Forms.ToolStripLabel()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.dg_emple = New System.Windows.Forms.DataGridView()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
@@ -159,9 +151,13 @@ Partial Class gestion_datos
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
+        Me.ToolStrip4 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel13 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel14 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel15 = New System.Windows.Forms.ToolStripLabel()
+        Me.tb_proveedores = New System.Windows.Forms.TabPage()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -178,9 +174,19 @@ Partial Class gestion_datos
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.ToolStrip5 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel16 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator15 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel17 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator16 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel18 = New System.Windows.Forms.ToolStripLabel()
         Me.toolstrip.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.tab_empleados.SuspendLayout()
+        Me.pan_datos_emple.SuspendLayout()
+        Me.pan_btns_emple.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dg_emple, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ts_empleados.SuspendLayout()
         Me.TabControl.SuspendLayout()
         Me.Roles.SuspendLayout()
@@ -194,15 +200,13 @@ Partial Class gestion_datos
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip3.SuspendLayout()
         Me.tb_clientes.SuspendLayout()
-        Me.ToolStrip4.SuspendLayout()
-        Me.tb_proveedores.SuspendLayout()
-        Me.ToolStrip5.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dg_emple, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip4.SuspendLayout()
+        Me.tb_proveedores.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip5.SuspendLayout()
         Me.SuspendLayout()
         '
         'toolstrip
@@ -210,7 +214,7 @@ Partial Class gestion_datos
         Me.toolstrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ts_volverimg, Me.ts_volver, Me.ToolStripSeparator2, Me.ts_busqueda, Me.ToolStripSeparator1, Me.ts_info, Me.ToolStripSeparator13, Me.ts_acerca, Me.ToolStripSeparator5, Me.ts_cerrar})
         Me.toolstrip.Location = New System.Drawing.Point(0, 0)
         Me.toolstrip.Name = "toolstrip"
-        Me.toolstrip.Size = New System.Drawing.Size(1199, 25)
+        Me.toolstrip.Size = New System.Drawing.Size(1598, 25)
         Me.toolstrip.TabIndex = 1
         Me.toolstrip.Text = " "
         '
@@ -281,9 +285,9 @@ Partial Class gestion_datos
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tss_barraprogreso, Me.tss_usuario, Me.tss_fechahora})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 640)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 798)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1199, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1598, 22)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -311,37 +315,267 @@ Partial Class gestion_datos
         '
         'tab_empleados
         '
+        Me.tab_empleados.Controls.Add(Me.pan_datos_emple)
         Me.tab_empleados.Controls.Add(Me.dg_emple)
-        Me.tab_empleados.Controls.Add(Me.PictureBox2)
-        Me.tab_empleados.Controls.Add(Me.Button10)
-        Me.tab_empleados.Controls.Add(Me.Button11)
-        Me.tab_empleados.Controls.Add(Me.Button12)
-        Me.tab_empleados.Controls.Add(Me.TextBox15)
-        Me.tab_empleados.Controls.Add(Me.TextBox16)
-        Me.tab_empleados.Controls.Add(Me.TextBox17)
-        Me.tab_empleados.Controls.Add(Me.TextBox18)
-        Me.tab_empleados.Controls.Add(Me.TextBox19)
-        Me.tab_empleados.Controls.Add(Me.TextBox20)
-        Me.tab_empleados.Controls.Add(Me.TextBox21)
-        Me.tab_empleados.Controls.Add(Me.TextBox22)
-        Me.tab_empleados.Controls.Add(Me.Label15)
-        Me.tab_empleados.Controls.Add(Me.Label16)
-        Me.tab_empleados.Controls.Add(Me.Label17)
-        Me.tab_empleados.Controls.Add(Me.Label18)
-        Me.tab_empleados.Controls.Add(Me.Label19)
-        Me.tab_empleados.Controls.Add(Me.Label20)
-        Me.tab_empleados.Controls.Add(Me.Label21)
-        Me.tab_empleados.Controls.Add(Me.Label22)
-        Me.tab_empleados.Controls.Add(Me.Label23)
-        Me.tab_empleados.Controls.Add(Me.TextBox23)
         Me.tab_empleados.Controls.Add(Me.ts_empleados)
         Me.tab_empleados.Location = New System.Drawing.Point(23, 4)
         Me.tab_empleados.Name = "tab_empleados"
         Me.tab_empleados.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_empleados.Size = New System.Drawing.Size(1172, 607)
+        Me.tab_empleados.Size = New System.Drawing.Size(1571, 765)
         Me.tab_empleados.TabIndex = 3
         Me.tab_empleados.Text = "Empleados"
         Me.tab_empleados.UseVisualStyleBackColor = True
+        '
+        'pan_datos_emple
+        '
+        Me.pan_datos_emple.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.pan_datos_emple.Controls.Add(Me.pan_btns_emple)
+        Me.pan_datos_emple.Controls.Add(Me.tb_emple_usu)
+        Me.pan_datos_emple.Controls.Add(Me.tb_emple_cont)
+        Me.pan_datos_emple.Controls.Add(Me.tb_emple_nom)
+        Me.pan_datos_emple.Controls.Add(Me.Label17)
+        Me.pan_datos_emple.Controls.Add(Me.tb_emple_rol)
+        Me.pan_datos_emple.Controls.Add(Me.tb_emple_ape1)
+        Me.pan_datos_emple.Controls.Add(Me.Label19)
+        Me.pan_datos_emple.Controls.Add(Me.Label18)
+        Me.pan_datos_emple.Controls.Add(Me.Label20)
+        Me.pan_datos_emple.Controls.Add(Me.tb_emple_correo)
+        Me.pan_datos_emple.Controls.Add(Me.Label21)
+        Me.pan_datos_emple.Controls.Add(Me.Label16)
+        Me.pan_datos_emple.Controls.Add(Me.Label22)
+        Me.pan_datos_emple.Controls.Add(Me.tb_emple_tlf)
+        Me.pan_datos_emple.Controls.Add(Me.Label23)
+        Me.pan_datos_emple.Controls.Add(Me.Label15)
+        Me.pan_datos_emple.Controls.Add(Me.tb_emple_id)
+        Me.pan_datos_emple.Controls.Add(Me.tb_emple_ape2)
+        Me.pan_datos_emple.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pan_datos_emple.Location = New System.Drawing.Point(3, 279)
+        Me.pan_datos_emple.Name = "pan_datos_emple"
+        Me.pan_datos_emple.Size = New System.Drawing.Size(1565, 483)
+        Me.pan_datos_emple.TabIndex = 63
+        '
+        'pan_btns_emple
+        '
+        Me.pan_btns_emple.AutoSize = True
+        Me.pan_btns_emple.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.pan_btns_emple.Controls.Add(Me.PictureBox2)
+        Me.pan_btns_emple.Controls.Add(Me.Button11)
+        Me.pan_btns_emple.Controls.Add(Me.Button12)
+        Me.pan_btns_emple.Controls.Add(Me.Button10)
+        Me.pan_btns_emple.Dock = System.Windows.Forms.DockStyle.Right
+        Me.pan_btns_emple.Location = New System.Drawing.Point(1273, 0)
+        Me.pan_btns_emple.Name = "pan_btns_emple"
+        Me.pan_btns_emple.Size = New System.Drawing.Size(292, 483)
+        Me.pan_btns_emple.TabIndex = 62
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
+        Me.PictureBox2.Location = New System.Drawing.Point(40, 7)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(249, 144)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 61
+        Me.PictureBox2.TabStop = False
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(25, 165)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(75, 52)
+        Me.Button11.TabIndex = 59
+        Me.Button11.Text = "ALTA"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(214, 165)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(75, 52)
+        Me.Button12.TabIndex = 58
+        Me.Button12.Text = "MODIFICAR"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(118, 162)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(75, 52)
+        Me.Button10.TabIndex = 60
+        Me.Button10.Text = "BAJA"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'tb_emple_usu
+        '
+        Me.tb_emple_usu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_emple_usu.Location = New System.Drawing.Point(296, 97)
+        Me.tb_emple_usu.Name = "tb_emple_usu"
+        Me.tb_emple_usu.Size = New System.Drawing.Size(117, 20)
+        Me.tb_emple_usu.TabIndex = 57
+        '
+        'tb_emple_cont
+        '
+        Me.tb_emple_cont.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_emple_cont.Location = New System.Drawing.Point(296, 130)
+        Me.tb_emple_cont.Name = "tb_emple_cont"
+        Me.tb_emple_cont.Size = New System.Drawing.Size(117, 20)
+        Me.tb_emple_cont.TabIndex = 56
+        '
+        'tb_emple_nom
+        '
+        Me.tb_emple_nom.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_emple_nom.Location = New System.Drawing.Point(296, 161)
+        Me.tb_emple_nom.Name = "tb_emple_nom"
+        Me.tb_emple_nom.Size = New System.Drawing.Size(117, 20)
+        Me.tb_emple_nom.TabIndex = 55
+        '
+        'Label17
+        '
+        Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(450, 43)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(78, 13)
+        Me.Label17.TabIndex = 47
+        Me.Label17.Text = "Primer apellido:"
+        '
+        'tb_emple_rol
+        '
+        Me.tb_emple_rol.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_emple_rol.Location = New System.Drawing.Point(296, 65)
+        Me.tb_emple_rol.Name = "tb_emple_rol"
+        Me.tb_emple_rol.Size = New System.Drawing.Size(117, 20)
+        Me.tb_emple_rol.TabIndex = 50
+        '
+        'tb_emple_ape1
+        '
+        Me.tb_emple_ape1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_emple_ape1.Location = New System.Drawing.Point(620, 40)
+        Me.tb_emple_ape1.Name = "tb_emple_ape1"
+        Me.tb_emple_ape1.Size = New System.Drawing.Size(117, 20)
+        Me.tb_emple_ape1.TabIndex = 54
+        '
+        'Label19
+        '
+        Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(157, 164)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(47, 13)
+        Me.Label19.TabIndex = 45
+        Me.Label19.Text = "Nombre:"
+        '
+        'Label18
+        '
+        Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(440, 78)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(92, 13)
+        Me.Label18.TabIndex = 46
+        Me.Label18.Text = "Segundo apellido:"
+        '
+        'Label20
+        '
+        Me.Label20.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(158, 100)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(46, 13)
+        Me.Label20.TabIndex = 44
+        Me.Label20.Text = "Usuario:"
+        '
+        'tb_emple_correo
+        '
+        Me.tb_emple_correo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_emple_correo.Location = New System.Drawing.Point(620, 146)
+        Me.tb_emple_correo.Name = "tb_emple_correo"
+        Me.tb_emple_correo.Size = New System.Drawing.Size(117, 20)
+        Me.tb_emple_correo.TabIndex = 53
+        '
+        'Label21
+        '
+        Me.Label21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(140, 133)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(64, 13)
+        Me.Label21.TabIndex = 43
+        Me.Label21.Text = "Contraseña:"
+        '
+        'Label16
+        '
+        Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(480, 112)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(52, 13)
+        Me.Label16.TabIndex = 48
+        Me.Label16.Text = "Teléfono:"
+        '
+        'Label22
+        '
+        Me.Label22.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(178, 68)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(26, 13)
+        Me.Label22.TabIndex = 42
+        Me.Label22.Text = "Rol:"
+        '
+        'tb_emple_tlf
+        '
+        Me.tb_emple_tlf.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_emple_tlf.Location = New System.Drawing.Point(620, 109)
+        Me.tb_emple_tlf.Name = "tb_emple_tlf"
+        Me.tb_emple_tlf.Size = New System.Drawing.Size(117, 20)
+        Me.tb_emple_tlf.TabIndex = 52
+        '
+        'Label23
+        '
+        Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(178, 39)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(21, 13)
+        Me.Label23.TabIndex = 41
+        Me.Label23.Text = "ID:"
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(436, 149)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(96, 13)
+        Me.Label15.TabIndex = 49
+        Me.Label15.Text = "Correo electrónico:"
+        '
+        'tb_emple_id
+        '
+        Me.tb_emple_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_emple_id.Enabled = False
+        Me.tb_emple_id.Location = New System.Drawing.Point(296, 36)
+        Me.tb_emple_id.Name = "tb_emple_id"
+        Me.tb_emple_id.Size = New System.Drawing.Size(117, 20)
+        Me.tb_emple_id.TabIndex = 40
+        '
+        'tb_emple_ape2
+        '
+        Me.tb_emple_ape2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_emple_ape2.Location = New System.Drawing.Point(620, 75)
+        Me.tb_emple_ape2.Name = "tb_emple_ape2"
+        Me.tb_emple_ape2.Size = New System.Drawing.Size(117, 20)
+        Me.tb_emple_ape2.TabIndex = 51
+        '
+        'dg_emple
+        '
+        Me.dg_emple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_emple.Dock = System.Windows.Forms.DockStyle.Top
+        Me.dg_emple.Location = New System.Drawing.Point(3, 28)
+        Me.dg_emple.Name = "dg_emple"
+        Me.dg_emple.Size = New System.Drawing.Size(1565, 245)
+        Me.dg_emple.TabIndex = 62
         '
         'ts_empleados
         '
@@ -349,7 +583,7 @@ Partial Class gestion_datos
         Me.ts_empleados.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel3, Me.ToolStripSeparator3, Me.ToolStripLabel4, Me.ToolStripSeparator4, Me.ToolStripLabel5})
         Me.ts_empleados.Location = New System.Drawing.Point(3, 3)
         Me.ts_empleados.Name = "ts_empleados"
-        Me.ts_empleados.Size = New System.Drawing.Size(1166, 25)
+        Me.ts_empleados.Size = New System.Drawing.Size(1565, 25)
         Me.ts_empleados.TabIndex = 2
         Me.ts_empleados.Text = "ToolStrip2"
         '
@@ -395,7 +629,7 @@ Partial Class gestion_datos
         Me.TabControl.Multiline = True
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
-        Me.TabControl.Size = New System.Drawing.Size(1199, 615)
+        Me.TabControl.Size = New System.Drawing.Size(1598, 773)
         Me.TabControl.TabIndex = 0
         '
         'Roles
@@ -710,6 +944,16 @@ Partial Class gestion_datos
         Me.tab_productos.Text = "Productos"
         Me.tab_productos.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(91, 540)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(38, 13)
+        Me.Label2.TabIndex = 46
+        Me.Label2.Text = "Stock:"
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
@@ -950,327 +1194,35 @@ Partial Class gestion_datos
         Me.tb_clientes.Text = "Clientes"
         Me.tb_clientes.UseVisualStyleBackColor = True
         '
-        'ToolStrip4
-        '
-        Me.ToolStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel13, Me.ToolStripSeparator12, Me.ToolStripLabel14, Me.ToolStripSeparator14, Me.ToolStripLabel15})
-        Me.ToolStrip4.Location = New System.Drawing.Point(3, 3)
-        Me.ToolStrip4.Name = "ToolStrip4"
-        Me.ToolStrip4.Size = New System.Drawing.Size(1166, 25)
-        Me.ToolStrip4.TabIndex = 3
-        Me.ToolStrip4.Text = "ToolStrip2"
-        '
-        'ToolStripLabel13
-        '
-        Me.ToolStripLabel13.Name = "ToolStripLabel13"
-        Me.ToolStripLabel13.Size = New System.Drawing.Size(33, 22)
-        Me.ToolStripLabel13.Text = "ALTA"
-        '
-        'ToolStripSeparator12
-        '
-        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
-        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripLabel14
-        '
-        Me.ToolStripLabel14.Name = "ToolStripLabel14"
-        Me.ToolStripLabel14.Size = New System.Drawing.Size(35, 22)
-        Me.ToolStripLabel14.Text = "BAJA"
-        '
-        'ToolStripSeparator14
-        '
-        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
-        Me.ToolStripSeparator14.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripLabel15
-        '
-        Me.ToolStripLabel15.Name = "ToolStripLabel15"
-        Me.ToolStripLabel15.Size = New System.Drawing.Size(92, 22)
-        Me.ToolStripLabel15.Text = "MODIFICACION"
-        '
-        'tb_proveedores
-        '
-        Me.tb_proveedores.Controls.Add(Me.Label8)
-        Me.tb_proveedores.Controls.Add(Me.Label25)
-        Me.tb_proveedores.Controls.Add(Me.PictureBox4)
-        Me.tb_proveedores.Controls.Add(Me.Label28)
-        Me.tb_proveedores.Controls.Add(Me.DataGridView3)
-        Me.tb_proveedores.Controls.Add(Me.Button16)
-        Me.tb_proveedores.Controls.Add(Me.Button17)
-        Me.tb_proveedores.Controls.Add(Me.Button18)
-        Me.tb_proveedores.Controls.Add(Me.TextBox26)
-        Me.tb_proveedores.Controls.Add(Me.TextBox30)
-        Me.tb_proveedores.Controls.Add(Me.TextBox31)
-        Me.tb_proveedores.Controls.Add(Me.TextBox32)
-        Me.tb_proveedores.Controls.Add(Me.Label33)
-        Me.tb_proveedores.Controls.Add(Me.Label34)
-        Me.tb_proveedores.Controls.Add(Me.Label35)
-        Me.tb_proveedores.Controls.Add(Me.TextBox33)
-        Me.tb_proveedores.Controls.Add(Me.ToolStrip5)
-        Me.tb_proveedores.Location = New System.Drawing.Point(23, 4)
-        Me.tb_proveedores.Name = "tb_proveedores"
-        Me.tb_proveedores.Padding = New System.Windows.Forms.Padding(3)
-        Me.tb_proveedores.Size = New System.Drawing.Size(1172, 607)
-        Me.tb_proveedores.TabIndex = 8
-        Me.tb_proveedores.Text = "Proveedores"
-        Me.tb_proveedores.UseVisualStyleBackColor = True
-        '
-        'ToolStrip5
-        '
-        Me.ToolStrip5.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip5.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel16, Me.ToolStripSeparator15, Me.ToolStripLabel17, Me.ToolStripSeparator16, Me.ToolStripLabel18})
-        Me.ToolStrip5.Location = New System.Drawing.Point(3, 3)
-        Me.ToolStrip5.Name = "ToolStrip5"
-        Me.ToolStrip5.Size = New System.Drawing.Size(1166, 25)
-        Me.ToolStrip5.TabIndex = 3
-        Me.ToolStrip5.Text = "ToolStrip2"
-        '
-        'ToolStripLabel16
-        '
-        Me.ToolStripLabel16.Name = "ToolStripLabel16"
-        Me.ToolStripLabel16.Size = New System.Drawing.Size(33, 22)
-        Me.ToolStripLabel16.Text = "ALTA"
-        '
-        'ToolStripSeparator15
-        '
-        Me.ToolStripSeparator15.Name = "ToolStripSeparator15"
-        Me.ToolStripSeparator15.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripLabel17
-        '
-        Me.ToolStripLabel17.Name = "ToolStripLabel17"
-        Me.ToolStripLabel17.Size = New System.Drawing.Size(35, 22)
-        Me.ToolStripLabel17.Text = "BAJA"
-        '
-        'ToolStripSeparator16
-        '
-        Me.ToolStripSeparator16.Name = "ToolStripSeparator16"
-        Me.ToolStripSeparator16.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripLabel18
-        '
-        Me.ToolStripLabel18.Name = "ToolStripLabel18"
-        Me.ToolStripLabel18.Size = New System.Drawing.Size(92, 22)
-        Me.ToolStripLabel18.Text = "MODIFICACION"
-        '
-        'TextBox15
-        '
-        Me.TextBox15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox15.Location = New System.Drawing.Point(249, 454)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox15.TabIndex = 57
-        '
-        'TextBox16
-        '
-        Me.TextBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox16.Location = New System.Drawing.Point(249, 487)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox16.TabIndex = 56
-        '
-        'TextBox17
-        '
-        Me.TextBox17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox17.Location = New System.Drawing.Point(249, 518)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox17.TabIndex = 55
-        '
-        'TextBox18
-        '
-        Me.TextBox18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox18.Location = New System.Drawing.Point(653, 396)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox18.TabIndex = 54
-        '
-        'TextBox19
-        '
-        Me.TextBox19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox19.Location = New System.Drawing.Point(653, 502)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox19.TabIndex = 53
-        '
-        'TextBox20
-        '
-        Me.TextBox20.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox20.Location = New System.Drawing.Point(653, 465)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox20.TabIndex = 52
-        '
-        'TextBox21
-        '
-        Me.TextBox21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox21.Location = New System.Drawing.Point(653, 431)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox21.TabIndex = 51
-        '
-        'TextBox22
-        '
-        Me.TextBox22.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox22.Location = New System.Drawing.Point(249, 422)
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox22.TabIndex = 50
-        '
-        'Label15
-        '
-        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(469, 505)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(96, 13)
-        Me.Label15.TabIndex = 49
-        Me.Label15.Text = "Correo electrónico:"
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(513, 468)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(52, 13)
-        Me.Label16.TabIndex = 48
-        Me.Label16.Text = "Teléfono:"
-        '
-        'Label17
-        '
-        Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(483, 399)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(78, 13)
-        Me.Label17.TabIndex = 47
-        Me.Label17.Text = "Primer apellido:"
-        '
-        'Label18
-        '
-        Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(473, 434)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(92, 13)
-        Me.Label18.TabIndex = 46
-        Me.Label18.Text = "Segundo apellido:"
-        '
-        'Label19
-        '
-        Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(110, 521)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(47, 13)
-        Me.Label19.TabIndex = 45
-        Me.Label19.Text = "Nombre:"
-        '
-        'Label20
-        '
-        Me.Label20.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(111, 457)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(46, 13)
-        Me.Label20.TabIndex = 44
-        Me.Label20.Text = "Usuario:"
-        '
-        'Label21
-        '
-        Me.Label21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(93, 490)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(64, 13)
-        Me.Label21.TabIndex = 43
-        Me.Label21.Text = "Contraseña:"
-        '
-        'Label22
-        '
-        Me.Label22.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(131, 425)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(26, 13)
-        Me.Label22.TabIndex = 42
-        Me.Label22.Text = "Rol:"
-        '
-        'Label23
-        '
-        Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(131, 396)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(21, 13)
-        Me.Label23.TabIndex = 41
-        Me.Label23.Text = "ID:"
-        '
-        'TextBox23
-        '
-        Me.TextBox23.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox23.Enabled = False
-        Me.TextBox23.Location = New System.Drawing.Point(249, 393)
-        Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.Size = New System.Drawing.Size(117, 20)
-        Me.TextBox23.TabIndex = 40
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
-        Me.PictureBox2.Location = New System.Drawing.Point(867, 359)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(249, 144)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 61
-        Me.PictureBox2.TabStop = False
-        '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(948, 518)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 52)
-        Me.Button10.TabIndex = 60
-        Me.Button10.Text = "BAJA"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
-        'Button11
-        '
-        Me.Button11.Location = New System.Drawing.Point(867, 518)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(75, 52)
-        Me.Button11.TabIndex = 59
-        Me.Button11.Text = "ALTA"
-        Me.Button11.UseVisualStyleBackColor = True
-        '
-        'Button12
-        '
-        Me.Button12.Location = New System.Drawing.Point(1024, 518)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(75, 52)
-        Me.Button12.TabIndex = 58
-        Me.Button12.Text = "MODIFICAR"
-        Me.Button12.UseVisualStyleBackColor = True
-        '
-        'dg_emple
-        '
-        Me.dg_emple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_emple.Dock = System.Windows.Forms.DockStyle.Top
-        Me.dg_emple.Location = New System.Drawing.Point(3, 28)
-        Me.dg_emple.Name = "dg_emple"
-        Me.dg_emple.Size = New System.Drawing.Size(1166, 245)
-        Me.dg_emple.TabIndex = 62
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(91, 540)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 13)
-        Me.Label2.TabIndex = 46
-        Me.Label2.Text = "Stock:"
+        'Label30
+        '
+        Me.Label30.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(481, 469)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(52, 13)
+        Me.Label30.TabIndex = 69
+        Me.Label30.Text = "Teléfono:"
+        '
+        'Label31
+        '
+        Me.Label31.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(51, 499)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(78, 13)
+        Me.Label31.TabIndex = 68
+        Me.Label31.Text = "Primer apellido:"
+        '
+        'Label32
+        '
+        Me.Label32.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(441, 438)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(92, 13)
+        Me.Label32.TabIndex = 67
+        Me.Label32.Text = "Segundo apellido:"
         '
         'PictureBox3
         '
@@ -1406,35 +1358,70 @@ Partial Class gestion_datos
         Me.TextBox28.Size = New System.Drawing.Size(117, 20)
         Me.TextBox28.TabIndex = 47
         '
-        'Label30
+        'ToolStrip4
         '
-        Me.Label30.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(481, 469)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(52, 13)
-        Me.Label30.TabIndex = 69
-        Me.Label30.Text = "Teléfono:"
+        Me.ToolStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel13, Me.ToolStripSeparator12, Me.ToolStripLabel14, Me.ToolStripSeparator14, Me.ToolStripLabel15})
+        Me.ToolStrip4.Location = New System.Drawing.Point(3, 3)
+        Me.ToolStrip4.Name = "ToolStrip4"
+        Me.ToolStrip4.Size = New System.Drawing.Size(1166, 25)
+        Me.ToolStrip4.TabIndex = 3
+        Me.ToolStrip4.Text = "ToolStrip2"
         '
-        'Label31
+        'ToolStripLabel13
         '
-        Me.Label31.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(51, 499)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(78, 13)
-        Me.Label31.TabIndex = 68
-        Me.Label31.Text = "Primer apellido:"
+        Me.ToolStripLabel13.Name = "ToolStripLabel13"
+        Me.ToolStripLabel13.Size = New System.Drawing.Size(33, 22)
+        Me.ToolStripLabel13.Text = "ALTA"
         '
-        'Label32
+        'ToolStripSeparator12
         '
-        Me.Label32.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(441, 438)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(92, 13)
-        Me.Label32.TabIndex = 67
-        Me.Label32.Text = "Segundo apellido:"
+        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
+        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel14
+        '
+        Me.ToolStripLabel14.Name = "ToolStripLabel14"
+        Me.ToolStripLabel14.Size = New System.Drawing.Size(35, 22)
+        Me.ToolStripLabel14.Text = "BAJA"
+        '
+        'ToolStripSeparator14
+        '
+        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
+        Me.ToolStripSeparator14.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel15
+        '
+        Me.ToolStripLabel15.Name = "ToolStripLabel15"
+        Me.ToolStripLabel15.Size = New System.Drawing.Size(92, 22)
+        Me.ToolStripLabel15.Text = "MODIFICACION"
+        '
+        'tb_proveedores
+        '
+        Me.tb_proveedores.Controls.Add(Me.Label8)
+        Me.tb_proveedores.Controls.Add(Me.Label25)
+        Me.tb_proveedores.Controls.Add(Me.PictureBox4)
+        Me.tb_proveedores.Controls.Add(Me.Label28)
+        Me.tb_proveedores.Controls.Add(Me.DataGridView3)
+        Me.tb_proveedores.Controls.Add(Me.Button16)
+        Me.tb_proveedores.Controls.Add(Me.Button17)
+        Me.tb_proveedores.Controls.Add(Me.Button18)
+        Me.tb_proveedores.Controls.Add(Me.TextBox26)
+        Me.tb_proveedores.Controls.Add(Me.TextBox30)
+        Me.tb_proveedores.Controls.Add(Me.TextBox31)
+        Me.tb_proveedores.Controls.Add(Me.TextBox32)
+        Me.tb_proveedores.Controls.Add(Me.Label33)
+        Me.tb_proveedores.Controls.Add(Me.Label34)
+        Me.tb_proveedores.Controls.Add(Me.Label35)
+        Me.tb_proveedores.Controls.Add(Me.TextBox33)
+        Me.tb_proveedores.Controls.Add(Me.ToolStrip5)
+        Me.tb_proveedores.Location = New System.Drawing.Point(23, 4)
+        Me.tb_proveedores.Name = "tb_proveedores"
+        Me.tb_proveedores.Padding = New System.Windows.Forms.Padding(3)
+        Me.tb_proveedores.Size = New System.Drawing.Size(1172, 607)
+        Me.tb_proveedores.TabIndex = 8
+        Me.tb_proveedores.Text = "Proveedores"
+        Me.tb_proveedores.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -1582,11 +1569,49 @@ Partial Class gestion_datos
         Me.TextBox33.Size = New System.Drawing.Size(117, 20)
         Me.TextBox33.TabIndex = 70
         '
+        'ToolStrip5
+        '
+        Me.ToolStrip5.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip5.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel16, Me.ToolStripSeparator15, Me.ToolStripLabel17, Me.ToolStripSeparator16, Me.ToolStripLabel18})
+        Me.ToolStrip5.Location = New System.Drawing.Point(3, 3)
+        Me.ToolStrip5.Name = "ToolStrip5"
+        Me.ToolStrip5.Size = New System.Drawing.Size(1166, 25)
+        Me.ToolStrip5.TabIndex = 3
+        Me.ToolStrip5.Text = "ToolStrip2"
+        '
+        'ToolStripLabel16
+        '
+        Me.ToolStripLabel16.Name = "ToolStripLabel16"
+        Me.ToolStripLabel16.Size = New System.Drawing.Size(33, 22)
+        Me.ToolStripLabel16.Text = "ALTA"
+        '
+        'ToolStripSeparator15
+        '
+        Me.ToolStripSeparator15.Name = "ToolStripSeparator15"
+        Me.ToolStripSeparator15.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel17
+        '
+        Me.ToolStripLabel17.Name = "ToolStripLabel17"
+        Me.ToolStripLabel17.Size = New System.Drawing.Size(35, 22)
+        Me.ToolStripLabel17.Text = "BAJA"
+        '
+        'ToolStripSeparator16
+        '
+        Me.ToolStripSeparator16.Name = "ToolStripSeparator16"
+        Me.ToolStripSeparator16.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel18
+        '
+        Me.ToolStripLabel18.Name = "ToolStripLabel18"
+        Me.ToolStripLabel18.Size = New System.Drawing.Size(92, 22)
+        Me.ToolStripLabel18.Text = "MODIFICACION"
+        '
         'gestion_datos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1199, 662)
+        Me.ClientSize = New System.Drawing.Size(1598, 820)
         Me.Controls.Add(Me.TabControl)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.toolstrip)
@@ -1600,6 +1625,11 @@ Partial Class gestion_datos
         Me.StatusStrip1.PerformLayout()
         Me.tab_empleados.ResumeLayout(False)
         Me.tab_empleados.PerformLayout()
+        Me.pan_datos_emple.ResumeLayout(False)
+        Me.pan_datos_emple.PerformLayout()
+        Me.pan_btns_emple.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dg_emple, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ts_empleados.ResumeLayout(False)
         Me.ts_empleados.PerformLayout()
         Me.TabControl.ResumeLayout(False)
@@ -1621,18 +1651,16 @@ Partial Class gestion_datos
         Me.ToolStrip3.PerformLayout()
         Me.tb_clientes.ResumeLayout(False)
         Me.tb_clientes.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip4.ResumeLayout(False)
         Me.ToolStrip4.PerformLayout()
         Me.tb_proveedores.ResumeLayout(False)
         Me.tb_proveedores.PerformLayout()
-        Me.ToolStrip5.ResumeLayout(False)
-        Me.ToolStrip5.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dg_emple, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip5.ResumeLayout(False)
+        Me.ToolStrip5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1738,14 +1766,14 @@ Partial Class gestion_datos
     Friend WithEvents Button10 As Button
     Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents TextBox16 As TextBox
-    Friend WithEvents TextBox17 As TextBox
-    Friend WithEvents TextBox18 As TextBox
-    Friend WithEvents TextBox19 As TextBox
-    Friend WithEvents TextBox20 As TextBox
-    Friend WithEvents TextBox21 As TextBox
-    Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents tb_emple_usu As TextBox
+    Friend WithEvents tb_emple_cont As TextBox
+    Friend WithEvents tb_emple_nom As TextBox
+    Friend WithEvents tb_emple_ape1 As TextBox
+    Friend WithEvents tb_emple_correo As TextBox
+    Friend WithEvents tb_emple_tlf As TextBox
+    Friend WithEvents tb_emple_ape2 As TextBox
+    Friend WithEvents tb_emple_rol As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
@@ -1755,7 +1783,7 @@ Partial Class gestion_datos
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label23 As Label
-    Friend WithEvents TextBox23 As TextBox
+    Friend WithEvents tb_emple_id As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label31 As Label
@@ -1791,4 +1819,6 @@ Partial Class gestion_datos
     Friend WithEvents Label34 As Label
     Friend WithEvents Label35 As Label
     Friend WithEvents TextBox33 As TextBox
+    Friend WithEvents pan_datos_emple As Panel
+    Friend WithEvents pan_btns_emple As Panel
 End Class
