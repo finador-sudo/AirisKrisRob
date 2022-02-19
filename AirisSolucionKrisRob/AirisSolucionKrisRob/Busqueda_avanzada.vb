@@ -5,25 +5,14 @@
 Public Class Busqueda_avanzada
 
     Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=././BBDD/airis_db.accdb")
+    Public auxDataset As New DataSet
+    Public preparedStatement As New OleDbCommand
+    Public miAdapter As New OleDbDataAdapter
 
-    Public adaptador_roles As New OleDbDataAdapter("Select * from roles", conexion)
-    Public adaptador_empleados As New OleDbDataAdapter("Select * from empleados", conexion)
-    Public adaptador_clientes As New OleDbDataAdapter("Select * from clientes", conexion)
-    Public adaptador_proveedores As New OleDbDataAdapter("Select * from proveedores", conexion)
-    Public adaptador_productos As New OleDbDataAdapter("Select * from productos", conexion)
-    Public adaptador_categoria_productos As New OleDbDataAdapter("Select * from categorias_prod", conexion)
-
-    Public dataset_roles As New DataSet
-    Public dataset_empleados As New DataSet
-    Public dataset_clientes As New DataSet
-    Public dataset_proveedores As New DataSet
-    Public dataset_productos As New DataSet
-    Public dataset_categoria_productos As New DataSet
 
     Private Sub Busqueda_avanzada_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pan_categorias.Hide()
         pan_empleados.Hide()
-        Console.Write("Hola mundo")
     End Sub
 
     Private Sub cb_tablas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_tablas.SelectedIndexChanged
@@ -76,48 +65,71 @@ Public Class Busqueda_avanzada
     Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
         Select Case cb_tablas.Text
             Case "Clientes"
-                Console.Write("BuscarCliente")
-                Dim cb As New OleDbDataAdapter("select * from clientes", conexion)
-                Dim ds As New DataSet
                 Dim _id_clientes As String = tb_id_clientes.Text
                 Dim _clie_nom As String = tb_nombre_clientes.Text
                 Dim _clie_ape1 As String = tb_ape1_clientes.Text
                 Dim _clie_ape2 As String = tb_ape2_clientes.Text
                 Dim _clie_telefono As String = tb_telefono_clientes.Text
-                Dim _emp_id As String = tb_empleado_id_clientes.Text
+                Dim _emp_nom As String = tb_empleado_id_clientes.Text
 
                 'Dim preparedStatement As New OleDbCommand(("select * from clientes where clie_id = ? and clie_nom = ? and clie_ape1 = ? and clie_ape2 = ? and clie_telefono = ? and emp_id = ?"), conexion)
-                Dim preparedStatement As New OleDbCommand(("select * from clientes"), conexion)
-                'preparedStatement.Parameters.AddWithValue("clie_id", _id_clientes)
-                'preparedStatement.Parameters.AddWithValue("clie_id", If(_id_clientes = "", "%", _id_clientes))
-                'preparedStatement.Parameters.AddWithValue("clie_nom", _clie_nom)
-                'preparedStatement.Parameters.AddWithValue("clie_nom", If(_clie_nom = "", "%", _clie_nom))
-                'preparedStatement.Parameters.AddWithValue("clie_ape1", _clie_ape1)
-                'preparedStatement.Parameters.AddWithValue("clie_ape1", If(_clie_ape1 = "", "%", _clie_ape1))
-                'preparedStatement.Parameters.AddWithValue("clie_ape2", _clie_ape2)
-                'preparedStatement.Parameters.AddWithValue("clie_ape2", If(_clie_ape2 = "", "%", _clie_ape2))
-                'preparedStatement.Parameters.AddWithValue("clie_telefono", _clie_telefono)
-                'preparedStatement.Parameters.AddWithValue("clie_telefono", If(_clie_telefono = "", "%", _clie_telefono))
-                'preparedStatement.Parameters.AddWithValue("emp_id", _emp_id)
-                'preparedStatement.Parameters.AddWithValue("emp_id", If(_emp_id = "", "%", _emp_id))
-                conexion.Open()
-                preparedStatement.ExecuteNonQuery()
-                cb.SelectCommand = preparedStatement
-                ds.Clear()
-                cb.Fill(ds, "busquedaCliente")
-                dg_busqueda.DataSource = ds
-
-
+                Dim preStateClientes As New OleDbCommand(("select clientes.clie_id,clientes.clie_nom,clientes.clie_ape1,clientes.clie_ape2,clientes.clie_telefono,empleados.emp_nom
+                    FROM clientes,empleados WHERE
+                    clientes.emp_id = empleados.emp_id and (clie_id LIKE @clie_id) and (clie_nom LIKE @clie_nom) and (clie_ape1 LIKE @clie_ape1) and (clie_ape2 LIKE @clie_ape2) and (clie_telefono LIKE @clie_telefono) and (empleados.emp_nom LIKE @emp_nom)"), conexion)
+                preStateClientes.Parameters.AddWithValue("@clie_id", If(_id_clientes = "", "%", _id_clientes))
+                preStateClientes.Parameters.AddWithValue("@clie_nom", If(_clie_nom = "", "%", "%" + _clie_nom + "%"))
+                preStateClientes.Parameters.AddWithValue("@clie_ape1", If(_clie_ape1 = "", "%", "%" + _clie_ape1 + "%"))
+                preStateClientes.Parameters.AddWithValue("@clie_ape2", If(_clie_ape2 = "", "%", "%" + _clie_ape2 + "%"))
+                preStateClientes.Parameters.AddWithValue("@clie_telefono", If(_clie_telefono = "", "%", "%" + _clie_telefono + "%"))
+                preStateClientes.Parameters.AddWithValue("@emp_nom", If(_emp_nom = "", "%", "%" + _emp_nom + "%"))
+                miAdapter.SelectCommand = preStateClientes
+                auxDataset.Clear()
+                miAdapter.Fill(auxDataset, "busquedaCliente")
+                dg_busqueda.DataSource = auxDataset
+                dg_busqueda.DataMember = "busquedaCliente"
             Case "Productos"
+                Dim _prod_id As String = tb_id_productos.Text
+                Dim _prod_nom As String = tb_nombre_productos.Text
+                Dim _precio As String = tb_precio_productos.Text
+                Dim _categoria As String = tb_categoria_id_productos.Text
+                Dim _stock As String = tb_stock_productos.Text
+                Dim _marca As String = tb_marca_productos.Text
+
+                Dim preStateProductos As New OleDbCommand(("select productos.prod_id,productos.prod_nom,productos.precio,productos.prod_stock,productos.prod_marca,categorias_prod.cat_nom
+                        FROM productos, categorias_prod where categorias_prod.cat_id = productos.cat_id and 
+                        (productos.prod_id LIKE @prod_id) and (productos.prod_nom LIKE @prod_nom) and (productos.precio LIKE @precio) and (productos.prod_stock LIKE @stock) AND (productos.prod_marca LIKE @marca) AND (categorias_prod.cat_nom LIKE @categoria)"), conexion)
+                preStateProductos.Parameters.AddWithValue("@prod_id", If(_prod_id = "", "%", _prod_id))
+                preStateProductos.Parameters.AddWithValue("@prod_nom", If(_prod_nom = "", "%", "%" + _prod_nom + "%"))
+                preStateProductos.Parameters.AddWithValue("@precio", If(_precio = "", "%", _precio))
+                preStateProductos.Parameters.AddWithValue("@stock", If(_stock = "", "%", _stock))
+                preStateProductos.Parameters.AddWithValue("@marca", If(_marca = "", "%", "%" + _marca + "%"))
+                preStateProductos.Parameters.AddWithValue("@categoria", If(_categoria = "", "%", "%" + _categoria + "%"))
+
+                miAdapter.SelectCommand = preStateProductos
+                auxDataset.Clear()
+                miAdapter.Fill(auxDataset, "busquedaProducto")
+                dg_busqueda.DataSource = auxDataset
+                dg_busqueda.DataMember = "busquedaProducto"
 
             Case "Provedores"
 
             Case "Roles"
 
             Case "Categorias de producto"
+                Dim _cat_id As String = tb_id_cat.Text
+                Dim _cat_nom As String = tb_nom_cat.Text
+                Dim _cat_description As String = tb_desc_cat.Text
+
+                Dim preStateCatProd As New OleDbCommand(("select * from categorias_prod where (cat_id LIKE @cat_id) and (cat_nom LIKE @cat_nom) and (cat_descrip LIKE @cat_descrip)"), conexion)
+                preStateCatProd.Parameters.AddWithValue("@cat_id", If(_cat_id = "", "%", _cat_id))
+                preStateCatProd.Parameters.AddWithValue("@cat_nom", If(_cat_nom = "", "%", _cat_nom))
 
             Case "Empleados"
 
         End Select
+    End Sub
+
+    Private Sub lbl_id_empleado_clientes_Click(sender As Object, e As EventArgs) Handles lbl_id_empleado_clientes.Click
+
     End Sub
 End Class
