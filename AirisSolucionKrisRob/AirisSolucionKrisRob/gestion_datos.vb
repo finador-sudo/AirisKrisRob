@@ -2,7 +2,7 @@
 
 
 Public Class gestion_datos
-    Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=././BBDD/airis_db.accdb")
+    Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=airis_db.accdb")
     Public adaptador_roles As New OleDbDataAdapter("Select * from roles", conexion)
     Public adaptador_empleados As New OleDbDataAdapter("Select * from empleados", conexion)
     Public adaptador_clientes As New OleDbDataAdapter("Select * from clientes", conexion)

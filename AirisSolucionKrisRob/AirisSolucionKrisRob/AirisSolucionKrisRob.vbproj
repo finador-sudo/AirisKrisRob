@@ -157,10 +157,5 @@
     <None Include="Resources\1975-airis_logo.png" />
     <None Include="Resources\1975-airis_logo.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="BBDD\airis_db.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
