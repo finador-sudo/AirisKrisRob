@@ -103,19 +103,85 @@ Public Class gestion_datos
         Me.Hide()
     End Sub
 
-    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
+    Private Sub tslbl_nuevo_Click(sender As Object, e As EventArgs) Handles tslbl_nuevo_empleado.Click
+        tb_emple_id.Text = ""
+        tb_emple_rol.Text = ""
+        tb_emple_usu.Text = ""
+        tb_emple_cont.Text = ""
+        tb_emple_nom.Text = ""
+        tb_emple_ape1.Text = ""
+        tb_emple_ape2.Text = ""
+        tb_emple_tlf.Text = ""
+        tb_emple_correo.Text = ""
+    End Sub
+
+    Private Sub tslbl_nuevo_rol_Click(sender As Object, e As EventArgs) Handles tslbl_nuevo_rol.Click
+        tb_roles_id.Text = ""
+        tb_roles_rol.Text = ""
+    End Sub
+
+    Private Sub tslbl_nuevo_categoria_Click(sender As Object, e As EventArgs) Handles tslbl_nuevo_categoria.Click
+        tb_categorias_id.Text = ""
+        tb_categorias_nombre.Text = ""
+        tb_categorias_descripccion.Text = ""
+    End Sub
+
+    Private Sub tslbl_nuevo_producto_Click(sender As Object, e As EventArgs) Handles tslbl_nuevo_producto.Click
+        tb_productos_id.Text = ""
+        tb_productos_nombre.Text = ""
+        tb_productos_precio.Text = ""
+        tb_productos_stock.Text = ""
+        tb_productos_descripccion.Text = ""
+        tb_productos_marca.Text = ""
+        tb_productos_categoriaID.Text = ""
+    End Sub
+
+    Private Sub tslbl_nuevo_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_nuevo_clientes.Click
+        tb_clientes_id.Text = ""
+        tb_clientes_nombre.Text = ""
+        tb_clientes_ape1.Text = ""
+        tb_clientes_ape2.Text = ""
+        tb_clientes_direccion.Text = ""
+        tb_clientes_empleadoID.Text = ""
+        tb_clientes_telefono.Text = ""
+    End Sub
+
+    Private Sub tslbl_nuevo_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_nuevo_proveedores.Click
+        tb_proveedores_id.Text = ""
+        tb_proveedores_contacto.Text = ""
+        tb_proveedores_direccion.Text = ""
+        tb_proveedores_nombre.Text = ""
+        tb_proveedores_telefono.Text = ""
+    End Sub
+
+    Private Sub tslbl_alta_productos_Click(sender As Object, e As EventArgs) Handles tslbl_alta_productos.Click
 
     End Sub
 
-    Private Sub tb_proveedores_Click(sender As Object, e As EventArgs) Handles tb_proveedores.Click
+    Private Sub tslbl_alta_roles_Click(sender As Object, e As EventArgs) Handles tslbl_alta_roles.Click
+        If (tb_roles_id.Text = "") Then
+            If (tb_roles_rol.Text = "") Then
+                MsgBox("Por favor introduzca un nombre de rol", 0 + MsgBoxStyle.Information, "Nombre incorrecto")
+                tb_roles_rol.Focus()
+            Else
+                Try
+                    conexion.Open()
+                    Dim rolesInsert As New OleDbCommand("INSERT INTO roles (rol_nom) VALUES (@rol)", conexion)
+                    rolesInsert.Parameters.AddWithValue("@rol", tb_roles_rol.Text)
 
-    End Sub
+                    rolesInsert.ExecuteNonQuery()
+                    conexion.Close()
 
-    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles lbl_empleados_password.Click
 
-    End Sub
+                Catch ex As Exception
+                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al insertar roles")
+                    FileOpen(2, "errores_airis.txt", OpenMode.Append)
+                    WriteLine(2, "Error al añadir un rol: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    FileClose(2)
+                End Try
 
-    Private Sub tab_productos_Click(sender As Object, e As EventArgs) Handles tab_productos.Click
 
+            End If
+        End If
     End Sub
 End Class

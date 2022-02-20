@@ -4,7 +4,7 @@
 
 Public Class Busqueda_avanzada
 
-    Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=././BBDD/airis_db.accdb")
+    Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=airis_db.accdb")
     Public auxDataset As New DataSet
     Public preparedStatement As New OleDbCommand
     Public miAdapter As New OleDbDataAdapter
