@@ -53,6 +53,36 @@ Public Class gestion_datos
         tb_emple_usu.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.usuario")
         tb_emple_cont.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.password")
 
+        tb_roles_id.DataBindings.Add("text", dataset_roles, "Tabla_roles.rol_id")
+        tb_roles_rol.DataBindings.Add("text", dataset_roles, "Tabla_roles.rol_nom")
+
+        tb_clientes_id.DataBindings.Add("text", dataset_clientes, "Tabla_clientes.clie_id")
+        tb_clientes_nombre.DataBindings.Add("text", dataset_clientes, "Tabla_clientes.clie_nom")
+        tb_clientes_ape1.DataBindings.Add("text", dataset_clientes, "Tabla_clientes.clie_ape1")
+        tb_clientes_ape2.DataBindings.Add("text", dataset_clientes, "Tabla_clientes.clie_ape2")
+        tb_clientes_telefono.DataBindings.Add("text", dataset_clientes, "Tabla_clientes.clie_telefono")
+        tb_clientes_empleadoID.DataBindings.Add("text", dataset_clientes, "Tabla_clientes.emp_id")
+        tb_clientes_direccion.DataBindings.Add("text", dataset_clientes, "Tabla_clientes.clie_dir")
+
+        tb_proveedores_id.DataBindings.Add("text", dataset_proveedores, "Tabla_proveedores.pro_id")
+        tb_proveedores_nombre.DataBindings.Add("text", dataset_proveedores, "Tabla_proveedores.pro_nom")
+        tb_proveedores_direccion.DataBindings.Add("text", dataset_proveedores, "Tabla_proveedores.pro_dir")
+        tb_proveedores_telefono.DataBindings.Add("text", dataset_proveedores, "Tabla_proveedores.pro_telefono")
+        tb_proveedores_contacto.DataBindings.Add("text", dataset_proveedores, "Tabla_proveedores.pro_contacto")
+
+        tb_productos_id.DataBindings.Add("text", dataset_productos, "Tabla_productos.prod_id")
+        tb_productos_nombre.DataBindings.Add("text", dataset_productos, "Tabla_productos.prod_nom")
+        tb_productos_precio.DataBindings.Add("text", dataset_productos, "Tabla_productos.precio")
+        tb_productos_categoriaID.DataBindings.Add("text", dataset_productos, "Tabla_productos.cat_id")
+        tb_productos_stock.DataBindings.Add("text", dataset_productos, "Tabla_productos.prod_stock")
+        tb_productos_descripccion.DataBindings.Add("text", dataset_productos, "Tabla_productos.prod_descrip")
+        tb_productos_marca.DataBindings.Add("text", dataset_productos, "Tabla_productos.prod_marca")
+
+        tb_categorias_id.DataBindings.Add("text", dataset_categoria_productos, "Tabla_categoria_productos.cat_id")
+        tb_categorias_nombre.DataBindings.Add("text", dataset_categoria_productos, "Tabla_categoria_productos.cat_nom")
+        tb_categorias_descripccion.DataBindings.Add("text", dataset_categoria_productos, "Tabla_categoria_productos.cat_descrip")
+
+
 
     End Sub
 
