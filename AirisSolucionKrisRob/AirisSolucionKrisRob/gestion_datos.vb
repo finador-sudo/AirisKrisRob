@@ -168,20 +168,152 @@ Public Class gestion_datos
                     conexion.Open()
                     Dim rolesInsert As New OleDbCommand("INSERT INTO roles (rol_nom) VALUES (@rol)", conexion)
                     rolesInsert.Parameters.AddWithValue("@rol", tb_roles_rol.Text)
-
                     rolesInsert.ExecuteNonQuery()
-                    conexion.Close()
-
+                    updateGridRoles()
 
                 Catch ex As Exception
                     MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al insertar roles")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
                     WriteLine(2, "Error al añadir un rol: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
+
+                Finally
+                    conexion.Close()
                 End Try
 
 
             End If
+        End If
+    End Sub
+
+    Private Sub updateGridRoles()
+        conexion.Close()
+        dataset_roles.Clear()
+        adaptador_roles.Fill(dataset_roles, "Tabla_roles")
+        BindingContext(dataset_roles, "Tabla_roles").Position = BindingContext(dataset_roles, "Tabla_roles").Count
+    End Sub
+
+    Private Sub tslbl_baja_roles_Click(sender As Object, e As EventArgs) Handles tslbl_baja_roles.Click
+        If Not (tb_roles_id.Text = "") Then
+            If Not (tb_roles_rol.Text = "") Then
+                Try
+                    conexion.Open()
+                    Dim rolesDelete As New OleDbCommand("DELETE FROM roles WHERE rol_id = @rol_id and rol_nom = @rol_nom", conexion)
+                    rolesDelete.Parameters.AddWithValue("@rol_id", tb_roles_id.Text)
+                    rolesDelete.Parameters.AddWithValue("@rol_nom", tb_roles_rol.Text)
+                    rolesDelete.ExecuteNonQuery()
+                    updateGridRoles()
+                Catch ex As Exception
+                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                    FileOpen(2, "errores_airis.txt", OpenMode.Append)
+                    WriteLine(2, "Error al eliminar un rol: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    FileClose(2)
+                End Try
+
+            Else
+                MsgBox("Por favor introduzca un nombre de rol correcto", 0 + MsgBoxStyle.Information, "Seleccion incorrecta")
+            End If
+        Else
+            MsgBox("Por favor selecione un rol para eliminar", 0 + MsgBoxStyle.Information, "Seleccion incorrecta")
+        End If
+    End Sub
+
+    Private Sub tslbl_modificar_roles_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_roles.Click
+        If Not (tb_roles_id.Text = "") Then
+            If Not (tb_roles_rol.Text = "") Then
+                Try
+                    conexion.Open()
+                    Dim rolesUpdate As New OleDbCommand("UPDATE roles SET rol_nom = @rol_nom WHERE rol_id = @rol_id", conexion)
+                    rolesUpdate.Parameters.AddWithValue("@rol_nom", tb_roles_rol.Text)
+                    rolesUpdate.Parameters.AddWithValue("@rol_id", tb_roles_id.Text)
+                    rolesUpdate.ExecuteNonQuery()
+                    updateGridRoles()
+                Catch ex As Exception
+                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al modificar roles")
+                    FileOpen(2, "errores_airis.txt", OpenMode.Append)
+                    WriteLine(2, "Error al modificar un rol: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    FileClose(2)
+                End Try
+            Else
+                MsgBox("Campos incorrectos", 0 + MsgBoxStyle.Information, "Campo incorrecto")
+            End If
+        Else
+            MsgBox("Por favor selecione un rol para eliminar", 0 + MsgBoxStyle.Information, "Seleccion incorrecta")
+        End If
+    End Sub
+
+    Private Sub tslbl_alta_empleados_Click(sender As Object, e As EventArgs) Handles tslbl_alta_empleados.Click
+        If (tb_emple_id.Text = "") Then
+            If (tb_emple_rol.Text = "") Then
+                MsgBox("Por favor introduzca un ID de rol", 0 + MsgBoxStyle.Information, "Campos incompletos")
+                tb_emple_rol.Focus()
+            Else
+                If (tb_emple_usu.Text = "") Then
+                    MsgBox("Por favor introduzca el usuario del empleado", 0 + MsgBoxStyle.Information, "Campos incompletos")
+                    tb_emple_usu.Focus()
+                Else
+                    If (tb_emple_cont.Text = "") Then
+                        MsgBox("Por favor introduzca la contraseña del empleado", 0 + MsgBoxStyle.Information, "Campos incompletos")
+                        tb_emple_cont.Focus()
+                    Else
+                        If (tb_emple_nom.Text = "") Then
+                            MsgBox("Por favor introduzca el nombre del empleado", 0 + MsgBoxStyle.Information, "Campos incompletos")
+                            tb_emple_nom.Focus()
+                        Else
+                            If (tb_emple_ape1.Text = "") Then
+                                MsgBox("Por favor introduzca el 1º apellido del empleado", 0 + MsgBoxStyle.Information, "Campos incompletos")
+                                tb_emple_ape1.Focus()
+                            Else
+                                If (tb_emple_ape2.Text = "") Then
+                                    MsgBox("Por favor introduzca el 2º apellido del empleado", 0 + MsgBoxStyle.Information, "Campos incompletos")
+                                    tb_emple_ape2.Focus()
+                                Else
+                                    If (tb_emple_tlf.Text = "") Then
+                                        MsgBox("Por favor introduzca el telefono del empleado", 0 + MsgBoxStyle.Information, "Campos incompletos")
+                                        tb_emple_tlf.Focus()
+                                    Else
+                                        If (tb_emple_correo.Text = "") Then
+                                            MsgBox("Por favor introduzca el correo del empleado", 0 + MsgBoxStyle.Information, "Campos incompletos")
+                                            tb_emple_correo.Focus()
+                                        Else
+                                            'Todos los campos correctos
+                                            Try
+                                                conexion.Open()
+                                                Dim empleadosInsert As New OleDbCommand("INSERT INTO empleados (emp_nom, emp_ape1, emp_ape2, rol_id, emp_telefono, emp_correo, usuario, password) 
+                                                    VALUES ( @nombre , @ape1 , @ape2 , @rol , @telefono, @correo , @usuario , @cont )", conexion)
+
+                                                empleadosInsert.Parameters.AddWithValue("@nombre", tb_emple_nom.Text)
+                                                empleadosInsert.Parameters.AddWithValue("@ape1", tb_emple_ape1.Text)
+                                                empleadosInsert.Parameters.AddWithValue("@ape2", tb_emple_ape2.Text)
+                                                empleadosInsert.Parameters.AddWithValue("@rol", tb_emple_rol.Text)
+                                                empleadosInsert.Parameters.AddWithValue("@telefono", tb_emple_tlf.Text)
+                                                empleadosInsert.Parameters.AddWithValue("@correo", tb_emple_correo.Text)
+                                                empleadosInsert.Parameters.AddWithValue("@usuario", tb_emple_usu.Text)
+                                                empleadosInsert.Parameters.AddWithValue("@cont", tb_emple_cont.Text)
+                                                empleadosInsert.ExecuteNonQuery()
+
+
+                                            Catch ex As Exception
+                                                MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al insertar empleados")
+                                                FileOpen(2, "errores_airis.txt", OpenMode.Append)
+                                                WriteLine(2, "Error al añadir un empleado: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                                                FileClose(2)
+
+                                            Finally
+                                                conexion.Close()
+                                            End Try
+
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+
+                End If
+            End If
+        Else
+            'indicar que presione "Nuevo" antes
         End If
     End Sub
 End Class
