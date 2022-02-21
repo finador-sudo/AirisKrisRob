@@ -157,5 +157,17 @@
     <None Include="Resources\1975-airis_logo.png" />
     <None Include="Resources\1975-airis_logo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-user-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 4%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 2%402x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

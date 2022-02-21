@@ -13,7 +13,20 @@
         pan_inicio.Show()
     End Sub
 
-    Private Sub btn_entrar_Click(sender As Object, e As EventArgs) Handles btn_entrar.Click
+    Private Sub ll_pagoficial_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_pagoficial.LinkClicked
+        Process.Start("chrome.exe", "www.AIRIS.es")
+
+    End Sub
+
+    Private Sub cb_cont_CheckedChanged(sender As Object, e As EventArgs) Handles cb_cont.CheckedChanged
+        If cb_cont.Checked Then
+            tb_cont.PasswordChar = ""
+        Else
+            tb_cont.PasswordChar = "*"
+        End If
+    End Sub
+
+    Private Sub btn_entrar_Click(sender As Object, e As EventArgs) Handles btn_entrar.Click, lbl_entrar.Click
         Me.Hide()
         gestion_datos.Show()
     End Sub
