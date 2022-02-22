@@ -88,7 +88,7 @@ Public Class gestion_datos
 
     End Sub
 
-    Private Sub ts_volver_Click(sender As Object, e As EventArgs) Handles ts_volver.Click
+    Private Sub ts_volver_Click(sender As Object, e As EventArgs)
         inicio.Show()
         Me.Close()
 
@@ -408,7 +408,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON BAJA
-    Private Sub tslbl_baja_productos_Click(sender As Object, e As EventArgs) Handles tslbl_baja_productos.Click, btn_baja_prod.Click,
+    Private Sub tslbl_baja_productos_Click(sender As Object, e As EventArgs) Handles tslbl_baja_productos.Click, btn_baja_prod.Click
         If Not (tb_productos_id.Text = "") Then
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try

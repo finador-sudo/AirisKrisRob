@@ -118,31 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Recurso 2@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Recurso 2@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alta1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="estandar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\estandar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1975-airis_logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1975-airis_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lock-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock-7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Recurso 4@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Recurso 4@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1975-airis_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1975-airis_logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circle-user-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circle-user-7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="texbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\texbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="baja" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baja1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_dg_rol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_dg_rol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock-7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Recurso 2@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recurso 2@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1975-airis_logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1975-airis_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1975-airis_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1975-airis_logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alta1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_dg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_dg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Recurso 4@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recurso 4@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pan_datos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pan_datos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pan_datos_roles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pan_datos_roles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

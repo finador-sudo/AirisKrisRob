@@ -178,5 +178,29 @@
   <ItemGroup>
     <None Include="Resources\baja1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel_dg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pan_datos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\texbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel_dg_rol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pan_datos_roles.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
