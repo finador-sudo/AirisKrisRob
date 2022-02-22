@@ -194,7 +194,7 @@ Partial Class inicio
         Me.lbl_entrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.lbl_entrar.Font = New System.Drawing.Font("Arial Narrow", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_entrar.ForeColor = System.Drawing.Color.White
-        Me.lbl_entrar.Location = New System.Drawing.Point(185, 464)
+        Me.lbl_entrar.Location = New System.Drawing.Point(185, 460)
         Me.lbl_entrar.Name = "lbl_entrar"
         Me.lbl_entrar.Size = New System.Drawing.Size(126, 37)
         Me.lbl_entrar.TabIndex = 22
