@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Recurso 2@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recurso 2@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Recurso 4@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Recurso 4@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -127,13 +130,13 @@
   <data name="lock-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock-7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="circle-user-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle-user-7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1975-airis_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1975-airis_logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Recurso 2@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Recurso 2@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="circle-user-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle-user-7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="estandar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\estandar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

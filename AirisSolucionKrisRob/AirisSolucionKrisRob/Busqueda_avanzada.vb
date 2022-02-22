@@ -15,7 +15,7 @@ Public Class Busqueda_avanzada
         pan_empleados.Hide()
     End Sub
 
-    Private Sub cb_tablas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_tablas.SelectedIndexChanged
+    Private Sub cb_tablas_SelectedIndexChanged(sender As Object, e As EventArgs)
         Select Case cb_tablas.Text
             Case "Clientes"
                 pan_roles.Hide()
@@ -62,7 +62,7 @@ Public Class Busqueda_avanzada
         End Select
     End Sub
 
-    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
+    Private Sub btn_buscar_Click(sender As Object, e As EventArgs)
         Select Case cb_tablas.Text
             Case "Clientes"
                 Dim _id_clientes As String = tb_id_clientes.Text
@@ -164,7 +164,7 @@ Public Class Busqueda_avanzada
         End Select
     End Sub
 
-    Private Sub lbl_id_empleado_clientes_Click(sender As Object, e As EventArgs) Handles lbl_id_empleado_clientes.Click
+    Private Sub lbl_id_empleado_clientes_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class
