@@ -408,7 +408,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON BAJA
-    Private Sub tslbl_baja_productos_Click(sender As Object, e As EventArgs) Handles tslbl_baja_productos.Click, btn_baja_prod.Click
+    Private Sub tslbl_baja_productos_Click(sender As Object, e As EventArgs) Handles tslbl_baja_productos.Click, btn_baja_prod.Click, lbl_baja_prod.Click
         If Not (tb_productos_id.Text = "") Then
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try
@@ -431,7 +431,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON MODIFICAR
-    Private Sub tslbl_modificar_productos_Click(sender As Object, e As EventArgs)
+    Private Sub tslbl_modificar_productos_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_productos.Click, btn_mod_prod.Click, lbl_mod_prod.Click
         If Not (tb_productos_id.Text = "" And tb_productos_categoriaID.Text = "" And tb_productos_descripccion.Text = "" And tb_productos_id.Text = "" And tb_productos_id.Text = "" And tb_productos_marca.Text = "" And tb_productos_nombre.Text = "" And tb_productos_precio.Text = "" And tb_productos_stock.Text = "") Then
             Try
                 conexion.Open()
@@ -461,12 +461,11 @@ Public Class gestion_datos
 
     End Sub
 
-
     '-------------------------------------------------------------------------
     'TAB CLIENTES
     '-------------------------------------------------------------------------
     'BOTON NUEVO
-    Private Sub tslbl_nuevo_clientes_Click(sender As Object, e As EventArgs)
+    Private Sub tslbl_nuevo_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_nuevo_clientes.Click
         tb_clientes_id.Text = ""
         tb_clientes_nombre.Text = ""
         tb_clientes_ape1.Text = ""
@@ -476,7 +475,7 @@ Public Class gestion_datos
         tb_clientes_telefono.Text = ""
     End Sub
     'BOTON ALTA
-    Private Sub tslbl_alta_clientes_Click(sender As Object, e As EventArgs)
+    Private Sub tslbl_alta_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_alta_clientes.Click, btn_clientes_alta.Click,
         If (tb_clientes_id.Text = "") Then
             If Not (tb_clientes_ape1.Text = "" And tb_clientes_ape2.Text = "" And tb_clientes_direccion.Text = "" And tb_clientes_empleadoID.Text = "" And tb_clientes_nombre.Text = "" And tb_clientes_telefono.Text = "") Then
                 Try
