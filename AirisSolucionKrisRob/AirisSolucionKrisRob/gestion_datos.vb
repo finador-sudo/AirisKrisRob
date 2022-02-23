@@ -466,7 +466,7 @@ Public Class gestion_datos
     'TAB CLIENTES
     '-------------------------------------------------------------------------
     'BOTON NUEVO
-    Private Sub tslbl_nuevo_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_nuevo_clientes.Click
+    Private Sub tslbl_nuevo_clientes_Click(sender As Object, e As EventArgs)
         tb_clientes_id.Text = ""
         tb_clientes_nombre.Text = ""
         tb_clientes_ape1.Text = ""
@@ -476,7 +476,7 @@ Public Class gestion_datos
         tb_clientes_telefono.Text = ""
     End Sub
     'BOTON ALTA
-    Private Sub tslbl_alta_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_alta_clientes.Click, btn_clientes_alta.Click
+    Private Sub tslbl_alta_clientes_Click(sender As Object, e As EventArgs)
         If (tb_clientes_id.Text = "") Then
             If Not (tb_clientes_ape1.Text = "" And tb_clientes_ape2.Text = "" And tb_clientes_direccion.Text = "" And tb_clientes_empleadoID.Text = "" And tb_clientes_nombre.Text = "" And tb_clientes_telefono.Text = "") Then
                 Try
@@ -507,7 +507,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON BAJA
-    Private Sub tslbl_baja_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_baja_clientes.Click, btn_clientes_baja.Click
+    Private Sub tslbl_baja_clientes_Click(sender As Object, e As EventArgs)
         If Not (tb_clientes.Text = "") Then
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try
@@ -531,7 +531,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON MODIFICAR
-    Private Sub tslbl_modificar_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_clientes.Click, btn_clientes_modificar.Click
+    Private Sub tslbl_modificar_clientes_Click(sender As Object, e As EventArgs)
         If Not (tb_clientes_id.Text = "" And tb_clientes_ape1.Text = "" And tb_clientes_ape2.Text = "" And tb_clientes_direccion.Text = "" And tb_clientes_empleadoID.Text = "" And tb_clientes_nombre.Text = "" And tb_clientes_telefono.Text = "") Then
             Try
                 conexion.Open()
@@ -564,7 +564,7 @@ Public Class gestion_datos
     'TAB PROVEEDORES
     '-------------------------------------------------------------------------
     'BOTON NUEVO
-    Private Sub tslbl_nuevo_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_nuevo_proveedores.Click
+    Private Sub tslbl_nuevo_proveedores_Click(sender As Object, e As EventArgs)
         tb_proveedores_id.Text = ""
         tb_proveedores_contacto.Text = ""
         tb_proveedores_direccion.Text = ""
@@ -572,7 +572,7 @@ Public Class gestion_datos
         tb_proveedores_telefono.Text = ""
     End Sub
     'BOTON ALTA
-    Private Sub tslbl_alta_provedores_Click(sender As Object, e As EventArgs) Handles tslbl_alta_provedores.Click, btn_provedores_alta.Click
+    Private Sub tslbl_alta_provedores_Click(sender As Object, e As EventArgs)
         If (tb_proveedores_id.Text = "") Then
             If Not (tb_proveedores_contacto.Text = "" And tb_proveedores_direccion.Text = "" And tb_proveedores_nombre.Text = "" And tb_proveedores_telefono.Text = "") Then
                 Try
@@ -603,7 +603,7 @@ Public Class gestion_datos
     End Sub
 
     'BOTON BAJA
-    Private Sub tslbl_baja_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_baja_proveedores.Click, btn_provedores_baja.Click
+    Private Sub tslbl_baja_proveedores_Click(sender As Object, e As EventArgs)
         If Not (tb_clientes.Text = "") Then
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try
@@ -626,7 +626,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON MODIFICAR
-    Private Sub tslbl_modificar_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_proveedores.Click, btn_provedores_modificar.Click
+    Private Sub tslbl_modificar_proveedores_Click(sender As Object, e As EventArgs)
         If Not (tb_proveedores_id.Text = "" And tb_proveedores_contacto.Text = "" And tb_proveedores_direccion.Text = "" And tb_proveedores_nombre.Text = "" And tb_proveedores_telefono.Text = "") Then
             Try
                 conexion.Open()

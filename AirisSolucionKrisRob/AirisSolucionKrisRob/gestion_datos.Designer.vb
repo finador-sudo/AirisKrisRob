@@ -23,8 +23,8 @@ Partial Class gestion_datos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestion_datos))
         Me.toolstrip = New System.Windows.Forms.ToolStrip()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -42,13 +42,6 @@ Partial Class gestion_datos
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.tab_roles = New System.Windows.Forms.TabPage()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
-        Me.tb_roles_rol = New System.Windows.Forms.TextBox()
-        Me.lbl_baja_roles = New System.Windows.Forms.Label()
-        Me.lbl_roles_rol = New System.Windows.Forms.Label()
-        Me.lbl_alta_roles = New System.Windows.Forms.Label()
-        Me.lbl_roles_id = New System.Windows.Forms.Label()
-        Me.lbl_mod_roles = New System.Windows.Forms.Label()
-        Me.tb_roles_id = New System.Windows.Forms.TextBox()
         Me.ts_roles = New System.Windows.Forms.ToolStrip()
         Me.tslbl_nuevo_rol = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator17 = New System.Windows.Forms.ToolStripSeparator()
@@ -65,67 +58,9 @@ Partial Class gestion_datos
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.tslbl_baja_empleados = New System.Windows.Forms.ToolStripLabel()
         Me.tslbl_modificar_empleados = New System.Windows.Forms.ToolStripLabel()
-        Me.tb_proveedores = New System.Windows.Forms.TabPage()
-        Me.lbl_proveedores_direccion = New System.Windows.Forms.Label()
-        Me.lbl_proveedores_id = New System.Windows.Forms.Label()
-        Me.lbl_proveedores_nombre = New System.Windows.Forms.Label()
-        Me.lbl_proveedores_telefono = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.dg_proveedores = New System.Windows.Forms.DataGridView()
-        Me.btn_provedores_baja = New System.Windows.Forms.Button()
-        Me.btn_provedores_alta = New System.Windows.Forms.Button()
-        Me.btn_provedores_modificar = New System.Windows.Forms.Button()
-        Me.tb_proveedores_direccion = New System.Windows.Forms.TextBox()
-        Me.tb_proveedores_telefono = New System.Windows.Forms.TextBox()
-        Me.tb_proveedores_contacto = New System.Windows.Forms.TextBox()
-        Me.tb_proveedores_nombre = New System.Windows.Forms.TextBox()
-        Me.tb_proveedores_id = New System.Windows.Forms.TextBox()
-        Me.lbl_proveedores_contacto = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.ts_proveedores = New System.Windows.Forms.ToolStrip()
-        Me.tslbl_nuevo_proveedores = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator15 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tslbl_alta_provedores = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator16 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tslbl_baja_proveedores = New System.Windows.Forms.ToolStripLabel()
-        Me.tslbl_modificar_proveedores = New System.Windows.Forms.ToolStripLabel()
-        Me.tb_clientes = New System.Windows.Forms.TabPage()
-        Me.lbl_clientes_direccion = New System.Windows.Forms.Label()
-        Me.tb_clientes_direccion = New System.Windows.Forms.TextBox()
-        Me.tb_clientes_ape2 = New System.Windows.Forms.TextBox()
-        Me.tb_clientes_ape1 = New System.Windows.Forms.TextBox()
-        Me.tb_clientes_telefono = New System.Windows.Forms.TextBox()
-        Me.tb_clientes_empleadoID = New System.Windows.Forms.TextBox()
-        Me.tb_clientes_nombre = New System.Windows.Forms.TextBox()
-        Me.tb_clientes_id = New System.Windows.Forms.TextBox()
-        Me.lbl_clientes_ape2 = New System.Windows.Forms.Label()
-        Me.lbl_clientes_ape1 = New System.Windows.Forms.Label()
-        Me.lbl_clientes_nombre = New System.Windows.Forms.Label()
-        Me.lbl_clientes_id = New System.Windows.Forms.Label()
-        Me.lbl_clientes_empleadoID = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.lbl_clientes_telefono = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.dg_clientes = New System.Windows.Forms.DataGridView()
-        Me.btn_clientes_baja = New System.Windows.Forms.Button()
-        Me.btn_clientes_alta = New System.Windows.Forms.Button()
-        Me.btn_clientes_modificar = New System.Windows.Forms.Button()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.ts_clientes = New System.Windows.Forms.ToolStrip()
-        Me.tslbl_nuevo_clientes = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tslbl_alta_clientes = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tslbl_baja_clientes = New System.Windows.Forms.ToolStripLabel()
-        Me.tslbl_modificar_clientes = New System.Windows.Forms.ToolStripLabel()
         Me.TabControl = New System.Windows.Forms.TabControl()
         Me.tab_categorias = New System.Windows.Forms.TabPage()
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.tit_categoria = New System.Windows.Forms.Label()
         Me.lbl_baja_categoria = New System.Windows.Forms.Label()
         Me.lbl_mod_categoria = New System.Windows.Forms.Label()
         Me.tb_categorias_descripccion = New System.Windows.Forms.TextBox()
@@ -135,7 +70,6 @@ Partial Class gestion_datos
         Me.lbl_categoria_nombre = New System.Windows.Forms.Label()
         Me.lbl_categoria_id = New System.Windows.Forms.Label()
         Me.tb_categorias_id = New System.Windows.Forms.TextBox()
-        Me.dg_categorias = New System.Windows.Forms.DataGridView()
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.tslbl_nuevo_categoria = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
@@ -146,7 +80,6 @@ Partial Class gestion_datos
         Me.tab_productos = New System.Windows.Forms.TabPage()
         Me.SplitContainer4 = New System.Windows.Forms.SplitContainer()
         Me.dg_productos = New System.Windows.Forms.DataGridView()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.lbl_baja_prod = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lbl_alta_prod = New System.Windows.Forms.Label()
@@ -158,13 +91,8 @@ Partial Class gestion_datos
         Me.tb_productos_precio = New System.Windows.Forms.TextBox()
         Me.tb_productos_categoriaID = New System.Windows.Forms.TextBox()
         Me.tb_productos_stock = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.tb_productos_nombre = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.tb_productos_id = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lbl_productos_marca = New System.Windows.Forms.Label()
         Me.lbl_productos_descripccion = New System.Windows.Forms.Label()
         Me.tb_productos_descripccion = New System.Windows.Forms.TextBox()
@@ -176,14 +104,12 @@ Partial Class gestion_datos
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.tslbl_baja_productos = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel12 = New System.Windows.Forms.ToolStripLabel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.panel = New System.Windows.Forms.Panel()
         Me.tit_datos_emp = New System.Windows.Forms.Label()
         Me.dg_emple = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pan_datos_emple = New System.Windows.Forms.Panel()
-        Me.pb5 = New System.Windows.Forms.PictureBox()
         Me.tb_emple_nom = New System.Windows.Forms.TextBox()
         Me.lbl_usuario = New System.Windows.Forms.Label()
         Me.lbl_cont_emple = New System.Windows.Forms.Label()
@@ -211,6 +137,7 @@ Partial Class gestion_datos
         Me.pb2 = New System.Windows.Forms.PictureBox()
         Me.pb3 = New System.Windows.Forms.PictureBox()
         Me.pb6 = New System.Windows.Forms.PictureBox()
+        Me.pb5 = New System.Windows.Forms.PictureBox()
         Me.lbl_alta_empleados = New System.Windows.Forms.Label()
         Me.btn_emp_alta = New System.Windows.Forms.PictureBox()
         Me.lbl_baja_empleados = New System.Windows.Forms.Label()
@@ -219,24 +146,112 @@ Partial Class gestion_datos
         Me.btn_emp_modif = New System.Windows.Forms.PictureBox()
         Me.pan_logo = New System.Windows.Forms.Panel()
         Me.pan_datos_roles = New System.Windows.Forms.Panel()
+        Me.tit_roles = New System.Windows.Forms.Label()
+        Me.lbl_baja_roles = New System.Windows.Forms.Label()
+        Me.tb_roles_rol = New System.Windows.Forms.TextBox()
+        Me.tb_roles_id = New System.Windows.Forms.TextBox()
+        Me.lbl_alta_roles = New System.Windows.Forms.Label()
+        Me.lbl_mod_roles = New System.Windows.Forms.Label()
         Me.btn_mod_roles = New System.Windows.Forms.PictureBox()
+        Me.lbl_roles_id = New System.Windows.Forms.Label()
         Me.btn_alta_rol = New System.Windows.Forms.PictureBox()
+        Me.lbl_roles_rol = New System.Windows.Forms.Label()
         Me.btn_baja_roles = New System.Windows.Forms.PictureBox()
+        Me.pb_id_rol = New System.Windows.Forms.PictureBox()
+        Me.pb_rol = New System.Windows.Forms.PictureBox()
         Me.pn_logo = New System.Windows.Forms.PictureBox()
         Me.pan_dg_rol = New System.Windows.Forms.Panel()
         Me.dg_roles = New System.Windows.Forms.DataGridView()
         Me.btn_mod_categoria = New System.Windows.Forms.PictureBox()
         Me.btn_alta_categoria = New System.Windows.Forms.PictureBox()
         Me.btn_baja_categoria = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pan_datos_cat = New System.Windows.Forms.PictureBox()
+        Me.pan_logo_roles = New System.Windows.Forms.PictureBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.dg_categorias = New System.Windows.Forms.DataGridView()
         Me.btn_baja_prod = New System.Windows.Forms.PictureBox()
         Me.btn_alta_prod = New System.Windows.Forms.PictureBox()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.ts_volverimg = New System.Windows.Forms.ToolStripButton()
-        Me.tit_roles = New System.Windows.Forms.Label()
-        Me.pb_rol = New System.Windows.Forms.PictureBox()
-        Me.pb_id_rol = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.tb_clientes = New System.Windows.Forms.TabPage()
+        Me.lbl_clientes_direccion = New System.Windows.Forms.Label()
+        Me.tb_clientes_direccion = New System.Windows.Forms.TextBox()
+        Me.tb_clientes_ape2 = New System.Windows.Forms.TextBox()
+        Me.tb_clientes_ape1 = New System.Windows.Forms.TextBox()
+        Me.tb_clientes_telefono = New System.Windows.Forms.TextBox()
+        Me.tb_clientes_empleadoID = New System.Windows.Forms.TextBox()
+        Me.tb_clientes_nombre = New System.Windows.Forms.TextBox()
+        Me.tb_clientes_id = New System.Windows.Forms.TextBox()
+        Me.lbl_clientes_ape2 = New System.Windows.Forms.Label()
+        Me.lbl_clientes_ape1 = New System.Windows.Forms.Label()
+        Me.lbl_clientes_nombre = New System.Windows.Forms.Label()
+        Me.lbl_clientes_id = New System.Windows.Forms.Label()
+        Me.lbl_clientes_empleadoID = New System.Windows.Forms.Label()
+        Me.lbl_clientes_telefono = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.dg_clientes = New System.Windows.Forms.DataGridView()
+        Me.btn_clientes_baja = New System.Windows.Forms.Button()
+        Me.btn_clientes_alta = New System.Windows.Forms.Button()
+        Me.btn_clientes_modificar = New System.Windows.Forms.Button()
+        Me.ts_clientes = New System.Windows.Forms.ToolStrip()
+        Me.tslbl_nuevo_clientes = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tslbl_alta_clientes = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tslbl_baja_clientes = New System.Windows.Forms.ToolStripLabel()
+        Me.tslbl_modificar_clientes = New System.Windows.Forms.ToolStripLabel()
+        Me.tb_proveedores = New System.Windows.Forms.TabPage()
+        Me.lbl_proveedores_direccion = New System.Windows.Forms.Label()
+        Me.lbl_proveedores_id = New System.Windows.Forms.Label()
+        Me.lbl_proveedores_nombre = New System.Windows.Forms.Label()
+        Me.lbl_proveedores_telefono = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.dg_proveedores = New System.Windows.Forms.DataGridView()
+        Me.btn_provedores_baja = New System.Windows.Forms.Button()
+        Me.btn_provedores_alta = New System.Windows.Forms.Button()
+        Me.btn_provedores_modificar = New System.Windows.Forms.Button()
+        Me.tb_proveedores_direccion = New System.Windows.Forms.TextBox()
+        Me.tb_proveedores_telefono = New System.Windows.Forms.TextBox()
+        Me.tb_proveedores_contacto = New System.Windows.Forms.TextBox()
+        Me.tb_proveedores_nombre = New System.Windows.Forms.TextBox()
+        Me.tb_proveedores_id = New System.Windows.Forms.TextBox()
+        Me.lbl_proveedores_contacto = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.ts_proveedores = New System.Windows.Forms.ToolStrip()
+        Me.tslbl_nuevo_proveedores = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator15 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tslbl_alta_provedores = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator16 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tslbl_baja_proveedores = New System.Windows.Forms.ToolStripLabel()
+        Me.tslbl_modificar_proveedores = New System.Windows.Forms.ToolStripLabel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
         Me.toolstrip.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.tab_roles.SuspendLayout()
@@ -251,19 +266,12 @@ Partial Class gestion_datos
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.ts_empleados.SuspendLayout()
-        Me.tb_proveedores.SuspendLayout()
-        CType(Me.dg_proveedores, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ts_proveedores.SuspendLayout()
-        Me.tb_clientes.SuspendLayout()
-        CType(Me.dg_clientes, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ts_clientes.SuspendLayout()
         Me.TabControl.SuspendLayout()
         Me.tab_categorias.SuspendLayout()
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
-        CType(Me.dg_categorias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
         Me.tab_productos.SuspendLayout()
         CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -272,12 +280,9 @@ Partial Class gestion_datos
         Me.SplitContainer4.SuspendLayout()
         CType(Me.dg_productos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip3.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
+        Me.panel.SuspendLayout()
         CType(Me.dg_emple, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pan_datos_emple.SuspendLayout()
-        CType(Me.pb5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -286,6 +291,7 @@ Partial Class gestion_datos
         CType(Me.pb2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_emp_alta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_emp_baja, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_emp_modif, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -293,19 +299,49 @@ Partial Class gestion_datos
         CType(Me.btn_mod_roles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_alta_rol, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_baja_roles, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_id_rol, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_rol, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pn_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pan_dg_rol.SuspendLayout()
         CType(Me.dg_roles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_mod_categoria, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_alta_categoria, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_baja_categoria, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pan_datos_cat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pan_logo_roles, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
+        CType(Me.dg_categorias, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_baja_prod, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_alta_prod, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pb_rol, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pb_id_rol, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tb_clientes.SuspendLayout()
+        CType(Me.dg_clientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ts_clientes.SuspendLayout()
+        Me.tb_proveedores.SuspendLayout()
+        CType(Me.dg_proveedores, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ts_proveedores.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'toolstrip
@@ -430,90 +466,6 @@ Partial Class gestion_datos
         Me.SplitContainer2.SplitterDistance = 1149
         Me.SplitContainer2.TabIndex = 106
         '
-        'tb_roles_rol
-        '
-        Me.tb_roles_rol.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.tb_roles_rol.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tb_roles_rol.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_roles_rol.Location = New System.Drawing.Point(511, 175)
-        Me.tb_roles_rol.Name = "tb_roles_rol"
-        Me.tb_roles_rol.Size = New System.Drawing.Size(173, 26)
-        Me.tb_roles_rol.TabIndex = 14
-        '
-        'lbl_baja_roles
-        '
-        Me.lbl_baja_roles.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.lbl_baja_roles.AutoSize = True
-        Me.lbl_baja_roles.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.lbl_baja_roles.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_baja_roles.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lbl_baja_roles.Location = New System.Drawing.Point(480, 296)
-        Me.lbl_baja_roles.Name = "lbl_baja_roles"
-        Me.lbl_baja_roles.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_baja_roles.TabIndex = 102
-        Me.lbl_baja_roles.Text = "BAJA"
-        '
-        'lbl_roles_rol
-        '
-        Me.lbl_roles_rol.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.lbl_roles_rol.AutoSize = True
-        Me.lbl_roles_rol.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_roles_rol.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.lbl_roles_rol.Location = New System.Drawing.Point(335, 171)
-        Me.lbl_roles_rol.Name = "lbl_roles_rol"
-        Me.lbl_roles_rol.Size = New System.Drawing.Size(56, 33)
-        Me.lbl_roles_rol.TabIndex = 13
-        Me.lbl_roles_rol.Text = "Rol:"
-        '
-        'lbl_alta_roles
-        '
-        Me.lbl_alta_roles.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.lbl_alta_roles.AutoSize = True
-        Me.lbl_alta_roles.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.lbl_alta_roles.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_alta_roles.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lbl_alta_roles.Location = New System.Drawing.Point(239, 296)
-        Me.lbl_alta_roles.Name = "lbl_alta_roles"
-        Me.lbl_alta_roles.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_alta_roles.TabIndex = 100
-        Me.lbl_alta_roles.Text = "ALTA"
-        '
-        'lbl_roles_id
-        '
-        Me.lbl_roles_id.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.lbl_roles_id.AutoSize = True
-        Me.lbl_roles_id.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_roles_id.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.lbl_roles_id.Location = New System.Drawing.Point(344, 90)
-        Me.lbl_roles_id.Name = "lbl_roles_id"
-        Me.lbl_roles_id.Size = New System.Drawing.Size(46, 33)
-        Me.lbl_roles_id.TabIndex = 12
-        Me.lbl_roles_id.Text = "ID:"
-        '
-        'lbl_mod_roles
-        '
-        Me.lbl_mod_roles.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.lbl_mod_roles.AutoSize = True
-        Me.lbl_mod_roles.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.lbl_mod_roles.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_mod_roles.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lbl_mod_roles.Location = New System.Drawing.Point(683, 296)
-        Me.lbl_mod_roles.Name = "lbl_mod_roles"
-        Me.lbl_mod_roles.Size = New System.Drawing.Size(138, 31)
-        Me.lbl_mod_roles.TabIndex = 101
-        Me.lbl_mod_roles.Text = "MODIFICAR"
-        '
-        'tb_roles_id
-        '
-        Me.tb_roles_id.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.tb_roles_id.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tb_roles_id.Enabled = False
-        Me.tb_roles_id.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_roles_id.Location = New System.Drawing.Point(511, 97)
-        Me.tb_roles_id.Name = "tb_roles_id"
-        Me.tb_roles_id.Size = New System.Drawing.Size(173, 26)
-        Me.tb_roles_id.TabIndex = 11
-        '
         'ts_roles
         '
         Me.ts_roles.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -585,14 +537,14 @@ Partial Class gestion_datos
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Panel2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.panel)
         '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.pan_datos_emple)
         Me.SplitContainer1.Panel2.Controls.Add(Me.pan_logo)
         Me.SplitContainer1.Size = New System.Drawing.Size(1890, 926)
-        Me.SplitContainer1.SplitterDistance = 427
+        Me.SplitContainer1.SplitterDistance = 426
         Me.SplitContainer1.TabIndex = 64
         '
         'ts_empleados
@@ -645,532 +597,14 @@ Partial Class gestion_datos
         Me.tslbl_modificar_empleados.Size = New System.Drawing.Size(70, 22)
         Me.tslbl_modificar_empleados.Text = "Modificar"
         '
-        'tb_proveedores
-        '
-        Me.tb_proveedores.Controls.Add(Me.lbl_proveedores_direccion)
-        Me.tb_proveedores.Controls.Add(Me.lbl_proveedores_id)
-        Me.tb_proveedores.Controls.Add(Me.lbl_proveedores_nombre)
-        Me.tb_proveedores.Controls.Add(Me.lbl_proveedores_telefono)
-        Me.tb_proveedores.Controls.Add(Me.Label25)
-        Me.tb_proveedores.Controls.Add(Me.Label28)
-        Me.tb_proveedores.Controls.Add(Me.dg_proveedores)
-        Me.tb_proveedores.Controls.Add(Me.btn_provedores_baja)
-        Me.tb_proveedores.Controls.Add(Me.btn_provedores_alta)
-        Me.tb_proveedores.Controls.Add(Me.btn_provedores_modificar)
-        Me.tb_proveedores.Controls.Add(Me.tb_proveedores_direccion)
-        Me.tb_proveedores.Controls.Add(Me.tb_proveedores_telefono)
-        Me.tb_proveedores.Controls.Add(Me.tb_proveedores_contacto)
-        Me.tb_proveedores.Controls.Add(Me.tb_proveedores_nombre)
-        Me.tb_proveedores.Controls.Add(Me.tb_proveedores_id)
-        Me.tb_proveedores.Controls.Add(Me.lbl_proveedores_contacto)
-        Me.tb_proveedores.Controls.Add(Me.Label34)
-        Me.tb_proveedores.Controls.Add(Me.Label35)
-        Me.tb_proveedores.Controls.Add(Me.ts_proveedores)
-        Me.tb_proveedores.Controls.Add(Me.PictureBox4)
-        Me.tb_proveedores.Location = New System.Drawing.Point(4, 28)
-        Me.tb_proveedores.Name = "tb_proveedores"
-        Me.tb_proveedores.Padding = New System.Windows.Forms.Padding(3)
-        Me.tb_proveedores.Size = New System.Drawing.Size(1896, 957)
-        Me.tb_proveedores.TabIndex = 8
-        Me.tb_proveedores.Text = "Proveedores"
-        Me.tb_proveedores.UseVisualStyleBackColor = True
-        '
-        'lbl_proveedores_direccion
-        '
-        Me.lbl_proveedores_direccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_proveedores_direccion.AutoSize = True
-        Me.lbl_proveedores_direccion.Location = New System.Drawing.Point(526, 511)
-        Me.lbl_proveedores_direccion.Name = "lbl_proveedores_direccion"
-        Me.lbl_proveedores_direccion.Size = New System.Drawing.Size(74, 19)
-        Me.lbl_proveedores_direccion.TabIndex = 92
-        Me.lbl_proveedores_direccion.Text = "Direccion:"
-        '
-        'lbl_proveedores_id
-        '
-        Me.lbl_proveedores_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_proveedores_id.AutoSize = True
-        Me.lbl_proveedores_id.Location = New System.Drawing.Point(526, 446)
-        Me.lbl_proveedores_id.Name = "lbl_proveedores_id"
-        Me.lbl_proveedores_id.Size = New System.Drawing.Size(27, 19)
-        Me.lbl_proveedores_id.TabIndex = 90
-        Me.lbl_proveedores_id.Text = "ID:"
-        '
-        'lbl_proveedores_nombre
-        '
-        Me.lbl_proveedores_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_proveedores_nombre.AutoSize = True
-        Me.lbl_proveedores_nombre.Location = New System.Drawing.Point(525, 476)
-        Me.lbl_proveedores_nombre.Name = "lbl_proveedores_nombre"
-        Me.lbl_proveedores_nombre.Size = New System.Drawing.Size(64, 19)
-        Me.lbl_proveedores_nombre.TabIndex = 89
-        Me.lbl_proveedores_nombre.Text = "Nombre:"
-        '
-        'lbl_proveedores_telefono
-        '
-        Me.lbl_proveedores_telefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_proveedores_telefono.AutoSize = True
-        Me.lbl_proveedores_telefono.Location = New System.Drawing.Point(802, 450)
-        Me.lbl_proveedores_telefono.Name = "lbl_proveedores_telefono"
-        Me.lbl_proveedores_telefono.Size = New System.Drawing.Size(69, 19)
-        Me.lbl_proveedores_telefono.TabIndex = 87
-        Me.lbl_proveedores_telefono.Text = "Teléfono:"
-        '
-        'Label25
-        '
-        Me.Label25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(399, 511)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(74, 19)
-        Me.Label25.TabIndex = 86
-        Me.Label25.Text = "Dirección:"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(372, 400)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(60, 19)
-        Me.Label28.TabIndex = 83
-        Me.Label28.Text = "Label28"
-        '
-        'dg_proveedores
-        '
-        Me.dg_proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_proveedores.Dock = System.Windows.Forms.DockStyle.Top
-        Me.dg_proveedores.Location = New System.Drawing.Point(3, 28)
-        Me.dg_proveedores.Name = "dg_proveedores"
-        Me.dg_proveedores.Size = New System.Drawing.Size(1890, 290)
-        Me.dg_proveedores.TabIndex = 82
-        '
-        'btn_provedores_baja
-        '
-        Me.btn_provedores_baja.Location = New System.Drawing.Point(910, 511)
-        Me.btn_provedores_baja.Name = "btn_provedores_baja"
-        Me.btn_provedores_baja.Size = New System.Drawing.Size(75, 52)
-        Me.btn_provedores_baja.TabIndex = 81
-        Me.btn_provedores_baja.Text = "BAJA"
-        Me.btn_provedores_baja.UseVisualStyleBackColor = True
-        '
-        'btn_provedores_alta
-        '
-        Me.btn_provedores_alta.Location = New System.Drawing.Point(829, 511)
-        Me.btn_provedores_alta.Name = "btn_provedores_alta"
-        Me.btn_provedores_alta.Size = New System.Drawing.Size(75, 52)
-        Me.btn_provedores_alta.TabIndex = 80
-        Me.btn_provedores_alta.Text = "ALTA"
-        Me.btn_provedores_alta.UseVisualStyleBackColor = True
-        '
-        'btn_provedores_modificar
-        '
-        Me.btn_provedores_modificar.Location = New System.Drawing.Point(986, 511)
-        Me.btn_provedores_modificar.Name = "btn_provedores_modificar"
-        Me.btn_provedores_modificar.Size = New System.Drawing.Size(75, 52)
-        Me.btn_provedores_modificar.TabIndex = 79
-        Me.btn_provedores_modificar.Text = "MODIFICAR"
-        Me.btn_provedores_modificar.UseVisualStyleBackColor = True
-        '
-        'tb_proveedores_direccion
-        '
-        Me.tb_proveedores_direccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_proveedores_direccion.Location = New System.Drawing.Point(608, 507)
-        Me.tb_proveedores_direccion.Name = "tb_proveedores_direccion"
-        Me.tb_proveedores_direccion.Size = New System.Drawing.Size(289, 27)
-        Me.tb_proveedores_direccion.TabIndex = 78
-        '
-        'tb_proveedores_telefono
-        '
-        Me.tb_proveedores_telefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_proveedores_telefono.Location = New System.Drawing.Point(952, 447)
-        Me.tb_proveedores_telefono.Name = "tb_proveedores_telefono"
-        Me.tb_proveedores_telefono.Size = New System.Drawing.Size(117, 27)
-        Me.tb_proveedores_telefono.TabIndex = 76
-        '
-        'tb_proveedores_contacto
-        '
-        Me.tb_proveedores_contacto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_proveedores_contacto.Location = New System.Drawing.Point(952, 477)
-        Me.tb_proveedores_contacto.Name = "tb_proveedores_contacto"
-        Me.tb_proveedores_contacto.Size = New System.Drawing.Size(117, 27)
-        Me.tb_proveedores_contacto.TabIndex = 75
-        '
-        'tb_proveedores_nombre
-        '
-        Me.tb_proveedores_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_proveedores_nombre.Location = New System.Drawing.Point(608, 475)
-        Me.tb_proveedores_nombre.Name = "tb_proveedores_nombre"
-        Me.tb_proveedores_nombre.Size = New System.Drawing.Size(117, 27)
-        Me.tb_proveedores_nombre.TabIndex = 74
-        '
-        'tb_proveedores_id
-        '
-        Me.tb_proveedores_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_proveedores_id.Enabled = False
-        Me.tb_proveedores_id.Location = New System.Drawing.Point(608, 446)
-        Me.tb_proveedores_id.Name = "tb_proveedores_id"
-        Me.tb_proveedores_id.Size = New System.Drawing.Size(117, 27)
-        Me.tb_proveedores_id.TabIndex = 70
-        '
-        'lbl_proveedores_contacto
-        '
-        Me.lbl_proveedores_contacto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_proveedores_contacto.AutoSize = True
-        Me.lbl_proveedores_contacto.Location = New System.Drawing.Point(802, 480)
-        Me.lbl_proveedores_contacto.Name = "lbl_proveedores_contacto"
-        Me.lbl_proveedores_contacto.Size = New System.Drawing.Size(71, 19)
-        Me.lbl_proveedores_contacto.TabIndex = 73
-        Me.lbl_proveedores_contacto.Text = "Contacto:"
-        '
-        'Label34
-        '
-        Me.Label34.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(406, 479)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(64, 19)
-        Me.Label34.TabIndex = 72
-        Me.Label34.Text = "Nombre:"
-        '
-        'Label35
-        '
-        Me.Label35.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(433, 450)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(27, 19)
-        Me.Label35.TabIndex = 71
-        Me.Label35.Text = "ID:"
-        '
-        'ts_proveedores
-        '
-        Me.ts_proveedores.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ts_proveedores.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ts_proveedores.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tslbl_nuevo_proveedores, Me.ToolStripSeparator15, Me.tslbl_alta_provedores, Me.ToolStripSeparator16, Me.tslbl_baja_proveedores, Me.tslbl_modificar_proveedores})
-        Me.ts_proveedores.Location = New System.Drawing.Point(3, 3)
-        Me.ts_proveedores.Name = "ts_proveedores"
-        Me.ts_proveedores.Size = New System.Drawing.Size(1890, 25)
-        Me.ts_proveedores.TabIndex = 88
-        Me.ts_proveedores.Text = "ToolStrip5"
-        '
-        'tslbl_nuevo_proveedores
-        '
-        Me.tslbl_nuevo_proveedores.Name = "tslbl_nuevo_proveedores"
-        Me.tslbl_nuevo_proveedores.Size = New System.Drawing.Size(42, 22)
-        Me.tslbl_nuevo_proveedores.Text = "Nuevo"
-        '
-        'ToolStripSeparator15
-        '
-        Me.ToolStripSeparator15.Name = "ToolStripSeparator15"
-        Me.ToolStripSeparator15.Size = New System.Drawing.Size(6, 25)
-        '
-        'tslbl_alta_provedores
-        '
-        Me.tslbl_alta_provedores.Name = "tslbl_alta_provedores"
-        Me.tslbl_alta_provedores.Size = New System.Drawing.Size(28, 22)
-        Me.tslbl_alta_provedores.Text = "Alta"
-        '
-        'ToolStripSeparator16
-        '
-        Me.ToolStripSeparator16.Name = "ToolStripSeparator16"
-        Me.ToolStripSeparator16.Size = New System.Drawing.Size(6, 25)
-        '
-        'tslbl_baja_proveedores
-        '
-        Me.tslbl_baja_proveedores.Name = "tslbl_baja_proveedores"
-        Me.tslbl_baja_proveedores.Size = New System.Drawing.Size(29, 22)
-        Me.tslbl_baja_proveedores.Text = "Baja"
-        '
-        'tslbl_modificar_proveedores
-        '
-        Me.tslbl_modificar_proveedores.Name = "tslbl_modificar_proveedores"
-        Me.tslbl_modificar_proveedores.Size = New System.Drawing.Size(58, 22)
-        Me.tslbl_modificar_proveedores.Text = "Modificar"
-        '
-        'tb_clientes
-        '
-        Me.tb_clientes.Controls.Add(Me.lbl_clientes_direccion)
-        Me.tb_clientes.Controls.Add(Me.tb_clientes_direccion)
-        Me.tb_clientes.Controls.Add(Me.tb_clientes_ape2)
-        Me.tb_clientes.Controls.Add(Me.tb_clientes_ape1)
-        Me.tb_clientes.Controls.Add(Me.tb_clientes_telefono)
-        Me.tb_clientes.Controls.Add(Me.tb_clientes_empleadoID)
-        Me.tb_clientes.Controls.Add(Me.tb_clientes_nombre)
-        Me.tb_clientes.Controls.Add(Me.tb_clientes_id)
-        Me.tb_clientes.Controls.Add(Me.lbl_clientes_ape2)
-        Me.tb_clientes.Controls.Add(Me.lbl_clientes_ape1)
-        Me.tb_clientes.Controls.Add(Me.lbl_clientes_nombre)
-        Me.tb_clientes.Controls.Add(Me.lbl_clientes_id)
-        Me.tb_clientes.Controls.Add(Me.lbl_clientes_empleadoID)
-        Me.tb_clientes.Controls.Add(Me.Label31)
-        Me.tb_clientes.Controls.Add(Me.lbl_clientes_telefono)
-        Me.tb_clientes.Controls.Add(Me.Label9)
-        Me.tb_clientes.Controls.Add(Me.dg_clientes)
-        Me.tb_clientes.Controls.Add(Me.btn_clientes_baja)
-        Me.tb_clientes.Controls.Add(Me.btn_clientes_alta)
-        Me.tb_clientes.Controls.Add(Me.btn_clientes_modificar)
-        Me.tb_clientes.Controls.Add(Me.Label26)
-        Me.tb_clientes.Controls.Add(Me.Label29)
-        Me.tb_clientes.Controls.Add(Me.ts_clientes)
-        Me.tb_clientes.Controls.Add(Me.PictureBox3)
-        Me.tb_clientes.Location = New System.Drawing.Point(4, 28)
-        Me.tb_clientes.Name = "tb_clientes"
-        Me.tb_clientes.Padding = New System.Windows.Forms.Padding(3)
-        Me.tb_clientes.Size = New System.Drawing.Size(1896, 957)
-        Me.tb_clientes.TabIndex = 7
-        Me.tb_clientes.Text = "Clientes"
-        Me.tb_clientes.UseVisualStyleBackColor = True
-        '
-        'lbl_clientes_direccion
-        '
-        Me.lbl_clientes_direccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_clientes_direccion.Location = New System.Drawing.Point(536, 527)
-        Me.lbl_clientes_direccion.Name = "lbl_clientes_direccion"
-        Me.lbl_clientes_direccion.Size = New System.Drawing.Size(53, 14)
-        Me.lbl_clientes_direccion.TabIndex = 94
-        Me.lbl_clientes_direccion.Text = "Direccion:"
-        '
-        'tb_clientes_direccion
-        '
-        Me.tb_clientes_direccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_clientes_direccion.Location = New System.Drawing.Point(618, 523)
-        Me.tb_clientes_direccion.Name = "tb_clientes_direccion"
-        Me.tb_clientes_direccion.Size = New System.Drawing.Size(273, 27)
-        Me.tb_clientes_direccion.TabIndex = 93
-        '
-        'tb_clientes_ape2
-        '
-        Me.tb_clientes_ape2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_clientes_ape2.Location = New System.Drawing.Point(879, 499)
-        Me.tb_clientes_ape2.Name = "tb_clientes_ape2"
-        Me.tb_clientes_ape2.Size = New System.Drawing.Size(117, 27)
-        Me.tb_clientes_ape2.TabIndex = 75
-        '
-        'tb_clientes_ape1
-        '
-        Me.tb_clientes_ape1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_clientes_ape1.Location = New System.Drawing.Point(618, 493)
-        Me.tb_clientes_ape1.Name = "tb_clientes_ape1"
-        Me.tb_clientes_ape1.Size = New System.Drawing.Size(117, 27)
-        Me.tb_clientes_ape1.TabIndex = 59
-        '
-        'tb_clientes_telefono
-        '
-        Me.tb_clientes_telefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_clientes_telefono.Location = New System.Drawing.Point(880, 434)
-        Me.tb_clientes_telefono.Name = "tb_clientes_telefono"
-        Me.tb_clientes_telefono.Size = New System.Drawing.Size(117, 27)
-        Me.tb_clientes_telefono.TabIndex = 58
-        '
-        'tb_clientes_empleadoID
-        '
-        Me.tb_clientes_empleadoID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_clientes_empleadoID.Location = New System.Drawing.Point(880, 466)
-        Me.tb_clientes_empleadoID.Name = "tb_clientes_empleadoID"
-        Me.tb_clientes_empleadoID.Size = New System.Drawing.Size(117, 27)
-        Me.tb_clientes_empleadoID.TabIndex = 57
-        '
-        'tb_clientes_nombre
-        '
-        Me.tb_clientes_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_clientes_nombre.Location = New System.Drawing.Point(618, 463)
-        Me.tb_clientes_nombre.Name = "tb_clientes_nombre"
-        Me.tb_clientes_nombre.Size = New System.Drawing.Size(117, 27)
-        Me.tb_clientes_nombre.TabIndex = 54
-        '
-        'tb_clientes_id
-        '
-        Me.tb_clientes_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_clientes_id.Enabled = False
-        Me.tb_clientes_id.Location = New System.Drawing.Point(618, 434)
-        Me.tb_clientes_id.Name = "tb_clientes_id"
-        Me.tb_clientes_id.Size = New System.Drawing.Size(117, 27)
-        Me.tb_clientes_id.TabIndex = 47
-        '
-        'lbl_clientes_ape2
-        '
-        Me.lbl_clientes_ape2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_clientes_ape2.AutoSize = True
-        Me.lbl_clientes_ape2.Location = New System.Drawing.Point(782, 499)
-        Me.lbl_clientes_ape2.Name = "lbl_clientes_ape2"
-        Me.lbl_clientes_ape2.Size = New System.Drawing.Size(125, 19)
-        Me.lbl_clientes_ape2.TabIndex = 74
-        Me.lbl_clientes_ape2.Text = "Segundo Apellido:"
-        '
-        'lbl_clientes_ape1
-        '
-        Me.lbl_clientes_ape1.AutoSize = True
-        Me.lbl_clientes_ape1.Location = New System.Drawing.Point(56, 497)
-        Me.lbl_clientes_ape1.Name = "lbl_clientes_ape1"
-        Me.lbl_clientes_ape1.Size = New System.Drawing.Size(112, 19)
-        Me.lbl_clientes_ape1.TabIndex = 73
-        Me.lbl_clientes_ape1.Text = "Primer Apellido:"
-        '
-        'lbl_clientes_nombre
-        '
-        Me.lbl_clientes_nombre.AutoSize = True
-        Me.lbl_clientes_nombre.Location = New System.Drawing.Point(56, 466)
-        Me.lbl_clientes_nombre.Name = "lbl_clientes_nombre"
-        Me.lbl_clientes_nombre.Size = New System.Drawing.Size(64, 19)
-        Me.lbl_clientes_nombre.TabIndex = 72
-        Me.lbl_clientes_nombre.Text = "Nombre:"
-        '
-        'lbl_clientes_id
-        '
-        Me.lbl_clientes_id.AutoSize = True
-        Me.lbl_clientes_id.Location = New System.Drawing.Point(56, 434)
-        Me.lbl_clientes_id.Name = "lbl_clientes_id"
-        Me.lbl_clientes_id.Size = New System.Drawing.Size(27, 19)
-        Me.lbl_clientes_id.TabIndex = 71
-        Me.lbl_clientes_id.Text = "ID:"
-        '
-        'lbl_clientes_empleadoID
-        '
-        Me.lbl_clientes_empleadoID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_clientes_empleadoID.AutoSize = True
-        Me.lbl_clientes_empleadoID.Location = New System.Drawing.Point(806, 469)
-        Me.lbl_clientes_empleadoID.Name = "lbl_clientes_empleadoID"
-        Me.lbl_clientes_empleadoID.Size = New System.Drawing.Size(95, 19)
-        Me.lbl_clientes_empleadoID.TabIndex = 69
-        Me.lbl_clientes_empleadoID.Text = "Empleado ID:"
-        '
-        'Label31
-        '
-        Me.Label31.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(376, 499)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(111, 19)
-        Me.Label31.TabIndex = 68
-        Me.Label31.Text = "Primer apellido:"
-        '
-        'lbl_clientes_telefono
-        '
-        Me.lbl_clientes_telefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_clientes_telefono.AutoSize = True
-        Me.lbl_clientes_telefono.Location = New System.Drawing.Point(824, 434)
-        Me.lbl_clientes_telefono.Name = "lbl_clientes_telefono"
-        Me.lbl_clientes_telefono.Size = New System.Drawing.Size(69, 19)
-        Me.lbl_clientes_telefono.TabIndex = 67
-        Me.lbl_clientes_telefono.Text = "Telefono:"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(372, 388)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(52, 19)
-        Me.Label9.TabIndex = 64
-        Me.Label9.Text = "Label9"
-        '
-        'dg_clientes
-        '
-        Me.dg_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_clientes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.dg_clientes.Location = New System.Drawing.Point(3, 28)
-        Me.dg_clientes.Name = "dg_clientes"
-        Me.dg_clientes.Size = New System.Drawing.Size(1890, 290)
-        Me.dg_clientes.TabIndex = 63
-        '
-        'btn_clientes_baja
-        '
-        Me.btn_clientes_baja.Location = New System.Drawing.Point(949, 527)
-        Me.btn_clientes_baja.Name = "btn_clientes_baja"
-        Me.btn_clientes_baja.Size = New System.Drawing.Size(75, 52)
-        Me.btn_clientes_baja.TabIndex = 62
-        Me.btn_clientes_baja.Text = "BAJA"
-        Me.btn_clientes_baja.UseVisualStyleBackColor = True
-        '
-        'btn_clientes_alta
-        '
-        Me.btn_clientes_alta.Location = New System.Drawing.Point(868, 527)
-        Me.btn_clientes_alta.Name = "btn_clientes_alta"
-        Me.btn_clientes_alta.Size = New System.Drawing.Size(75, 52)
-        Me.btn_clientes_alta.TabIndex = 61
-        Me.btn_clientes_alta.Text = "ALTA"
-        Me.btn_clientes_alta.UseVisualStyleBackColor = True
-        '
-        'btn_clientes_modificar
-        '
-        Me.btn_clientes_modificar.Location = New System.Drawing.Point(1025, 527)
-        Me.btn_clientes_modificar.Name = "btn_clientes_modificar"
-        Me.btn_clientes_modificar.Size = New System.Drawing.Size(75, 52)
-        Me.btn_clientes_modificar.TabIndex = 60
-        Me.btn_clientes_modificar.Text = "MODIFICAR"
-        Me.btn_clientes_modificar.UseVisualStyleBackColor = True
-        '
-        'Label26
-        '
-        Me.Label26.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(406, 467)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(64, 19)
-        Me.Label26.TabIndex = 51
-        Me.Label26.Text = "Nombre:"
-        '
-        'Label29
-        '
-        Me.Label29.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(433, 438)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(27, 19)
-        Me.Label29.TabIndex = 48
-        Me.Label29.Text = "ID:"
-        '
-        'ts_clientes
-        '
-        Me.ts_clientes.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ts_clientes.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ts_clientes.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tslbl_nuevo_clientes, Me.ToolStripSeparator12, Me.tslbl_alta_clientes, Me.ToolStripSeparator14, Me.tslbl_baja_clientes, Me.tslbl_modificar_clientes})
-        Me.ts_clientes.Location = New System.Drawing.Point(3, 3)
-        Me.ts_clientes.Name = "ts_clientes"
-        Me.ts_clientes.Size = New System.Drawing.Size(1890, 25)
-        Me.ts_clientes.TabIndex = 70
-        Me.ts_clientes.Text = "ToolStrip4"
-        '
-        'tslbl_nuevo_clientes
-        '
-        Me.tslbl_nuevo_clientes.Name = "tslbl_nuevo_clientes"
-        Me.tslbl_nuevo_clientes.Size = New System.Drawing.Size(42, 22)
-        Me.tslbl_nuevo_clientes.Text = "Nuevo"
-        '
-        'ToolStripSeparator12
-        '
-        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
-        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
-        '
-        'tslbl_alta_clientes
-        '
-        Me.tslbl_alta_clientes.Name = "tslbl_alta_clientes"
-        Me.tslbl_alta_clientes.Size = New System.Drawing.Size(28, 22)
-        Me.tslbl_alta_clientes.Text = "Alta"
-        '
-        'ToolStripSeparator14
-        '
-        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
-        Me.ToolStripSeparator14.Size = New System.Drawing.Size(6, 25)
-        '
-        'tslbl_baja_clientes
-        '
-        Me.tslbl_baja_clientes.Name = "tslbl_baja_clientes"
-        Me.tslbl_baja_clientes.Size = New System.Drawing.Size(29, 22)
-        Me.tslbl_baja_clientes.Text = "Baja"
-        '
-        'tslbl_modificar_clientes
-        '
-        Me.tslbl_modificar_clientes.Name = "tslbl_modificar_clientes"
-        Me.tslbl_modificar_clientes.Size = New System.Drawing.Size(58, 22)
-        Me.tslbl_modificar_clientes.Text = "Modificar"
-        '
         'TabControl
         '
-        Me.TabControl.Controls.Add(Me.tb_clientes)
-        Me.TabControl.Controls.Add(Me.tb_proveedores)
         Me.TabControl.Controls.Add(Me.tab_empleados)
         Me.TabControl.Controls.Add(Me.tab_roles)
         Me.TabControl.Controls.Add(Me.tab_categorias)
         Me.TabControl.Controls.Add(Me.tab_productos)
+        Me.TabControl.Controls.Add(Me.tb_clientes)
+        Me.TabControl.Controls.Add(Me.tb_proveedores)
         Me.TabControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl.Location = New System.Drawing.Point(0, 30)
@@ -1200,8 +634,7 @@ Partial Class gestion_datos
         '
         'SplitContainer3.Panel1
         '
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Panel4)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.tit_categoria)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer3.Panel1.Controls.Add(Me.lbl_baja_categoria)
         Me.SplitContainer3.Panel1.Controls.Add(Me.lbl_mod_categoria)
         Me.SplitContainer3.Panel1.Controls.Add(Me.tb_categorias_descripccion)
@@ -1214,44 +647,27 @@ Partial Class gestion_datos
         Me.SplitContainer3.Panel1.Controls.Add(Me.lbl_categoria_id)
         Me.SplitContainer3.Panel1.Controls.Add(Me.btn_baja_categoria)
         Me.SplitContainer3.Panel1.Controls.Add(Me.tb_categorias_id)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.PictureBox9)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.PictureBox5)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.PictureBox2)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.PictureBox1)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.pan_datos_cat)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.pan_logo_roles)
         '
         'SplitContainer3.Panel2
         '
-        Me.SplitContainer3.Panel2.Controls.Add(Me.dg_categorias)
+        Me.SplitContainer3.Panel2.Controls.Add(Me.Panel3)
         Me.SplitContainer3.Size = New System.Drawing.Size(1890, 926)
-        Me.SplitContainer3.SplitterDistance = 1386
+        Me.SplitContainer3.SplitterDistance = 1162
         Me.SplitContainer3.TabIndex = 114
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel4.Location = New System.Drawing.Point(1353, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(33, 926)
-        Me.Panel4.TabIndex = 107
-        '
-        'tit_categoria
-        '
-        Me.tit_categoria.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tit_categoria.AutoSize = True
-        Me.tit_categoria.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tit_categoria.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.tit_categoria.Location = New System.Drawing.Point(688, 50)
-        Me.tit_categoria.Name = "tit_categoria"
-        Me.tit_categoria.Size = New System.Drawing.Size(203, 31)
-        Me.tit_categoria.TabIndex = 107
-        Me.tit_categoria.Text = "Datos de categoría:"
         '
         'lbl_baja_categoria
         '
         Me.lbl_baja_categoria.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_baja_categoria.AutoSize = True
-        Me.lbl_baja_categoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(16, Byte), Integer), CType(CType(16, Byte), Integer))
+        Me.lbl_baja_categoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.lbl_baja_categoria.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_baja_categoria.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lbl_baja_categoria.Location = New System.Drawing.Point(741, 388)
+        Me.lbl_baja_categoria.Location = New System.Drawing.Point(530, 386)
         Me.lbl_baja_categoria.Name = "lbl_baja_categoria"
         Me.lbl_baja_categoria.Size = New System.Drawing.Size(70, 31)
         Me.lbl_baja_categoria.TabIndex = 113
@@ -1261,10 +677,10 @@ Partial Class gestion_datos
         '
         Me.lbl_mod_categoria.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_mod_categoria.AutoSize = True
-        Me.lbl_mod_categoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_mod_categoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.lbl_mod_categoria.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_mod_categoria.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lbl_mod_categoria.Location = New System.Drawing.Point(944, 388)
+        Me.lbl_mod_categoria.Location = New System.Drawing.Point(733, 386)
         Me.lbl_mod_categoria.Name = "lbl_mod_categoria"
         Me.lbl_mod_categoria.Size = New System.Drawing.Size(138, 31)
         Me.lbl_mod_categoria.TabIndex = 112
@@ -1273,31 +689,34 @@ Partial Class gestion_datos
         'tb_categorias_descripccion
         '
         Me.tb_categorias_descripccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_categorias_descripccion.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_categorias_descripccion.Location = New System.Drawing.Point(676, 257)
+        Me.tb_categorias_descripccion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_categorias_descripccion.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_categorias_descripccion.Location = New System.Drawing.Point(521, 266)
         Me.tb_categorias_descripccion.Multiline = True
         Me.tb_categorias_descripccion.Name = "tb_categorias_descripccion"
-        Me.tb_categorias_descripccion.Size = New System.Drawing.Size(206, 83)
+        Me.tb_categorias_descripccion.Size = New System.Drawing.Size(181, 73)
         Me.tb_categorias_descripccion.TabIndex = 23
         '
         'tb_categorias_nombre
         '
         Me.tb_categorias_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_categorias_nombre.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_categorias_nombre.Location = New System.Drawing.Point(676, 182)
+        Me.tb_categorias_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_categorias_nombre.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_categorias_nombre.Location = New System.Drawing.Point(521, 203)
         Me.tb_categorias_nombre.Name = "tb_categorias_nombre"
-        Me.tb_categorias_nombre.Size = New System.Drawing.Size(206, 32)
+        Me.tb_categorias_nombre.Size = New System.Drawing.Size(181, 20)
         Me.tb_categorias_nombre.TabIndex = 22
         '
         'lbl_categoria_descripcion
         '
         Me.lbl_categoria_descripcion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_categoria_descripcion.AutoSize = True
-        Me.lbl_categoria_descripcion.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_categoria_descripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.lbl_categoria_descripcion.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_categoria_descripcion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.lbl_categoria_descripcion.Location = New System.Drawing.Point(520, 261)
+        Me.lbl_categoria_descripcion.Location = New System.Drawing.Point(288, 255)
         Me.lbl_categoria_descripcion.Name = "lbl_categoria_descripcion"
-        Me.lbl_categoria_descripcion.Size = New System.Drawing.Size(96, 23)
+        Me.lbl_categoria_descripcion.Size = New System.Drawing.Size(148, 33)
         Me.lbl_categoria_descripcion.TabIndex = 21
         Me.lbl_categoria_descripcion.Text = "Descripción:"
         '
@@ -1305,10 +724,10 @@ Partial Class gestion_datos
         '
         Me.lbl_alta_categoria.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_alta_categoria.AutoSize = True
-        Me.lbl_alta_categoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.lbl_alta_categoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.lbl_alta_categoria.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_alta_categoria.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lbl_alta_categoria.Location = New System.Drawing.Point(499, 383)
+        Me.lbl_alta_categoria.Location = New System.Drawing.Point(288, 386)
         Me.lbl_alta_categoria.Name = "lbl_alta_categoria"
         Me.lbl_alta_categoria.Size = New System.Drawing.Size(70, 31)
         Me.lbl_alta_categoria.TabIndex = 111
@@ -1318,11 +737,12 @@ Partial Class gestion_datos
         '
         Me.lbl_categoria_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_categoria_nombre.AutoSize = True
-        Me.lbl_categoria_nombre.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_categoria_nombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.lbl_categoria_nombre.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_categoria_nombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.lbl_categoria_nombre.Location = New System.Drawing.Point(440, 186)
+        Me.lbl_categoria_nombre.Location = New System.Drawing.Point(160, 192)
         Me.lbl_categoria_nombre.Name = "lbl_categoria_nombre"
-        Me.lbl_categoria_nombre.Size = New System.Drawing.Size(176, 23)
+        Me.lbl_categoria_nombre.Size = New System.Drawing.Size(276, 33)
         Me.lbl_categoria_nombre.TabIndex = 20
         Me.lbl_categoria_nombre.Text = "Nombre de la categoría:"
         '
@@ -1330,34 +750,26 @@ Partial Class gestion_datos
         '
         Me.lbl_categoria_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_categoria_id.AutoSize = True
-        Me.lbl_categoria_id.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_categoria_id.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.lbl_categoria_id.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_categoria_id.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.lbl_categoria_id.Location = New System.Drawing.Point(588, 120)
+        Me.lbl_categoria_id.Location = New System.Drawing.Point(390, 131)
         Me.lbl_categoria_id.Name = "lbl_categoria_id"
-        Me.lbl_categoria_id.Size = New System.Drawing.Size(28, 23)
+        Me.lbl_categoria_id.Size = New System.Drawing.Size(46, 33)
         Me.lbl_categoria_id.TabIndex = 19
         Me.lbl_categoria_id.Text = "ID:"
         '
         'tb_categorias_id
         '
         Me.tb_categorias_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_categorias_id.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.tb_categorias_id.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_categorias_id.Enabled = False
-        Me.tb_categorias_id.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_categorias_id.Location = New System.Drawing.Point(676, 116)
+        Me.tb_categorias_id.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_categorias_id.Location = New System.Drawing.Point(521, 142)
         Me.tb_categorias_id.Name = "tb_categorias_id"
-        Me.tb_categorias_id.Size = New System.Drawing.Size(93, 32)
+        Me.tb_categorias_id.Size = New System.Drawing.Size(181, 20)
         Me.tb_categorias_id.TabIndex = 18
-        '
-        'dg_categorias
-        '
-        Me.dg_categorias.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.dg_categorias.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dg_categorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_categorias.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dg_categorias.Location = New System.Drawing.Point(0, 0)
-        Me.dg_categorias.Name = "dg_categorias"
-        Me.dg_categorias.Size = New System.Drawing.Size(500, 926)
-        Me.dg_categorias.TabIndex = 25
         '
         'ToolStrip2
         '
@@ -1430,71 +842,34 @@ Partial Class gestion_datos
         'SplitContainer4.Panel1
         '
         Me.SplitContainer4.Panel1.Controls.Add(Me.dg_productos)
+        Me.SplitContainer4.Panel1.Controls.Add(Me.PictureBox6)
         '
         'SplitContainer4.Panel2
         '
-        Me.SplitContainer4.Panel2.Controls.Add(Me.Label14)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.lbl_baja_prod)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.Label5)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.btn_baja_prod)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.lbl_alta_prod)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.btn_alta_prod)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.PictureBox17)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.lbl_producto_stock)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.lbl_productos_categoria_id)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.lbl_productos_precio)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.lbl_productos_nombre)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.lbl_productos_id)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.tb_productos_precio)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.tb_productos_categoriaID)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.tb_productos_stock)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.TextBox6)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.TextBox7)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.tb_productos_nombre)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.Label2)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.Label3)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.tb_productos_id)
+        Me.SplitContainer4.Panel2.Controls.Add(Me.Panel2)
         Me.SplitContainer4.Panel2.Controls.Add(Me.Panel1)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.PictureBox10)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.lbl_productos_marca)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.lbl_productos_descripccion)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.tb_productos_descripccion)
-        Me.SplitContainer4.Panel2.Controls.Add(Me.tb_productos_marca)
         Me.SplitContainer4.Size = New System.Drawing.Size(1890, 926)
         Me.SplitContainer4.SplitterDistance = 445
         Me.SplitContainer4.TabIndex = 63
         '
         'dg_productos
         '
-        Me.dg_productos.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.dg_productos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.dg_productos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_productos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dg_productos.Location = New System.Drawing.Point(0, 0)
+        Me.dg_productos.Location = New System.Drawing.Point(46, 80)
         Me.dg_productos.Name = "dg_productos"
-        Me.dg_productos.Size = New System.Drawing.Size(1890, 445)
+        Me.dg_productos.Size = New System.Drawing.Size(1080, 313)
         Me.dg_productos.TabIndex = 44
-        '
-        'Label14
-        '
-        Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(556, 51)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(203, 31)
-        Me.Label14.TabIndex = 130
-        Me.Label14.Text = "Datos de categoría:"
         '
         'lbl_baja_prod
         '
         Me.lbl_baja_prod.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lbl_baja_prod.AutoSize = True
-        Me.lbl_baja_prod.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(16, Byte), Integer), CType(CType(16, Byte), Integer))
+        Me.lbl_baja_prod.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.lbl_baja_prod.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_baja_prod.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lbl_baja_prod.Location = New System.Drawing.Point(987, 308)
+        Me.lbl_baja_prod.Location = New System.Drawing.Point(1138, 327)
         Me.lbl_baja_prod.Name = "lbl_baja_prod"
         Me.lbl_baja_prod.Size = New System.Drawing.Size(70, 31)
         Me.lbl_baja_prod.TabIndex = 129
@@ -1504,10 +879,10 @@ Partial Class gestion_datos
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(956, 198)
+        Me.Label5.Location = New System.Drawing.Point(893, 327)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(138, 31)
         Me.Label5.TabIndex = 128
@@ -1517,10 +892,10 @@ Partial Class gestion_datos
         '
         Me.lbl_alta_prod.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lbl_alta_prod.AutoSize = True
-        Me.lbl_alta_prod.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.lbl_alta_prod.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.lbl_alta_prod.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_alta_prod.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lbl_alta_prod.Location = New System.Drawing.Point(987, 89)
+        Me.lbl_alta_prod.Location = New System.Drawing.Point(707, 327)
         Me.lbl_alta_prod.Name = "lbl_alta_prod"
         Me.lbl_alta_prod.Size = New System.Drawing.Size(70, 31)
         Me.lbl_alta_prod.TabIndex = 127
@@ -1529,142 +904,108 @@ Partial Class gestion_datos
         'lbl_producto_stock
         '
         Me.lbl_producto_stock.AutoSize = True
-        Me.lbl_producto_stock.Location = New System.Drawing.Point(146, 237)
+        Me.lbl_producto_stock.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_producto_stock.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_producto_stock.Location = New System.Drawing.Point(170, 338)
         Me.lbl_producto_stock.Name = "lbl_producto_stock"
-        Me.lbl_producto_stock.Size = New System.Drawing.Size(47, 19)
+        Me.lbl_producto_stock.Size = New System.Drawing.Size(80, 33)
         Me.lbl_producto_stock.TabIndex = 113
         Me.lbl_producto_stock.Text = "Stock:"
         '
         'lbl_productos_categoria_id
         '
         Me.lbl_productos_categoria_id.AutoSize = True
-        Me.lbl_productos_categoria_id.Location = New System.Drawing.Point(129, 206)
+        Me.lbl_productos_categoria_id.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_productos_categoria_id.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_productos_categoria_id.Location = New System.Drawing.Point(94, 283)
         Me.lbl_productos_categoria_id.Name = "lbl_productos_categoria_id"
-        Me.lbl_productos_categoria_id.Size = New System.Drawing.Size(94, 19)
+        Me.lbl_productos_categoria_id.Size = New System.Drawing.Size(156, 33)
         Me.lbl_productos_categoria_id.TabIndex = 112
         Me.lbl_productos_categoria_id.Text = "Categoria ID:"
         '
         'lbl_productos_precio
         '
         Me.lbl_productos_precio.AutoSize = True
-        Me.lbl_productos_precio.Location = New System.Drawing.Point(146, 175)
+        Me.lbl_productos_precio.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_productos_precio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_productos_precio.Location = New System.Drawing.Point(161, 225)
         Me.lbl_productos_precio.Name = "lbl_productos_precio"
-        Me.lbl_productos_precio.Size = New System.Drawing.Size(53, 19)
+        Me.lbl_productos_precio.Size = New System.Drawing.Size(89, 33)
         Me.lbl_productos_precio.TabIndex = 111
         Me.lbl_productos_precio.Text = "Precio:"
         '
         'lbl_productos_nombre
         '
         Me.lbl_productos_nombre.AutoSize = True
-        Me.lbl_productos_nombre.Location = New System.Drawing.Point(146, 146)
+        Me.lbl_productos_nombre.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_productos_nombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_productos_nombre.Location = New System.Drawing.Point(139, 160)
         Me.lbl_productos_nombre.Name = "lbl_productos_nombre"
-        Me.lbl_productos_nombre.Size = New System.Drawing.Size(64, 19)
+        Me.lbl_productos_nombre.Size = New System.Drawing.Size(111, 33)
         Me.lbl_productos_nombre.TabIndex = 110
         Me.lbl_productos_nombre.Text = "Nombre:"
         '
         'lbl_productos_id
         '
         Me.lbl_productos_id.AutoSize = True
-        Me.lbl_productos_id.Location = New System.Drawing.Point(146, 112)
+        Me.lbl_productos_id.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_productos_id.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_productos_id.Location = New System.Drawing.Point(204, 106)
         Me.lbl_productos_id.Name = "lbl_productos_id"
-        Me.lbl_productos_id.Size = New System.Drawing.Size(27, 19)
+        Me.lbl_productos_id.Size = New System.Drawing.Size(46, 33)
         Me.lbl_productos_id.TabIndex = 109
         Me.lbl_productos_id.Text = "ID:"
         '
         'tb_productos_precio
         '
         Me.tb_productos_precio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_precio.Location = New System.Drawing.Point(476, 169)
+        Me.tb_productos_precio.Location = New System.Drawing.Point(364, 223)
         Me.tb_productos_precio.Name = "tb_productos_precio"
-        Me.tb_productos_precio.Size = New System.Drawing.Size(117, 27)
+        Me.tb_productos_precio.Size = New System.Drawing.Size(175, 27)
         Me.tb_productos_precio.TabIndex = 108
         '
         'tb_productos_categoriaID
         '
         Me.tb_productos_categoriaID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_categoriaID.Location = New System.Drawing.Point(476, 203)
+        Me.tb_productos_categoriaID.Location = New System.Drawing.Point(364, 283)
         Me.tb_productos_categoriaID.Name = "tb_productos_categoriaID"
-        Me.tb_productos_categoriaID.Size = New System.Drawing.Size(117, 27)
+        Me.tb_productos_categoriaID.Size = New System.Drawing.Size(175, 27)
         Me.tb_productos_categoriaID.TabIndex = 107
         '
         'tb_productos_stock
         '
         Me.tb_productos_stock.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_stock.Location = New System.Drawing.Point(476, 234)
+        Me.tb_productos_stock.Location = New System.Drawing.Point(364, 344)
         Me.tb_productos_stock.Name = "tb_productos_stock"
         Me.tb_productos_stock.Size = New System.Drawing.Size(117, 27)
         Me.tb_productos_stock.TabIndex = 106
         '
-        'TextBox6
-        '
-        Me.TextBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox6.Location = New System.Drawing.Point(774, 111)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(117, 27)
-        Me.TextBox6.TabIndex = 105
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox7.Location = New System.Drawing.Point(774, 146)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(117, 72)
-        Me.TextBox7.TabIndex = 104
-        '
         'tb_productos_nombre
         '
         Me.tb_productos_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_nombre.Location = New System.Drawing.Point(476, 138)
+        Me.tb_productos_nombre.Location = New System.Drawing.Point(364, 166)
         Me.tb_productos_nombre.Name = "tb_productos_nombre"
-        Me.tb_productos_nombre.Size = New System.Drawing.Size(117, 27)
+        Me.tb_productos_nombre.Size = New System.Drawing.Size(175, 27)
         Me.tb_productos_nombre.TabIndex = 103
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(733, 114)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 19)
-        Me.Label2.TabIndex = 102
-        Me.Label2.Text = "Marca:"
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(708, 149)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 19)
-        Me.Label3.TabIndex = 101
-        Me.Label3.Text = "Descripción:"
         '
         'tb_productos_id
         '
         Me.tb_productos_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_productos_id.Enabled = False
-        Me.tb_productos_id.Location = New System.Drawing.Point(476, 109)
+        Me.tb_productos_id.Location = New System.Drawing.Point(364, 112)
         Me.tb_productos_id.Name = "tb_productos_id"
-        Me.tb_productos_id.Size = New System.Drawing.Size(117, 27)
+        Me.tb_productos_id.Size = New System.Drawing.Size(175, 27)
         Me.tb_productos_id.TabIndex = 100
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1890, 33)
-        Me.Panel1.TabIndex = 99
         '
         'lbl_productos_marca
         '
         Me.lbl_productos_marca.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_productos_marca.AutoSize = True
-        Me.lbl_productos_marca.Location = New System.Drawing.Point(1447, 139)
+        Me.lbl_productos_marca.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_productos_marca.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_productos_marca.Location = New System.Drawing.Point(724, 104)
         Me.lbl_productos_marca.Name = "lbl_productos_marca"
-        Me.lbl_productos_marca.Size = New System.Drawing.Size(54, 19)
+        Me.lbl_productos_marca.Size = New System.Drawing.Size(91, 33)
         Me.lbl_productos_marca.TabIndex = 29
         Me.lbl_productos_marca.Text = "Marca:"
         '
@@ -1672,27 +1013,31 @@ Partial Class gestion_datos
         '
         Me.lbl_productos_descripccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_productos_descripccion.AutoSize = True
-        Me.lbl_productos_descripccion.Location = New System.Drawing.Point(1422, 174)
+        Me.lbl_productos_descripccion.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_productos_descripccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_productos_descripccion.Location = New System.Drawing.Point(673, 159)
         Me.lbl_productos_descripccion.Name = "lbl_productos_descripccion"
-        Me.lbl_productos_descripccion.Size = New System.Drawing.Size(89, 19)
+        Me.lbl_productos_descripccion.Size = New System.Drawing.Size(148, 33)
         Me.lbl_productos_descripccion.TabIndex = 28
         Me.lbl_productos_descripccion.Text = "Descripción:"
         '
         'tb_productos_descripccion
         '
         Me.tb_productos_descripccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_descripccion.Location = New System.Drawing.Point(1488, 171)
+        Me.tb_productos_descripccion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_productos_descripccion.Location = New System.Drawing.Point(888, 166)
         Me.tb_productos_descripccion.Multiline = True
         Me.tb_productos_descripccion.Name = "tb_productos_descripccion"
-        Me.tb_productos_descripccion.Size = New System.Drawing.Size(117, 72)
+        Me.tb_productos_descripccion.Size = New System.Drawing.Size(174, 72)
         Me.tb_productos_descripccion.TabIndex = 33
         '
         'tb_productos_marca
         '
         Me.tb_productos_marca.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_marca.Location = New System.Drawing.Point(1488, 136)
+        Me.tb_productos_marca.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_productos_marca.Location = New System.Drawing.Point(888, 112)
         Me.tb_productos_marca.Name = "tb_productos_marca"
-        Me.tb_productos_marca.Size = New System.Drawing.Size(117, 27)
+        Me.tb_productos_marca.Size = New System.Drawing.Size(174, 20)
         Me.tb_productos_marca.TabIndex = 36
         '
         'ToolStrip3
@@ -1744,36 +1089,28 @@ Partial Class gestion_datos
         Me.ToolStripLabel12.Size = New System.Drawing.Size(63, 22)
         Me.ToolStripLabel12.Text = "Modificar"
         '
-        'PictureBox3
+        'Label1
         '
-        Me.PictureBox3.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
-        Me.PictureBox3.Location = New System.Drawing.Point(868, 368)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(249, 144)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 65
-        Me.PictureBox3.TabStop = False
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Corbel", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(433, 59)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(359, 42)
+        Me.Label1.TabIndex = 119
+        Me.Label1.Text = "DATOS DE CATEGORÍA"
         '
-        'PictureBox4
+        'panel
         '
-        Me.PictureBox4.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
-        Me.PictureBox4.Location = New System.Drawing.Point(829, 352)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(249, 144)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 84
-        Me.PictureBox4.TabStop = False
-        '
-        'Panel2
-        '
-        Me.Panel2.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.panel_dg
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel2.Controls.Add(Me.tit_datos_emp)
-        Me.Panel2.Controls.Add(Me.dg_emple)
-        Me.Panel2.Location = New System.Drawing.Point(21, 30)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1846, 385)
-        Me.Panel2.TabIndex = 0
+        Me.panel.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.panel_dg
+        Me.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.panel.Controls.Add(Me.tit_datos_emp)
+        Me.panel.Controls.Add(Me.dg_emple)
+        Me.panel.Location = New System.Drawing.Point(21, 30)
+        Me.panel.Name = "panel"
+        Me.panel.Size = New System.Drawing.Size(1846, 385)
+        Me.panel.TabIndex = 0
         '
         'tit_datos_emp
         '
@@ -1789,21 +1126,21 @@ Partial Class gestion_datos
         '
         'dg_emple
         '
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dg_emple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_emple.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dg_emple.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.dg_emple.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_emple.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dg_emple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_emple.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1})
         Me.dg_emple.GridColor = System.Drawing.Color.WhiteSmoke
@@ -1821,7 +1158,6 @@ Partial Class gestion_datos
         '
         Me.pan_datos_emple.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.pan_datos
         Me.pan_datos_emple.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pan_datos_emple.Controls.Add(Me.pb5)
         Me.pan_datos_emple.Controls.Add(Me.tb_emple_nom)
         Me.pan_datos_emple.Controls.Add(Me.lbl_usuario)
         Me.pan_datos_emple.Controls.Add(Me.lbl_cont_emple)
@@ -1849,6 +1185,7 @@ Partial Class gestion_datos
         Me.pan_datos_emple.Controls.Add(Me.pb2)
         Me.pan_datos_emple.Controls.Add(Me.pb3)
         Me.pan_datos_emple.Controls.Add(Me.pb6)
+        Me.pan_datos_emple.Controls.Add(Me.pb5)
         Me.pan_datos_emple.Controls.Add(Me.lbl_alta_empleados)
         Me.pan_datos_emple.Controls.Add(Me.btn_emp_alta)
         Me.pan_datos_emple.Controls.Add(Me.lbl_baja_empleados)
@@ -1860,17 +1197,6 @@ Partial Class gestion_datos
         Me.pan_datos_emple.Name = "pan_datos_emple"
         Me.pan_datos_emple.Size = New System.Drawing.Size(1323, 458)
         Me.pan_datos_emple.TabIndex = 125
-        '
-        'pb5
-        '
-        Me.pb5.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.pb5.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
-        Me.pb5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pb5.Location = New System.Drawing.Point(322, 319)
-        Me.pb5.Name = "pb5"
-        Me.pb5.Size = New System.Drawing.Size(224, 59)
-        Me.pb5.TabIndex = 126
-        Me.pb5.TabStop = False
         '
         'tb_emple_nom
         '
@@ -2189,6 +1515,17 @@ Partial Class gestion_datos
         Me.pb6.TabIndex = 118
         Me.pb6.TabStop = False
         '
+        'pb5
+        '
+        Me.pb5.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.pb5.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.pb5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pb5.Location = New System.Drawing.Point(322, 319)
+        Me.pb5.Name = "pb5"
+        Me.pb5.Size = New System.Drawing.Size(224, 59)
+        Me.pb5.TabIndex = 126
+        Me.pb5.TabStop = False
+        '
         'lbl_alta_empleados
         '
         Me.lbl_alta_empleados.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -2282,8 +1619,8 @@ Partial Class gestion_datos
         Me.pan_datos_roles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pan_datos_roles.Controls.Add(Me.tit_roles)
         Me.pan_datos_roles.Controls.Add(Me.lbl_baja_roles)
-        Me.pan_datos_roles.Controls.Add(Me.tb_roles_id)
         Me.pan_datos_roles.Controls.Add(Me.tb_roles_rol)
+        Me.pan_datos_roles.Controls.Add(Me.tb_roles_id)
         Me.pan_datos_roles.Controls.Add(Me.lbl_alta_roles)
         Me.pan_datos_roles.Controls.Add(Me.lbl_mod_roles)
         Me.pan_datos_roles.Controls.Add(Me.btn_mod_roles)
@@ -2298,6 +1635,79 @@ Partial Class gestion_datos
         Me.pan_datos_roles.Size = New System.Drawing.Size(1101, 449)
         Me.pan_datos_roles.TabIndex = 104
         '
+        'tit_roles
+        '
+        Me.tit_roles.AutoSize = True
+        Me.tit_roles.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.tit_roles.Font = New System.Drawing.Font("Corbel", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tit_roles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.tit_roles.Location = New System.Drawing.Point(466, 29)
+        Me.tit_roles.Name = "tit_roles"
+        Me.tit_roles.Size = New System.Drawing.Size(245, 42)
+        Me.tit_roles.TabIndex = 118
+        Me.tit_roles.Text = "DATOS DE ROL"
+        '
+        'lbl_baja_roles
+        '
+        Me.lbl_baja_roles.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.lbl_baja_roles.AutoSize = True
+        Me.lbl_baja_roles.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.lbl_baja_roles.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_baja_roles.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lbl_baja_roles.Location = New System.Drawing.Point(480, 296)
+        Me.lbl_baja_roles.Name = "lbl_baja_roles"
+        Me.lbl_baja_roles.Size = New System.Drawing.Size(70, 31)
+        Me.lbl_baja_roles.TabIndex = 102
+        Me.lbl_baja_roles.Text = "BAJA"
+        '
+        'tb_roles_rol
+        '
+        Me.tb_roles_rol.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.tb_roles_rol.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_roles_rol.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_roles_rol.Location = New System.Drawing.Point(511, 175)
+        Me.tb_roles_rol.Name = "tb_roles_rol"
+        Me.tb_roles_rol.Size = New System.Drawing.Size(173, 26)
+        Me.tb_roles_rol.TabIndex = 14
+        '
+        'tb_roles_id
+        '
+        Me.tb_roles_id.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.tb_roles_id.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.tb_roles_id.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_roles_id.Enabled = False
+        Me.tb_roles_id.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_roles_id.Location = New System.Drawing.Point(511, 97)
+        Me.tb_roles_id.Name = "tb_roles_id"
+        Me.tb_roles_id.Size = New System.Drawing.Size(173, 26)
+        Me.tb_roles_id.TabIndex = 11
+        '
+        'lbl_alta_roles
+        '
+        Me.lbl_alta_roles.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.lbl_alta_roles.AutoSize = True
+        Me.lbl_alta_roles.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.lbl_alta_roles.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_alta_roles.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lbl_alta_roles.Location = New System.Drawing.Point(239, 296)
+        Me.lbl_alta_roles.Name = "lbl_alta_roles"
+        Me.lbl_alta_roles.Size = New System.Drawing.Size(70, 31)
+        Me.lbl_alta_roles.TabIndex = 100
+        Me.lbl_alta_roles.Text = "ALTA"
+        '
+        'lbl_mod_roles
+        '
+        Me.lbl_mod_roles.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.lbl_mod_roles.AutoSize = True
+        Me.lbl_mod_roles.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.lbl_mod_roles.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_mod_roles.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lbl_mod_roles.Location = New System.Drawing.Point(683, 296)
+        Me.lbl_mod_roles.Name = "lbl_mod_roles"
+        Me.lbl_mod_roles.Size = New System.Drawing.Size(138, 31)
+        Me.lbl_mod_roles.TabIndex = 101
+        Me.lbl_mod_roles.Text = "MODIFICAR"
+        '
         'btn_mod_roles
         '
         Me.btn_mod_roles.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -2310,6 +1720,18 @@ Partial Class gestion_datos
         Me.btn_mod_roles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btn_mod_roles.TabIndex = 99
         Me.btn_mod_roles.TabStop = False
+        '
+        'lbl_roles_id
+        '
+        Me.lbl_roles_id.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.lbl_roles_id.AutoSize = True
+        Me.lbl_roles_id.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_roles_id.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_roles_id.Location = New System.Drawing.Point(344, 90)
+        Me.lbl_roles_id.Name = "lbl_roles_id"
+        Me.lbl_roles_id.Size = New System.Drawing.Size(46, 33)
+        Me.lbl_roles_id.TabIndex = 12
+        Me.lbl_roles_id.Text = "ID:"
         '
         'btn_alta_rol
         '
@@ -2325,6 +1747,18 @@ Partial Class gestion_datos
         Me.btn_alta_rol.TabIndex = 97
         Me.btn_alta_rol.TabStop = False
         '
+        'lbl_roles_rol
+        '
+        Me.lbl_roles_rol.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.lbl_roles_rol.AutoSize = True
+        Me.lbl_roles_rol.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_roles_rol.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_roles_rol.Location = New System.Drawing.Point(335, 171)
+        Me.lbl_roles_rol.Name = "lbl_roles_rol"
+        Me.lbl_roles_rol.Size = New System.Drawing.Size(56, 33)
+        Me.lbl_roles_rol.TabIndex = 13
+        Me.lbl_roles_rol.Text = "Rol:"
+        '
         'btn_baja_roles
         '
         Me.btn_baja_roles.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -2337,6 +1771,28 @@ Partial Class gestion_datos
         Me.btn_baja_roles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btn_baja_roles.TabIndex = 98
         Me.btn_baja_roles.TabStop = False
+        '
+        'pb_id_rol
+        '
+        Me.pb_id_rol.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.pb_id_rol.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.tb_disabled
+        Me.pb_id_rol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pb_id_rol.Location = New System.Drawing.Point(486, 83)
+        Me.pb_id_rol.Name = "pb_id_rol"
+        Me.pb_id_rol.Size = New System.Drawing.Size(224, 59)
+        Me.pb_id_rol.TabIndex = 123
+        Me.pb_id_rol.TabStop = False
+        '
+        'pb_rol
+        '
+        Me.pb_rol.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.pb_rol.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.pb_rol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pb_rol.Location = New System.Drawing.Point(486, 160)
+        Me.pb_rol.Name = "pb_rol"
+        Me.pb_rol.Size = New System.Drawing.Size(224, 59)
+        Me.pb_rol.TabIndex = 122
+        Me.pb_rol.TabStop = False
         '
         'pn_logo
         '
@@ -2372,8 +1828,9 @@ Partial Class gestion_datos
         'btn_mod_categoria
         '
         Me.btn_mod_categoria.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_mod_categoria.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.Recurso_2_2x
-        Me.btn_mod_categoria.Location = New System.Drawing.Point(926, 371)
+        Me.btn_mod_categoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.btn_mod_categoria.Image = CType(resources.GetObject("btn_mod_categoria.Image"), System.Drawing.Image)
+        Me.btn_mod_categoria.Location = New System.Drawing.Point(715, 364)
         Me.btn_mod_categoria.Name = "btn_mod_categoria"
         Me.btn_mod_categoria.Size = New System.Drawing.Size(175, 84)
         Me.btn_mod_categoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -2383,8 +1840,9 @@ Partial Class gestion_datos
         'btn_alta_categoria
         '
         Me.btn_alta_categoria.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_alta_categoria.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.alta
-        Me.btn_alta_categoria.Location = New System.Drawing.Point(449, 366)
+        Me.btn_alta_categoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.btn_alta_categoria.Image = CType(resources.GetObject("btn_alta_categoria.Image"), System.Drawing.Image)
+        Me.btn_alta_categoria.Location = New System.Drawing.Point(238, 364)
         Me.btn_alta_categoria.Name = "btn_alta_categoria"
         Me.btn_alta_categoria.Size = New System.Drawing.Size(175, 84)
         Me.btn_alta_categoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -2394,30 +1852,93 @@ Partial Class gestion_datos
         'btn_baja_categoria
         '
         Me.btn_baja_categoria.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_baja_categoria.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.baja
-        Me.btn_baja_categoria.Location = New System.Drawing.Point(689, 371)
+        Me.btn_baja_categoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.btn_baja_categoria.Image = CType(resources.GetObject("btn_baja_categoria.Image"), System.Drawing.Image)
+        Me.btn_baja_categoria.Location = New System.Drawing.Point(478, 364)
         Me.btn_baja_categoria.Name = "btn_baja_categoria"
         Me.btn_baja_categoria.Size = New System.Drawing.Size(175, 84)
         Me.btn_baja_categoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btn_baja_categoria.TabIndex = 109
         Me.btn_baja_categoria.TabStop = False
         '
-        'PictureBox9
+        'PictureBox5
         '
-        Me.PictureBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox9.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
-        Me.PictureBox9.Location = New System.Drawing.Point(592, 455)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(390, 344)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 62
-        Me.PictureBox9.TabStop = False
+        Me.PictureBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox5.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.tb_desc
+        Me.PictureBox5.Location = New System.Drawing.Point(503, 253)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(224, 105)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 126
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox2.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(503, 188)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox2.TabIndex = 125
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox1.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.tb_disabled
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(503, 123)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox1.TabIndex = 124
+        Me.PictureBox1.TabStop = False
+        '
+        'pan_datos_cat
+        '
+        Me.pan_datos_cat.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.pan_datos_roles
+        Me.pan_datos_cat.Location = New System.Drawing.Point(34, 22)
+        Me.pan_datos_cat.Name = "pan_datos_cat"
+        Me.pan_datos_cat.Size = New System.Drawing.Size(1101, 449)
+        Me.pan_datos_cat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pan_datos_cat.TabIndex = 115
+        Me.pan_datos_cat.TabStop = False
+        '
+        'pan_logo_roles
+        '
+        Me.pan_logo_roles.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.Logo_2
+        Me.pan_logo_roles.Location = New System.Drawing.Point(34, 489)
+        Me.pan_logo_roles.Name = "pan_logo_roles"
+        Me.pan_logo_roles.Size = New System.Drawing.Size(1101, 434)
+        Me.pan_logo_roles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pan_logo_roles.TabIndex = 114
+        Me.pan_logo_roles.TabStop = False
+        '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.panel_dg_rol
+        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Controls.Add(Me.dg_categorias)
+        Me.Panel3.Location = New System.Drawing.Point(8, 22)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(702, 871)
+        Me.Panel3.TabIndex = 0
+        '
+        'dg_categorias
+        '
+        Me.dg_categorias.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.dg_categorias.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dg_categorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_categorias.Location = New System.Drawing.Point(53, 125)
+        Me.dg_categorias.Name = "dg_categorias"
+        Me.dg_categorias.Size = New System.Drawing.Size(605, 725)
+        Me.dg_categorias.TabIndex = 25
         '
         'btn_baja_prod
         '
         Me.btn_baja_prod.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btn_baja_prod.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.baja
-        Me.btn_baja_prod.Location = New System.Drawing.Point(935, 291)
+        Me.btn_baja_prod.Image = CType(resources.GetObject("btn_baja_prod.Image"), System.Drawing.Image)
+        Me.btn_baja_prod.Location = New System.Drawing.Point(1086, 305)
         Me.btn_baja_prod.Name = "btn_baja_prod"
         Me.btn_baja_prod.Size = New System.Drawing.Size(175, 84)
         Me.btn_baja_prod.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -2427,8 +1948,8 @@ Partial Class gestion_datos
         'btn_alta_prod
         '
         Me.btn_alta_prod.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btn_alta_prod.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.alta
-        Me.btn_alta_prod.Location = New System.Drawing.Point(937, 72)
+        Me.btn_alta_prod.Image = CType(resources.GetObject("btn_alta_prod.Image"), System.Drawing.Image)
+        Me.btn_alta_prod.Location = New System.Drawing.Point(657, 305)
         Me.btn_alta_prod.Name = "btn_alta_prod"
         Me.btn_alta_prod.Size = New System.Drawing.Size(175, 84)
         Me.btn_alta_prod.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -2438,23 +1959,13 @@ Partial Class gestion_datos
         'PictureBox17
         '
         Me.PictureBox17.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PictureBox17.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.Recurso_2_2x
-        Me.PictureBox17.Location = New System.Drawing.Point(938, 181)
+        Me.PictureBox17.Image = CType(resources.GetObject("PictureBox17.Image"), System.Drawing.Image)
+        Me.PictureBox17.Location = New System.Drawing.Point(875, 305)
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.Size = New System.Drawing.Size(175, 84)
         Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox17.TabIndex = 126
         Me.PictureBox17.TabStop = False
-        '
-        'PictureBox10
-        '
-        Me.PictureBox10.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PictureBox10.Location = New System.Drawing.Point(1181, 41)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(390, 344)
-        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox10.TabIndex = 62
-        Me.PictureBox10.TabStop = False
         '
         'ts_volverimg
         '
@@ -2467,39 +1978,773 @@ Partial Class gestion_datos
         Me.ts_volverimg.Size = New System.Drawing.Size(60, 27)
         Me.ts_volverimg.Text = "ToolStripButton1"
         '
-        'tit_roles
+        'PictureBox6
         '
-        Me.tit_roles.AutoSize = True
-        Me.tit_roles.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.tit_roles.Font = New System.Drawing.Font("Corbel", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tit_roles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.tit_roles.Location = New System.Drawing.Point(466, 29)
-        Me.tit_roles.Name = "tit_roles"
-        Me.tit_roles.Size = New System.Drawing.Size(245, 42)
-        Me.tit_roles.TabIndex = 118
-        Me.tit_roles.Text = "DATOS DE ROL"
+        Me.PictureBox6.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.panel_dg
+        Me.PictureBox6.Location = New System.Drawing.Point(26, 34)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(1846, 385)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 0
+        Me.PictureBox6.TabStop = False
         '
-        'pb_rol
+        'Panel1
         '
-        Me.pb_rol.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.pb_rol.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
-        Me.pb_rol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pb_rol.Location = New System.Drawing.Point(486, 160)
-        Me.pb_rol.Name = "pb_rol"
-        Me.pb_rol.Size = New System.Drawing.Size(224, 59)
-        Me.pb_rol.TabIndex = 122
-        Me.pb_rol.TabStop = False
+        Me.Panel1.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.Logo
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Location = New System.Drawing.Point(1370, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(502, 458)
+        Me.Panel1.TabIndex = 131
         '
-        'pb_id_rol
+        'Panel2
         '
-        Me.pb_id_rol.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.pb_id_rol.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
-        Me.pb_id_rol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pb_id_rol.Location = New System.Drawing.Point(486, 83)
-        Me.pb_id_rol.Name = "pb_id_rol"
-        Me.pb_id_rol.Size = New System.Drawing.Size(224, 59)
-        Me.pb_id_rol.TabIndex = 123
-        Me.pb_id_rol.TabStop = False
+        Me.Panel2.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.pan_datos
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.PictureBox14)
+        Me.Panel2.Controls.Add(Me.PictureBox13)
+        Me.Panel2.Controls.Add(Me.PictureBox12)
+        Me.Panel2.Controls.Add(Me.PictureBox10)
+        Me.Panel2.Controls.Add(Me.PictureBox9)
+        Me.Panel2.Controls.Add(Me.PictureBox8)
+        Me.Panel2.Controls.Add(Me.PictureBox7)
+        Me.Panel2.Controls.Add(Me.lbl_alta_prod)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.PictureBox17)
+        Me.Panel2.Controls.Add(Me.lbl_producto_stock)
+        Me.Panel2.Controls.Add(Me.lbl_productos_categoria_id)
+        Me.Panel2.Controls.Add(Me.btn_alta_prod)
+        Me.Panel2.Controls.Add(Me.lbl_productos_precio)
+        Me.Panel2.Controls.Add(Me.lbl_baja_prod)
+        Me.Panel2.Controls.Add(Me.lbl_productos_nombre)
+        Me.Panel2.Controls.Add(Me.btn_baja_prod)
+        Me.Panel2.Controls.Add(Me.lbl_productos_id)
+        Me.Panel2.Controls.Add(Me.tb_productos_precio)
+        Me.Panel2.Controls.Add(Me.tb_productos_categoriaID)
+        Me.Panel2.Controls.Add(Me.lbl_productos_marca)
+        Me.Panel2.Controls.Add(Me.tb_productos_stock)
+        Me.Panel2.Controls.Add(Me.tb_productos_marca)
+        Me.Panel2.Controls.Add(Me.tb_productos_nombre)
+        Me.Panel2.Controls.Add(Me.tb_productos_descripccion)
+        Me.Panel2.Controls.Add(Me.tb_productos_id)
+        Me.Panel2.Controls.Add(Me.lbl_productos_descripccion)
+        Me.Panel2.Location = New System.Drawing.Point(26, 3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1323, 458)
+        Me.Panel2.TabIndex = 132
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox7.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox7.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.tb_disabled
+        Me.PictureBox7.Location = New System.Drawing.Point(340, 97)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 131
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox8.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox8.Location = New System.Drawing.Point(340, 153)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox8.TabIndex = 132
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox9.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox9.Location = New System.Drawing.Point(864, 93)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox9.TabIndex = 133
+        Me.PictureBox9.TabStop = False
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox10.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox10.Location = New System.Drawing.Point(340, 330)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox10.TabIndex = 134
+        Me.PictureBox10.TabStop = False
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox12.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox12.Location = New System.Drawing.Point(340, 210)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox12.TabIndex = 136
+        Me.PictureBox12.TabStop = False
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox13.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox13.Location = New System.Drawing.Point(340, 270)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox13.TabIndex = 137
+        Me.PictureBox13.TabStop = False
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox14.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.tb_desc
+        Me.PictureBox14.Location = New System.Drawing.Point(864, 153)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(224, 105)
+        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox14.TabIndex = 138
+        Me.PictureBox14.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Label2.Font = New System.Drawing.Font("Corbel", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(512, 27)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(358, 42)
+        Me.Label2.TabIndex = 139
+        Me.Label2.Text = "DATOS DE PRODUCTO"
+        '
+        'tb_clientes
+        '
+        Me.tb_clientes.Controls.Add(Me.Panel4)
+        Me.tb_clientes.Controls.Add(Me.PictureBox11)
+        Me.tb_clientes.Controls.Add(Me.Label9)
+        Me.tb_clientes.Controls.Add(Me.dg_clientes)
+        Me.tb_clientes.Controls.Add(Me.Panel5)
+        Me.tb_clientes.Controls.Add(Me.ts_clientes)
+        Me.tb_clientes.Location = New System.Drawing.Point(4, 28)
+        Me.tb_clientes.Name = "tb_clientes"
+        Me.tb_clientes.Padding = New System.Windows.Forms.Padding(3)
+        Me.tb_clientes.Size = New System.Drawing.Size(1896, 957)
+        Me.tb_clientes.TabIndex = 13
+        Me.tb_clientes.Text = "Clientes"
+        Me.tb_clientes.UseVisualStyleBackColor = True
+        '
+        'lbl_clientes_direccion
+        '
+        Me.lbl_clientes_direccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_clientes_direccion.Location = New System.Drawing.Point(133, 287)
+        Me.lbl_clientes_direccion.Name = "lbl_clientes_direccion"
+        Me.lbl_clientes_direccion.Size = New System.Drawing.Size(79, 20)
+        Me.lbl_clientes_direccion.TabIndex = 94
+        Me.lbl_clientes_direccion.Text = "Direccion:"
+        '
+        'tb_clientes_direccion
+        '
+        Me.tb_clientes_direccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_clientes_direccion.Location = New System.Drawing.Point(324, 284)
+        Me.tb_clientes_direccion.Name = "tb_clientes_direccion"
+        Me.tb_clientes_direccion.Size = New System.Drawing.Size(273, 27)
+        Me.tb_clientes_direccion.TabIndex = 93
+        '
+        'tb_clientes_ape2
+        '
+        Me.tb_clientes_ape2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_clientes_ape2.Location = New System.Drawing.Point(843, 225)
+        Me.tb_clientes_ape2.Name = "tb_clientes_ape2"
+        Me.tb_clientes_ape2.Size = New System.Drawing.Size(117, 27)
+        Me.tb_clientes_ape2.TabIndex = 75
+        '
+        'tb_clientes_ape1
+        '
+        Me.tb_clientes_ape1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_clientes_ape1.Location = New System.Drawing.Point(324, 254)
+        Me.tb_clientes_ape1.Name = "tb_clientes_ape1"
+        Me.tb_clientes_ape1.Size = New System.Drawing.Size(117, 27)
+        Me.tb_clientes_ape1.TabIndex = 59
+        '
+        'tb_clientes_telefono
+        '
+        Me.tb_clientes_telefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_clientes_telefono.Location = New System.Drawing.Point(844, 160)
+        Me.tb_clientes_telefono.Name = "tb_clientes_telefono"
+        Me.tb_clientes_telefono.Size = New System.Drawing.Size(117, 27)
+        Me.tb_clientes_telefono.TabIndex = 58
+        '
+        'tb_clientes_empleadoID
+        '
+        Me.tb_clientes_empleadoID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_clientes_empleadoID.Location = New System.Drawing.Point(844, 192)
+        Me.tb_clientes_empleadoID.Name = "tb_clientes_empleadoID"
+        Me.tb_clientes_empleadoID.Size = New System.Drawing.Size(117, 27)
+        Me.tb_clientes_empleadoID.TabIndex = 57
+        '
+        'tb_clientes_nombre
+        '
+        Me.tb_clientes_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_clientes_nombre.Location = New System.Drawing.Point(324, 224)
+        Me.tb_clientes_nombre.Name = "tb_clientes_nombre"
+        Me.tb_clientes_nombre.Size = New System.Drawing.Size(117, 27)
+        Me.tb_clientes_nombre.TabIndex = 54
+        '
+        'tb_clientes_id
+        '
+        Me.tb_clientes_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_clientes_id.Enabled = False
+        Me.tb_clientes_id.Location = New System.Drawing.Point(324, 195)
+        Me.tb_clientes_id.Name = "tb_clientes_id"
+        Me.tb_clientes_id.Size = New System.Drawing.Size(117, 27)
+        Me.tb_clientes_id.TabIndex = 47
+        '
+        'lbl_clientes_ape2
+        '
+        Me.lbl_clientes_ape2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_clientes_ape2.AutoSize = True
+        Me.lbl_clientes_ape2.Location = New System.Drawing.Point(659, 233)
+        Me.lbl_clientes_ape2.Name = "lbl_clientes_ape2"
+        Me.lbl_clientes_ape2.Size = New System.Drawing.Size(125, 19)
+        Me.lbl_clientes_ape2.TabIndex = 74
+        Me.lbl_clientes_ape2.Text = "Segundo Apellido:"
+        '
+        'lbl_clientes_ape1
+        '
+        Me.lbl_clientes_ape1.AutoSize = True
+        Me.lbl_clientes_ape1.Location = New System.Drawing.Point(92, 258)
+        Me.lbl_clientes_ape1.Name = "lbl_clientes_ape1"
+        Me.lbl_clientes_ape1.Size = New System.Drawing.Size(112, 19)
+        Me.lbl_clientes_ape1.TabIndex = 73
+        Me.lbl_clientes_ape1.Text = "Primer Apellido:"
+        '
+        'lbl_clientes_nombre
+        '
+        Me.lbl_clientes_nombre.AutoSize = True
+        Me.lbl_clientes_nombre.Location = New System.Drawing.Point(92, 227)
+        Me.lbl_clientes_nombre.Name = "lbl_clientes_nombre"
+        Me.lbl_clientes_nombre.Size = New System.Drawing.Size(64, 19)
+        Me.lbl_clientes_nombre.TabIndex = 72
+        Me.lbl_clientes_nombre.Text = "Nombre:"
+        '
+        'lbl_clientes_id
+        '
+        Me.lbl_clientes_id.AutoSize = True
+        Me.lbl_clientes_id.Location = New System.Drawing.Point(92, 195)
+        Me.lbl_clientes_id.Name = "lbl_clientes_id"
+        Me.lbl_clientes_id.Size = New System.Drawing.Size(27, 19)
+        Me.lbl_clientes_id.TabIndex = 71
+        Me.lbl_clientes_id.Text = "ID:"
+        '
+        'lbl_clientes_empleadoID
+        '
+        Me.lbl_clientes_empleadoID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_clientes_empleadoID.AutoSize = True
+        Me.lbl_clientes_empleadoID.Location = New System.Drawing.Point(683, 203)
+        Me.lbl_clientes_empleadoID.Name = "lbl_clientes_empleadoID"
+        Me.lbl_clientes_empleadoID.Size = New System.Drawing.Size(95, 19)
+        Me.lbl_clientes_empleadoID.TabIndex = 69
+        Me.lbl_clientes_empleadoID.Text = "Empleado ID:"
+        '
+        'lbl_clientes_telefono
+        '
+        Me.lbl_clientes_telefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_clientes_telefono.AutoSize = True
+        Me.lbl_clientes_telefono.Location = New System.Drawing.Point(701, 168)
+        Me.lbl_clientes_telefono.Name = "lbl_clientes_telefono"
+        Me.lbl_clientes_telefono.Size = New System.Drawing.Size(69, 19)
+        Me.lbl_clientes_telefono.TabIndex = 67
+        Me.lbl_clientes_telefono.Text = "Telefono:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(372, 388)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(52, 19)
+        Me.Label9.TabIndex = 64
+        Me.Label9.Text = "Label9"
+        '
+        'dg_clientes
+        '
+        Me.dg_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_clientes.Location = New System.Drawing.Point(174, 106)
+        Me.dg_clientes.Name = "dg_clientes"
+        Me.dg_clientes.Size = New System.Drawing.Size(989, 189)
+        Me.dg_clientes.TabIndex = 63
+        '
+        'btn_clientes_baja
+        '
+        Me.btn_clientes_baja.Location = New System.Drawing.Point(1028, 335)
+        Me.btn_clientes_baja.Name = "btn_clientes_baja"
+        Me.btn_clientes_baja.Size = New System.Drawing.Size(75, 52)
+        Me.btn_clientes_baja.TabIndex = 62
+        Me.btn_clientes_baja.Text = "BAJA"
+        Me.btn_clientes_baja.UseVisualStyleBackColor = True
+        '
+        'btn_clientes_alta
+        '
+        Me.btn_clientes_alta.Location = New System.Drawing.Point(947, 335)
+        Me.btn_clientes_alta.Name = "btn_clientes_alta"
+        Me.btn_clientes_alta.Size = New System.Drawing.Size(75, 52)
+        Me.btn_clientes_alta.TabIndex = 61
+        Me.btn_clientes_alta.Text = "ALTA"
+        Me.btn_clientes_alta.UseVisualStyleBackColor = True
+        '
+        'btn_clientes_modificar
+        '
+        Me.btn_clientes_modificar.Location = New System.Drawing.Point(1104, 335)
+        Me.btn_clientes_modificar.Name = "btn_clientes_modificar"
+        Me.btn_clientes_modificar.Size = New System.Drawing.Size(75, 52)
+        Me.btn_clientes_modificar.TabIndex = 60
+        Me.btn_clientes_modificar.Text = "MODIFICAR"
+        Me.btn_clientes_modificar.UseVisualStyleBackColor = True
+        '
+        'ts_clientes
+        '
+        Me.ts_clientes.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ts_clientes.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ts_clientes.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tslbl_nuevo_clientes, Me.ToolStripSeparator12, Me.tslbl_alta_clientes, Me.ToolStripSeparator14, Me.tslbl_baja_clientes, Me.tslbl_modificar_clientes})
+        Me.ts_clientes.Location = New System.Drawing.Point(3, 3)
+        Me.ts_clientes.Name = "ts_clientes"
+        Me.ts_clientes.Size = New System.Drawing.Size(1890, 25)
+        Me.ts_clientes.TabIndex = 70
+        Me.ts_clientes.Text = "ToolStrip4"
+        '
+        'tslbl_nuevo_clientes
+        '
+        Me.tslbl_nuevo_clientes.Name = "tslbl_nuevo_clientes"
+        Me.tslbl_nuevo_clientes.Size = New System.Drawing.Size(42, 22)
+        Me.tslbl_nuevo_clientes.Text = "Nuevo"
+        '
+        'ToolStripSeparator12
+        '
+        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
+        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
+        '
+        'tslbl_alta_clientes
+        '
+        Me.tslbl_alta_clientes.Name = "tslbl_alta_clientes"
+        Me.tslbl_alta_clientes.Size = New System.Drawing.Size(28, 22)
+        Me.tslbl_alta_clientes.Text = "Alta"
+        '
+        'ToolStripSeparator14
+        '
+        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
+        Me.ToolStripSeparator14.Size = New System.Drawing.Size(6, 25)
+        '
+        'tslbl_baja_clientes
+        '
+        Me.tslbl_baja_clientes.Name = "tslbl_baja_clientes"
+        Me.tslbl_baja_clientes.Size = New System.Drawing.Size(29, 22)
+        Me.tslbl_baja_clientes.Text = "Baja"
+        '
+        'tslbl_modificar_clientes
+        '
+        Me.tslbl_modificar_clientes.Name = "tslbl_modificar_clientes"
+        Me.tslbl_modificar_clientes.Size = New System.Drawing.Size(58, 22)
+        Me.tslbl_modificar_clientes.Text = "Modificar"
+        '
+        'tb_proveedores
+        '
+        Me.tb_proveedores.Controls.Add(Me.lbl_proveedores_direccion)
+        Me.tb_proveedores.Controls.Add(Me.lbl_proveedores_id)
+        Me.tb_proveedores.Controls.Add(Me.lbl_proveedores_nombre)
+        Me.tb_proveedores.Controls.Add(Me.lbl_proveedores_telefono)
+        Me.tb_proveedores.Controls.Add(Me.Label25)
+        Me.tb_proveedores.Controls.Add(Me.Label28)
+        Me.tb_proveedores.Controls.Add(Me.dg_proveedores)
+        Me.tb_proveedores.Controls.Add(Me.btn_provedores_baja)
+        Me.tb_proveedores.Controls.Add(Me.btn_provedores_alta)
+        Me.tb_proveedores.Controls.Add(Me.btn_provedores_modificar)
+        Me.tb_proveedores.Controls.Add(Me.tb_proveedores_direccion)
+        Me.tb_proveedores.Controls.Add(Me.tb_proveedores_telefono)
+        Me.tb_proveedores.Controls.Add(Me.tb_proveedores_contacto)
+        Me.tb_proveedores.Controls.Add(Me.tb_proveedores_nombre)
+        Me.tb_proveedores.Controls.Add(Me.tb_proveedores_id)
+        Me.tb_proveedores.Controls.Add(Me.lbl_proveedores_contacto)
+        Me.tb_proveedores.Controls.Add(Me.Label34)
+        Me.tb_proveedores.Controls.Add(Me.Label35)
+        Me.tb_proveedores.Controls.Add(Me.ts_proveedores)
+        Me.tb_proveedores.Controls.Add(Me.PictureBox4)
+        Me.tb_proveedores.Location = New System.Drawing.Point(4, 28)
+        Me.tb_proveedores.Name = "tb_proveedores"
+        Me.tb_proveedores.Padding = New System.Windows.Forms.Padding(3)
+        Me.tb_proveedores.Size = New System.Drawing.Size(1896, 957)
+        Me.tb_proveedores.TabIndex = 14
+        Me.tb_proveedores.Text = "Proveedores"
+        Me.tb_proveedores.UseVisualStyleBackColor = True
+        '
+        'lbl_proveedores_direccion
+        '
+        Me.lbl_proveedores_direccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_proveedores_direccion.AutoSize = True
+        Me.lbl_proveedores_direccion.Location = New System.Drawing.Point(526, 511)
+        Me.lbl_proveedores_direccion.Name = "lbl_proveedores_direccion"
+        Me.lbl_proveedores_direccion.Size = New System.Drawing.Size(74, 19)
+        Me.lbl_proveedores_direccion.TabIndex = 92
+        Me.lbl_proveedores_direccion.Text = "Direccion:"
+        '
+        'lbl_proveedores_id
+        '
+        Me.lbl_proveedores_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_proveedores_id.AutoSize = True
+        Me.lbl_proveedores_id.Location = New System.Drawing.Point(526, 446)
+        Me.lbl_proveedores_id.Name = "lbl_proveedores_id"
+        Me.lbl_proveedores_id.Size = New System.Drawing.Size(27, 19)
+        Me.lbl_proveedores_id.TabIndex = 90
+        Me.lbl_proveedores_id.Text = "ID:"
+        '
+        'lbl_proveedores_nombre
+        '
+        Me.lbl_proveedores_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_proveedores_nombre.AutoSize = True
+        Me.lbl_proveedores_nombre.Location = New System.Drawing.Point(525, 476)
+        Me.lbl_proveedores_nombre.Name = "lbl_proveedores_nombre"
+        Me.lbl_proveedores_nombre.Size = New System.Drawing.Size(64, 19)
+        Me.lbl_proveedores_nombre.TabIndex = 89
+        Me.lbl_proveedores_nombre.Text = "Nombre:"
+        '
+        'lbl_proveedores_telefono
+        '
+        Me.lbl_proveedores_telefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_proveedores_telefono.AutoSize = True
+        Me.lbl_proveedores_telefono.Location = New System.Drawing.Point(802, 450)
+        Me.lbl_proveedores_telefono.Name = "lbl_proveedores_telefono"
+        Me.lbl_proveedores_telefono.Size = New System.Drawing.Size(69, 19)
+        Me.lbl_proveedores_telefono.TabIndex = 87
+        Me.lbl_proveedores_telefono.Text = "Teléfono:"
+        '
+        'Label25
+        '
+        Me.Label25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(399, 511)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(74, 19)
+        Me.Label25.TabIndex = 86
+        Me.Label25.Text = "Dirección:"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(372, 400)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(60, 19)
+        Me.Label28.TabIndex = 83
+        Me.Label28.Text = "Label28"
+        '
+        'dg_proveedores
+        '
+        Me.dg_proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_proveedores.Dock = System.Windows.Forms.DockStyle.Top
+        Me.dg_proveedores.Location = New System.Drawing.Point(3, 28)
+        Me.dg_proveedores.Name = "dg_proveedores"
+        Me.dg_proveedores.Size = New System.Drawing.Size(1890, 290)
+        Me.dg_proveedores.TabIndex = 82
+        '
+        'btn_provedores_baja
+        '
+        Me.btn_provedores_baja.Location = New System.Drawing.Point(910, 511)
+        Me.btn_provedores_baja.Name = "btn_provedores_baja"
+        Me.btn_provedores_baja.Size = New System.Drawing.Size(75, 52)
+        Me.btn_provedores_baja.TabIndex = 81
+        Me.btn_provedores_baja.Text = "BAJA"
+        Me.btn_provedores_baja.UseVisualStyleBackColor = True
+        '
+        'btn_provedores_alta
+        '
+        Me.btn_provedores_alta.Location = New System.Drawing.Point(829, 511)
+        Me.btn_provedores_alta.Name = "btn_provedores_alta"
+        Me.btn_provedores_alta.Size = New System.Drawing.Size(75, 52)
+        Me.btn_provedores_alta.TabIndex = 80
+        Me.btn_provedores_alta.Text = "ALTA"
+        Me.btn_provedores_alta.UseVisualStyleBackColor = True
+        '
+        'btn_provedores_modificar
+        '
+        Me.btn_provedores_modificar.Location = New System.Drawing.Point(986, 511)
+        Me.btn_provedores_modificar.Name = "btn_provedores_modificar"
+        Me.btn_provedores_modificar.Size = New System.Drawing.Size(75, 52)
+        Me.btn_provedores_modificar.TabIndex = 79
+        Me.btn_provedores_modificar.Text = "MODIFICAR"
+        Me.btn_provedores_modificar.UseVisualStyleBackColor = True
+        '
+        'tb_proveedores_direccion
+        '
+        Me.tb_proveedores_direccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_proveedores_direccion.Location = New System.Drawing.Point(608, 507)
+        Me.tb_proveedores_direccion.Name = "tb_proveedores_direccion"
+        Me.tb_proveedores_direccion.Size = New System.Drawing.Size(289, 27)
+        Me.tb_proveedores_direccion.TabIndex = 78
+        '
+        'tb_proveedores_telefono
+        '
+        Me.tb_proveedores_telefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_proveedores_telefono.Location = New System.Drawing.Point(952, 447)
+        Me.tb_proveedores_telefono.Name = "tb_proveedores_telefono"
+        Me.tb_proveedores_telefono.Size = New System.Drawing.Size(117, 27)
+        Me.tb_proveedores_telefono.TabIndex = 76
+        '
+        'tb_proveedores_contacto
+        '
+        Me.tb_proveedores_contacto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_proveedores_contacto.Location = New System.Drawing.Point(952, 477)
+        Me.tb_proveedores_contacto.Name = "tb_proveedores_contacto"
+        Me.tb_proveedores_contacto.Size = New System.Drawing.Size(117, 27)
+        Me.tb_proveedores_contacto.TabIndex = 75
+        '
+        'tb_proveedores_nombre
+        '
+        Me.tb_proveedores_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_proveedores_nombre.Location = New System.Drawing.Point(608, 475)
+        Me.tb_proveedores_nombre.Name = "tb_proveedores_nombre"
+        Me.tb_proveedores_nombre.Size = New System.Drawing.Size(117, 27)
+        Me.tb_proveedores_nombre.TabIndex = 74
+        '
+        'tb_proveedores_id
+        '
+        Me.tb_proveedores_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_proveedores_id.Enabled = False
+        Me.tb_proveedores_id.Location = New System.Drawing.Point(608, 446)
+        Me.tb_proveedores_id.Name = "tb_proveedores_id"
+        Me.tb_proveedores_id.Size = New System.Drawing.Size(117, 27)
+        Me.tb_proveedores_id.TabIndex = 70
+        '
+        'lbl_proveedores_contacto
+        '
+        Me.lbl_proveedores_contacto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_proveedores_contacto.AutoSize = True
+        Me.lbl_proveedores_contacto.Location = New System.Drawing.Point(802, 480)
+        Me.lbl_proveedores_contacto.Name = "lbl_proveedores_contacto"
+        Me.lbl_proveedores_contacto.Size = New System.Drawing.Size(71, 19)
+        Me.lbl_proveedores_contacto.TabIndex = 73
+        Me.lbl_proveedores_contacto.Text = "Contacto:"
+        '
+        'Label34
+        '
+        Me.Label34.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(406, 479)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(64, 19)
+        Me.Label34.TabIndex = 72
+        Me.Label34.Text = "Nombre:"
+        '
+        'Label35
+        '
+        Me.Label35.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(433, 450)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(27, 19)
+        Me.Label35.TabIndex = 71
+        Me.Label35.Text = "ID:"
+        '
+        'ts_proveedores
+        '
+        Me.ts_proveedores.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ts_proveedores.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ts_proveedores.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tslbl_nuevo_proveedores, Me.ToolStripSeparator15, Me.tslbl_alta_provedores, Me.ToolStripSeparator16, Me.tslbl_baja_proveedores, Me.tslbl_modificar_proveedores})
+        Me.ts_proveedores.Location = New System.Drawing.Point(3, 3)
+        Me.ts_proveedores.Name = "ts_proveedores"
+        Me.ts_proveedores.Size = New System.Drawing.Size(1890, 25)
+        Me.ts_proveedores.TabIndex = 88
+        Me.ts_proveedores.Text = "ToolStrip5"
+        '
+        'tslbl_nuevo_proveedores
+        '
+        Me.tslbl_nuevo_proveedores.Name = "tslbl_nuevo_proveedores"
+        Me.tslbl_nuevo_proveedores.Size = New System.Drawing.Size(42, 22)
+        Me.tslbl_nuevo_proveedores.Text = "Nuevo"
+        '
+        'ToolStripSeparator15
+        '
+        Me.ToolStripSeparator15.Name = "ToolStripSeparator15"
+        Me.ToolStripSeparator15.Size = New System.Drawing.Size(6, 25)
+        '
+        'tslbl_alta_provedores
+        '
+        Me.tslbl_alta_provedores.Name = "tslbl_alta_provedores"
+        Me.tslbl_alta_provedores.Size = New System.Drawing.Size(28, 22)
+        Me.tslbl_alta_provedores.Text = "Alta"
+        '
+        'ToolStripSeparator16
+        '
+        Me.ToolStripSeparator16.Name = "ToolStripSeparator16"
+        Me.ToolStripSeparator16.Size = New System.Drawing.Size(6, 25)
+        '
+        'tslbl_baja_proveedores
+        '
+        Me.tslbl_baja_proveedores.Name = "tslbl_baja_proveedores"
+        Me.tslbl_baja_proveedores.Size = New System.Drawing.Size(29, 22)
+        Me.tslbl_baja_proveedores.Text = "Baja"
+        '
+        'tslbl_modificar_proveedores
+        '
+        Me.tslbl_modificar_proveedores.Name = "tslbl_modificar_proveedores"
+        Me.tslbl_modificar_proveedores.Size = New System.Drawing.Size(58, 22)
+        Me.tslbl_modificar_proveedores.Text = "Modificar"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
+        Me.PictureBox4.Location = New System.Drawing.Point(829, 352)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(249, 144)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 84
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.panel_dg
+        Me.PictureBox11.Location = New System.Drawing.Point(19, 31)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(1846, 385)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox11.TabIndex = 95
+        Me.PictureBox11.TabStop = False
+        '
+        'Panel4
+        '
+        Me.Panel4.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.Logo
+        Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel4.Location = New System.Drawing.Point(1363, 438)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(502, 458)
+        Me.Panel4.TabIndex = 132
+        '
+        'Panel5
+        '
+        Me.Panel5.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.pan_datos
+        Me.Panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel5.Controls.Add(Me.PictureBox21)
+        Me.Panel5.Controls.Add(Me.PictureBox20)
+        Me.Panel5.Controls.Add(Me.PictureBox19)
+        Me.Panel5.Controls.Add(Me.PictureBox18)
+        Me.Panel5.Controls.Add(Me.PictureBox16)
+        Me.Panel5.Controls.Add(Me.PictureBox15)
+        Me.Panel5.Controls.Add(Me.PictureBox3)
+        Me.Panel5.Controls.Add(Me.Label3)
+        Me.Panel5.Controls.Add(Me.btn_clientes_alta)
+        Me.Panel5.Controls.Add(Me.btn_clientes_modificar)
+        Me.Panel5.Controls.Add(Me.lbl_clientes_ape1)
+        Me.Panel5.Controls.Add(Me.lbl_clientes_direccion)
+        Me.Panel5.Controls.Add(Me.lbl_clientes_nombre)
+        Me.Panel5.Controls.Add(Me.btn_clientes_baja)
+        Me.Panel5.Controls.Add(Me.lbl_clientes_id)
+        Me.Panel5.Controls.Add(Me.tb_clientes_direccion)
+        Me.Panel5.Controls.Add(Me.tb_clientes_telefono)
+        Me.Panel5.Controls.Add(Me.tb_clientes_ape1)
+        Me.Panel5.Controls.Add(Me.tb_clientes_ape2)
+        Me.Panel5.Controls.Add(Me.tb_clientes_nombre)
+        Me.Panel5.Controls.Add(Me.tb_clientes_empleadoID)
+        Me.Panel5.Controls.Add(Me.tb_clientes_id)
+        Me.Panel5.Controls.Add(Me.lbl_clientes_telefono)
+        Me.Panel5.Controls.Add(Me.lbl_clientes_ape2)
+        Me.Panel5.Controls.Add(Me.lbl_clientes_empleadoID)
+        Me.Panel5.Location = New System.Drawing.Point(19, 438)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1323, 458)
+        Me.Panel5.TabIndex = 133
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Label3.Font = New System.Drawing.Font("Corbel", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(529, 38)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(308, 42)
+        Me.Label3.TabIndex = 140
+        Me.Label3.Text = "DATOS DE CLIENTE"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox3.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(299, 64)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox3.TabIndex = 141
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox15
+        '
+        Me.PictureBox15.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox15.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox15.Location = New System.Drawing.Point(549, 200)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox15.TabIndex = 142
+        Me.PictureBox15.TabStop = False
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox16.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox16.Location = New System.Drawing.Point(557, 208)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox16.TabIndex = 143
+        Me.PictureBox16.TabStop = False
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox18.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox18.Location = New System.Drawing.Point(565, 216)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox18.TabIndex = 144
+        Me.PictureBox18.TabStop = False
+        '
+        'PictureBox19
+        '
+        Me.PictureBox19.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox19.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox19.Location = New System.Drawing.Point(573, 224)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox19.TabIndex = 145
+        Me.PictureBox19.TabStop = False
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox20.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox20.Location = New System.Drawing.Point(879, 248)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox20.TabIndex = 146
+        Me.PictureBox20.TabStop = False
+        '
+        'PictureBox21
+        '
+        Me.PictureBox21.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.PictureBox21.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.PictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox21.Location = New System.Drawing.Point(324, 64)
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.Size = New System.Drawing.Size(224, 59)
+        Me.PictureBox21.TabIndex = 147
+        Me.PictureBox21.TabStop = False
         '
         'gestion_datos
         '
@@ -2534,16 +2779,6 @@ Partial Class gestion_datos
         Me.SplitContainer1.ResumeLayout(False)
         Me.ts_empleados.ResumeLayout(False)
         Me.ts_empleados.PerformLayout()
-        Me.tb_proveedores.ResumeLayout(False)
-        Me.tb_proveedores.PerformLayout()
-        CType(Me.dg_proveedores, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ts_proveedores.ResumeLayout(False)
-        Me.ts_proveedores.PerformLayout()
-        Me.tb_clientes.ResumeLayout(False)
-        Me.tb_clientes.PerformLayout()
-        CType(Me.dg_clientes, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ts_clientes.ResumeLayout(False)
-        Me.ts_clientes.PerformLayout()
         Me.TabControl.ResumeLayout(False)
         Me.tab_categorias.ResumeLayout(False)
         Me.tab_categorias.PerformLayout()
@@ -2552,27 +2787,22 @@ Partial Class gestion_datos
         Me.SplitContainer3.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
-        CType(Me.dg_categorias, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip2.ResumeLayout(False)
         Me.ToolStrip2.PerformLayout()
         Me.tab_productos.ResumeLayout(False)
         Me.tab_productos.PerformLayout()
         Me.SplitContainer4.Panel1.ResumeLayout(False)
         Me.SplitContainer4.Panel2.ResumeLayout(False)
-        Me.SplitContainer4.Panel2.PerformLayout()
         CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer4.ResumeLayout(False)
         CType(Me.dg_productos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip3.ResumeLayout(False)
         Me.ToolStrip3.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.panel.ResumeLayout(False)
+        Me.panel.PerformLayout()
         CType(Me.dg_emple, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pan_datos_emple.ResumeLayout(False)
         Me.pan_datos_emple.PerformLayout()
-        CType(Me.pb5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2581,6 +2811,7 @@ Partial Class gestion_datos
         CType(Me.pb2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_emp_alta, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_emp_baja, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_emp_modif, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2589,19 +2820,55 @@ Partial Class gestion_datos
         CType(Me.btn_mod_roles, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_alta_rol, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_baja_roles, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_id_rol, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_rol, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pn_logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pan_dg_rol.ResumeLayout(False)
         CType(Me.dg_roles, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_mod_categoria, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_alta_categoria, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_baja_categoria, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pan_datos_cat, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pan_logo_roles, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.dg_categorias, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_baja_prod, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_alta_prod, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pb_rol, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pb_id_rol, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tb_clientes.ResumeLayout(False)
+        Me.tb_clientes.PerformLayout()
+        CType(Me.dg_clientes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ts_clientes.ResumeLayout(False)
+        Me.ts_clientes.PerformLayout()
+        Me.tb_proveedores.ResumeLayout(False)
+        Me.tb_proveedores.PerformLayout()
+        CType(Me.dg_proveedores, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ts_proveedores.ResumeLayout(False)
+        Me.ts_proveedores.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2677,6 +2944,127 @@ Partial Class gestion_datos
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents tslbl_baja_empleados As ToolStripLabel
     Friend WithEvents tslbl_modificar_empleados As ToolStripLabel
+    Friend WithEvents TabControl As TabControl
+    Friend WithEvents tab_categorias As TabPage
+    Friend WithEvents SplitContainer3 As SplitContainer
+    Friend WithEvents lbl_baja_categoria As Label
+    Friend WithEvents lbl_mod_categoria As Label
+    Friend WithEvents tb_categorias_descripccion As TextBox
+    Friend WithEvents btn_mod_categoria As PictureBox
+    Friend WithEvents tb_categorias_nombre As TextBox
+    Friend WithEvents lbl_categoria_descripcion As Label
+    Friend WithEvents lbl_alta_categoria As Label
+    Friend WithEvents lbl_categoria_nombre As Label
+    Friend WithEvents btn_alta_categoria As PictureBox
+    Friend WithEvents lbl_categoria_id As Label
+    Friend WithEvents btn_baja_categoria As PictureBox
+    Friend WithEvents tb_categorias_id As TextBox
+    Friend WithEvents dg_categorias As DataGridView
+    Friend WithEvents ToolStrip2 As ToolStrip
+    Friend WithEvents tslbl_nuevo_categoria As ToolStripLabel
+    Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
+    Friend WithEvents tslbl_alta_categoria_productos As ToolStripLabel
+    Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
+    Friend WithEvents tslbl_baja_categorias_producto As ToolStripLabel
+    Friend WithEvents tslbl_modificar_categoria_productos As ToolStripLabel
+    Friend WithEvents tab_productos As TabPage
+    Friend WithEvents SplitContainer4 As SplitContainer
+    Friend WithEvents dg_productos As DataGridView
+    Friend WithEvents lbl_baja_prod As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents btn_baja_prod As PictureBox
+    Friend WithEvents lbl_alta_prod As Label
+    Friend WithEvents btn_alta_prod As PictureBox
+    Friend WithEvents PictureBox17 As PictureBox
+    Friend WithEvents lbl_producto_stock As Label
+    Friend WithEvents lbl_productos_categoria_id As Label
+    Friend WithEvents lbl_productos_precio As Label
+    Friend WithEvents lbl_productos_nombre As Label
+    Friend WithEvents lbl_productos_id As Label
+    Friend WithEvents tb_productos_precio As TextBox
+    Friend WithEvents tb_productos_categoriaID As TextBox
+    Friend WithEvents tb_productos_stock As TextBox
+    Friend WithEvents tb_productos_nombre As TextBox
+    Friend WithEvents tb_productos_id As TextBox
+    Friend WithEvents lbl_productos_marca As Label
+    Friend WithEvents lbl_productos_descripccion As Label
+    Friend WithEvents tb_productos_descripccion As TextBox
+    Friend WithEvents tb_productos_marca As TextBox
+    Friend WithEvents ToolStrip3 As ToolStrip
+    Friend WithEvents tslbl_nuevo_producto As ToolStripLabel
+    Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
+    Friend WithEvents tslbl_alta_productos As ToolStripLabel
+    Friend WithEvents ToolStripSeparator11 As ToolStripSeparator
+    Friend WithEvents tslbl_baja_productos As ToolStripLabel
+    Friend WithEvents ToolStripLabel12 As ToolStripLabel
+    Friend WithEvents panel As Panel
+    Friend WithEvents pan_datos_emple As Panel
+    Friend WithEvents pan_logo As Panel
+    Friend WithEvents pb6 As PictureBox
+    Friend WithEvents pb4 As PictureBox
+    Friend WithEvents pb7 As PictureBox
+    Friend WithEvents pb8 As PictureBox
+    Friend WithEvents pb9 As PictureBox
+    Friend WithEvents pb1 As PictureBox
+    Friend WithEvents pb2 As PictureBox
+    Friend WithEvents pb3 As PictureBox
+    Friend WithEvents pb5 As PictureBox
+    Friend WithEvents tit_datos_emp As Label
+    Friend WithEvents pan_dg_rol As Panel
+    Friend WithEvents pn_logo As PictureBox
+    Friend WithEvents pan_datos_roles As Panel
+    Friend WithEvents tit_roles As Label
+    Friend WithEvents pb_id_rol As PictureBox
+    Friend WithEvents pb_rol As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pan_datos_cat As PictureBox
+    Friend WithEvents pan_logo_roles As PictureBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents PictureBox14 As PictureBox
+    Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents tb_clientes As TabPage
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents dg_clientes As DataGridView
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents btn_clientes_alta As Button
+    Friend WithEvents btn_clientes_modificar As Button
+    Friend WithEvents lbl_clientes_ape1 As Label
+    Friend WithEvents lbl_clientes_direccion As Label
+    Friend WithEvents lbl_clientes_nombre As Label
+    Friend WithEvents btn_clientes_baja As Button
+    Friend WithEvents lbl_clientes_id As Label
+    Friend WithEvents tb_clientes_direccion As TextBox
+    Friend WithEvents tb_clientes_telefono As TextBox
+    Friend WithEvents tb_clientes_ape1 As TextBox
+    Friend WithEvents tb_clientes_ape2 As TextBox
+    Friend WithEvents tb_clientes_nombre As TextBox
+    Friend WithEvents tb_clientes_empleadoID As TextBox
+    Friend WithEvents tb_clientes_id As TextBox
+    Friend WithEvents lbl_clientes_telefono As Label
+    Friend WithEvents lbl_clientes_ape2 As Label
+    Friend WithEvents lbl_clientes_empleadoID As Label
+    Friend WithEvents ts_clientes As ToolStrip
+    Friend WithEvents tslbl_nuevo_clientes As ToolStripLabel
+    Friend WithEvents ToolStripSeparator12 As ToolStripSeparator
+    Friend WithEvents tslbl_alta_clientes As ToolStripLabel
+    Friend WithEvents ToolStripSeparator14 As ToolStripSeparator
+    Friend WithEvents tslbl_baja_clientes As ToolStripLabel
+    Friend WithEvents tslbl_modificar_clientes As ToolStripLabel
     Friend WithEvents tb_proveedores As TabPage
     Friend WithEvents lbl_proveedores_direccion As Label
     Friend WithEvents lbl_proveedores_id As Label
@@ -2704,117 +3092,11 @@ Partial Class gestion_datos
     Friend WithEvents tslbl_baja_proveedores As ToolStripLabel
     Friend WithEvents tslbl_modificar_proveedores As ToolStripLabel
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents tb_clientes As TabPage
-    Friend WithEvents lbl_clientes_direccion As Label
-    Friend WithEvents tb_clientes_direccion As TextBox
-    Friend WithEvents tb_clientes_ape2 As TextBox
-    Friend WithEvents tb_clientes_ape1 As TextBox
-    Friend WithEvents tb_clientes_telefono As TextBox
-    Friend WithEvents tb_clientes_empleadoID As TextBox
-    Friend WithEvents tb_clientes_nombre As TextBox
-    Friend WithEvents tb_clientes_id As TextBox
-    Friend WithEvents lbl_clientes_ape2 As Label
-    Friend WithEvents lbl_clientes_ape1 As Label
-    Friend WithEvents lbl_clientes_nombre As Label
-    Friend WithEvents lbl_clientes_id As Label
-    Friend WithEvents lbl_clientes_empleadoID As Label
-    Friend WithEvents Label31 As Label
-    Friend WithEvents lbl_clientes_telefono As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents dg_clientes As DataGridView
-    Friend WithEvents btn_clientes_baja As Button
-    Friend WithEvents btn_clientes_alta As Button
-    Friend WithEvents btn_clientes_modificar As Button
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents ts_clientes As ToolStrip
-    Friend WithEvents tslbl_nuevo_clientes As ToolStripLabel
-    Friend WithEvents ToolStripSeparator12 As ToolStripSeparator
-    Friend WithEvents tslbl_alta_clientes As ToolStripLabel
-    Friend WithEvents ToolStripSeparator14 As ToolStripSeparator
-    Friend WithEvents tslbl_baja_clientes As ToolStripLabel
-    Friend WithEvents tslbl_modificar_clientes As ToolStripLabel
+    Friend WithEvents PictureBox21 As PictureBox
+    Friend WithEvents PictureBox20 As PictureBox
+    Friend WithEvents PictureBox19 As PictureBox
+    Friend WithEvents PictureBox18 As PictureBox
+    Friend WithEvents PictureBox16 As PictureBox
+    Friend WithEvents PictureBox15 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents TabControl As TabControl
-    Friend WithEvents tab_categorias As TabPage
-    Friend WithEvents SplitContainer3 As SplitContainer
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents tit_categoria As Label
-    Friend WithEvents lbl_baja_categoria As Label
-    Friend WithEvents lbl_mod_categoria As Label
-    Friend WithEvents tb_categorias_descripccion As TextBox
-    Friend WithEvents btn_mod_categoria As PictureBox
-    Friend WithEvents tb_categorias_nombre As TextBox
-    Friend WithEvents lbl_categoria_descripcion As Label
-    Friend WithEvents lbl_alta_categoria As Label
-    Friend WithEvents lbl_categoria_nombre As Label
-    Friend WithEvents btn_alta_categoria As PictureBox
-    Friend WithEvents lbl_categoria_id As Label
-    Friend WithEvents btn_baja_categoria As PictureBox
-    Friend WithEvents tb_categorias_id As TextBox
-    Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents dg_categorias As DataGridView
-    Friend WithEvents ToolStrip2 As ToolStrip
-    Friend WithEvents tslbl_nuevo_categoria As ToolStripLabel
-    Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
-    Friend WithEvents tslbl_alta_categoria_productos As ToolStripLabel
-    Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
-    Friend WithEvents tslbl_baja_categorias_producto As ToolStripLabel
-    Friend WithEvents tslbl_modificar_categoria_productos As ToolStripLabel
-    Friend WithEvents tab_productos As TabPage
-    Friend WithEvents SplitContainer4 As SplitContainer
-    Friend WithEvents dg_productos As DataGridView
-    Friend WithEvents Label14 As Label
-    Friend WithEvents lbl_baja_prod As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents btn_baja_prod As PictureBox
-    Friend WithEvents lbl_alta_prod As Label
-    Friend WithEvents btn_alta_prod As PictureBox
-    Friend WithEvents PictureBox17 As PictureBox
-    Friend WithEvents lbl_producto_stock As Label
-    Friend WithEvents lbl_productos_categoria_id As Label
-    Friend WithEvents lbl_productos_precio As Label
-    Friend WithEvents lbl_productos_nombre As Label
-    Friend WithEvents lbl_productos_id As Label
-    Friend WithEvents tb_productos_precio As TextBox
-    Friend WithEvents tb_productos_categoriaID As TextBox
-    Friend WithEvents tb_productos_stock As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents tb_productos_nombre As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents tb_productos_id As TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox10 As PictureBox
-    Friend WithEvents lbl_productos_marca As Label
-    Friend WithEvents lbl_productos_descripccion As Label
-    Friend WithEvents tb_productos_descripccion As TextBox
-    Friend WithEvents tb_productos_marca As TextBox
-    Friend WithEvents ToolStrip3 As ToolStrip
-    Friend WithEvents tslbl_nuevo_producto As ToolStripLabel
-    Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
-    Friend WithEvents tslbl_alta_productos As ToolStripLabel
-    Friend WithEvents ToolStripSeparator11 As ToolStripSeparator
-    Friend WithEvents tslbl_baja_productos As ToolStripLabel
-    Friend WithEvents ToolStripLabel12 As ToolStripLabel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents pan_datos_emple As Panel
-    Friend WithEvents pan_logo As Panel
-    Friend WithEvents pb6 As PictureBox
-    Friend WithEvents pb4 As PictureBox
-    Friend WithEvents pb7 As PictureBox
-    Friend WithEvents pb8 As PictureBox
-    Friend WithEvents pb9 As PictureBox
-    Friend WithEvents pb1 As PictureBox
-    Friend WithEvents pb2 As PictureBox
-    Friend WithEvents pb3 As PictureBox
-    Friend WithEvents pb5 As PictureBox
-    Friend WithEvents tit_datos_emp As Label
-    Friend WithEvents pan_dg_rol As Panel
-    Friend WithEvents pn_logo As PictureBox
-    Friend WithEvents pan_datos_roles As Panel
-    Friend WithEvents tit_roles As Label
-    Friend WithEvents pb_id_rol As PictureBox
-    Friend WithEvents pb_rol As PictureBox
 End Class

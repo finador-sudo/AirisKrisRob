@@ -202,5 +202,11 @@
   <ItemGroup>
     <None Include="Resources\pan_datos_roles.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tb_desc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tb_disabled.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
