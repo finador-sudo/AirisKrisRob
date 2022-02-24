@@ -1109,6 +1109,7 @@ Partial Class Busqueda_avanzada
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(435, 560)
         Me.Controls.Add(Me.SplitContainer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Busqueda_avanzada"
         Me.Text = "Busqueda_avanzada"
         Me.SplitContainer1.Panel1.ResumeLayout(False)

@@ -1,10 +1,10 @@
 ﻿Imports System.Data.OleDb
-
+Imports System.Drawing.Printing
 
 Public Class gestion_datos
 
     'Conexion a la base de datos
-    Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.16.0;Data Source=airis_db.accdb")
+    Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=airis_db.accdb")
     Public adaptador_roles As New OleDbDataAdapter("Select * from roles", conexion)
     Public adaptador_empleados As New OleDbDataAdapter("Select * from empleados", conexion)
     Public adaptador_clientes As New OleDbDataAdapter("Select * from clientes", conexion)
@@ -470,7 +470,7 @@ Public Class gestion_datos
         tb_clientes_telefono.Text = ""
     End Sub
     'BOTON ALTA
-    Private Sub tslbl_alta_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_alta_clientes.Click, btn_clientes_alta.Click
+    Private Sub tslbl_alta_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_alta_clientes.Click, btn_clientes_alta.Click, lbl_alta_clientes.Click
         If (tb_clientes_id.Text = "") Then
             If Not (tb_clientes_ape1.Text = "" And tb_clientes_ape2.Text = "" And tb_clientes_direccion.Text = "" And tb_clientes_empleadoID.Text = "" And tb_clientes_nombre.Text = "" And tb_clientes_telefono.Text = "") Then
                 Try
@@ -501,7 +501,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON BAJA
-    Private Sub tslbl_baja_clientes_Click(sender As Object, e As EventArgs)
+    Private Sub tslbl_baja_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_baja_clientes.Click, btn_emp_baja.Click, lbl_baja_empleados.Click
         If Not (tb_clientes.Text = "") Then
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try
@@ -525,7 +525,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON MODIFICAR
-    Private Sub tslbl_modificar_clientes_Click(sender As Object, e As EventArgs)
+    Private Sub tslbl_modificar_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_clientes.Click, btn_emp_modif.Click, lbl_mod_empleados.Click
         If Not (tb_clientes_id.Text = "" And tb_clientes_ape1.Text = "" And tb_clientes_ape2.Text = "" And tb_clientes_direccion.Text = "" And tb_clientes_empleadoID.Text = "" And tb_clientes_nombre.Text = "" And tb_clientes_telefono.Text = "") Then
             Try
                 conexion.Open()
@@ -551,14 +551,52 @@ Public Class gestion_datos
             MsgBox("Campos vacios, por favor revise la informacion.", MsgBoxStyle.Information, "Campos incompletos")
         End If
     End Sub
+    'BOTON IMPRIMIR
+    Private Sub btn_imprimir_Click(sender As Object, e As EventArgs) Handles btn_imprimir.Click
+        Dim printDoc As New PrintDocument
+        AddHandler printDoc.PrintPage, AddressOf print_PrintPage
+        ' Llamamos al emtodo que imprime
+        'METER VALIDACION DE CAMPOS VACIOS
+        printDoc.Print()
+    End Sub
 
+    Private Sub print_PrintPage(ByVal sender As Object,
+                            ByVal e As PrintPageEventArgs)
+        ' Este evento se producirá cada vez que se imprima una nueva página
+        ' imprimir HOLA MUNDO en Arial tamaño 24 y negrita
 
+        ' imprimimos la cadena en el margen izquierdo
+        ' La fuente a usar
+        Dim id, nom, dir, tel, ape1, ape2
+        id = tb_clientes_id.Text
+        nom = tb_clientes_nombre.Text
+        dir = tb_clientes_direccion.Text
+        tel = tb_clientes_telefono.Text
+        ape1 = tb_clientes_ape1.Text
+        ape2 = tb_clientes_ape2.Text
+        Dim prFont As New Font("Arial", 8, FontStyle.Regular)
+        ' la posición superior
+
+        Dim imagen As Bitmap = Image.FromFile(".\.\Resources\carne.png")
+        e.Graphics.DrawImage(imagen, 0, 0, 500, 560)
+        ' imprimimos la cadena
+        e.Graphics.DrawString(id, prFont, Brushes.Black, 135, 46.5)
+        e.Graphics.DrawString(nom, prFont, Brushes.Black, 135, 72.5)
+        e.Graphics.DrawString(dir, prFont, Brushes.Black, 135, 98)
+        e.Graphics.DrawString(tel, prFont, Brushes.Black, 135, 122)
+        e.Graphics.DrawString(ape1, prFont, Brushes.Black, 375, 46.5)
+        e.Graphics.DrawString(ape2, prFont, Brushes.Black, 375, 72.5)
+        ' indicamos que ya no hay nada más que imprimir
+        ' (el valor predeterminado de esta propiedad es False)
+        e.HasMorePages = False
+
+    End Sub
 
     '-------------------------------------------------------------------------
     'TAB PROVEEDORES
     '-------------------------------------------------------------------------
     'BOTON NUEVO
-    Private Sub tslbl_nuevo_proveedores_Click(sender As Object, e As EventArgs)
+    Private Sub tslbl_nuevo_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_nuevo_proveedores.Click
         tb_proveedores_id.Text = ""
         tb_proveedores_contacto.Text = ""
         tb_proveedores_direccion.Text = ""
@@ -566,7 +604,7 @@ Public Class gestion_datos
         tb_proveedores_telefono.Text = ""
     End Sub
     'BOTON ALTA
-    Private Sub tslbl_alta_provedores_Click(sender As Object, e As EventArgs)
+    Private Sub tslbl_alta_provedores_Click(sender As Object, e As EventArgs) Handles tslbl_alta_provedores.Click, btn_emp_alta.Click, lbl_alta_empleados.Click
         If (tb_proveedores_id.Text = "") Then
             If Not (tb_proveedores_contacto.Text = "" And tb_proveedores_direccion.Text = "" And tb_proveedores_nombre.Text = "" And tb_proveedores_telefono.Text = "") Then
                 Try
@@ -597,7 +635,7 @@ Public Class gestion_datos
     End Sub
 
     'BOTON BAJA
-    Private Sub tslbl_baja_proveedores_Click(sender As Object, e As EventArgs)
+    Private Sub tslbl_baja_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_baja_proveedores.Click, btn_emp_baja.Click, lbl_baja_empleados.Click
         If Not (tb_clientes.Text = "") Then
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try
@@ -620,7 +658,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON MODIFICAR
-    Private Sub tslbl_modificar_proveedores_Click(sender As Object, e As EventArgs)
+    Private Sub tslbl_modificar_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_proveedores.Click, btn_emp_modif.Click, lbl_mod_empleados.Click
         If Not (tb_proveedores_id.Text = "" And tb_proveedores_contacto.Text = "" And tb_proveedores_direccion.Text = "" And tb_proveedores_nombre.Text = "" And tb_proveedores_telefono.Text = "") Then
             Try
                 conexion.Open()
@@ -692,5 +730,6 @@ Public Class gestion_datos
         Me.Hide()
         inicio.Show()
     End Sub
+
 
 End Class

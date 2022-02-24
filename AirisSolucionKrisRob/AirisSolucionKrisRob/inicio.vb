@@ -2,7 +2,9 @@
 
 Public Class inicio
 
-    Dim conexionInicio As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.16.0;Data Source=airis_db.accdb")
+    ' Dim conexionInicio As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.16.0;Data Source=airis_db.accdb")
+    Dim conexionInicio As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=airis_db.accdb")
+
     Dim adaptadorUsuarios As New OleDbDataAdapter("select * from empleados", conexionInicio)
     Dim dataset_usuarios As New DataSet
 
@@ -63,6 +65,8 @@ Public Class inicio
                 WriteLine(1, "Acceso por parte de " + usu + ", con clave: " + pass + ", fecha: " + DateString + "; hora:" + TimeString)
 
                 FileClose()
+                ll_acerca.Hide()
+                ll_pagoficial.Hide()
                 progressBarAction()
 
                 Me.Hide()

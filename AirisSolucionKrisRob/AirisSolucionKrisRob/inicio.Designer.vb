@@ -26,35 +26,35 @@ Partial Class inicio
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inicio))
         Me.pan_presentacion = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pan_inicio = New System.Windows.Forms.Panel()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.ll_pagoficial = New System.Windows.Forms.LinkLabel()
         Me.ll_acerca = New System.Windows.Forms.LinkLabel()
         Me.cb_cont = New System.Windows.Forms.CheckBox()
         Me.lbl_inf = New System.Windows.Forms.Label()
         Me.lbl_bienvenido = New System.Windows.Forms.Label()
-        Me.pb_ico_usu = New System.Windows.Forms.PictureBox()
-        Me.pb_ico_cont = New System.Windows.Forms.PictureBox()
         Me.lbl_entrar = New System.Windows.Forms.Label()
         Me.tb_cont = New System.Windows.Forms.TextBox()
         Me.tb_usu = New System.Windows.Forms.TextBox()
+        Me.pan_logo = New System.Windows.Forms.Panel()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.pb_ico_usu = New System.Windows.Forms.PictureBox()
+        Me.pb_ico_cont = New System.Windows.Forms.PictureBox()
         Me.btn_entrar = New System.Windows.Forms.PictureBox()
         Me.pb_cont = New System.Windows.Forms.PictureBox()
         Me.pb_usu = New System.Windows.Forms.PictureBox()
-        Me.pan_logo = New System.Windows.Forms.Panel()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
-        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pan_presentacion.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pan_inicio.SuspendLayout()
+        Me.pan_logo.SuspendLayout()
         CType(Me.pb_ico_usu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_ico_cont, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_entrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_cont, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_usu, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pan_logo.SuspendLayout()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pan_presentacion
@@ -79,16 +79,6 @@ Partial Class inicio
         Me.Label1.Text = "Presiona cualquier" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "botón para entrar"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
-        Me.PictureBox1.Location = New System.Drawing.Point(51, 57)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(361, 322)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
         'pan_inicio
         '
         Me.pan_inicio.Controls.Add(Me.ProgressBar1)
@@ -111,15 +101,23 @@ Partial Class inicio
         Me.pan_inicio.Size = New System.Drawing.Size(467, 628)
         Me.pan_inicio.TabIndex = 1
         '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(72, 534)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(322, 56)
+        Me.ProgressBar1.TabIndex = 2
+        Me.ProgressBar1.Visible = False
+        '
         'll_pagoficial
         '
         Me.ll_pagoficial.AutoSize = True
-        Me.ll_pagoficial.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ll_pagoficial.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ll_pagoficial.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.ll_pagoficial.LinkColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(16, Byte), Integer))
-        Me.ll_pagoficial.Location = New System.Drawing.Point(188, 543)
+        Me.ll_pagoficial.Location = New System.Drawing.Point(177, 534)
         Me.ll_pagoficial.Name = "ll_pagoficial"
-        Me.ll_pagoficial.Size = New System.Drawing.Size(100, 23)
+        Me.ll_pagoficial.Size = New System.Drawing.Size(110, 23)
         Me.ll_pagoficial.TabIndex = 29
         Me.ll_pagoficial.TabStop = True
         Me.ll_pagoficial.Text = "página oficial"
@@ -127,12 +125,12 @@ Partial Class inicio
         'll_acerca
         '
         Me.ll_acerca.AutoSize = True
-        Me.ll_acerca.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ll_acerca.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ll_acerca.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.ll_acerca.LinkColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.ll_acerca.Location = New System.Drawing.Point(188, 576)
+        Me.ll_acerca.Location = New System.Drawing.Point(177, 567)
         Me.ll_acerca.Name = "ll_acerca"
-        Me.ll_acerca.Size = New System.Drawing.Size(110, 23)
+        Me.ll_acerca.Size = New System.Drawing.Size(111, 23)
         Me.ll_acerca.TabIndex = 28
         Me.ll_acerca.TabStop = True
         Me.ll_acerca.Text = "ACERCA DE..."
@@ -140,11 +138,11 @@ Partial Class inicio
         'cb_cont
         '
         Me.cb_cont.AutoSize = True
-        Me.cb_cont.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cb_cont.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_cont.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.cb_cont.Location = New System.Drawing.Point(170, 404)
+        Me.cb_cont.Location = New System.Drawing.Point(162, 401)
         Me.cb_cont.Name = "cb_cont"
-        Me.cb_cont.Size = New System.Drawing.Size(141, 24)
+        Me.cb_cont.Size = New System.Drawing.Size(155, 23)
         Me.cb_cont.TabIndex = 27
         Me.cb_cont.Text = "Mostrar contraseña"
         Me.cb_cont.UseVisualStyleBackColor = True
@@ -152,11 +150,11 @@ Partial Class inicio
         'lbl_inf
         '
         Me.lbl_inf.AutoSize = True
-        Me.lbl_inf.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_inf.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_inf.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.lbl_inf.Location = New System.Drawing.Point(119, 227)
+        Me.lbl_inf.Location = New System.Drawing.Point(99, 231)
         Me.lbl_inf.Name = "lbl_inf"
-        Me.lbl_inf.Size = New System.Drawing.Size(243, 23)
+        Me.lbl_inf.Size = New System.Drawing.Size(276, 23)
         Me.lbl_inf.TabIndex = 26
         Me.lbl_inf.Text = "Introduce tu usuario y contraseña:"
         '
@@ -170,6 +168,55 @@ Partial Class inicio
         Me.lbl_bienvenido.Size = New System.Drawing.Size(242, 41)
         Me.lbl_bienvenido.TabIndex = 25
         Me.lbl_bienvenido.Text = "Bienvenido a"
+        '
+        'lbl_entrar
+        '
+        Me.lbl_entrar.AutoSize = True
+        Me.lbl_entrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_entrar.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_entrar.ForeColor = System.Drawing.Color.White
+        Me.lbl_entrar.Location = New System.Drawing.Point(179, 450)
+        Me.lbl_entrar.Name = "lbl_entrar"
+        Me.lbl_entrar.Size = New System.Drawing.Size(123, 39)
+        Me.lbl_entrar.TabIndex = 22
+        Me.lbl_entrar.Text = "ENTRAR"
+        '
+        'tb_cont
+        '
+        Me.tb_cont.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(232, Byte), Integer))
+        Me.tb_cont.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_cont.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_cont.Location = New System.Drawing.Point(150, 351)
+        Me.tb_cont.MaxLength = 6
+        Me.tb_cont.Name = "tb_cont"
+        Me.tb_cont.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tb_cont.Size = New System.Drawing.Size(212, 26)
+        Me.tb_cont.TabIndex = 19
+        '
+        'tb_usu
+        '
+        Me.tb_usu.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(232, Byte), Integer))
+        Me.tb_usu.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_usu.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_usu.Location = New System.Drawing.Point(150, 282)
+        Me.tb_usu.Name = "tb_usu"
+        Me.tb_usu.Size = New System.Drawing.Size(209, 26)
+        Me.tb_usu.TabIndex = 17
+        '
+        'pan_logo
+        '
+        Me.pan_logo.Controls.Add(Me.pb_logo)
+        Me.pan_logo.Location = New System.Drawing.Point(69, 59)
+        Me.pan_logo.Name = "pan_logo"
+        Me.pan_logo.Size = New System.Drawing.Size(329, 155)
+        Me.pan_logo.TabIndex = 16
+        '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
         '
         'pb_ico_usu
         '
@@ -193,44 +240,10 @@ Partial Class inicio
         Me.pb_ico_cont.TabIndex = 23
         Me.pb_ico_cont.TabStop = False
         '
-        'lbl_entrar
-        '
-        Me.lbl_entrar.AutoSize = True
-        Me.lbl_entrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.lbl_entrar.Font = New System.Drawing.Font("Arial Narrow", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_entrar.ForeColor = System.Drawing.Color.White
-        Me.lbl_entrar.Location = New System.Drawing.Point(185, 460)
-        Me.lbl_entrar.Name = "lbl_entrar"
-        Me.lbl_entrar.Size = New System.Drawing.Size(126, 37)
-        Me.lbl_entrar.TabIndex = 22
-        Me.lbl_entrar.Text = "ENTRAR"
-        '
-        'tb_cont
-        '
-        Me.tb_cont.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(232, Byte), Integer))
-        Me.tb_cont.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tb_cont.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_cont.Location = New System.Drawing.Point(150, 351)
-        Me.tb_cont.MaxLength = 6
-        Me.tb_cont.Name = "tb_cont"
-        Me.tb_cont.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tb_cont.Size = New System.Drawing.Size(212, 31)
-        Me.tb_cont.TabIndex = 19
-        '
-        'tb_usu
-        '
-        Me.tb_usu.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(232, Byte), Integer))
-        Me.tb_usu.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tb_usu.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_usu.Location = New System.Drawing.Point(150, 282)
-        Me.tb_usu.Name = "tb_usu"
-        Me.tb_usu.Size = New System.Drawing.Size(209, 31)
-        Me.tb_usu.TabIndex = 17
-        '
         'btn_entrar
         '
         Me.btn_entrar.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.Recurso_2_2x
-        Me.btn_entrar.Location = New System.Drawing.Point(114, 451)
+        Me.btn_entrar.Location = New System.Drawing.Point(108, 441)
         Me.btn_entrar.Name = "btn_entrar"
         Me.btn_entrar.Size = New System.Drawing.Size(258, 80)
         Me.btn_entrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -257,14 +270,6 @@ Partial Class inicio
         Me.pb_usu.TabIndex = 18
         Me.pb_usu.TabStop = False
         '
-        'pan_logo
-        '
-        Me.pan_logo.Controls.Add(Me.pb_logo)
-        Me.pan_logo.Location = New System.Drawing.Point(69, 59)
-        Me.pan_logo.Name = "pan_logo"
-        Me.pan_logo.Size = New System.Drawing.Size(329, 155)
-        Me.pan_logo.TabIndex = 16
-        '
         'pb_logo
         '
         Me.pb_logo.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
@@ -275,20 +280,15 @@ Partial Class inicio
         Me.pb_logo.TabIndex = 0
         Me.pb_logo.TabStop = False
         '
-        'NotifyIcon1
+        'PictureBox1
         '
-        Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon1.Text = "NotifyIcon1"
-        Me.NotifyIcon1.Visible = True
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(76, 537)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(322, 56)
-        Me.ProgressBar1.TabIndex = 2
-        Me.ProgressBar1.Visible = False
+        Me.PictureBox1.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
+        Me.PictureBox1.Location = New System.Drawing.Point(51, 57)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(361, 322)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'inicio
         '
@@ -298,22 +298,23 @@ Partial Class inicio
         Me.ClientSize = New System.Drawing.Size(468, 629)
         Me.Controls.Add(Me.pan_inicio)
         Me.Controls.Add(Me.pan_presentacion)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "inicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Airis Managment Application"
         Me.pan_presentacion.ResumeLayout(False)
         Me.pan_presentacion.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pan_inicio.ResumeLayout(False)
         Me.pan_inicio.PerformLayout()
+        Me.pan_logo.ResumeLayout(False)
         CType(Me.pb_ico_usu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_ico_cont, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_entrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_cont, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_usu, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pan_logo.ResumeLayout(False)
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
