@@ -22,6 +22,8 @@ Partial Class inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inicio))
         Me.pan_presentacion = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -41,6 +43,8 @@ Partial Class inicio
         Me.pb_usu = New System.Windows.Forms.PictureBox()
         Me.pan_logo = New System.Windows.Forms.Panel()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.pan_presentacion.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pan_inicio.SuspendLayout()
@@ -87,6 +91,7 @@ Partial Class inicio
         '
         'pan_inicio
         '
+        Me.pan_inicio.Controls.Add(Me.ProgressBar1)
         Me.pan_inicio.Controls.Add(Me.ll_pagoficial)
         Me.pan_inicio.Controls.Add(Me.ll_acerca)
         Me.pan_inicio.Controls.Add(Me.cb_cont)
@@ -270,6 +275,21 @@ Partial Class inicio
         Me.pb_logo.TabIndex = 0
         Me.pb_logo.TabStop = False
         '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(76, 537)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(322, 56)
+        Me.ProgressBar1.TabIndex = 2
+        Me.ProgressBar1.Visible = False
+        '
         'inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -317,4 +337,6 @@ Partial Class inicio
     Friend WithEvents pan_logo As Panel
     Friend WithEvents pb_logo As PictureBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents ProgressBar1 As ProgressBar
 End Class

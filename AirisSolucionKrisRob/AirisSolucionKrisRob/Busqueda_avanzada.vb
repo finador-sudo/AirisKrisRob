@@ -11,11 +11,10 @@ Public Class Busqueda_avanzada
 
 
     Private Sub Busqueda_avanzada_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        pan_categorias.Hide()
-        pan_empleados.Hide()
+
     End Sub
 
-    Private Sub cb_tablas_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub cb_tablas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_tablas.SelectedIndexChanged
         Select Case cb_tablas.Text
             Case "Clientes"
                 pan_roles.Hide()
@@ -62,7 +61,7 @@ Public Class Busqueda_avanzada
         End Select
     End Sub
 
-    Private Sub btn_buscar_Click(sender As Object, e As EventArgs)
+    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles lbl_buscar.Click
         Select Case cb_tablas.Text
             Case "Clientes"
                 Dim _id_clientes As String = tb_id_clientes.Text
@@ -166,5 +165,9 @@ Public Class Busqueda_avanzada
 
     Private Sub lbl_id_empleado_clientes_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub Busqueda_avanzada_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        gestion_datos.Show()
     End Sub
 End Class

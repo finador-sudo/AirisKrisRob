@@ -28,9 +28,6 @@ Partial Class Busqueda_avanzada
         Me.lbl_buscar = New System.Windows.Forms.Label()
         Me.lbl_cerrar = New System.Windows.Forms.Label()
         Me.pan_divisor = New System.Windows.Forms.Panel()
-        Me.lbl_tabla = New System.Windows.Forms.Label()
-        Me.cb_tablas = New System.Windows.Forms.ComboBox()
-        Me.dg_busqueda = New System.Windows.Forms.DataGridView()
         Me.btn_cerrar = New System.Windows.Forms.PictureBox()
         Me.btn_buscar = New System.Windows.Forms.PictureBox()
         Me.pan_categorias = New System.Windows.Forms.Panel()
@@ -53,6 +50,7 @@ Partial Class Busqueda_avanzada
         Me.tb_id_productos = New System.Windows.Forms.TextBox()
         Me.tb_nombre_productos = New System.Windows.Forms.TextBox()
         Me.tb_categoria_id_productos = New System.Windows.Forms.TextBox()
+        Me.lbl_tabla = New System.Windows.Forms.Label()
         Me.pan_provedores = New System.Windows.Forms.Panel()
         Me.lbl_contacto_provedores = New System.Windows.Forms.Label()
         Me.lbl_telefono_provedores = New System.Windows.Forms.Label()
@@ -65,6 +63,7 @@ Partial Class Busqueda_avanzada
         Me.tb_id_provedores = New System.Windows.Forms.TextBox()
         Me.tb_nombre_provedores = New System.Windows.Forms.TextBox()
         Me.tb_telefono_provedores = New System.Windows.Forms.TextBox()
+        Me.cb_tablas = New System.Windows.Forms.ComboBox()
         Me.pan_clientes = New System.Windows.Forms.Panel()
         Me.lbl_telefono_cliente = New System.Windows.Forms.Label()
         Me.lbl_ape2_clientes = New System.Windows.Forms.Label()
@@ -102,11 +101,11 @@ Partial Class Busqueda_avanzada
         Me.lbl_roles = New System.Windows.Forms.Label()
         Me.rb_rol_id = New System.Windows.Forms.TextBox()
         Me.tb_rol_nombre = New System.Windows.Forms.TextBox()
+        Me.dg_busqueda = New System.Windows.Forms.DataGridView()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        CType(Me.dg_busqueda, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_cerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_buscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pan_categorias.SuspendLayout()
@@ -115,6 +114,7 @@ Partial Class Busqueda_avanzada
         Me.pan_clientes.SuspendLayout()
         Me.pan_empleados.SuspendLayout()
         Me.pan_roles.SuspendLayout()
+        CType(Me.dg_busqueda, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -191,41 +191,6 @@ Partial Class Busqueda_avanzada
         Me.pan_divisor.Name = "pan_divisor"
         Me.pan_divisor.Size = New System.Drawing.Size(435, 3)
         Me.pan_divisor.TabIndex = 23
-        '
-        'lbl_tabla
-        '
-        Me.lbl_tabla.AutoSize = True
-        Me.lbl_tabla.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_tabla.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.lbl_tabla.Location = New System.Drawing.Point(69, 94)
-        Me.lbl_tabla.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lbl_tabla.Name = "lbl_tabla"
-        Me.lbl_tabla.Size = New System.Drawing.Size(47, 20)
-        Me.lbl_tabla.TabIndex = 1
-        Me.lbl_tabla.Text = "Tabla:"
-        '
-        'cb_tablas
-        '
-        Me.cb_tablas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cb_tablas.FormattingEnabled = True
-        Me.cb_tablas.Items.AddRange(New Object() {"Clientes", "Categorias de producto", "Roles", "Empleados", "Productos", "Provedores"})
-        Me.cb_tablas.Location = New System.Drawing.Point(124, 95)
-        Me.cb_tablas.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.cb_tablas.Name = "cb_tablas"
-        Me.cb_tablas.Size = New System.Drawing.Size(164, 21)
-        Me.cb_tablas.TabIndex = 0
-        '
-        'dg_busqueda
-        '
-        Me.dg_busqueda.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.dg_busqueda.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dg_busqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_busqueda.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dg_busqueda.Location = New System.Drawing.Point(0, 0)
-        Me.dg_busqueda.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.dg_busqueda.Name = "dg_busqueda"
-        Me.dg_busqueda.Size = New System.Drawing.Size(435, 227)
-        Me.dg_busqueda.TabIndex = 2
         '
         'btn_cerrar
         '
@@ -497,6 +462,18 @@ Partial Class Busqueda_avanzada
         Me.tb_categoria_id_productos.Size = New System.Drawing.Size(101, 22)
         Me.tb_categoria_id_productos.TabIndex = 0
         '
+        'lbl_tabla
+        '
+        Me.lbl_tabla.AutoSize = True
+        Me.lbl_tabla.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_tabla.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_tabla.Location = New System.Drawing.Point(69, 94)
+        Me.lbl_tabla.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_tabla.Name = "lbl_tabla"
+        Me.lbl_tabla.Size = New System.Drawing.Size(47, 20)
+        Me.lbl_tabla.TabIndex = 1
+        Me.lbl_tabla.Text = "Tabla:"
+        '
         'pan_provedores
         '
         Me.pan_provedores.BackgroundImage = CType(resources.GetObject("pan_provedores.BackgroundImage"), System.Drawing.Image)
@@ -646,6 +623,17 @@ Partial Class Busqueda_avanzada
         Me.tb_telefono_provedores.Name = "tb_telefono_provedores"
         Me.tb_telefono_provedores.Size = New System.Drawing.Size(101, 22)
         Me.tb_telefono_provedores.TabIndex = 0
+        '
+        'cb_tablas
+        '
+        Me.cb_tablas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb_tablas.FormattingEnabled = True
+        Me.cb_tablas.Items.AddRange(New Object() {"Clientes", "Categorias de producto", "Roles", "Empleados", "Productos", "Provedores"})
+        Me.cb_tablas.Location = New System.Drawing.Point(124, 95)
+        Me.cb_tablas.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.cb_tablas.Name = "cb_tablas"
+        Me.cb_tablas.Size = New System.Drawing.Size(164, 21)
+        Me.cb_tablas.TabIndex = 0
         '
         'pan_clientes
         '
@@ -1101,6 +1089,19 @@ Partial Class Busqueda_avanzada
         Me.tb_rol_nombre.Size = New System.Drawing.Size(103, 22)
         Me.tb_rol_nombre.TabIndex = 0
         '
+        'dg_busqueda
+        '
+        Me.dg_busqueda.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.dg_busqueda.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dg_busqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_busqueda.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dg_busqueda.Location = New System.Drawing.Point(0, 0)
+        Me.dg_busqueda.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.dg_busqueda.Name = "dg_busqueda"
+        Me.dg_busqueda.ReadOnly = True
+        Me.dg_busqueda.Size = New System.Drawing.Size(435, 227)
+        Me.dg_busqueda.TabIndex = 2
+        '
         'Busqueda_avanzada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1115,7 +1116,6 @@ Partial Class Busqueda_avanzada
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        CType(Me.dg_busqueda, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_cerrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_buscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pan_categorias.ResumeLayout(False)
@@ -1130,6 +1130,7 @@ Partial Class Busqueda_avanzada
         Me.pan_empleados.PerformLayout()
         Me.pan_roles.ResumeLayout(False)
         Me.pan_roles.PerformLayout()
+        CType(Me.dg_busqueda, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

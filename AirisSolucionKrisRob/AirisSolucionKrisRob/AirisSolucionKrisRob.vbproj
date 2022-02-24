@@ -208,5 +208,10 @@
   <ItemGroup>
     <None Include="Resources\tb_disabled.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\airis_db.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

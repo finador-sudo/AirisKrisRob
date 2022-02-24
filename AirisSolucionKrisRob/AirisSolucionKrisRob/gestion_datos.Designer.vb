@@ -24,8 +24,8 @@ Partial Class gestion_datos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestion_datos))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.toolstrip = New System.Windows.Forms.ToolStrip()
         Me.ts_volverimg = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -713,6 +713,7 @@ Partial Class gestion_datos
         Me.dg_roles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_roles.Location = New System.Drawing.Point(60, 107)
         Me.dg_roles.Name = "dg_roles"
+        Me.dg_roles.ReadOnly = True
         Me.dg_roles.Size = New System.Drawing.Size(605, 725)
         Me.dg_roles.TabIndex = 1
         '
@@ -822,26 +823,27 @@ Partial Class gestion_datos
         '
         'dg_emple
         '
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dg_emple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_emple.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dg_emple.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.dg_emple.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_emple.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dg_emple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_emple.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1})
         Me.dg_emple.GridColor = System.Drawing.Color.WhiteSmoke
         Me.dg_emple.Location = New System.Drawing.Point(49, 57)
         Me.dg_emple.Name = "dg_emple"
+        Me.dg_emple.ReadOnly = True
         Me.dg_emple.Size = New System.Drawing.Size(1761, 279)
         Me.dg_emple.TabIndex = 62
         '
@@ -849,6 +851,7 @@ Partial Class gestion_datos
         '
         Me.Column1.HeaderText = "Column1"
         Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
         'pan_datos_emple
         '
@@ -1664,6 +1667,7 @@ Partial Class gestion_datos
         Me.dg_categorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_categorias.Location = New System.Drawing.Point(53, 125)
         Me.dg_categorias.Name = "dg_categorias"
+        Me.dg_categorias.ReadOnly = True
         Me.dg_categorias.Size = New System.Drawing.Size(605, 725)
         Me.dg_categorias.TabIndex = 25
         '
@@ -1768,6 +1772,7 @@ Partial Class gestion_datos
         Me.dg_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_productos.Location = New System.Drawing.Point(46, 80)
         Me.dg_productos.Name = "dg_productos"
+        Me.dg_productos.ReadOnly = True
         Me.dg_productos.Size = New System.Drawing.Size(1080, 313)
         Me.dg_productos.TabIndex = 44
         '
@@ -2214,6 +2219,7 @@ Partial Class gestion_datos
         Me.dg_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_clientes.Location = New System.Drawing.Point(42, 119)
         Me.dg_clientes.Name = "dg_clientes"
+        Me.dg_clientes.ReadOnly = True
         Me.dg_clientes.Size = New System.Drawing.Size(1791, 266)
         Me.dg_clientes.TabIndex = 63
         '
@@ -2843,6 +2849,7 @@ Partial Class gestion_datos
         Me.dg_proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_proveedores.Location = New System.Drawing.Point(34, 103)
         Me.dg_proveedores.Name = "dg_proveedores"
+        Me.dg_proveedores.ReadOnly = True
         Me.dg_proveedores.Size = New System.Drawing.Size(1791, 266)
         Me.dg_proveedores.TabIndex = 82
         '
