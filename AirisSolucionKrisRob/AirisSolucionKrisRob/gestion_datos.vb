@@ -556,17 +556,13 @@ Public Class gestion_datos
         Dim printDoc As New PrintDocument
         AddHandler printDoc.PrintPage, AddressOf print_PrintPage
         ' Llamamos al emtodo que imprime
-        'METER VALIDACION DE CAMPOS VACIOS
         printDoc.Print()
+        NotifyIcon1.ShowBalloonTip(2)
     End Sub
 
     Private Sub print_PrintPage(ByVal sender As Object,
                             ByVal e As PrintPageEventArgs)
-        ' Este evento se producirá cada vez que se imprima una nueva página
-        ' imprimir HOLA MUNDO en Arial tamaño 24 y negrita
 
-        ' imprimimos la cadena en el margen izquierdo
-        ' La fuente a usar
         Dim id, nom, dir, tel, ape1, ape2
         id = tb_clientes_id.Text
         nom = tb_clientes_nombre.Text
@@ -577,7 +573,7 @@ Public Class gestion_datos
         Dim prFont As New Font("Arial", 8, FontStyle.Regular)
         ' la posición superior
 
-        Dim imagen As Bitmap = Image.FromFile("..\Resources\carne.png")
+        Dim imagen As Bitmap = Image.FromFile("carne.png")
         e.Graphics.DrawImage(imagen, 0, 0, 500, 560)
         ' imprimimos la cadena
         e.Graphics.DrawString(id, prFont, Brushes.Black, 135, 46.5)
@@ -751,14 +747,18 @@ Public Class gestion_datos
     End Sub
 
     Private Sub ll_ayuda_cat_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_cat.LinkClicked
-
+        Help.ShowHelp(ll_ayuda_cat, "Airis.chm")
     End Sub
 
     Private Sub ll_ayuda_prod_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_prod.LinkClicked
-
+        Help.ShowHelp(ll_ayuda_prod, "Airis.chm")
     End Sub
 
     Private Sub ll_ayuda_clie_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_clie.LinkClicked
+        Help.ShowHelp(ll_ayuda_clie, "Airis.chm")
+    End Sub
 
+    Private Sub ll_ayuda_prov_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_prov.LinkClicked
+        Help.ShowHelp(ll_ayuda_prov, "Airis.chm")
     End Sub
 End Class
