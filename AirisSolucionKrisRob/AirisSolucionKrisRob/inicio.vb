@@ -48,7 +48,7 @@ Public Class inicio
             Dim reader As OleDbDataReader = comando.ExecuteReader
 
             While reader.Read
-                If reader.Item("usuario") = usu And reader.Item("password") = pass Then
+                If reader.Item("usuario") = usu And reader.Item("cont") = pass Then
                     m = 1
                 Else
                     pos += 1
@@ -67,7 +67,7 @@ Public Class inicio
                 FileClose()
                 ll_acerca.Hide()
                 ll_pagoficial.Hide()
-                progressBarAction()
+                'progressBarAction()
 
                 Me.Hide()
                 gestion_datos.Show()

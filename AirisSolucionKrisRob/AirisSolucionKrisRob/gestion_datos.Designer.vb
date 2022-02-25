@@ -24,8 +24,8 @@ Partial Class gestion_datos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestion_datos))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.toolstrip = New System.Windows.Forms.ToolStrip()
         Me.ts_volverimg = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -158,6 +158,13 @@ Partial Class gestion_datos
         Me.dg_productos = New System.Windows.Forms.DataGridView()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.tb_productos_marca = New System.Windows.Forms.TextBox()
+        Me.tb_productos_stock = New System.Windows.Forms.TextBox()
+        Me.tb_productos_precio = New System.Windows.Forms.TextBox()
+        Me.tb_productos_nombre = New System.Windows.Forms.TextBox()
+        Me.tb_productos_id = New System.Windows.Forms.TextBox()
+        Me.tb_productos_descripccion = New System.Windows.Forms.TextBox()
+        Me.tb_productos_categoriaID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
@@ -177,14 +184,7 @@ Partial Class gestion_datos
         Me.lbl_productos_nombre = New System.Windows.Forms.Label()
         Me.btn_baja_prod = New System.Windows.Forms.PictureBox()
         Me.lbl_productos_id = New System.Windows.Forms.Label()
-        Me.tb_productos_precio = New System.Windows.Forms.TextBox()
-        Me.tb_productos_categoriaID = New System.Windows.Forms.TextBox()
         Me.lbl_productos_marca = New System.Windows.Forms.Label()
-        Me.tb_productos_stock = New System.Windows.Forms.TextBox()
-        Me.tb_productos_marca = New System.Windows.Forms.TextBox()
-        Me.tb_productos_nombre = New System.Windows.Forms.TextBox()
-        Me.tb_productos_descripccion = New System.Windows.Forms.TextBox()
-        Me.tb_productos_id = New System.Windows.Forms.TextBox()
         Me.lbl_productos_descripccion = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ll_ayuda_prod = New System.Windows.Forms.LinkLabel()
@@ -526,6 +526,7 @@ Partial Class gestion_datos
         Me.SplitContainer2.Size = New System.Drawing.Size(1890, 926)
         Me.SplitContainer2.SplitterDistance = 1149
         Me.SplitContainer2.TabIndex = 106
+        Me.SplitContainer2.TabStop = False
         '
         'll_ayuda_roles
         '
@@ -584,7 +585,7 @@ Partial Class gestion_datos
         Me.lbl_baja_roles.Location = New System.Drawing.Point(480, 296)
         Me.lbl_baja_roles.Name = "lbl_baja_roles"
         Me.lbl_baja_roles.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_baja_roles.TabIndex = 102
+        Me.lbl_baja_roles.TabIndex = 13
         Me.lbl_baja_roles.Text = "BAJA"
         '
         'tb_roles_rol
@@ -595,7 +596,7 @@ Partial Class gestion_datos
         Me.tb_roles_rol.Location = New System.Drawing.Point(511, 175)
         Me.tb_roles_rol.Name = "tb_roles_rol"
         Me.tb_roles_rol.Size = New System.Drawing.Size(173, 26)
-        Me.tb_roles_rol.TabIndex = 14
+        Me.tb_roles_rol.TabIndex = 11
         '
         'tb_roles_id
         '
@@ -607,7 +608,7 @@ Partial Class gestion_datos
         Me.tb_roles_id.Location = New System.Drawing.Point(511, 97)
         Me.tb_roles_id.Name = "tb_roles_id"
         Me.tb_roles_id.Size = New System.Drawing.Size(173, 26)
-        Me.tb_roles_id.TabIndex = 11
+        Me.tb_roles_id.TabIndex = 10
         '
         'lbl_alta_roles
         '
@@ -619,7 +620,7 @@ Partial Class gestion_datos
         Me.lbl_alta_roles.Location = New System.Drawing.Point(239, 296)
         Me.lbl_alta_roles.Name = "lbl_alta_roles"
         Me.lbl_alta_roles.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_alta_roles.TabIndex = 100
+        Me.lbl_alta_roles.TabIndex = 12
         Me.lbl_alta_roles.Text = "ALTA"
         '
         'lbl_mod_roles
@@ -632,7 +633,7 @@ Partial Class gestion_datos
         Me.lbl_mod_roles.Location = New System.Drawing.Point(683, 296)
         Me.lbl_mod_roles.Name = "lbl_mod_roles"
         Me.lbl_mod_roles.Size = New System.Drawing.Size(138, 31)
-        Me.lbl_mod_roles.TabIndex = 101
+        Me.lbl_mod_roles.TabIndex = 14
         Me.lbl_mod_roles.Text = "MODIFICAR"
         '
         'btn_mod_roles
@@ -768,6 +769,7 @@ Partial Class gestion_datos
         Me.dg_roles.ReadOnly = True
         Me.dg_roles.Size = New System.Drawing.Size(605, 725)
         Me.dg_roles.TabIndex = 1
+        Me.dg_roles.TabStop = False
         '
         'ts_roles
         '
@@ -849,6 +851,7 @@ Partial Class gestion_datos
         Me.SplitContainer1.Size = New System.Drawing.Size(1890, 926)
         Me.SplitContainer1.SplitterDistance = 426
         Me.SplitContainer1.TabIndex = 64
+        Me.SplitContainer1.TabStop = False
         '
         'panel
         '
@@ -875,21 +878,21 @@ Partial Class gestion_datos
         '
         'dg_emple
         '
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dg_emple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_emple.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dg_emple.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.dg_emple.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_emple.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dg_emple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_emple.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1})
         Me.dg_emple.GridColor = System.Drawing.Color.WhiteSmoke
@@ -898,6 +901,7 @@ Partial Class gestion_datos
         Me.dg_emple.ReadOnly = True
         Me.dg_emple.Size = New System.Drawing.Size(1761, 279)
         Me.dg_emple.TabIndex = 62
+        Me.dg_emple.TabStop = False
         '
         'Column1
         '
@@ -958,7 +962,7 @@ Partial Class gestion_datos
         Me.tb_emple_nom.Location = New System.Drawing.Point(348, 335)
         Me.tb_emple_nom.Name = "tb_emple_nom"
         Me.tb_emple_nom.Size = New System.Drawing.Size(173, 26)
-        Me.tb_emple_nom.TabIndex = 114
+        Me.tb_emple_nom.TabIndex = 13
         '
         'lbl_usuario
         '
@@ -1021,7 +1025,7 @@ Partial Class gestion_datos
         Me.tb_emple_rol.Location = New System.Drawing.Point(348, 160)
         Me.tb_emple_rol.Name = "tb_emple_rol"
         Me.tb_emple_rol.Size = New System.Drawing.Size(173, 26)
-        Me.tb_emple_rol.TabIndex = 109
+        Me.tb_emple_rol.TabIndex = 10
         '
         'lbl_id_emple
         '
@@ -1045,7 +1049,7 @@ Partial Class gestion_datos
         Me.tb_emple_ape2.Location = New System.Drawing.Point(1000, 152)
         Me.tb_emple_ape2.Name = "tb_emple_ape2"
         Me.tb_emple_ape2.Size = New System.Drawing.Size(173, 26)
-        Me.tb_emple_ape2.TabIndex = 110
+        Me.tb_emple_ape2.TabIndex = 15
         '
         'tb_emple_cont
         '
@@ -1056,7 +1060,7 @@ Partial Class gestion_datos
         Me.tb_emple_cont.Location = New System.Drawing.Point(348, 274)
         Me.tb_emple_cont.Name = "tb_emple_cont"
         Me.tb_emple_cont.Size = New System.Drawing.Size(173, 26)
-        Me.tb_emple_cont.TabIndex = 115
+        Me.tb_emple_cont.TabIndex = 12
         '
         'lbl_empleados_email
         '
@@ -1105,7 +1109,7 @@ Partial Class gestion_datos
         Me.tb_emple_tlf.Location = New System.Drawing.Point(1000, 210)
         Me.tb_emple_tlf.Name = "tb_emple_tlf"
         Me.tb_emple_tlf.Size = New System.Drawing.Size(173, 26)
-        Me.tb_emple_tlf.TabIndex = 111
+        Me.tb_emple_tlf.TabIndex = 16
         '
         'tb_emple_usu
         '
@@ -1116,7 +1120,7 @@ Partial Class gestion_datos
         Me.tb_emple_usu.Location = New System.Drawing.Point(348, 218)
         Me.tb_emple_usu.Name = "tb_emple_usu"
         Me.tb_emple_usu.Size = New System.Drawing.Size(173, 26)
-        Me.tb_emple_usu.TabIndex = 116
+        Me.tb_emple_usu.TabIndex = 11
         '
         'tb_emple_ape1
         '
@@ -1127,7 +1131,7 @@ Partial Class gestion_datos
         Me.tb_emple_ape1.Location = New System.Drawing.Point(1000, 96)
         Me.tb_emple_ape1.Name = "tb_emple_ape1"
         Me.tb_emple_ape1.Size = New System.Drawing.Size(173, 26)
-        Me.tb_emple_ape1.TabIndex = 113
+        Me.tb_emple_ape1.TabIndex = 14
         '
         'tb_emple_id
         '
@@ -1163,7 +1167,7 @@ Partial Class gestion_datos
         Me.tb_emple_correo.Location = New System.Drawing.Point(1000, 268)
         Me.tb_emple_correo.Name = "tb_emple_correo"
         Me.tb_emple_correo.Size = New System.Drawing.Size(173, 26)
-        Me.tb_emple_correo.TabIndex = 112
+        Me.tb_emple_correo.TabIndex = 17
         '
         'lbl_empleados_ape2
         '
@@ -1287,7 +1291,7 @@ Partial Class gestion_datos
         Me.lbl_alta_empleados.Location = New System.Drawing.Point(724, 360)
         Me.lbl_alta_empleados.Name = "lbl_alta_empleados"
         Me.lbl_alta_empleados.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_alta_empleados.TabIndex = 121
+        Me.lbl_alta_empleados.TabIndex = 18
         Me.lbl_alta_empleados.Text = "ALTA"
         '
         'btn_emp_alta
@@ -1313,7 +1317,7 @@ Partial Class gestion_datos
         Me.lbl_baja_empleados.Location = New System.Drawing.Point(1090, 360)
         Me.lbl_baja_empleados.Name = "lbl_baja_empleados"
         Me.lbl_baja_empleados.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_baja_empleados.TabIndex = 123
+        Me.lbl_baja_empleados.TabIndex = 20
         Me.lbl_baja_empleados.Text = "BAJA"
         '
         'btn_emp_baja
@@ -1339,7 +1343,7 @@ Partial Class gestion_datos
         Me.lbl_mod_empleados.Location = New System.Drawing.Point(873, 360)
         Me.lbl_mod_empleados.Name = "lbl_mod_empleados"
         Me.lbl_mod_empleados.Size = New System.Drawing.Size(138, 31)
-        Me.lbl_mod_empleados.TabIndex = 122
+        Me.lbl_mod_empleados.TabIndex = 19
         Me.lbl_mod_empleados.Text = "MODIFICAR"
         '
         'btn_emp_modif
@@ -1491,6 +1495,7 @@ Partial Class gestion_datos
         Me.SplitContainer3.Size = New System.Drawing.Size(1890, 926)
         Me.SplitContainer3.SplitterDistance = 1162
         Me.SplitContainer3.TabIndex = 114
+        Me.SplitContainer3.TabStop = False
         '
         'll_ayuda_cat
         '
@@ -1527,7 +1532,7 @@ Partial Class gestion_datos
         Me.lbl_baja_categoria.Location = New System.Drawing.Point(530, 386)
         Me.lbl_baja_categoria.Name = "lbl_baja_categoria"
         Me.lbl_baja_categoria.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_baja_categoria.TabIndex = 113
+        Me.lbl_baja_categoria.TabIndex = 14
         Me.lbl_baja_categoria.Text = "BAJA"
         '
         'lbl_mod_categoria
@@ -1540,7 +1545,7 @@ Partial Class gestion_datos
         Me.lbl_mod_categoria.Location = New System.Drawing.Point(733, 386)
         Me.lbl_mod_categoria.Name = "lbl_mod_categoria"
         Me.lbl_mod_categoria.Size = New System.Drawing.Size(138, 31)
-        Me.lbl_mod_categoria.TabIndex = 112
+        Me.lbl_mod_categoria.TabIndex = 15
         Me.lbl_mod_categoria.Text = "MODIFICAR"
         '
         'tb_categorias_descripccion
@@ -1552,7 +1557,7 @@ Partial Class gestion_datos
         Me.tb_categorias_descripccion.Multiline = True
         Me.tb_categorias_descripccion.Name = "tb_categorias_descripccion"
         Me.tb_categorias_descripccion.Size = New System.Drawing.Size(181, 73)
-        Me.tb_categorias_descripccion.TabIndex = 23
+        Me.tb_categorias_descripccion.TabIndex = 12
         '
         'btn_mod_categoria
         '
@@ -1574,7 +1579,7 @@ Partial Class gestion_datos
         Me.tb_categorias_nombre.Location = New System.Drawing.Point(521, 203)
         Me.tb_categorias_nombre.Name = "tb_categorias_nombre"
         Me.tb_categorias_nombre.Size = New System.Drawing.Size(181, 20)
-        Me.tb_categorias_nombre.TabIndex = 22
+        Me.tb_categorias_nombre.TabIndex = 11
         '
         'lbl_categoria_descripcion
         '
@@ -1599,7 +1604,7 @@ Partial Class gestion_datos
         Me.lbl_alta_categoria.Location = New System.Drawing.Point(288, 386)
         Me.lbl_alta_categoria.Name = "lbl_alta_categoria"
         Me.lbl_alta_categoria.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_alta_categoria.TabIndex = 111
+        Me.lbl_alta_categoria.TabIndex = 13
         Me.lbl_alta_categoria.Text = "ALTA"
         '
         'lbl_categoria_nombre
@@ -1662,7 +1667,7 @@ Partial Class gestion_datos
         Me.tb_categorias_id.Location = New System.Drawing.Point(521, 142)
         Me.tb_categorias_id.Name = "tb_categorias_id"
         Me.tb_categorias_id.Size = New System.Drawing.Size(181, 20)
-        Me.tb_categorias_id.TabIndex = 18
+        Me.tb_categorias_id.TabIndex = 10
         '
         'PictureBox5
         '
@@ -1753,6 +1758,7 @@ Partial Class gestion_datos
         Me.dg_categorias.ReadOnly = True
         Me.dg_categorias.Size = New System.Drawing.Size(605, 725)
         Me.dg_categorias.TabIndex = 25
+        Me.dg_categorias.TabStop = False
         '
         'ToolStrip2
         '
@@ -1835,6 +1841,7 @@ Partial Class gestion_datos
         Me.SplitContainer4.Size = New System.Drawing.Size(1890, 926)
         Me.SplitContainer4.SplitterDistance = 445
         Me.SplitContainer4.TabIndex = 63
+        Me.SplitContainer4.TabStop = False
         '
         'Label7
         '
@@ -1851,7 +1858,6 @@ Partial Class gestion_datos
         'dg_productos
         '
         Me.dg_productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dg_productos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dg_productos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.dg_productos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -1861,6 +1867,7 @@ Partial Class gestion_datos
         Me.dg_productos.ReadOnly = True
         Me.dg_productos.Size = New System.Drawing.Size(1793, 301)
         Me.dg_productos.TabIndex = 44
+        Me.dg_productos.TabStop = False
         '
         'PictureBox6
         '
@@ -1876,6 +1883,13 @@ Partial Class gestion_datos
         '
         Me.Panel2.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.pan_datos
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Controls.Add(Me.tb_productos_marca)
+        Me.Panel2.Controls.Add(Me.tb_productos_stock)
+        Me.Panel2.Controls.Add(Me.tb_productos_precio)
+        Me.Panel2.Controls.Add(Me.tb_productos_nombre)
+        Me.Panel2.Controls.Add(Me.tb_productos_id)
+        Me.Panel2.Controls.Add(Me.tb_productos_descripccion)
+        Me.Panel2.Controls.Add(Me.tb_productos_categoriaID)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.PictureBox14)
         Me.Panel2.Controls.Add(Me.PictureBox13)
@@ -1895,19 +1909,78 @@ Partial Class gestion_datos
         Me.Panel2.Controls.Add(Me.lbl_productos_nombre)
         Me.Panel2.Controls.Add(Me.btn_baja_prod)
         Me.Panel2.Controls.Add(Me.lbl_productos_id)
-        Me.Panel2.Controls.Add(Me.tb_productos_precio)
-        Me.Panel2.Controls.Add(Me.tb_productos_categoriaID)
         Me.Panel2.Controls.Add(Me.lbl_productos_marca)
-        Me.Panel2.Controls.Add(Me.tb_productos_stock)
-        Me.Panel2.Controls.Add(Me.tb_productos_marca)
-        Me.Panel2.Controls.Add(Me.tb_productos_nombre)
-        Me.Panel2.Controls.Add(Me.tb_productos_descripccion)
-        Me.Panel2.Controls.Add(Me.tb_productos_id)
         Me.Panel2.Controls.Add(Me.lbl_productos_descripccion)
         Me.Panel2.Location = New System.Drawing.Point(26, 3)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1323, 458)
         Me.Panel2.TabIndex = 132
+        '
+        'tb_productos_marca
+        '
+        Me.tb_productos_marca.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_productos_marca.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_productos_marca.Location = New System.Drawing.Point(888, 112)
+        Me.tb_productos_marca.Name = "tb_productos_marca"
+        Me.tb_productos_marca.Size = New System.Drawing.Size(174, 20)
+        Me.tb_productos_marca.TabIndex = 15
+        '
+        'tb_productos_stock
+        '
+        Me.tb_productos_stock.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_productos_stock.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_productos_stock.Location = New System.Drawing.Point(364, 344)
+        Me.tb_productos_stock.Name = "tb_productos_stock"
+        Me.tb_productos_stock.Size = New System.Drawing.Size(117, 20)
+        Me.tb_productos_stock.TabIndex = 14
+        '
+        'tb_productos_precio
+        '
+        Me.tb_productos_precio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_productos_precio.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_productos_precio.Location = New System.Drawing.Point(364, 223)
+        Me.tb_productos_precio.Name = "tb_productos_precio"
+        Me.tb_productos_precio.Size = New System.Drawing.Size(175, 20)
+        Me.tb_productos_precio.TabIndex = 12
+        '
+        'tb_productos_nombre
+        '
+        Me.tb_productos_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_productos_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_productos_nombre.Location = New System.Drawing.Point(364, 166)
+        Me.tb_productos_nombre.Name = "tb_productos_nombre"
+        Me.tb_productos_nombre.Size = New System.Drawing.Size(175, 20)
+        Me.tb_productos_nombre.TabIndex = 11
+        '
+        'tb_productos_id
+        '
+        Me.tb_productos_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_productos_id.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.tb_productos_id.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_productos_id.Enabled = False
+        Me.tb_productos_id.Location = New System.Drawing.Point(364, 112)
+        Me.tb_productos_id.Name = "tb_productos_id"
+        Me.tb_productos_id.Size = New System.Drawing.Size(175, 20)
+        Me.tb_productos_id.TabIndex = 10
+        '
+        'tb_productos_descripccion
+        '
+        Me.tb_productos_descripccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_productos_descripccion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_productos_descripccion.Location = New System.Drawing.Point(888, 166)
+        Me.tb_productos_descripccion.Multiline = True
+        Me.tb_productos_descripccion.Name = "tb_productos_descripccion"
+        Me.tb_productos_descripccion.Size = New System.Drawing.Size(174, 72)
+        Me.tb_productos_descripccion.TabIndex = 16
+        '
+        'tb_productos_categoriaID
+        '
+        Me.tb_productos_categoriaID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_productos_categoriaID.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tb_productos_categoriaID.Location = New System.Drawing.Point(364, 283)
+        Me.tb_productos_categoriaID.Name = "tb_productos_categoriaID"
+        Me.tb_productos_categoriaID.Size = New System.Drawing.Size(175, 20)
+        Me.tb_productos_categoriaID.TabIndex = 13
         '
         'Label2
         '
@@ -2010,7 +2083,7 @@ Partial Class gestion_datos
         Me.lbl_alta_prod.Location = New System.Drawing.Point(707, 327)
         Me.lbl_alta_prod.Name = "lbl_alta_prod"
         Me.lbl_alta_prod.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_alta_prod.TabIndex = 127
+        Me.lbl_alta_prod.TabIndex = 17
         Me.lbl_alta_prod.Text = "ALTA"
         '
         'lbl_mod_prod
@@ -2023,7 +2096,7 @@ Partial Class gestion_datos
         Me.lbl_mod_prod.Location = New System.Drawing.Point(893, 327)
         Me.lbl_mod_prod.Name = "lbl_mod_prod"
         Me.lbl_mod_prod.Size = New System.Drawing.Size(138, 31)
-        Me.lbl_mod_prod.TabIndex = 128
+        Me.lbl_mod_prod.TabIndex = 18
         Me.lbl_mod_prod.Text = "MODIFICAR"
         '
         'btn_mod_prod
@@ -2091,7 +2164,7 @@ Partial Class gestion_datos
         Me.lbl_baja_prod.Location = New System.Drawing.Point(1138, 327)
         Me.lbl_baja_prod.Name = "lbl_baja_prod"
         Me.lbl_baja_prod.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_baja_prod.TabIndex = 129
+        Me.lbl_baja_prod.TabIndex = 19
         Me.lbl_baja_prod.Text = "BAJA"
         '
         'lbl_productos_nombre
@@ -2127,22 +2200,6 @@ Partial Class gestion_datos
         Me.lbl_productos_id.TabIndex = 109
         Me.lbl_productos_id.Text = "ID:"
         '
-        'tb_productos_precio
-        '
-        Me.tb_productos_precio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_precio.Location = New System.Drawing.Point(364, 223)
-        Me.tb_productos_precio.Name = "tb_productos_precio"
-        Me.tb_productos_precio.Size = New System.Drawing.Size(175, 27)
-        Me.tb_productos_precio.TabIndex = 108
-        '
-        'tb_productos_categoriaID
-        '
-        Me.tb_productos_categoriaID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_categoriaID.Location = New System.Drawing.Point(364, 283)
-        Me.tb_productos_categoriaID.Name = "tb_productos_categoriaID"
-        Me.tb_productos_categoriaID.Size = New System.Drawing.Size(175, 27)
-        Me.tb_productos_categoriaID.TabIndex = 107
-        '
         'lbl_productos_marca
         '
         Me.lbl_productos_marca.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -2154,50 +2211,6 @@ Partial Class gestion_datos
         Me.lbl_productos_marca.Size = New System.Drawing.Size(91, 33)
         Me.lbl_productos_marca.TabIndex = 29
         Me.lbl_productos_marca.Text = "Marca:"
-        '
-        'tb_productos_stock
-        '
-        Me.tb_productos_stock.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_stock.Location = New System.Drawing.Point(364, 344)
-        Me.tb_productos_stock.Name = "tb_productos_stock"
-        Me.tb_productos_stock.Size = New System.Drawing.Size(117, 27)
-        Me.tb_productos_stock.TabIndex = 106
-        '
-        'tb_productos_marca
-        '
-        Me.tb_productos_marca.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_marca.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tb_productos_marca.Location = New System.Drawing.Point(888, 112)
-        Me.tb_productos_marca.Name = "tb_productos_marca"
-        Me.tb_productos_marca.Size = New System.Drawing.Size(174, 20)
-        Me.tb_productos_marca.TabIndex = 36
-        '
-        'tb_productos_nombre
-        '
-        Me.tb_productos_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_nombre.Location = New System.Drawing.Point(364, 166)
-        Me.tb_productos_nombre.Name = "tb_productos_nombre"
-        Me.tb_productos_nombre.Size = New System.Drawing.Size(175, 27)
-        Me.tb_productos_nombre.TabIndex = 103
-        '
-        'tb_productos_descripccion
-        '
-        Me.tb_productos_descripccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_descripccion.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tb_productos_descripccion.Location = New System.Drawing.Point(888, 166)
-        Me.tb_productos_descripccion.Multiline = True
-        Me.tb_productos_descripccion.Name = "tb_productos_descripccion"
-        Me.tb_productos_descripccion.Size = New System.Drawing.Size(174, 72)
-        Me.tb_productos_descripccion.TabIndex = 33
-        '
-        'tb_productos_id
-        '
-        Me.tb_productos_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_productos_id.Enabled = False
-        Me.tb_productos_id.Location = New System.Drawing.Point(364, 112)
-        Me.tb_productos_id.Name = "tb_productos_id"
-        Me.tb_productos_id.Size = New System.Drawing.Size(175, 27)
-        Me.tb_productos_id.TabIndex = 100
         '
         'lbl_productos_descripccion
         '
@@ -2324,6 +2337,7 @@ Partial Class gestion_datos
         Me.dg_clientes.ReadOnly = True
         Me.dg_clientes.Size = New System.Drawing.Size(1791, 266)
         Me.dg_clientes.TabIndex = 63
+        Me.dg_clientes.TabStop = False
         '
         'ts_clientes
         '
@@ -2457,7 +2471,7 @@ Partial Class gestion_datos
         Me.lbl_imprimir.Location = New System.Drawing.Point(536, 342)
         Me.lbl_imprimir.Name = "lbl_imprimir"
         Me.lbl_imprimir.Size = New System.Drawing.Size(105, 58)
-        Me.lbl_imprimir.TabIndex = 155
+        Me.lbl_imprimir.TabIndex = 17
         Me.lbl_imprimir.Text = "IMRPIMIR " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CARNE"
         Me.lbl_imprimir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -2471,7 +2485,7 @@ Partial Class gestion_datos
         Me.lbl_baja_clie.Location = New System.Drawing.Point(1154, 351)
         Me.lbl_baja_clie.Name = "lbl_baja_clie"
         Me.lbl_baja_clie.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_baja_clie.TabIndex = 154
+        Me.lbl_baja_clie.TabIndex = 20
         Me.lbl_baja_clie.Text = "BAJA"
         '
         'lbl_mod_clie
@@ -2484,7 +2498,7 @@ Partial Class gestion_datos
         Me.lbl_mod_clie.Location = New System.Drawing.Point(920, 351)
         Me.lbl_mod_clie.Name = "lbl_mod_clie"
         Me.lbl_mod_clie.Size = New System.Drawing.Size(138, 31)
-        Me.lbl_mod_clie.TabIndex = 153
+        Me.lbl_mod_clie.TabIndex = 19
         Me.lbl_mod_clie.Text = "MODIFICAR"
         '
         'lbl_alta_clientes
@@ -2497,7 +2511,7 @@ Partial Class gestion_datos
         Me.lbl_alta_clientes.Location = New System.Drawing.Point(751, 351)
         Me.lbl_alta_clientes.Name = "lbl_alta_clientes"
         Me.lbl_alta_clientes.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_alta_clientes.TabIndex = 152
+        Me.lbl_alta_clientes.TabIndex = 18
         Me.lbl_alta_clientes.Text = "ALTA"
         '
         'btn_imprimir
@@ -2607,7 +2621,7 @@ Partial Class gestion_datos
         Me.tb_clientes_direccion.Location = New System.Drawing.Point(320, 286)
         Me.tb_clientes_direccion.Name = "tb_clientes_direccion"
         Me.tb_clientes_direccion.Size = New System.Drawing.Size(289, 20)
-        Me.tb_clientes_direccion.TabIndex = 93
+        Me.tb_clientes_direccion.TabIndex = 13
         '
         'tb_clientes_telefono
         '
@@ -2616,7 +2630,7 @@ Partial Class gestion_datos
         Me.tb_clientes_telefono.Location = New System.Drawing.Point(996, 105)
         Me.tb_clientes_telefono.Name = "tb_clientes_telefono"
         Me.tb_clientes_telefono.Size = New System.Drawing.Size(171, 20)
-        Me.tb_clientes_telefono.TabIndex = 58
+        Me.tb_clientes_telefono.TabIndex = 14
         '
         'tb_clientes_ape1
         '
@@ -2625,7 +2639,7 @@ Partial Class gestion_datos
         Me.tb_clientes_ape1.Location = New System.Drawing.Point(320, 228)
         Me.tb_clientes_ape1.Name = "tb_clientes_ape1"
         Me.tb_clientes_ape1.Size = New System.Drawing.Size(174, 20)
-        Me.tb_clientes_ape1.TabIndex = 59
+        Me.tb_clientes_ape1.TabIndex = 12
         '
         'tb_clientes_ape2
         '
@@ -2634,7 +2648,7 @@ Partial Class gestion_datos
         Me.tb_clientes_ape2.Location = New System.Drawing.Point(996, 224)
         Me.tb_clientes_ape2.Name = "tb_clientes_ape2"
         Me.tb_clientes_ape2.Size = New System.Drawing.Size(171, 20)
-        Me.tb_clientes_ape2.TabIndex = 75
+        Me.tb_clientes_ape2.TabIndex = 16
         '
         'tb_clientes_nombre
         '
@@ -2643,7 +2657,7 @@ Partial Class gestion_datos
         Me.tb_clientes_nombre.Location = New System.Drawing.Point(320, 168)
         Me.tb_clientes_nombre.Name = "tb_clientes_nombre"
         Me.tb_clientes_nombre.Size = New System.Drawing.Size(174, 20)
-        Me.tb_clientes_nombre.TabIndex = 54
+        Me.tb_clientes_nombre.TabIndex = 11
         '
         'tb_clientes_empleadoID
         '
@@ -2652,7 +2666,7 @@ Partial Class gestion_datos
         Me.tb_clientes_empleadoID.Location = New System.Drawing.Point(996, 164)
         Me.tb_clientes_empleadoID.Name = "tb_clientes_empleadoID"
         Me.tb_clientes_empleadoID.Size = New System.Drawing.Size(171, 20)
-        Me.tb_clientes_empleadoID.TabIndex = 57
+        Me.tb_clientes_empleadoID.TabIndex = 15
         '
         'tb_clientes_id
         '
@@ -2663,7 +2677,7 @@ Partial Class gestion_datos
         Me.tb_clientes_id.Location = New System.Drawing.Point(320, 109)
         Me.tb_clientes_id.Name = "tb_clientes_id"
         Me.tb_clientes_id.Size = New System.Drawing.Size(174, 20)
-        Me.tb_clientes_id.TabIndex = 47
+        Me.tb_clientes_id.TabIndex = 10
         '
         'PictureBox16
         '
@@ -2837,7 +2851,7 @@ Partial Class gestion_datos
         Me.lbl_baja_prov.Location = New System.Drawing.Point(1112, 343)
         Me.lbl_baja_prov.Name = "lbl_baja_prov"
         Me.lbl_baja_prov.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_baja_prov.TabIndex = 157
+        Me.lbl_baja_prov.TabIndex = 17
         Me.lbl_baja_prov.Text = "BAJA"
         '
         'lbl_mod_prov
@@ -2850,7 +2864,7 @@ Partial Class gestion_datos
         Me.lbl_mod_prov.Location = New System.Drawing.Point(878, 343)
         Me.lbl_mod_prov.Name = "lbl_mod_prov"
         Me.lbl_mod_prov.Size = New System.Drawing.Size(138, 31)
-        Me.lbl_mod_prov.TabIndex = 156
+        Me.lbl_mod_prov.TabIndex = 16
         Me.lbl_mod_prov.Text = "MODIFICAR"
         '
         'lbl_alta_prov
@@ -2863,7 +2877,7 @@ Partial Class gestion_datos
         Me.lbl_alta_prov.Location = New System.Drawing.Point(709, 343)
         Me.lbl_alta_prov.Name = "lbl_alta_prov"
         Me.lbl_alta_prov.Size = New System.Drawing.Size(70, 31)
-        Me.lbl_alta_prov.TabIndex = 155
+        Me.lbl_alta_prov.TabIndex = 15
         Me.lbl_alta_prov.Text = "ALTA"
         '
         'Label11
@@ -2881,12 +2895,13 @@ Partial Class gestion_datos
         'tb_proveedores_id
         '
         Me.tb_proveedores_id.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_proveedores_id.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.tb_proveedores_id.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_proveedores_id.Enabled = False
         Me.tb_proveedores_id.Location = New System.Drawing.Point(325, 142)
         Me.tb_proveedores_id.Name = "tb_proveedores_id"
         Me.tb_proveedores_id.Size = New System.Drawing.Size(175, 20)
-        Me.tb_proveedores_id.TabIndex = 70
+        Me.tb_proveedores_id.TabIndex = 10
         '
         'btn_provedores_baja
         '
@@ -2929,7 +2944,7 @@ Partial Class gestion_datos
         Me.tb_proveedores_nombre.Location = New System.Drawing.Point(325, 203)
         Me.tb_proveedores_nombre.Name = "tb_proveedores_nombre"
         Me.tb_proveedores_nombre.Size = New System.Drawing.Size(174, 20)
-        Me.tb_proveedores_nombre.TabIndex = 74
+        Me.tb_proveedores_nombre.TabIndex = 11
         '
         'btn_alta_prov
         '
@@ -2949,7 +2964,7 @@ Partial Class gestion_datos
         Me.tb_proveedores_direccion.Location = New System.Drawing.Point(325, 263)
         Me.tb_proveedores_direccion.Name = "tb_proveedores_direccion"
         Me.tb_proveedores_direccion.Size = New System.Drawing.Size(289, 20)
-        Me.tb_proveedores_direccion.TabIndex = 78
+        Me.tb_proveedores_direccion.TabIndex = 12
         '
         'lbl_proveedores_nombre
         '
@@ -2982,7 +2997,7 @@ Partial Class gestion_datos
         Me.tb_proveedores_telefono.Location = New System.Drawing.Point(942, 142)
         Me.tb_proveedores_telefono.Name = "tb_proveedores_telefono"
         Me.tb_proveedores_telefono.Size = New System.Drawing.Size(179, 20)
-        Me.tb_proveedores_telefono.TabIndex = 76
+        Me.tb_proveedores_telefono.TabIndex = 13
         '
         'lbl_proveedores_direccion
         '
@@ -3003,7 +3018,7 @@ Partial Class gestion_datos
         Me.tb_proveedores_contacto.Location = New System.Drawing.Point(942, 203)
         Me.tb_proveedores_contacto.Name = "tb_proveedores_contacto"
         Me.tb_proveedores_contacto.Size = New System.Drawing.Size(183, 20)
-        Me.tb_proveedores_contacto.TabIndex = 75
+        Me.tb_proveedores_contacto.TabIndex = 14
         '
         'lbl_proveedores_contacto
         '
@@ -3053,7 +3068,7 @@ Partial Class gestion_datos
         'pb_tb_id_prov
         '
         Me.pb_tb_id_prov.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.pb_tb_id_prov.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.pb_tb_id_prov.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.tb_disabled
         Me.pb_tb_id_prov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pb_tb_id_prov.Location = New System.Drawing.Point(300, 121)
         Me.pb_tb_id_prov.Name = "pb_tb_id_prov"
@@ -3119,6 +3134,7 @@ Partial Class gestion_datos
         Me.dg_proveedores.ReadOnly = True
         Me.dg_proveedores.Size = New System.Drawing.Size(1791, 266)
         Me.dg_proveedores.TabIndex = 82
+        Me.dg_proveedores.TabStop = False
         '
         'ts_proveedores
         '

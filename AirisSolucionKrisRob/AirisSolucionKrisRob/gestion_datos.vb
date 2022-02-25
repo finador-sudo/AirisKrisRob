@@ -5,6 +5,7 @@ Public Class gestion_datos
     Public c As String
     'Conexion a la base de datos
     Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=airis_db.accdb")
+
     Public adaptador_roles As New OleDbDataAdapter("Select * from roles", conexion)
     Public adaptador_empleados As New OleDbDataAdapter("Select * from empleados", conexion)
     Public adaptador_clientes As New OleDbDataAdapter("Select * from clientes", conexion)
@@ -53,7 +54,7 @@ Public Class gestion_datos
         tb_emple_tlf.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_telefono")
         tb_emple_correo.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_correo")
         tb_emple_usu.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.usuario")
-        tb_emple_cont.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.password")
+        tb_emple_cont.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.cont")
 
         tb_roles_id.DataBindings.Add("text", dataset_roles, "Tabla_roles.rol_id")
         tb_roles_rol.DataBindings.Add("text", dataset_roles, "Tabla_roles.rol_nom")
@@ -117,13 +118,22 @@ Public Class gestion_datos
     'BOTON ALTA 
     Private Sub tslbl_alta_empleados_Click(sender As Object, e As EventArgs) Handles tslbl_alta_empleados.Click, btn_emp_alta.Click, lbl_alta_empleados.Click
         If (tb_emple_id.Text = "") Then
-            If Not (tb_emple_rol.Text = "" And tb_emple_usu.Text = "" And tb_emple_cont.Text = "" And tb_emple_nom.Text = "" And tb_emple_ape1.Text = "" And tb_emple_ape2.Text = "" And tb_emple_tlf.Text = "" And tb_emple_correo.Text = "") Then
+            If Not (tb_emple_rol.Text = "" Or tb_emple_usu.Text = "" Or tb_emple_cont.Text = "" Or tb_emple_nom.Text = "" Or tb_emple_ape1.Text = "" Or tb_emple_ape2.Text = "" Or tb_emple_tlf.Text = "" Or tb_emple_correo.Text = "") Then
                 'Todos los campos correctos
                 Try
                     conexion.Open()
-                    Dim empInsert As New OleDbCommand()
+                    Dim empInsert As New OleDbCommand("INSERT INTO empleados (emp_nom,emp_ape1,emp_ape2,rol_id,emp_telefono,emp_correo,usuario,cont) VALUES (@nom,@ape,@ape2,@rol,@telefono,@mail,@usu,@pas)", conexion)
+                    empInsert.Parameters.AddWithValue("@nom", tb_emple_nom.Text.Trim)
+                    empInsert.Parameters.AddWithValue("@ape", tb_emple_ape1.Text.Trim)
+                    empInsert.Parameters.AddWithValue("@ape2", tb_emple_ape2.Text.Trim)
+                    empInsert.Parameters.AddWithValue("@rol", tb_emple_rol.Text.Trim)
+                    empInsert.Parameters.AddWithValue("@telefono", tb_emple_tlf.Text.Trim)
+                    empInsert.Parameters.AddWithValue("@correo", tb_emple_correo.Text.Trim)
+                    empInsert.Parameters.AddWithValue("@usu", tb_emple_usu.Text.Trim)
+                    empInsert.Parameters.AddWithValue("@pas", tb_emple_cont.Text.Trim)
+                    empInsert.ExecuteNonQuery()
 
-
+                    updateGridEmpleados()
                 Catch ex As Exception
                     MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al insertar empleados")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
@@ -147,7 +157,7 @@ Public Class gestion_datos
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try
                     conexion.Open()
-                    Dim deleteEmpleado As New OleDbCommand("delete from empleados WHERE clie_id=@id")
+                    Dim deleteEmpleado As New OleDbCommand("delete from empleados WHERE emp_id = @id", conexion)
                     deleteEmpleado.Parameters.AddWithValue("@id", tb_emple_id.Text.Trim)
                     deleteEmpleado.ExecuteNonQuery()
                     updateGridEmpleados()
@@ -167,18 +177,18 @@ Public Class gestion_datos
     End Sub
     'BOTON MODIFICAR
     Private Sub tslbl_modificar_empleados_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_empleados.Click, btn_emp_modif.Click, lbl_mod_empleados.Click
-        If Not (tb_emple_id.Text = "" And tb_emple_rol.Text = "" And tb_emple_usu.Text = "" And tb_emple_cont.Text = "" And tb_emple_nom.Text = "" And tb_emple_ape1.Text = "" And tb_emple_ape2.Text = "" And tb_emple_tlf.Text = "" And tb_emple_correo.Text = "") Then
+        If Not (tb_emple_id.Text = "" Or tb_emple_rol.Text = "" Or tb_emple_usu.Text = "" Or tb_emple_cont.Text = "" Or tb_emple_nom.Text = "" Or tb_emple_ape1.Text = "" Or tb_emple_ape2.Text = "" Or tb_emple_tlf.Text = "" Or tb_emple_correo.Text = "") Then
             Try
                 conexion.Open()
-                Dim updateEmpleados As New OleDbCommand("UPDATE empleados SET (emp_nom=@nom,emp_ape1=@ape1,emp_ape2=@ape2,rol_id=@rol,emp_telefono=@tlf,emp_correo=@mail,usuario=@user,password=@pass) WHERE emp_id = @id")
+                Dim updateEmpleados As New OleDbCommand("UPDATE empleados SET emp_nom = @nom, emp_ape1 = @ape1, emp_ape2 = @ape2, rol_id = @rol, emp_telefono = @tlf, emp_correo = @mail, usuario = @usu, cont = @cont WHERE emp_id = @id", conexion)
                 updateEmpleados.Parameters.AddWithValue("@nom", tb_emple_nom.Text.Trim)
                 updateEmpleados.Parameters.AddWithValue("@ape1", tb_emple_ape1.Text.Trim)
                 updateEmpleados.Parameters.AddWithValue("@ape2", tb_emple_ape2.Text.Trim)
                 updateEmpleados.Parameters.AddWithValue("@rol", tb_emple_rol.Text.Trim)
                 updateEmpleados.Parameters.AddWithValue("@tlf", tb_emple_tlf.Text.Trim)
                 updateEmpleados.Parameters.AddWithValue("@mail", tb_emple_correo.Text.Trim)
-                updateEmpleados.Parameters.AddWithValue("@user", tb_emple_usu.Text.Trim)
-                updateEmpleados.Parameters.AddWithValue("@pass", tb_emple_cont.Text.Trim)
+                updateEmpleados.Parameters.AddWithValue("@usu", tb_emple_usu.Text.Trim)
+                updateEmpleados.Parameters.AddWithValue("@cont", tb_emple_cont.Text.Trim)
                 updateEmpleados.Parameters.AddWithValue("@id", tb_emple_id.Text.Trim)
                 updateEmpleados.ExecuteNonQuery()
                 updateGridEmpleados()
@@ -187,6 +197,8 @@ Public Class gestion_datos
                 FileOpen(2, "errores_airis.txt", OpenMode.Append)
                 WriteLine(2, "Error al añadir un empleado: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
                 FileClose(2)
+            Finally
+                conexion.Close()
             End Try
         Else
             MsgBox("Campos vacios, por favor revise la informacion.", MsgBoxStyle.Information, "Campos incompletos")
@@ -246,6 +258,8 @@ Public Class gestion_datos
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
                     WriteLine(2, "Error al eliminar un rol: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
+                Finally
+                    conexion.Close()
                 End Try
 
             Else
@@ -271,6 +285,9 @@ Public Class gestion_datos
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
                     WriteLine(2, "Error al modificar un rol: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
+
+                Finally
+                    conexion.Close()
                 End Try
             Else
                 MsgBox("Campos incorrectos", 0 + MsgBoxStyle.Information, "Campo incorrecto")
@@ -292,7 +309,7 @@ Public Class gestion_datos
     'BOTON ALTA
     Private Sub tslbl_alta_categoria_productos_Click(sender As Object, e As EventArgs) Handles tslbl_alta_categoria_productos.Click, btn_alta_categoria.Click, lbl_alta_categoria.Click
         If (tb_categorias_id.Text = "") Then
-            If Not (tb_categorias_nombre.Text = "" And tb_categorias_descripccion.Text = "") Then
+            If Not (tb_categorias_nombre.Text = "" Or tb_categorias_descripccion.Text = "") Then
                 Try
                     conexion.Open()
                     Dim insertCategoria As New OleDbCommand("INSERT INTO categorias_prod (cat_nom,cat_descrip) VALUES (@nom,@desc)", conexion)
@@ -306,6 +323,9 @@ Public Class gestion_datos
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
                     WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
+
+                Finally
+                    conexion.Close()
                 End Try
             Else
                 MsgBox("Seleccione un elemento", MsgBoxStyle.Information, "Seleccion vacia")
@@ -338,10 +358,10 @@ Public Class gestion_datos
     End Sub
     'BOTON MODIFICAR
     Private Sub tslbl_modificar_categoria_productos_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_categoria_productos.Click, btn_mod_categoria.Click, lbl_mod_categoria.Click
-        If Not ((tb_categorias_id.Text = "" And tb_categorias_descripccion.Text = "" And tb_categorias_nombre.Text = "")) Then
+        If Not ((tb_categorias_id.Text = "" Or tb_categorias_descripccion.Text = "" Or tb_categorias_nombre.Text = "")) Then
             Try
                 conexion.Open()
-                Dim updateCategoria As New OleDbCommand("UPDATE categorias_prod SET (cat_nom=@cat_nom,cat_descrip=@cat_descrip) WHERE (cat_id=@cat_id)", conexion)
+                Dim updateCategoria As New OleDbCommand("UPDATE categorias_prod SET cat_nom = @cat_nom, cat_descrip = @cat_descrip WHERE (cat_id=@cat_id)", conexion)
                 updateCategoria.Parameters.AddWithValue("@cat_nom", tb_categorias_nombre.Text.Trim)
                 updateCategoria.Parameters.AddWithValue("@cat_descrip", tb_categorias_descripccion.Text.Trim)
                 updateCategoria.Parameters.AddWithValue("@cat_id", tb_categorias_id.Text.Trim)
@@ -376,7 +396,7 @@ Public Class gestion_datos
     'BOTON ALTA
     Private Sub tslbl_alta_productos_Click(sender As Object, e As EventArgs) Handles tslbl_alta_productos.Click, btn_alta_prod.Click, lbl_alta_prod.Click
         If (tb_productos_id.Text = "") Then
-            If Not (tb_productos_categoriaID.Text = "" And tb_productos_descripccion.Text = "" And tb_productos_id.Text = "" And tb_productos_id.Text = "" And tb_productos_marca.Text = "" And tb_productos_nombre.Text = "" And tb_productos_precio.Text = "" And tb_productos_stock.Text = "") Then
+            If Not (tb_productos_categoriaID.Text = "" Or tb_productos_descripccion.Text = "" Or tb_productos_marca.Text = "" Or tb_productos_nombre.Text = "" Or tb_productos_precio.Text = "" Or tb_productos_stock.Text = "") Then
                 Try
                     conexion.Open()
                     Dim insertProducto As New OleDbCommand("insert into productos (prod_nom,precio,cat_id,prod_stock,prod_descrip,prod_marca) values (@nom,@precio,@cat,@stock,@desc,@marca)", conexion)
@@ -397,9 +417,9 @@ Public Class gestion_datos
                 Finally
                     conexion.Close()
                 End Try
-            Else
-                MsgBox("vacia el campo id", MsgBoxStyle.Critical, "Error al insertar roles")
             End If
+        Else
+            MsgBox("vacia el campo id", MsgBoxStyle.Critical, "Error al insertar roles")
         End If
     End Sub
     'BOTON BAJA
@@ -427,13 +447,13 @@ Public Class gestion_datos
     End Sub
     'BOTON MODIFICAR
     Private Sub tslbl_modificar_productos_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_productos.Click, btn_mod_prod.Click, lbl_mod_prod.Click
-        If Not (tb_productos_id.Text = "" And tb_productos_categoriaID.Text = "" And tb_productos_descripccion.Text = "" And tb_productos_id.Text = "" And tb_productos_id.Text = "" And tb_productos_marca.Text = "" And tb_productos_nombre.Text = "" And tb_productos_precio.Text = "" And tb_productos_stock.Text = "") Then
+        If Not (tb_productos_id.Text = "" Or tb_productos_categoriaID.Text = "" Or tb_productos_descripccion.Text = "" Or tb_productos_id.Text = "" Or tb_productos_id.Text = "" Or tb_productos_marca.Text = "" Or tb_productos_nombre.Text = "" Or tb_productos_precio.Text = "" Or tb_productos_stock.Text = "") Then
             Try
                 conexion.Open()
-                Dim updateProducto As New OleDbCommand("UPDATE productos SET (prod_nom=@nom,precio=@precio,cat_id=@catid,prod_stock=@stock,prod_descrip=@desc,prod_marca=@marca) WHERE (prod_id=@id)", conexion)
+                Dim updateProducto As New OleDbCommand("UPDATE productos SET prod_nom = @nom, precio = @precio, cat_id = @catid, prod_stock = @stock, prod_descrip = @desc, prod_marca = @marca WHERE prod_id = @id", conexion)
                 updateProducto.Parameters.AddWithValue("@nom", tb_productos_nombre.Text.Trim)
                 updateProducto.Parameters.AddWithValue("@precio", tb_productos_precio.Text.Trim)
-                updateProducto.Parameters.AddWithValue("@catid", tb_productos_id.Text.Trim)
+                updateProducto.Parameters.AddWithValue("@catid", tb_productos_categoriaID.Text.Trim)
                 updateProducto.Parameters.AddWithValue("@stock", tb_productos_stock.Text.Trim)
                 updateProducto.Parameters.AddWithValue("@desc", tb_productos_descripccion.Text.Trim)
                 updateProducto.Parameters.AddWithValue("@marca", tb_productos_marca.Text.Trim)
@@ -472,7 +492,7 @@ Public Class gestion_datos
     'BOTON ALTA
     Private Sub tslbl_alta_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_alta_clientes.Click, btn_clientes_alta.Click, lbl_alta_clientes.Click
         If (tb_clientes_id.Text = "") Then
-            If Not (tb_clientes_ape1.Text = "" And tb_clientes_ape2.Text = "" And tb_clientes_direccion.Text = "" And tb_clientes_empleadoID.Text = "" And tb_clientes_nombre.Text = "" And tb_clientes_telefono.Text = "") Then
+            If Not (tb_clientes_ape1.Text = "" Or tb_clientes_ape2.Text = "" Or tb_clientes_direccion.Text = "" Or tb_clientes_empleadoID.Text = "" Or tb_clientes_nombre.Text = "" Or tb_clientes_telefono.Text = "") Then
                 Try
                     conexion.Open()
                     Dim insertCliente As New OleDbCommand("INSERT INTO clientes (clie_nom,clie_ape1,clie_ape2,clie_telefono,emp_id,clie_dir) VALUES (@nom,@ape1,@ape2,@tlf,@emp_id,@dir)", conexion)
@@ -501,7 +521,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON BAJA
-    Private Sub tslbl_baja_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_baja_clientes.Click, btn_emp_baja.Click, lbl_baja_clie.Click
+    Private Sub tslbl_baja_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_baja_clientes.Click, btn_clientes_baja.Click
         If Not (tb_clientes.Text = "") Then
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try
@@ -525,17 +545,18 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON MODIFICAR
-    Private Sub tslbl_modificar_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_clientes.Click, btn_emp_modif.Click, lbl_mod_clie.Click
-        If Not (tb_clientes_id.Text = "" And tb_clientes_ape1.Text = "" And tb_clientes_ape2.Text = "" And tb_clientes_direccion.Text = "" And tb_clientes_empleadoID.Text = "" And tb_clientes_nombre.Text = "" And tb_clientes_telefono.Text = "") Then
+    Private Sub tslbl_modificar_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_clientes.Click, btn_clientes_modificar.Click, lbl_mod_clie.Click
+        If Not (tb_clientes_id.Text = "" Or tb_clientes_ape1.Text = "" Or tb_clientes_ape2.Text = "" Or tb_clientes_direccion.Text = "" Or tb_clientes_empleadoID.Text = "" Or tb_clientes_nombre.Text = "" Or tb_clientes_telefono.Text = "") Then
             Try
                 conexion.Open()
-                Dim updateCliente As New OleDbCommand("UPDATE clientes SET (clie_nom=@nom,clie_ape1=@ape1,clie_ape2=@ape2,clie_telefono=@tlf,emp_id=@empid,clie_dir=@dir) WHERE (clie_id=@id)", conexion)
+                Dim updateCliente As New OleDbCommand("UPDATE clientes SET clie_nom = @nom, clie_ape1 = @ape1, clie_ape2 = @ape2, clie_telefono = @tlf, emp_id = @empid, clie_dir = @dir WHERE clie_id = @id", conexion)
                 updateCliente.Parameters.AddWithValue("@nom", tb_clientes_nombre.Text.Trim)
                 updateCliente.Parameters.AddWithValue("@ape1", tb_clientes_ape1.Text.Trim)
                 updateCliente.Parameters.AddWithValue("@ape2", tb_clientes_ape2.Text.Trim)
                 updateCliente.Parameters.AddWithValue("@tlf", tb_clientes_telefono.Text.Trim)
                 updateCliente.Parameters.AddWithValue("@empid", tb_clientes_empleadoID.Text.Trim)
                 updateCliente.Parameters.AddWithValue("@dir", tb_clientes_direccion.Text.Trim)
+                updateCliente.Parameters.AddWithValue("@id", tb_clientes_id.Text.Trim)
                 updateCliente.ExecuteNonQuery()
                 updateGridClientes()
             Catch ex As Exception
@@ -551,42 +572,8 @@ Public Class gestion_datos
             MsgBox("Campos vacios, por favor revise la informacion.", MsgBoxStyle.Information, "Campos incompletos")
         End If
     End Sub
-    'BOTON IMPRIMIR
-    Private Sub btn_imprimir_Click(sender As Object, e As EventArgs) Handles btn_imprimir.Click, lbl_imprimir.Click
-        Dim printDoc As New PrintDocument
-        AddHandler printDoc.PrintPage, AddressOf print_PrintPage
-        ' Llamamos al emtodo que imprime
-        printDoc.Print()
-        NotifyIcon1.ShowBalloonTip(2)
-    End Sub
 
-    Private Sub print_PrintPage(ByVal sender As Object,
-                            ByVal e As PrintPageEventArgs)
 
-        Dim id, nom, dir, tel, ape1, ape2
-        id = tb_clientes_id.Text
-        nom = tb_clientes_nombre.Text
-        dir = tb_clientes_direccion.Text
-        tel = tb_clientes_telefono.Text
-        ape1 = tb_clientes_ape1.Text
-        ape2 = tb_clientes_ape2.Text
-        Dim prFont As New Font("Arial", 8, FontStyle.Regular)
-        ' la posición superior
-
-        Dim imagen As Bitmap = Image.FromFile("carne.png")
-        e.Graphics.DrawImage(imagen, 0, 0, 500, 560)
-        ' imprimimos la cadena
-        e.Graphics.DrawString(id, prFont, Brushes.Black, 135, 46.5)
-        e.Graphics.DrawString(nom, prFont, Brushes.Black, 135, 72.5)
-        e.Graphics.DrawString(dir, prFont, Brushes.Black, 135, 98)
-        e.Graphics.DrawString(tel, prFont, Brushes.Black, 135, 122)
-        e.Graphics.DrawString(ape1, prFont, Brushes.Black, 375, 46.5)
-        e.Graphics.DrawString(ape2, prFont, Brushes.Black, 375, 72.5)
-        ' indicamos que ya no hay nada más que imprimir
-        ' (el valor predeterminado de esta propiedad es False)
-        e.HasMorePages = False
-
-    End Sub
 
     '-------------------------------------------------------------------------
     'TAB PROVEEDORES
@@ -602,7 +589,7 @@ Public Class gestion_datos
     'BOTON ALTA
     Private Sub tslbl_alta_provedores_Click(sender As Object, e As EventArgs) Handles tslbl_alta_provedores.Click, btn_alta_prov.Click, lbl_alta_prov.Click
         If (tb_proveedores_id.Text = "") Then
-            If Not (tb_proveedores_contacto.Text = "" And tb_proveedores_direccion.Text = "" And tb_proveedores_nombre.Text = "" And tb_proveedores_telefono.Text = "") Then
+            If Not (tb_proveedores_contacto.Text = "" Or tb_proveedores_direccion.Text = "" Or tb_proveedores_nombre.Text = "" Or tb_proveedores_telefono.Text = "") Then
                 Try
                     conexion.Open()
                     Dim insertProveedor As New OleDbCommand("insert into proveedores (pro_nom,pro_dir,pro_telefono,pro_contacto) values (@nom,@dir,@tlf,@contacto)", conexion)
@@ -631,7 +618,7 @@ Public Class gestion_datos
     End Sub
 
     'BOTON BAJA
-    Private Sub tslbl_baja_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_baja_proveedores.Click, btn_provedores_baja.Click, lbl_baja_prov.Click
+    Private Sub tslbl_baja_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_baja_proveedores.Click, btn_baja_prod.Click, lbl_baja_prov.Click
         If Not (tb_clientes.Text = "") Then
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try
@@ -655,21 +642,22 @@ Public Class gestion_datos
     End Sub
     'BOTON MODIFICAR
     Private Sub tslbl_modificar_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_proveedores.Click, btn_provedores_modificar.Click, lbl_mod_prov.Click
-        If Not (tb_proveedores_id.Text = "" And tb_proveedores_contacto.Text = "" And tb_proveedores_direccion.Text = "" And tb_proveedores_nombre.Text = "" And tb_proveedores_telefono.Text = "") Then
+        If Not (tb_proveedores_id.Text = "" Or tb_proveedores_contacto.Text = "" Or tb_proveedores_direccion.Text = "" Or tb_proveedores_nombre.Text = "" Or tb_proveedores_telefono.Text = "") Then
             Try
                 conexion.Open()
-                Dim updateProveedor As New OleDbCommand("UPDATE proveedores SET (pro_nom=@nom,pro_dir=@dir,pro_telefono=@tlf,pro_contacto=@contacto) WHERE (pro_id=@id)", conexion)
+                Dim updateProveedor As New OleDbCommand("UPDATE proveedores SET pro_nom = @nom, pro_dir = @dir, pro_telefono = @tlf, pro_contacto = @contacto WHERE pro_id = @id", conexion)
                 updateProveedor.Parameters.AddWithValue("@nom", tb_proveedores_nombre.Text.Trim)
                 updateProveedor.Parameters.AddWithValue("@dir", tb_proveedores_direccion.Text.Trim)
                 updateProveedor.Parameters.AddWithValue("@tlf", tb_proveedores_telefono.Text.Trim)
                 updateProveedor.Parameters.AddWithValue("@contacto", tb_proveedores_contacto.Text.Trim)
-                updateProveedor.Parameters.AddWithValue("@id", tb_productos_id.Text.Trim)
+                updateProveedor.Parameters.AddWithValue("@id", tb_proveedores_id.Text.Trim)
                 updateProveedor.ExecuteNonQuery()
                 updateGridProveedores()
             Catch ex As Exception
-                dataset_proveedores.Clear()
-                adaptador_proveedores.Fill(dataset_proveedores, "Tabla_proveedores")
-                BindingContext(dataset_proveedores, "Tabla_proveedores").Position = BindingContext(dataset_proveedores, "Tabla_proveedores").Count
+                MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                FileOpen(2, "errores_airis.txt", OpenMode.Append)
+                WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                FileClose(2)
             Finally
                 conexion.Close()
             End Try
