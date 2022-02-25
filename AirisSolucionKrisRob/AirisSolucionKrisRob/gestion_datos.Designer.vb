@@ -24,16 +24,17 @@ Partial Class gestion_datos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestion_datos))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.toolstrip = New System.Windows.Forms.ToolStrip()
         Me.ts_volverimg = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ts_busqueda = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ts_info = New System.Windows.Forms.ToolStripLabel()
+        Me.ts_info = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.info_clie = New System.Windows.Forms.ToolStripMenuItem()
+        Me.info_prod = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator13 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ts_acerca = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ts_cerrar = New System.Windows.Forms.ToolStripLabel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -43,6 +44,7 @@ Partial Class gestion_datos
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.tab_roles = New System.Windows.Forms.TabPage()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.ll_ayuda_roles = New System.Windows.Forms.LinkLabel()
         Me.pan_datos_roles = New System.Windows.Forms.Panel()
         Me.tit_roles = New System.Windows.Forms.Label()
         Me.lbl_baja_roles = New System.Windows.Forms.Label()
@@ -110,6 +112,7 @@ Partial Class gestion_datos
         Me.lbl_mod_empleados = New System.Windows.Forms.Label()
         Me.btn_emp_modif = New System.Windows.Forms.PictureBox()
         Me.pan_logo = New System.Windows.Forms.Panel()
+        Me.ll_ayuda_emple = New System.Windows.Forms.LinkLabel()
         Me.ts_empleados = New System.Windows.Forms.ToolStrip()
         Me.tslbl_nuevo = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
@@ -120,6 +123,7 @@ Partial Class gestion_datos
         Me.TabControl = New System.Windows.Forms.TabControl()
         Me.tab_categorias = New System.Windows.Forms.TabPage()
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
+        Me.ll_ayuda_cat = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_baja_categoria = New System.Windows.Forms.Label()
         Me.lbl_mod_categoria = New System.Windows.Forms.Label()
@@ -183,6 +187,7 @@ Partial Class gestion_datos
         Me.tb_productos_id = New System.Windows.Forms.TextBox()
         Me.lbl_productos_descripccion = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ll_ayuda_prod = New System.Windows.Forms.LinkLabel()
         Me.ToolStrip3 = New System.Windows.Forms.ToolStrip()
         Me.tslbl_nuevo_producto = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
@@ -193,13 +198,20 @@ Partial Class gestion_datos
         Me.tb_clientes = New System.Windows.Forms.TabPage()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dg_clientes = New System.Windows.Forms.DataGridView()
+        Me.ts_clientes = New System.Windows.Forms.ToolStrip()
+        Me.tslbl_nuevo_clientes = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tslbl_alta_clientes = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tslbl_baja_clientes = New System.Windows.Forms.ToolStripLabel()
+        Me.tslbl_modificar_clientes = New System.Windows.Forms.ToolStripLabel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.ll_ayuda_clie = New System.Windows.Forms.LinkLabel()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.lbl_imprimir = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lbl_baja_clie = New System.Windows.Forms.Label()
+        Me.lbl_mod_clie = New System.Windows.Forms.Label()
         Me.lbl_alta_clientes = New System.Windows.Forms.Label()
         Me.btn_imprimir = New System.Windows.Forms.PictureBox()
         Me.btn_clientes_baja = New System.Windows.Forms.PictureBox()
@@ -227,30 +239,18 @@ Partial Class gestion_datos
         Me.lbl_clientes_telefono = New System.Windows.Forms.Label()
         Me.lbl_clientes_ape2 = New System.Windows.Forms.Label()
         Me.lbl_clientes_empleadoID = New System.Windows.Forms.Label()
-        Me.ts_clientes = New System.Windows.Forms.ToolStrip()
-        Me.tslbl_nuevo_clientes = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tslbl_alta_clientes = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tslbl_baja_clientes = New System.Windows.Forms.ToolStripLabel()
-        Me.tslbl_modificar_clientes = New System.Windows.Forms.ToolStripLabel()
         Me.tb_proveedores = New System.Windows.Forms.TabPage()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.pan_datos_prov = New System.Windows.Forms.Panel()
+        Me.lbl_baja_prov = New System.Windows.Forms.Label()
+        Me.lbl_mod_prov = New System.Windows.Forms.Label()
+        Me.lbl_alta_prov = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.tb_proveedores_id = New System.Windows.Forms.TextBox()
         Me.btn_provedores_baja = New System.Windows.Forms.PictureBox()
         Me.btn_provedores_modificar = New System.Windows.Forms.PictureBox()
         Me.lbl_proveedores_telefono = New System.Windows.Forms.Label()
         Me.tb_proveedores_nombre = New System.Windows.Forms.TextBox()
-        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.btn_alta_prov = New System.Windows.Forms.PictureBox()
         Me.tb_proveedores_direccion = New System.Windows.Forms.TextBox()
         Me.lbl_proveedores_nombre = New System.Windows.Forms.Label()
         Me.lbl_proveedores_id = New System.Windows.Forms.Label()
@@ -258,7 +258,13 @@ Partial Class gestion_datos
         Me.lbl_proveedores_direccion = New System.Windows.Forms.Label()
         Me.tb_proveedores_contacto = New System.Windows.Forms.TextBox()
         Me.lbl_proveedores_contacto = New System.Windows.Forms.Label()
+        Me.pb_tb_cont_prov = New System.Windows.Forms.PictureBox()
+        Me.pb_tb_dir_prov = New System.Windows.Forms.PictureBox()
+        Me.pb_tb_nom_prov = New System.Windows.Forms.PictureBox()
+        Me.pb_tb_id_prov = New System.Windows.Forms.PictureBox()
+        Me.pb_tb_tel_prov = New System.Windows.Forms.PictureBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.ll_ayuda_prov = New System.Windows.Forms.LinkLabel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.dg_proveedores = New System.Windows.Forms.DataGridView()
         Me.ts_proveedores = New System.Windows.Forms.ToolStrip()
@@ -306,6 +312,7 @@ Partial Class gestion_datos
         CType(Me.btn_emp_alta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_emp_baja, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_emp_modif, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pan_logo.SuspendLayout()
         Me.ts_empleados.SuspendLayout()
         Me.TabControl.SuspendLayout()
         Me.tab_categorias.SuspendLayout()
@@ -342,9 +349,12 @@ Partial Class gestion_datos
         CType(Me.btn_mod_prod, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_alta_prod, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_baja_prod, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.ToolStrip3.SuspendLayout()
         Me.tb_clientes.SuspendLayout()
         CType(Me.dg_clientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ts_clientes.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         CType(Me.btn_imprimir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -358,17 +368,17 @@ Partial Class gestion_datos
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ts_clientes.SuspendLayout()
         Me.tb_proveedores.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pan_datos_prov.SuspendLayout()
         CType(Me.btn_provedores_baja, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_provedores_modificar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btn_alta_prov, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_tb_cont_prov, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_tb_dir_prov, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_tb_nom_prov, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_tb_id_prov, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_tb_tel_prov, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel6.SuspendLayout()
         CType(Me.dg_proveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ts_proveedores.SuspendLayout()
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -378,7 +388,7 @@ Partial Class gestion_datos
         '
         Me.toolstrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.toolstrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolstrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ts_volverimg, Me.ToolStripSeparator2, Me.ts_busqueda, Me.ToolStripSeparator1, Me.ts_info, Me.ToolStripSeparator13, Me.ts_acerca, Me.ToolStripSeparator5, Me.ts_cerrar})
+        Me.toolstrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ts_volverimg, Me.ToolStripSeparator2, Me.ts_busqueda, Me.ToolStripSeparator1, Me.ts_info, Me.ToolStripSeparator13, Me.ToolStripSeparator5, Me.ts_cerrar})
         Me.toolstrip.Location = New System.Drawing.Point(0, 0)
         Me.toolstrip.Name = "toolstrip"
         Me.toolstrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
@@ -416,22 +426,28 @@ Partial Class gestion_datos
         '
         'ts_info
         '
+        Me.ts_info.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.info_clie, Me.info_prod})
         Me.ts_info.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ts_info.Name = "ts_info"
-        Me.ts_info.Size = New System.Drawing.Size(66, 27)
+        Me.ts_info.Size = New System.Drawing.Size(79, 27)
         Me.ts_info.Text = "Informes"
+        '
+        'info_clie
+        '
+        Me.info_clie.Name = "info_clie"
+        Me.info_clie.Size = New System.Drawing.Size(142, 24)
+        Me.info_clie.Text = "Clientes"
+        '
+        'info_prod
+        '
+        Me.info_prod.Name = "info_prod"
+        Me.info_prod.Size = New System.Drawing.Size(142, 24)
+        Me.info_prod.Text = "Productos"
         '
         'ToolStripSeparator13
         '
         Me.ToolStripSeparator13.Name = "ToolStripSeparator13"
         Me.ToolStripSeparator13.Size = New System.Drawing.Size(6, 30)
-        '
-        'ts_acerca
-        '
-        Me.ts_acerca.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ts_acerca.Name = "ts_acerca"
-        Me.ts_acerca.Size = New System.Drawing.Size(85, 27)
-        Me.ts_acerca.Text = "Acerca de..."
         '
         'ToolStripSeparator5
         '
@@ -497,6 +513,7 @@ Partial Class gestion_datos
         '
         'SplitContainer2.Panel1
         '
+        Me.SplitContainer2.Panel1.Controls.Add(Me.ll_ayuda_roles)
         Me.SplitContainer2.Panel1.Controls.Add(Me.pan_datos_roles)
         Me.SplitContainer2.Panel1.Controls.Add(Me.pn_logo)
         '
@@ -506,6 +523,19 @@ Partial Class gestion_datos
         Me.SplitContainer2.Size = New System.Drawing.Size(1890, 926)
         Me.SplitContainer2.SplitterDistance = 1149
         Me.SplitContainer2.TabIndex = 106
+        '
+        'll_ayuda_roles
+        '
+        Me.ll_ayuda_roles.AutoSize = True
+        Me.ll_ayuda_roles.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.ll_ayuda_roles.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ll_ayuda_roles.LinkColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.ll_ayuda_roles.Location = New System.Drawing.Point(70, 822)
+        Me.ll_ayuda_roles.Name = "ll_ayuda_roles"
+        Me.ll_ayuda_roles.Size = New System.Drawing.Size(92, 33)
+        Me.ll_ayuda_roles.TabIndex = 105
+        Me.ll_ayuda_roles.TabStop = True
+        Me.ll_ayuda_roles.Text = "AYUDA"
         '
         'pan_datos_roles
         '
@@ -842,21 +872,21 @@ Partial Class gestion_datos
         '
         'dg_emple
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dg_emple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_emple.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dg_emple.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.dg_emple.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_emple.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dg_emple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_emple.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1})
         Me.dg_emple.GridColor = System.Drawing.Color.WhiteSmoke
@@ -1326,10 +1356,24 @@ Partial Class gestion_datos
         '
         Me.pan_logo.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.Logo
         Me.pan_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pan_logo.Controls.Add(Me.ll_ayuda_emple)
         Me.pan_logo.Location = New System.Drawing.Point(1365, 7)
         Me.pan_logo.Name = "pan_logo"
         Me.pan_logo.Size = New System.Drawing.Size(502, 458)
         Me.pan_logo.TabIndex = 127
+        '
+        'll_ayuda_emple
+        '
+        Me.ll_ayuda_emple.AutoSize = True
+        Me.ll_ayuda_emple.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.ll_ayuda_emple.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ll_ayuda_emple.LinkColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.ll_ayuda_emple.Location = New System.Drawing.Point(210, 345)
+        Me.ll_ayuda_emple.Name = "ll_ayuda_emple"
+        Me.ll_ayuda_emple.Size = New System.Drawing.Size(92, 33)
+        Me.ll_ayuda_emple.TabIndex = 0
+        Me.ll_ayuda_emple.TabStop = True
+        Me.ll_ayuda_emple.Text = "AYUDA"
         '
         'ts_empleados
         '
@@ -1418,6 +1462,7 @@ Partial Class gestion_datos
         '
         'SplitContainer3.Panel1
         '
+        Me.SplitContainer3.Panel1.Controls.Add(Me.ll_ayuda_cat)
         Me.SplitContainer3.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer3.Panel1.Controls.Add(Me.lbl_baja_categoria)
         Me.SplitContainer3.Panel1.Controls.Add(Me.lbl_mod_categoria)
@@ -1443,6 +1488,19 @@ Partial Class gestion_datos
         Me.SplitContainer3.Size = New System.Drawing.Size(1890, 926)
         Me.SplitContainer3.SplitterDistance = 1162
         Me.SplitContainer3.TabIndex = 114
+        '
+        'll_ayuda_cat
+        '
+        Me.ll_ayuda_cat.AutoSize = True
+        Me.ll_ayuda_cat.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.ll_ayuda_cat.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ll_ayuda_cat.LinkColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.ll_ayuda_cat.Location = New System.Drawing.Point(64, 820)
+        Me.ll_ayuda_cat.Name = "ll_ayuda_cat"
+        Me.ll_ayuda_cat.Size = New System.Drawing.Size(92, 33)
+        Me.ll_ayuda_cat.TabIndex = 127
+        Me.ll_ayuda_cat.TabStop = True
+        Me.ll_ayuda_cat.Text = "AYUDA"
         '
         'Label1
         '
@@ -2154,10 +2212,24 @@ Partial Class gestion_datos
         '
         Me.Panel1.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.Logo
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.ll_ayuda_prod)
         Me.Panel1.Location = New System.Drawing.Point(1370, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(502, 458)
         Me.Panel1.TabIndex = 131
+        '
+        'll_ayuda_prod
+        '
+        Me.ll_ayuda_prod.AutoSize = True
+        Me.ll_ayuda_prod.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.ll_ayuda_prod.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ll_ayuda_prod.LinkColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.ll_ayuda_prod.Location = New System.Drawing.Point(204, 325)
+        Me.ll_ayuda_prod.Name = "ll_ayuda_prod"
+        Me.ll_ayuda_prod.Size = New System.Drawing.Size(92, 33)
+        Me.ll_ayuda_prod.TabIndex = 128
+        Me.ll_ayuda_prod.TabStop = True
+        Me.ll_ayuda_prod.Text = "AYUDA"
         '
         'ToolStrip3
         '
@@ -2212,11 +2284,10 @@ Partial Class gestion_datos
         '
         Me.tb_clientes.Controls.Add(Me.Label8)
         Me.tb_clientes.Controls.Add(Me.dg_clientes)
+        Me.tb_clientes.Controls.Add(Me.ts_clientes)
         Me.tb_clientes.Controls.Add(Me.Panel4)
         Me.tb_clientes.Controls.Add(Me.PictureBox11)
-        Me.tb_clientes.Controls.Add(Me.Label9)
         Me.tb_clientes.Controls.Add(Me.Panel5)
-        Me.tb_clientes.Controls.Add(Me.ts_clientes)
         Me.tb_clientes.Location = New System.Drawing.Point(4, 28)
         Me.tb_clientes.Name = "tb_clientes"
         Me.tb_clientes.Padding = New System.Windows.Forms.Padding(3)
@@ -2251,14 +2322,78 @@ Partial Class gestion_datos
         Me.dg_clientes.Size = New System.Drawing.Size(1791, 266)
         Me.dg_clientes.TabIndex = 63
         '
+        'ts_clientes
+        '
+        Me.ts_clientes.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ts_clientes.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ts_clientes.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ts_clientes.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tslbl_nuevo_clientes, Me.ToolStripSeparator12, Me.tslbl_alta_clientes, Me.ToolStripSeparator14, Me.tslbl_baja_clientes, Me.tslbl_modificar_clientes})
+        Me.ts_clientes.Location = New System.Drawing.Point(3, 3)
+        Me.ts_clientes.Name = "ts_clientes"
+        Me.ts_clientes.Size = New System.Drawing.Size(1890, 25)
+        Me.ts_clientes.TabIndex = 70
+        Me.ts_clientes.Text = "ToolStrip4"
+        '
+        'tslbl_nuevo_clientes
+        '
+        Me.tslbl_nuevo_clientes.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tslbl_nuevo_clientes.Name = "tslbl_nuevo_clientes"
+        Me.tslbl_nuevo_clientes.Size = New System.Drawing.Size(50, 22)
+        Me.tslbl_nuevo_clientes.Text = "Nuevo"
+        '
+        'ToolStripSeparator12
+        '
+        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
+        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
+        '
+        'tslbl_alta_clientes
+        '
+        Me.tslbl_alta_clientes.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tslbl_alta_clientes.Name = "tslbl_alta_clientes"
+        Me.tslbl_alta_clientes.Size = New System.Drawing.Size(35, 22)
+        Me.tslbl_alta_clientes.Text = "Alta"
+        '
+        'ToolStripSeparator14
+        '
+        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
+        Me.ToolStripSeparator14.Size = New System.Drawing.Size(6, 25)
+        '
+        'tslbl_baja_clientes
+        '
+        Me.tslbl_baja_clientes.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tslbl_baja_clientes.Name = "tslbl_baja_clientes"
+        Me.tslbl_baja_clientes.Size = New System.Drawing.Size(38, 22)
+        Me.tslbl_baja_clientes.Text = "Baja"
+        '
+        'tslbl_modificar_clientes
+        '
+        Me.tslbl_modificar_clientes.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tslbl_modificar_clientes.Name = "tslbl_modificar_clientes"
+        Me.tslbl_modificar_clientes.Size = New System.Drawing.Size(70, 22)
+        Me.tslbl_modificar_clientes.Text = "Modificar"
+        '
         'Panel4
         '
         Me.Panel4.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.Logo
         Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel4.Controls.Add(Me.ll_ayuda_clie)
         Me.Panel4.Location = New System.Drawing.Point(1363, 438)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(502, 458)
         Me.Panel4.TabIndex = 132
+        '
+        'll_ayuda_clie
+        '
+        Me.ll_ayuda_clie.AutoSize = True
+        Me.ll_ayuda_clie.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.ll_ayuda_clie.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ll_ayuda_clie.LinkColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.ll_ayuda_clie.Location = New System.Drawing.Point(210, 332)
+        Me.ll_ayuda_clie.Name = "ll_ayuda_clie"
+        Me.ll_ayuda_clie.Size = New System.Drawing.Size(92, 33)
+        Me.ll_ayuda_clie.TabIndex = 128
+        Me.ll_ayuda_clie.TabStop = True
+        Me.ll_ayuda_clie.Text = "AYUDA"
         '
         'PictureBox11
         '
@@ -2270,22 +2405,13 @@ Partial Class gestion_datos
         Me.PictureBox11.TabIndex = 95
         Me.PictureBox11.TabStop = False
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(372, 388)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(52, 19)
-        Me.Label9.TabIndex = 64
-        Me.Label9.Text = "Label9"
-        '
         'Panel5
         '
         Me.Panel5.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.pan_datos
         Me.Panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel5.Controls.Add(Me.lbl_imprimir)
-        Me.Panel5.Controls.Add(Me.Label13)
-        Me.Panel5.Controls.Add(Me.Label12)
+        Me.Panel5.Controls.Add(Me.lbl_baja_clie)
+        Me.Panel5.Controls.Add(Me.lbl_mod_clie)
         Me.Panel5.Controls.Add(Me.lbl_alta_clientes)
         Me.Panel5.Controls.Add(Me.btn_imprimir)
         Me.Panel5.Controls.Add(Me.btn_clientes_baja)
@@ -2332,31 +2458,31 @@ Partial Class gestion_datos
         Me.lbl_imprimir.Text = "IMRPIMIR " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CARNE"
         Me.lbl_imprimir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label13
+        'lbl_baja_clie
         '
-        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Label13.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label13.Location = New System.Drawing.Point(1154, 351)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(70, 31)
-        Me.Label13.TabIndex = 154
-        Me.Label13.Text = "BAJA"
+        Me.lbl_baja_clie.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lbl_baja_clie.AutoSize = True
+        Me.lbl_baja_clie.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.lbl_baja_clie.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_baja_clie.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lbl_baja_clie.Location = New System.Drawing.Point(1154, 351)
+        Me.lbl_baja_clie.Name = "lbl_baja_clie"
+        Me.lbl_baja_clie.Size = New System.Drawing.Size(70, 31)
+        Me.lbl_baja_clie.TabIndex = 154
+        Me.lbl_baja_clie.Text = "BAJA"
         '
-        'Label12
+        'lbl_mod_clie
         '
-        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Label12.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label12.Location = New System.Drawing.Point(920, 351)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(138, 31)
-        Me.Label12.TabIndex = 153
-        Me.Label12.Text = "MODIFICAR"
+        Me.lbl_mod_clie.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lbl_mod_clie.AutoSize = True
+        Me.lbl_mod_clie.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.lbl_mod_clie.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_mod_clie.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lbl_mod_clie.Location = New System.Drawing.Point(920, 351)
+        Me.lbl_mod_clie.Name = "lbl_mod_clie"
+        Me.lbl_mod_clie.Size = New System.Drawing.Size(138, 31)
+        Me.lbl_mod_clie.TabIndex = 153
+        Me.lbl_mod_clie.Text = "MODIFICAR"
         '
         'lbl_alta_clientes
         '
@@ -2651,59 +2777,9 @@ Partial Class gestion_datos
         Me.lbl_clientes_empleadoID.TabIndex = 69
         Me.lbl_clientes_empleadoID.Text = "Empleado ID:"
         '
-        'ts_clientes
-        '
-        Me.ts_clientes.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ts_clientes.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ts_clientes.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ts_clientes.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tslbl_nuevo_clientes, Me.ToolStripSeparator12, Me.tslbl_alta_clientes, Me.ToolStripSeparator14, Me.tslbl_baja_clientes, Me.tslbl_modificar_clientes})
-        Me.ts_clientes.Location = New System.Drawing.Point(3, 3)
-        Me.ts_clientes.Name = "ts_clientes"
-        Me.ts_clientes.Size = New System.Drawing.Size(1890, 25)
-        Me.ts_clientes.TabIndex = 70
-        Me.ts_clientes.Text = "ToolStrip4"
-        '
-        'tslbl_nuevo_clientes
-        '
-        Me.tslbl_nuevo_clientes.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tslbl_nuevo_clientes.Name = "tslbl_nuevo_clientes"
-        Me.tslbl_nuevo_clientes.Size = New System.Drawing.Size(50, 22)
-        Me.tslbl_nuevo_clientes.Text = "Nuevo"
-        '
-        'ToolStripSeparator12
-        '
-        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
-        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
-        '
-        'tslbl_alta_clientes
-        '
-        Me.tslbl_alta_clientes.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tslbl_alta_clientes.Name = "tslbl_alta_clientes"
-        Me.tslbl_alta_clientes.Size = New System.Drawing.Size(35, 22)
-        Me.tslbl_alta_clientes.Text = "Alta"
-        '
-        'ToolStripSeparator14
-        '
-        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
-        Me.ToolStripSeparator14.Size = New System.Drawing.Size(6, 25)
-        '
-        'tslbl_baja_clientes
-        '
-        Me.tslbl_baja_clientes.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tslbl_baja_clientes.Name = "tslbl_baja_clientes"
-        Me.tslbl_baja_clientes.Size = New System.Drawing.Size(38, 22)
-        Me.tslbl_baja_clientes.Text = "Baja"
-        '
-        'tslbl_modificar_clientes
-        '
-        Me.tslbl_modificar_clientes.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tslbl_modificar_clientes.Name = "tslbl_modificar_clientes"
-        Me.tslbl_modificar_clientes.Size = New System.Drawing.Size(70, 22)
-        Me.tslbl_modificar_clientes.Text = "Modificar"
-        '
         'tb_proveedores
         '
-        Me.tb_proveedores.Controls.Add(Me.Panel7)
+        Me.tb_proveedores.Controls.Add(Me.pan_datos_prov)
         Me.tb_proveedores.Controls.Add(Me.Panel6)
         Me.tb_proveedores.Controls.Add(Me.Label10)
         Me.tb_proveedores.Controls.Add(Me.dg_proveedores)
@@ -2717,130 +2793,75 @@ Partial Class gestion_datos
         Me.tb_proveedores.Text = "Proveedores"
         Me.tb_proveedores.UseVisualStyleBackColor = True
         '
-        'Panel7
+        'pan_datos_prov
         '
-        Me.Panel7.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.pan_datos
-        Me.Panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel7.Controls.Add(Me.PictureBox28)
-        Me.Panel7.Controls.Add(Me.PictureBox24)
-        Me.Panel7.Controls.Add(Me.PictureBox23)
-        Me.Panel7.Controls.Add(Me.PictureBox4)
-        Me.Panel7.Controls.Add(Me.PictureBox17)
-        Me.Panel7.Controls.Add(Me.Label14)
-        Me.Panel7.Controls.Add(Me.Label15)
-        Me.Panel7.Controls.Add(Me.Label16)
-        Me.Panel7.Controls.Add(Me.Label11)
-        Me.Panel7.Controls.Add(Me.tb_proveedores_id)
-        Me.Panel7.Controls.Add(Me.btn_provedores_baja)
-        Me.Panel7.Controls.Add(Me.btn_provedores_modificar)
-        Me.Panel7.Controls.Add(Me.lbl_proveedores_telefono)
-        Me.Panel7.Controls.Add(Me.tb_proveedores_nombre)
-        Me.Panel7.Controls.Add(Me.PictureBox25)
-        Me.Panel7.Controls.Add(Me.tb_proveedores_direccion)
-        Me.Panel7.Controls.Add(Me.lbl_proveedores_nombre)
-        Me.Panel7.Controls.Add(Me.lbl_proveedores_id)
-        Me.Panel7.Controls.Add(Me.tb_proveedores_telefono)
-        Me.Panel7.Controls.Add(Me.lbl_proveedores_direccion)
-        Me.Panel7.Controls.Add(Me.tb_proveedores_contacto)
-        Me.Panel7.Controls.Add(Me.lbl_proveedores_contacto)
-        Me.Panel7.Location = New System.Drawing.Point(19, 447)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(1306, 458)
-        Me.Panel7.TabIndex = 137
+        Me.pan_datos_prov.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.pan_datos
+        Me.pan_datos_prov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pan_datos_prov.Controls.Add(Me.lbl_baja_prov)
+        Me.pan_datos_prov.Controls.Add(Me.lbl_mod_prov)
+        Me.pan_datos_prov.Controls.Add(Me.lbl_alta_prov)
+        Me.pan_datos_prov.Controls.Add(Me.Label11)
+        Me.pan_datos_prov.Controls.Add(Me.tb_proveedores_id)
+        Me.pan_datos_prov.Controls.Add(Me.btn_provedores_baja)
+        Me.pan_datos_prov.Controls.Add(Me.btn_provedores_modificar)
+        Me.pan_datos_prov.Controls.Add(Me.lbl_proveedores_telefono)
+        Me.pan_datos_prov.Controls.Add(Me.tb_proveedores_nombre)
+        Me.pan_datos_prov.Controls.Add(Me.btn_alta_prov)
+        Me.pan_datos_prov.Controls.Add(Me.tb_proveedores_direccion)
+        Me.pan_datos_prov.Controls.Add(Me.lbl_proveedores_nombre)
+        Me.pan_datos_prov.Controls.Add(Me.lbl_proveedores_id)
+        Me.pan_datos_prov.Controls.Add(Me.tb_proveedores_telefono)
+        Me.pan_datos_prov.Controls.Add(Me.lbl_proveedores_direccion)
+        Me.pan_datos_prov.Controls.Add(Me.tb_proveedores_contacto)
+        Me.pan_datos_prov.Controls.Add(Me.lbl_proveedores_contacto)
+        Me.pan_datos_prov.Controls.Add(Me.pb_tb_cont_prov)
+        Me.pan_datos_prov.Controls.Add(Me.pb_tb_dir_prov)
+        Me.pan_datos_prov.Controls.Add(Me.pb_tb_nom_prov)
+        Me.pan_datos_prov.Controls.Add(Me.pb_tb_id_prov)
+        Me.pan_datos_prov.Controls.Add(Me.pb_tb_tel_prov)
+        Me.pan_datos_prov.Location = New System.Drawing.Point(19, 447)
+        Me.pan_datos_prov.Name = "pan_datos_prov"
+        Me.pan_datos_prov.Size = New System.Drawing.Size(1306, 458)
+        Me.pan_datos_prov.TabIndex = 137
         '
-        'PictureBox28
+        'lbl_baja_prov
         '
-        Me.PictureBox28.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.PictureBox28.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
-        Me.PictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox28.Location = New System.Drawing.Point(920, 125)
-        Me.PictureBox28.Name = "PictureBox28"
-        Me.PictureBox28.Size = New System.Drawing.Size(224, 59)
-        Me.PictureBox28.TabIndex = 162
-        Me.PictureBox28.TabStop = False
+        Me.lbl_baja_prov.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lbl_baja_prov.AutoSize = True
+        Me.lbl_baja_prov.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.lbl_baja_prov.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_baja_prov.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lbl_baja_prov.Location = New System.Drawing.Point(1112, 343)
+        Me.lbl_baja_prov.Name = "lbl_baja_prov"
+        Me.lbl_baja_prov.Size = New System.Drawing.Size(70, 31)
+        Me.lbl_baja_prov.TabIndex = 157
+        Me.lbl_baja_prov.Text = "BAJA"
         '
-        'PictureBox24
+        'lbl_mod_prov
         '
-        Me.PictureBox24.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.PictureBox24.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
-        Me.PictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox24.Location = New System.Drawing.Point(300, 125)
-        Me.PictureBox24.Name = "PictureBox24"
-        Me.PictureBox24.Size = New System.Drawing.Size(224, 59)
-        Me.PictureBox24.TabIndex = 161
-        Me.PictureBox24.TabStop = False
+        Me.lbl_mod_prov.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lbl_mod_prov.AutoSize = True
+        Me.lbl_mod_prov.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.lbl_mod_prov.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_mod_prov.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lbl_mod_prov.Location = New System.Drawing.Point(878, 343)
+        Me.lbl_mod_prov.Name = "lbl_mod_prov"
+        Me.lbl_mod_prov.Size = New System.Drawing.Size(138, 31)
+        Me.lbl_mod_prov.TabIndex = 156
+        Me.lbl_mod_prov.Text = "MODIFICAR"
         '
-        'PictureBox23
+        'lbl_alta_prov
         '
-        Me.PictureBox23.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.PictureBox23.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
-        Me.PictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox23.Location = New System.Drawing.Point(300, 186)
-        Me.PictureBox23.Name = "PictureBox23"
-        Me.PictureBox23.Size = New System.Drawing.Size(224, 59)
-        Me.PictureBox23.TabIndex = 160
-        Me.PictureBox23.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.PictureBox4.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(920, 186)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(224, 59)
-        Me.PictureBox4.TabIndex = 158
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox17
-        '
-        Me.PictureBox17.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.PictureBox17.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.tb_largo
-        Me.PictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox17.Location = New System.Drawing.Point(300, 246)
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(347, 59)
-        Me.PictureBox17.TabIndex = 159
-        Me.PictureBox17.TabStop = False
-        '
-        'Label14
-        '
-        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Label14.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label14.Location = New System.Drawing.Point(1112, 343)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(70, 31)
-        Me.Label14.TabIndex = 157
-        Me.Label14.Text = "BAJA"
-        '
-        'Label15
-        '
-        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Label15.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label15.Location = New System.Drawing.Point(878, 343)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(138, 31)
-        Me.Label15.TabIndex = 156
-        Me.Label15.Text = "MODIFICAR"
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Label16.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label16.Location = New System.Drawing.Point(709, 343)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(70, 31)
-        Me.Label16.TabIndex = 155
-        Me.Label16.Text = "ALTA"
+        Me.lbl_alta_prov.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lbl_alta_prov.AutoSize = True
+        Me.lbl_alta_prov.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.lbl_alta_prov.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_alta_prov.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lbl_alta_prov.Location = New System.Drawing.Point(709, 343)
+        Me.lbl_alta_prov.Name = "lbl_alta_prov"
+        Me.lbl_alta_prov.Size = New System.Drawing.Size(70, 31)
+        Me.lbl_alta_prov.TabIndex = 155
+        Me.lbl_alta_prov.Text = "ALTA"
         '
         'Label11
         '
@@ -2907,16 +2928,16 @@ Partial Class gestion_datos
         Me.tb_proveedores_nombre.Size = New System.Drawing.Size(174, 20)
         Me.tb_proveedores_nombre.TabIndex = 74
         '
-        'PictureBox25
+        'btn_alta_prov
         '
-        Me.PictureBox25.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PictureBox25.Image = CType(resources.GetObject("PictureBox25.Image"), System.Drawing.Image)
-        Me.PictureBox25.Location = New System.Drawing.Point(657, 320)
-        Me.PictureBox25.Name = "PictureBox25"
-        Me.PictureBox25.Size = New System.Drawing.Size(175, 84)
-        Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox25.TabIndex = 134
-        Me.PictureBox25.TabStop = False
+        Me.btn_alta_prov.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btn_alta_prov.Image = CType(resources.GetObject("btn_alta_prov.Image"), System.Drawing.Image)
+        Me.btn_alta_prov.Location = New System.Drawing.Point(657, 320)
+        Me.btn_alta_prov.Name = "btn_alta_prov"
+        Me.btn_alta_prov.Size = New System.Drawing.Size(175, 84)
+        Me.btn_alta_prov.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btn_alta_prov.TabIndex = 134
+        Me.btn_alta_prov.TabStop = False
         '
         'tb_proveedores_direccion
         '
@@ -2993,14 +3014,83 @@ Partial Class gestion_datos
         Me.lbl_proveedores_contacto.TabIndex = 73
         Me.lbl_proveedores_contacto.Text = "Contacto:"
         '
+        'pb_tb_cont_prov
+        '
+        Me.pb_tb_cont_prov.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.pb_tb_cont_prov.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.pb_tb_cont_prov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pb_tb_cont_prov.Location = New System.Drawing.Point(920, 186)
+        Me.pb_tb_cont_prov.Name = "pb_tb_cont_prov"
+        Me.pb_tb_cont_prov.Size = New System.Drawing.Size(224, 59)
+        Me.pb_tb_cont_prov.TabIndex = 158
+        Me.pb_tb_cont_prov.TabStop = False
+        '
+        'pb_tb_dir_prov
+        '
+        Me.pb_tb_dir_prov.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.pb_tb_dir_prov.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.tb_largo
+        Me.pb_tb_dir_prov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pb_tb_dir_prov.Location = New System.Drawing.Point(300, 244)
+        Me.pb_tb_dir_prov.Name = "pb_tb_dir_prov"
+        Me.pb_tb_dir_prov.Size = New System.Drawing.Size(347, 59)
+        Me.pb_tb_dir_prov.TabIndex = 159
+        Me.pb_tb_dir_prov.TabStop = False
+        '
+        'pb_tb_nom_prov
+        '
+        Me.pb_tb_nom_prov.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.pb_tb_nom_prov.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.pb_tb_nom_prov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pb_tb_nom_prov.Location = New System.Drawing.Point(300, 186)
+        Me.pb_tb_nom_prov.Name = "pb_tb_nom_prov"
+        Me.pb_tb_nom_prov.Size = New System.Drawing.Size(224, 59)
+        Me.pb_tb_nom_prov.TabIndex = 160
+        Me.pb_tb_nom_prov.TabStop = False
+        '
+        'pb_tb_id_prov
+        '
+        Me.pb_tb_id_prov.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.pb_tb_id_prov.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.pb_tb_id_prov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pb_tb_id_prov.Location = New System.Drawing.Point(300, 121)
+        Me.pb_tb_id_prov.Name = "pb_tb_id_prov"
+        Me.pb_tb_id_prov.Size = New System.Drawing.Size(224, 59)
+        Me.pb_tb_id_prov.TabIndex = 161
+        Me.pb_tb_id_prov.TabStop = False
+        '
+        'pb_tb_tel_prov
+        '
+        Me.pb_tb_tel_prov.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.pb_tb_tel_prov.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.pb_tb_tel_prov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pb_tb_tel_prov.Location = New System.Drawing.Point(920, 121)
+        Me.pb_tb_tel_prov.Name = "pb_tb_tel_prov"
+        Me.pb_tb_tel_prov.Size = New System.Drawing.Size(224, 59)
+        Me.pb_tb_tel_prov.TabIndex = 162
+        Me.pb_tb_tel_prov.TabStop = False
+        '
         'Panel6
         '
         Me.Panel6.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.Logo
         Me.Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel6.Controls.Add(Me.ll_ayuda_prov)
         Me.Panel6.Location = New System.Drawing.Point(1363, 447)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(502, 458)
         Me.Panel6.TabIndex = 133
+        '
+        'll_ayuda_prov
+        '
+        Me.ll_ayuda_prov.AutoSize = True
+        Me.ll_ayuda_prov.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.ll_ayuda_prov.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ll_ayuda_prov.LinkColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.ll_ayuda_prov.Location = New System.Drawing.Point(217, 343)
+        Me.ll_ayuda_prov.Name = "ll_ayuda_prov"
+        Me.ll_ayuda_prov.Size = New System.Drawing.Size(92, 33)
+        Me.ll_ayuda_prov.TabIndex = 128
+        Me.ll_ayuda_prov.TabStop = True
+        Me.ll_ayuda_prov.Text = "AYUDA"
         '
         'Label10
         '
@@ -3103,6 +3193,7 @@ Partial Class gestion_datos
         Me.tab_roles.ResumeLayout(False)
         Me.tab_roles.PerformLayout()
         Me.SplitContainer2.Panel1.ResumeLayout(False)
+        Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
@@ -3142,6 +3233,8 @@ Partial Class gestion_datos
         CType(Me.btn_emp_alta, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_emp_baja, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_emp_modif, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pan_logo.ResumeLayout(False)
+        Me.pan_logo.PerformLayout()
         Me.ts_empleados.ResumeLayout(False)
         Me.ts_empleados.PerformLayout()
         Me.TabControl.ResumeLayout(False)
@@ -3186,11 +3279,17 @@ Partial Class gestion_datos
         CType(Me.btn_mod_prod, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_alta_prod, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_baja_prod, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ToolStrip3.ResumeLayout(False)
         Me.ToolStrip3.PerformLayout()
         Me.tb_clientes.ResumeLayout(False)
         Me.tb_clientes.PerformLayout()
         CType(Me.dg_clientes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ts_clientes.ResumeLayout(False)
+        Me.ts_clientes.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
@@ -3205,20 +3304,20 @@ Partial Class gestion_datos
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ts_clientes.ResumeLayout(False)
-        Me.ts_clientes.PerformLayout()
         Me.tb_proveedores.ResumeLayout(False)
         Me.tb_proveedores.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
-        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pan_datos_prov.ResumeLayout(False)
+        Me.pan_datos_prov.PerformLayout()
         CType(Me.btn_provedores_baja, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_provedores_modificar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btn_alta_prov, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_tb_cont_prov, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_tb_dir_prov, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_tb_nom_prov, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_tb_id_prov, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_tb_tel_prov, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
         CType(Me.dg_proveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ts_proveedores.ResumeLayout(False)
         Me.ts_proveedores.PerformLayout()
@@ -3235,12 +3334,10 @@ Partial Class gestion_datos
     Friend WithEvents ts_volverimg As ToolStripButton
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ts_info As ToolStripLabel
     Friend WithEvents ToolStripSeparator13 As ToolStripSeparator
     Friend WithEvents ts_cerrar As ToolStripLabel
     Friend WithEvents tss_usuario As ToolStripStatusLabel
     Friend WithEvents tss_fechahora As ToolStripStatusLabel
-    Friend WithEvents ts_acerca As ToolStripLabel
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
     Friend WithEvents tab_roles As TabPage
     Friend WithEvents SplitContainer2 As SplitContainer
@@ -3389,7 +3486,6 @@ Partial Class gestion_datos
     Friend WithEvents tb_clientes As TabPage
     Friend WithEvents Panel4 As Panel
     Friend WithEvents PictureBox11 As PictureBox
-    Friend WithEvents Label9 As Label
     Friend WithEvents dg_clientes As DataGridView
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label3 As Label
@@ -3447,11 +3543,11 @@ Partial Class gestion_datos
     Friend WithEvents btn_clientes_baja As PictureBox
     Friend WithEvents btn_clientes_modificar As PictureBox
     Friend WithEvents btn_clientes_alta As PictureBox
-    Friend WithEvents Panel7 As Panel
+    Friend WithEvents pan_datos_prov As Panel
     Friend WithEvents Label11 As Label
     Friend WithEvents btn_provedores_baja As PictureBox
     Friend WithEvents btn_provedores_modificar As PictureBox
-    Friend WithEvents PictureBox25 As PictureBox
+    Friend WithEvents btn_alta_prov As PictureBox
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox22 As PictureBox
@@ -3459,15 +3555,24 @@ Partial Class gestion_datos
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btn_imprimir As PictureBox
     Friend WithEvents lbl_imprimir As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents lbl_baja_clie As Label
+    Friend WithEvents lbl_mod_clie As Label
     Friend WithEvents lbl_alta_clientes As Label
-    Friend WithEvents PictureBox28 As PictureBox
-    Friend WithEvents PictureBox24 As PictureBox
-    Friend WithEvents PictureBox23 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox17 As PictureBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
+    Friend WithEvents pb_tb_tel_prov As PictureBox
+    Friend WithEvents pb_tb_id_prov As PictureBox
+    Friend WithEvents pb_tb_nom_prov As PictureBox
+    Friend WithEvents pb_tb_cont_prov As PictureBox
+    Friend WithEvents pb_tb_dir_prov As PictureBox
+    Friend WithEvents lbl_baja_prov As Label
+    Friend WithEvents lbl_mod_prov As Label
+    Friend WithEvents lbl_alta_prov As Label
+    Friend WithEvents ll_ayuda_emple As LinkLabel
+    Friend WithEvents ts_info As ToolStripDropDownButton
+    Friend WithEvents info_clie As ToolStripMenuItem
+    Friend WithEvents info_prod As ToolStripMenuItem
+    Friend WithEvents ll_ayuda_roles As LinkLabel
+    Friend WithEvents ll_ayuda_cat As LinkLabel
+    Friend WithEvents ll_ayuda_prod As LinkLabel
+    Friend WithEvents ll_ayuda_clie As LinkLabel
+    Friend WithEvents ll_ayuda_prov As LinkLabel
 End Class

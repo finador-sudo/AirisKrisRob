@@ -2,7 +2,7 @@
 Imports System.Drawing.Printing
 
 Public Class gestion_datos
-
+    Public c As String
     'Conexion a la base de datos
     Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=airis_db.accdb")
     Public adaptador_roles As New OleDbDataAdapter("Select * from roles", conexion)
@@ -501,7 +501,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON BAJA
-    Private Sub tslbl_baja_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_baja_clientes.Click, btn_emp_baja.Click, lbl_baja_empleados.Click
+    Private Sub tslbl_baja_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_baja_clientes.Click, btn_emp_baja.Click, lbl_baja_clie.Click
         If Not (tb_clientes.Text = "") Then
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try
@@ -525,7 +525,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON MODIFICAR
-    Private Sub tslbl_modificar_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_clientes.Click, btn_emp_modif.Click, lbl_mod_empleados.Click
+    Private Sub tslbl_modificar_clientes_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_clientes.Click, btn_emp_modif.Click, lbl_mod_clie.Click
         If Not (tb_clientes_id.Text = "" And tb_clientes_ape1.Text = "" And tb_clientes_ape2.Text = "" And tb_clientes_direccion.Text = "" And tb_clientes_empleadoID.Text = "" And tb_clientes_nombre.Text = "" And tb_clientes_telefono.Text = "") Then
             Try
                 conexion.Open()
@@ -552,7 +552,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON IMPRIMIR
-    Private Sub btn_imprimir_Click(sender As Object, e As EventArgs) Handles btn_imprimir.Click
+    Private Sub btn_imprimir_Click(sender As Object, e As EventArgs) Handles btn_imprimir.Click, lbl_imprimir.Click
         Dim printDoc As New PrintDocument
         AddHandler printDoc.PrintPage, AddressOf print_PrintPage
         ' Llamamos al emtodo que imprime
@@ -577,7 +577,7 @@ Public Class gestion_datos
         Dim prFont As New Font("Arial", 8, FontStyle.Regular)
         ' la posición superior
 
-        Dim imagen As Bitmap = Image.FromFile(".\.\Resources\carne.png")
+        Dim imagen As Bitmap = Image.FromFile("..\Resources\carne.png")
         e.Graphics.DrawImage(imagen, 0, 0, 500, 560)
         ' imprimimos la cadena
         e.Graphics.DrawString(id, prFont, Brushes.Black, 135, 46.5)
@@ -604,7 +604,7 @@ Public Class gestion_datos
         tb_proveedores_telefono.Text = ""
     End Sub
     'BOTON ALTA
-    Private Sub tslbl_alta_provedores_Click(sender As Object, e As EventArgs) Handles tslbl_alta_provedores.Click, btn_emp_alta.Click, lbl_alta_empleados.Click
+    Private Sub tslbl_alta_provedores_Click(sender As Object, e As EventArgs) Handles tslbl_alta_provedores.Click, btn_alta_prov.Click, lbl_alta_prov.Click
         If (tb_proveedores_id.Text = "") Then
             If Not (tb_proveedores_contacto.Text = "" And tb_proveedores_direccion.Text = "" And tb_proveedores_nombre.Text = "" And tb_proveedores_telefono.Text = "") Then
                 Try
@@ -635,7 +635,7 @@ Public Class gestion_datos
     End Sub
 
     'BOTON BAJA
-    Private Sub tslbl_baja_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_baja_proveedores.Click, btn_emp_baja.Click, lbl_baja_empleados.Click
+    Private Sub tslbl_baja_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_baja_proveedores.Click, btn_provedores_baja.Click, lbl_baja_prov.Click
         If Not (tb_clientes.Text = "") Then
             If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
                 Try
@@ -658,7 +658,7 @@ Public Class gestion_datos
         End If
     End Sub
     'BOTON MODIFICAR
-    Private Sub tslbl_modificar_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_proveedores.Click, btn_emp_modif.Click, lbl_mod_empleados.Click
+    Private Sub tslbl_modificar_proveedores_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_proveedores.Click, btn_provedores_modificar.Click, lbl_mod_prov.Click
         If Not (tb_proveedores_id.Text = "" And tb_proveedores_contacto.Text = "" And tb_proveedores_direccion.Text = "" And tb_proveedores_nombre.Text = "" And tb_proveedores_telefono.Text = "") Then
             Try
                 conexion.Open()
@@ -731,5 +731,34 @@ Public Class gestion_datos
         inicio.Show()
     End Sub
 
+    'INFORMES
+    Private Sub info_clie_Click(sender As Object, e As EventArgs) Handles info_clie.Click
+        Informe.Show()
+        c = 1
+    End Sub
 
+    Private Sub info_prod_Click(sender As Object, e As EventArgs) Handles info_prod.Click
+        Informe.Show()
+        c = 2
+    End Sub
+    'AYUDAS
+    Private Sub ll_ayuda_roles_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_roles.LinkClicked
+        Help.ShowHelp(ll_ayuda_roles, "Airis.chm")
+    End Sub
+
+    Private Sub ll_ayuda_emple_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_emple.LinkClicked
+        Help.ShowHelp(ll_ayuda_emple, "Airis.chm")
+    End Sub
+
+    Private Sub ll_ayuda_cat_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_cat.LinkClicked
+
+    End Sub
+
+    Private Sub ll_ayuda_prod_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_prod.LinkClicked
+
+    End Sub
+
+    Private Sub ll_ayuda_clie_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_clie.LinkClicked
+
+    End Sub
 End Class

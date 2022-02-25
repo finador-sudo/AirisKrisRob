@@ -26,6 +26,7 @@ Partial Class inicio
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inicio))
         Me.pan_presentacion = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pan_inicio = New System.Windows.Forms.Panel()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.ll_pagoficial = New System.Windows.Forms.LinkLabel()
@@ -33,28 +34,27 @@ Partial Class inicio
         Me.cb_cont = New System.Windows.Forms.CheckBox()
         Me.lbl_inf = New System.Windows.Forms.Label()
         Me.lbl_bienvenido = New System.Windows.Forms.Label()
+        Me.pb_ico_usu = New System.Windows.Forms.PictureBox()
+        Me.pb_ico_cont = New System.Windows.Forms.PictureBox()
         Me.lbl_entrar = New System.Windows.Forms.Label()
         Me.tb_cont = New System.Windows.Forms.TextBox()
         Me.tb_usu = New System.Windows.Forms.TextBox()
-        Me.pan_logo = New System.Windows.Forms.Panel()
-        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.pb_ico_usu = New System.Windows.Forms.PictureBox()
-        Me.pb_ico_cont = New System.Windows.Forms.PictureBox()
         Me.btn_entrar = New System.Windows.Forms.PictureBox()
         Me.pb_cont = New System.Windows.Forms.PictureBox()
         Me.pb_usu = New System.Windows.Forms.PictureBox()
+        Me.pan_logo = New System.Windows.Forms.Panel()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.pan_presentacion.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pan_inicio.SuspendLayout()
-        Me.pan_logo.SuspendLayout()
         CType(Me.pb_ico_usu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_ico_cont, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_entrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_cont, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_usu, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pan_logo.SuspendLayout()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pan_presentacion
@@ -78,6 +78,16 @@ Partial Class inicio
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Presiona cualquier" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "botón para entrar"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
+        Me.PictureBox1.Location = New System.Drawing.Point(51, 57)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(361, 322)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'pan_inicio
         '
@@ -169,6 +179,28 @@ Partial Class inicio
         Me.lbl_bienvenido.TabIndex = 25
         Me.lbl_bienvenido.Text = "Bienvenido a"
         '
+        'pb_ico_usu
+        '
+        Me.pb_ico_usu.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(232, Byte), Integer))
+        Me.pb_ico_usu.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.circle_user_7
+        Me.pb_ico_usu.Location = New System.Drawing.Point(103, 282)
+        Me.pb_ico_usu.Name = "pb_ico_usu"
+        Me.pb_ico_usu.Size = New System.Drawing.Size(30, 30)
+        Me.pb_ico_usu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pb_ico_usu.TabIndex = 24
+        Me.pb_ico_usu.TabStop = False
+        '
+        'pb_ico_cont
+        '
+        Me.pb_ico_cont.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(232, Byte), Integer))
+        Me.pb_ico_cont.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.lock_7
+        Me.pb_ico_cont.Location = New System.Drawing.Point(103, 352)
+        Me.pb_ico_cont.Name = "pb_ico_cont"
+        Me.pb_ico_cont.Size = New System.Drawing.Size(30, 30)
+        Me.pb_ico_cont.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pb_ico_cont.TabIndex = 23
+        Me.pb_ico_cont.TabStop = False
+        '
         'lbl_entrar
         '
         Me.lbl_entrar.AutoSize = True
@@ -203,43 +235,6 @@ Partial Class inicio
         Me.tb_usu.Size = New System.Drawing.Size(209, 26)
         Me.tb_usu.TabIndex = 17
         '
-        'pan_logo
-        '
-        Me.pan_logo.Controls.Add(Me.pb_logo)
-        Me.pan_logo.Location = New System.Drawing.Point(69, 59)
-        Me.pan_logo.Name = "pan_logo"
-        Me.pan_logo.Size = New System.Drawing.Size(329, 155)
-        Me.pan_logo.TabIndex = 16
-        '
-        'NotifyIcon1
-        '
-        Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon1.Text = "NotifyIcon1"
-        Me.NotifyIcon1.Visible = True
-        '
-        'pb_ico_usu
-        '
-        Me.pb_ico_usu.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(232, Byte), Integer))
-        Me.pb_ico_usu.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.circle_user_7
-        Me.pb_ico_usu.Location = New System.Drawing.Point(103, 282)
-        Me.pb_ico_usu.Name = "pb_ico_usu"
-        Me.pb_ico_usu.Size = New System.Drawing.Size(30, 30)
-        Me.pb_ico_usu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pb_ico_usu.TabIndex = 24
-        Me.pb_ico_usu.TabStop = False
-        '
-        'pb_ico_cont
-        '
-        Me.pb_ico_cont.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(232, Byte), Integer))
-        Me.pb_ico_cont.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.lock_7
-        Me.pb_ico_cont.Location = New System.Drawing.Point(103, 352)
-        Me.pb_ico_cont.Name = "pb_ico_cont"
-        Me.pb_ico_cont.Size = New System.Drawing.Size(30, 30)
-        Me.pb_ico_cont.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pb_ico_cont.TabIndex = 23
-        Me.pb_ico_cont.TabStop = False
-        '
         'btn_entrar
         '
         Me.btn_entrar.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.Recurso_2_2x
@@ -270,6 +265,14 @@ Partial Class inicio
         Me.pb_usu.TabIndex = 18
         Me.pb_usu.TabStop = False
         '
+        'pan_logo
+        '
+        Me.pan_logo.Controls.Add(Me.pb_logo)
+        Me.pan_logo.Location = New System.Drawing.Point(69, 59)
+        Me.pan_logo.Name = "pan_logo"
+        Me.pan_logo.Size = New System.Drawing.Size(329, 155)
+        Me.pan_logo.TabIndex = 16
+        '
         'pb_logo
         '
         Me.pb_logo.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
@@ -280,15 +283,12 @@ Partial Class inicio
         Me.pb_logo.TabIndex = 0
         Me.pb_logo.TabStop = False
         '
-        'PictureBox1
+        'NotifyIcon1
         '
-        Me.PictureBox1.Image = Global.AirisSolucionKrisRob.My.Resources.Resources._1975_airis_logo1
-        Me.PictureBox1.Location = New System.Drawing.Point(51, 57)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(361, 322)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
+        Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
         '
         'inicio
         '
@@ -305,16 +305,16 @@ Partial Class inicio
         Me.Text = "Airis Managment Application"
         Me.pan_presentacion.ResumeLayout(False)
         Me.pan_presentacion.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pan_inicio.ResumeLayout(False)
         Me.pan_inicio.PerformLayout()
-        Me.pan_logo.ResumeLayout(False)
         CType(Me.pb_ico_usu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_ico_cont, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_entrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_cont, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_usu, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pan_logo.ResumeLayout(False)
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

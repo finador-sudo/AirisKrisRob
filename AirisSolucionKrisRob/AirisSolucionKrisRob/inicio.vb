@@ -111,4 +111,8 @@ Public Class inicio
         ProgressBar1.Visible = False
 
     End Sub
+
+    Private Sub ll_acerca_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_acerca.LinkClicked
+        Help.ShowHelp(ll_acerca, "Airis.chm")
+    End Sub
 End Class
