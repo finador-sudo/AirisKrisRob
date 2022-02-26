@@ -219,7 +219,7 @@ Partial Class inicio
         Me.tb_cont.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_cont.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_cont.Location = New System.Drawing.Point(150, 351)
-        Me.tb_cont.MaxLength = 6
+        Me.tb_cont.MaxLength = 15
         Me.tb_cont.Name = "tb_cont"
         Me.tb_cont.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tb_cont.Size = New System.Drawing.Size(212, 26)
@@ -231,6 +231,7 @@ Partial Class inicio
         Me.tb_usu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_usu.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_usu.Location = New System.Drawing.Point(150, 282)
+        Me.tb_usu.MaxLength = 15
         Me.tb_usu.Name = "tb_usu"
         Me.tb_usu.Size = New System.Drawing.Size(209, 26)
         Me.tb_usu.TabIndex = 17

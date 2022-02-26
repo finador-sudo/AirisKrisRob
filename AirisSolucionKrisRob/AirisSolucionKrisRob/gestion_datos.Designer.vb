@@ -24,8 +24,8 @@ Partial Class gestion_datos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestion_datos))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.toolstrip = New System.Windows.Forms.ToolStrip()
         Me.ts_volverimg = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -75,7 +75,6 @@ Partial Class gestion_datos
         Me.panel = New System.Windows.Forms.Panel()
         Me.tit_datos_emp = New System.Windows.Forms.Label()
         Me.dg_emple = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pan_datos_emple = New System.Windows.Forms.Panel()
         Me.tb_emple_nom = New System.Windows.Forms.TextBox()
         Me.lbl_usuario = New System.Windows.Forms.Label()
@@ -594,6 +593,7 @@ Partial Class gestion_datos
         Me.tb_roles_rol.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_roles_rol.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_roles_rol.Location = New System.Drawing.Point(511, 175)
+        Me.tb_roles_rol.MaxLength = 15
         Me.tb_roles_rol.Name = "tb_roles_rol"
         Me.tb_roles_rol.Size = New System.Drawing.Size(173, 26)
         Me.tb_roles_rol.TabIndex = 11
@@ -606,6 +606,7 @@ Partial Class gestion_datos
         Me.tb_roles_id.Enabled = False
         Me.tb_roles_id.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_roles_id.Location = New System.Drawing.Point(511, 97)
+        Me.tb_roles_id.MaxLength = 15
         Me.tb_roles_id.Name = "tb_roles_id"
         Me.tb_roles_id.Size = New System.Drawing.Size(173, 26)
         Me.tb_roles_id.TabIndex = 10
@@ -878,23 +879,22 @@ Partial Class gestion_datos
         '
         'dg_emple
         '
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dg_emple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_emple.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dg_emple.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.dg_emple.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_emple.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dg_emple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_emple.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1})
         Me.dg_emple.GridColor = System.Drawing.Color.WhiteSmoke
         Me.dg_emple.Location = New System.Drawing.Point(49, 57)
         Me.dg_emple.Name = "dg_emple"
@@ -902,12 +902,6 @@ Partial Class gestion_datos
         Me.dg_emple.Size = New System.Drawing.Size(1761, 279)
         Me.dg_emple.TabIndex = 62
         Me.dg_emple.TabStop = False
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Column1"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
         '
         'pan_datos_emple
         '
@@ -960,6 +954,7 @@ Partial Class gestion_datos
         Me.tb_emple_nom.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_emple_nom.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_emple_nom.Location = New System.Drawing.Point(348, 335)
+        Me.tb_emple_nom.MaxLength = 15
         Me.tb_emple_nom.Name = "tb_emple_nom"
         Me.tb_emple_nom.Size = New System.Drawing.Size(173, 26)
         Me.tb_emple_nom.TabIndex = 13
@@ -1023,6 +1018,7 @@ Partial Class gestion_datos
         Me.tb_emple_rol.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_emple_rol.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_emple_rol.Location = New System.Drawing.Point(348, 160)
+        Me.tb_emple_rol.MaxLength = 15
         Me.tb_emple_rol.Name = "tb_emple_rol"
         Me.tb_emple_rol.Size = New System.Drawing.Size(173, 26)
         Me.tb_emple_rol.TabIndex = 10
@@ -1047,6 +1043,7 @@ Partial Class gestion_datos
         Me.tb_emple_ape2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_emple_ape2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_emple_ape2.Location = New System.Drawing.Point(1000, 152)
+        Me.tb_emple_ape2.MaxLength = 15
         Me.tb_emple_ape2.Name = "tb_emple_ape2"
         Me.tb_emple_ape2.Size = New System.Drawing.Size(173, 26)
         Me.tb_emple_ape2.TabIndex = 15
@@ -1058,6 +1055,7 @@ Partial Class gestion_datos
         Me.tb_emple_cont.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_emple_cont.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_emple_cont.Location = New System.Drawing.Point(348, 274)
+        Me.tb_emple_cont.MaxLength = 15
         Me.tb_emple_cont.Name = "tb_emple_cont"
         Me.tb_emple_cont.Size = New System.Drawing.Size(173, 26)
         Me.tb_emple_cont.TabIndex = 12
@@ -1107,6 +1105,7 @@ Partial Class gestion_datos
         Me.tb_emple_tlf.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_emple_tlf.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_emple_tlf.Location = New System.Drawing.Point(1000, 210)
+        Me.tb_emple_tlf.MaxLength = 15
         Me.tb_emple_tlf.Name = "tb_emple_tlf"
         Me.tb_emple_tlf.Size = New System.Drawing.Size(173, 26)
         Me.tb_emple_tlf.TabIndex = 16
@@ -1118,6 +1117,7 @@ Partial Class gestion_datos
         Me.tb_emple_usu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_emple_usu.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_emple_usu.Location = New System.Drawing.Point(348, 218)
+        Me.tb_emple_usu.MaxLength = 15
         Me.tb_emple_usu.Name = "tb_emple_usu"
         Me.tb_emple_usu.Size = New System.Drawing.Size(173, 26)
         Me.tb_emple_usu.TabIndex = 11
@@ -1129,6 +1129,7 @@ Partial Class gestion_datos
         Me.tb_emple_ape1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_emple_ape1.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_emple_ape1.Location = New System.Drawing.Point(1000, 96)
+        Me.tb_emple_ape1.MaxLength = 15
         Me.tb_emple_ape1.Name = "tb_emple_ape1"
         Me.tb_emple_ape1.Size = New System.Drawing.Size(173, 26)
         Me.tb_emple_ape1.TabIndex = 14
@@ -1136,11 +1137,12 @@ Partial Class gestion_datos
         'tb_emple_id
         '
         Me.tb_emple_id.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.tb_emple_id.BackColor = System.Drawing.Color.White
+        Me.tb_emple_id.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.tb_emple_id.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_emple_id.Enabled = False
         Me.tb_emple_id.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_emple_id.Location = New System.Drawing.Point(348, 102)
+        Me.tb_emple_id.MaxLength = 15
         Me.tb_emple_id.Name = "tb_emple_id"
         Me.tb_emple_id.Size = New System.Drawing.Size(173, 26)
         Me.tb_emple_id.TabIndex = 99
@@ -1165,6 +1167,7 @@ Partial Class gestion_datos
         Me.tb_emple_correo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_emple_correo.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_emple_correo.Location = New System.Drawing.Point(1000, 268)
+        Me.tb_emple_correo.MaxLength = 35
         Me.tb_emple_correo.Name = "tb_emple_correo"
         Me.tb_emple_correo.Size = New System.Drawing.Size(173, 26)
         Me.tb_emple_correo.TabIndex = 17
@@ -1229,7 +1232,7 @@ Partial Class gestion_datos
         'pb1
         '
         Me.pb1.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.pb1.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.texbox
+        Me.pb1.BackgroundImage = Global.AirisSolucionKrisRob.My.Resources.Resources.tb_disabled
         Me.pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pb1.Location = New System.Drawing.Point(322, 87)
         Me.pb1.Name = "pb1"
@@ -1554,6 +1557,7 @@ Partial Class gestion_datos
         Me.tb_categorias_descripccion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_categorias_descripccion.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_categorias_descripccion.Location = New System.Drawing.Point(521, 266)
+        Me.tb_categorias_descripccion.MaxLength = 255
         Me.tb_categorias_descripccion.Multiline = True
         Me.tb_categorias_descripccion.Name = "tb_categorias_descripccion"
         Me.tb_categorias_descripccion.Size = New System.Drawing.Size(181, 73)
@@ -1577,6 +1581,7 @@ Partial Class gestion_datos
         Me.tb_categorias_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_categorias_nombre.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_categorias_nombre.Location = New System.Drawing.Point(521, 203)
+        Me.tb_categorias_nombre.MaxLength = 15
         Me.tb_categorias_nombre.Name = "tb_categorias_nombre"
         Me.tb_categorias_nombre.Size = New System.Drawing.Size(181, 20)
         Me.tb_categorias_nombre.TabIndex = 11
@@ -1665,6 +1670,7 @@ Partial Class gestion_datos
         Me.tb_categorias_id.Enabled = False
         Me.tb_categorias_id.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_categorias_id.Location = New System.Drawing.Point(521, 142)
+        Me.tb_categorias_id.MaxLength = 15
         Me.tb_categorias_id.Name = "tb_categorias_id"
         Me.tb_categorias_id.Size = New System.Drawing.Size(181, 20)
         Me.tb_categorias_id.TabIndex = 10
@@ -1921,6 +1927,7 @@ Partial Class gestion_datos
         Me.tb_productos_marca.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_productos_marca.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_productos_marca.Location = New System.Drawing.Point(888, 112)
+        Me.tb_productos_marca.MaxLength = 15
         Me.tb_productos_marca.Name = "tb_productos_marca"
         Me.tb_productos_marca.Size = New System.Drawing.Size(174, 20)
         Me.tb_productos_marca.TabIndex = 15
@@ -1930,6 +1937,7 @@ Partial Class gestion_datos
         Me.tb_productos_stock.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_productos_stock.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_productos_stock.Location = New System.Drawing.Point(364, 344)
+        Me.tb_productos_stock.MaxLength = 15
         Me.tb_productos_stock.Name = "tb_productos_stock"
         Me.tb_productos_stock.Size = New System.Drawing.Size(117, 20)
         Me.tb_productos_stock.TabIndex = 14
@@ -1939,6 +1947,7 @@ Partial Class gestion_datos
         Me.tb_productos_precio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_productos_precio.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_productos_precio.Location = New System.Drawing.Point(364, 223)
+        Me.tb_productos_precio.MaxLength = 15
         Me.tb_productos_precio.Name = "tb_productos_precio"
         Me.tb_productos_precio.Size = New System.Drawing.Size(175, 20)
         Me.tb_productos_precio.TabIndex = 12
@@ -1948,6 +1957,7 @@ Partial Class gestion_datos
         Me.tb_productos_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_productos_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_productos_nombre.Location = New System.Drawing.Point(364, 166)
+        Me.tb_productos_nombre.MaxLength = 15
         Me.tb_productos_nombre.Name = "tb_productos_nombre"
         Me.tb_productos_nombre.Size = New System.Drawing.Size(175, 20)
         Me.tb_productos_nombre.TabIndex = 11
@@ -1959,6 +1969,7 @@ Partial Class gestion_datos
         Me.tb_productos_id.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_productos_id.Enabled = False
         Me.tb_productos_id.Location = New System.Drawing.Point(364, 112)
+        Me.tb_productos_id.MaxLength = 15
         Me.tb_productos_id.Name = "tb_productos_id"
         Me.tb_productos_id.Size = New System.Drawing.Size(175, 20)
         Me.tb_productos_id.TabIndex = 10
@@ -1968,6 +1979,7 @@ Partial Class gestion_datos
         Me.tb_productos_descripccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_productos_descripccion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_productos_descripccion.Location = New System.Drawing.Point(888, 166)
+        Me.tb_productos_descripccion.MaxLength = 255
         Me.tb_productos_descripccion.Multiline = True
         Me.tb_productos_descripccion.Name = "tb_productos_descripccion"
         Me.tb_productos_descripccion.Size = New System.Drawing.Size(174, 72)
@@ -1978,6 +1990,7 @@ Partial Class gestion_datos
         Me.tb_productos_categoriaID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_productos_categoriaID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_productos_categoriaID.Location = New System.Drawing.Point(364, 283)
+        Me.tb_productos_categoriaID.MaxLength = 15
         Me.tb_productos_categoriaID.Name = "tb_productos_categoriaID"
         Me.tb_productos_categoriaID.Size = New System.Drawing.Size(175, 20)
         Me.tb_productos_categoriaID.TabIndex = 13
@@ -2619,6 +2632,7 @@ Partial Class gestion_datos
         Me.tb_clientes_direccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_clientes_direccion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_clientes_direccion.Location = New System.Drawing.Point(320, 286)
+        Me.tb_clientes_direccion.MaxLength = 35
         Me.tb_clientes_direccion.Name = "tb_clientes_direccion"
         Me.tb_clientes_direccion.Size = New System.Drawing.Size(289, 20)
         Me.tb_clientes_direccion.TabIndex = 13
@@ -2628,6 +2642,7 @@ Partial Class gestion_datos
         Me.tb_clientes_telefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_clientes_telefono.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_clientes_telefono.Location = New System.Drawing.Point(996, 105)
+        Me.tb_clientes_telefono.MaxLength = 15
         Me.tb_clientes_telefono.Name = "tb_clientes_telefono"
         Me.tb_clientes_telefono.Size = New System.Drawing.Size(171, 20)
         Me.tb_clientes_telefono.TabIndex = 14
@@ -2637,6 +2652,7 @@ Partial Class gestion_datos
         Me.tb_clientes_ape1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_clientes_ape1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_clientes_ape1.Location = New System.Drawing.Point(320, 228)
+        Me.tb_clientes_ape1.MaxLength = 15
         Me.tb_clientes_ape1.Name = "tb_clientes_ape1"
         Me.tb_clientes_ape1.Size = New System.Drawing.Size(174, 20)
         Me.tb_clientes_ape1.TabIndex = 12
@@ -2646,6 +2662,7 @@ Partial Class gestion_datos
         Me.tb_clientes_ape2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_clientes_ape2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_clientes_ape2.Location = New System.Drawing.Point(996, 224)
+        Me.tb_clientes_ape2.MaxLength = 15
         Me.tb_clientes_ape2.Name = "tb_clientes_ape2"
         Me.tb_clientes_ape2.Size = New System.Drawing.Size(171, 20)
         Me.tb_clientes_ape2.TabIndex = 16
@@ -2655,6 +2672,7 @@ Partial Class gestion_datos
         Me.tb_clientes_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_clientes_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_clientes_nombre.Location = New System.Drawing.Point(320, 168)
+        Me.tb_clientes_nombre.MaxLength = 15
         Me.tb_clientes_nombre.Name = "tb_clientes_nombre"
         Me.tb_clientes_nombre.Size = New System.Drawing.Size(174, 20)
         Me.tb_clientes_nombre.TabIndex = 11
@@ -2664,6 +2682,7 @@ Partial Class gestion_datos
         Me.tb_clientes_empleadoID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_clientes_empleadoID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_clientes_empleadoID.Location = New System.Drawing.Point(996, 164)
+        Me.tb_clientes_empleadoID.MaxLength = 15
         Me.tb_clientes_empleadoID.Name = "tb_clientes_empleadoID"
         Me.tb_clientes_empleadoID.Size = New System.Drawing.Size(171, 20)
         Me.tb_clientes_empleadoID.TabIndex = 15
@@ -2675,6 +2694,7 @@ Partial Class gestion_datos
         Me.tb_clientes_id.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_clientes_id.Enabled = False
         Me.tb_clientes_id.Location = New System.Drawing.Point(320, 109)
+        Me.tb_clientes_id.MaxLength = 15
         Me.tb_clientes_id.Name = "tb_clientes_id"
         Me.tb_clientes_id.Size = New System.Drawing.Size(174, 20)
         Me.tb_clientes_id.TabIndex = 10
@@ -2899,6 +2919,7 @@ Partial Class gestion_datos
         Me.tb_proveedores_id.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_proveedores_id.Enabled = False
         Me.tb_proveedores_id.Location = New System.Drawing.Point(325, 142)
+        Me.tb_proveedores_id.MaxLength = 15
         Me.tb_proveedores_id.Name = "tb_proveedores_id"
         Me.tb_proveedores_id.Size = New System.Drawing.Size(175, 20)
         Me.tb_proveedores_id.TabIndex = 10
@@ -2942,6 +2963,7 @@ Partial Class gestion_datos
         Me.tb_proveedores_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_proveedores_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_proveedores_nombre.Location = New System.Drawing.Point(325, 203)
+        Me.tb_proveedores_nombre.MaxLength = 15
         Me.tb_proveedores_nombre.Name = "tb_proveedores_nombre"
         Me.tb_proveedores_nombre.Size = New System.Drawing.Size(174, 20)
         Me.tb_proveedores_nombre.TabIndex = 11
@@ -2962,6 +2984,7 @@ Partial Class gestion_datos
         Me.tb_proveedores_direccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_proveedores_direccion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_proveedores_direccion.Location = New System.Drawing.Point(325, 263)
+        Me.tb_proveedores_direccion.MaxLength = 35
         Me.tb_proveedores_direccion.Name = "tb_proveedores_direccion"
         Me.tb_proveedores_direccion.Size = New System.Drawing.Size(289, 20)
         Me.tb_proveedores_direccion.TabIndex = 12
@@ -2995,6 +3018,7 @@ Partial Class gestion_datos
         Me.tb_proveedores_telefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_proveedores_telefono.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_proveedores_telefono.Location = New System.Drawing.Point(942, 142)
+        Me.tb_proveedores_telefono.MaxLength = 15
         Me.tb_proveedores_telefono.Name = "tb_proveedores_telefono"
         Me.tb_proveedores_telefono.Size = New System.Drawing.Size(179, 20)
         Me.tb_proveedores_telefono.TabIndex = 13
@@ -3016,6 +3040,7 @@ Partial Class gestion_datos
         Me.tb_proveedores_contacto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_proveedores_contacto.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_proveedores_contacto.Location = New System.Drawing.Point(942, 203)
+        Me.tb_proveedores_contacto.MaxLength = 15
         Me.tb_proveedores_contacto.Name = "tb_proveedores_contacto"
         Me.tb_proveedores_contacto.Size = New System.Drawing.Size(183, 20)
         Me.tb_proveedores_contacto.TabIndex = 14
@@ -3381,7 +3406,6 @@ Partial Class gestion_datos
     Friend WithEvents tab_empleados As TabPage
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents dg_emple As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents lbl_baja_empleados As Label
     Friend WithEvents lbl_mod_empleados As Label
     Friend WithEvents btn_emp_baja As PictureBox

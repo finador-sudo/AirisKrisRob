@@ -137,6 +137,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SharedModule.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Busqueda_avanzada.resx">
@@ -253,6 +254,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\finad\repos\ValidacionesAIRIS\ValidacionesAIRIS\ValidacionesAIRIS.vbproj">
+      <Project>{1CB5B6F8-AB50-41FC-9AF1-EF44B8A86DD7}</Project>
+      <Name>ValidacionesAIRIS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

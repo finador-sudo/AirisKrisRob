@@ -749,4 +749,18 @@ Public Class gestion_datos
     Private Sub ll_ayuda_prov_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_prov.LinkClicked
         Help.ShowHelp(ll_ayuda_prov, "Airis.chm")
     End Sub
+
+    '
+    'Eventos de teclado y validaciones
+    '
+    'Enteros (Id, stock)
+    Private Sub checkEntero(sender As Object, e As EventArgs) Handles tb_emple_rol.TextChanged, tb_productos_stock.TextChanged, tb_clientes_empleadoID.TextAlignChanged, tb_categorias_id.TextChanged
+        Dim strToCheck As String = CType(sender, TextBox).Text
+        If Not (validaciones.allNumbers(strToCheck)) Then
+            CType(sender, TextBox).Text = strToCheck.Substring(0, strToCheck.Length)
+            MsgBox("Error: Valor invalido", MsgBoxStyle.Information, "Se requiere un numero entero")
+        End If
+
+    End Sub
+
 End Class
