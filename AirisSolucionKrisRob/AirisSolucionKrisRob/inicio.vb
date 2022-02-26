@@ -44,7 +44,7 @@ Public Class inicio
 
         Try
             conexionInicio.Open()
-            Dim comando As New OleDbCommand("Select * from empleados", conexionInicio)
+            Dim comando As New OleDbCommand("Select * from empleados Where cont is not Null", conexionInicio)
             Dim reader As OleDbDataReader = comando.ExecuteReader
 
             While reader.Read
@@ -68,8 +68,9 @@ Public Class inicio
                 ll_acerca.Hide()
                 ll_pagoficial.Hide()
                 'progressBarAction()
-
+                logedUser = usu
                 Me.Hide()
+                gestion_datos.Close()
                 gestion_datos.Show()
 
             Else
@@ -91,6 +92,8 @@ Public Class inicio
             FileOpen(2, "errores_airis.txt", OpenMode.Append)
             WriteLine(2, " " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
             FileClose(2)
+        Finally
+            conexionInicio.Close
         End Try
 
     End Sub

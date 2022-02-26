@@ -61,7 +61,7 @@ Public Class Busqueda_avanzada
         End Select
     End Sub
 
-    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles lbl_buscar.Click
+    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles lbl_buscar.Click, btn_buscar.Click
         Select Case cb_tablas.Text
             Case "Clientes"
                 Dim _id_clientes As String = tb_id_clientes.Text
@@ -132,7 +132,7 @@ Public Class Busqueda_avanzada
                 dg_busqueda.DataMember = "busquedaProveedores"
 
             Case "Roles"
-                Dim _rol_id As String = tb_rol_id_emple.Text
+                Dim _rol_id As String = tb_rol_emple.Text
                 Dim _rol_nom As String = tb_rol_nombre.Text
 
                 Dim preStateRoles As New OleDbCommand(("select * from roles where (rol_id LIKE @rol_id) and (rol_nom LIKE @rol_nom)"), conexion)
@@ -159,6 +159,36 @@ Public Class Busqueda_avanzada
                 dg_busqueda.DataMember = "busquedaCategoria"
 
             Case "Empleados"
+                Dim _emp_id As String = tb_id_emple.Text
+                Dim _emp_nom As String = tb_nom_emple.Text
+                Dim _emp_ape1 As String = tb_ape1_emple.Text
+                Dim _emp_ape2 As String = tb_ape2_emple.Text
+                Dim _rol_text As String = tb_rol_emple.Text
+                Dim _emp_telefono As String = tb_telef_emple.Text
+                Dim _emp_correo As String = tb_correo_emple.Text
+                Dim _usuario As String = tb_usuario_empleado.Text
+
+                Dim preStateEmple As New OleDbCommand(If(logedUser = "admin", "SELECT emp_id, emp_nom, emp_ape1, emp_ape2, roles.rol_nom, emp_telefono, emp_correo, usuario, cont
+                FROM empleados, roles 
+                Where roles.rol_id = empleados.rol_id and 
+                (emp_id LIKE @id) and (emp_nom LIKE @nom) and (emp_ape1 LIKE @ape1) and (emp_ape2 LIKE @ape2) and (roles.rol_nom LIKE @rolnom) and (emp_telefono LIKE @mail) and (usuario LIKE @usu)",
+                "SELECT emp_id, emp_nom, emp_ape1, emp_ape2, roles.rol_nom, emp_telefono, emp_correo, usuario
+                FROM empleados, roles 
+                Where roles.rol_id = empleados.rol_id and 
+                (emp_id LIKE @id) and (emp_nom LIKE @nom) and (emp_ape1 LIKE @ape1) and (emp_ape2 LIKE @ape2) and (roles.rol_nom LIKE @rolnom) and (emp_telefono LIKE @mail) and (usuario LIKE @usu)"), conexion)
+
+                preStateEmple.Parameters.AddWithValue("@id", If(_emp_id = "", "%", _emp_id))
+                preStateEmple.Parameters.AddWithValue("@nom", If(_emp_nom = "", "%", "%" + _emp_nom + "%"))
+                preStateEmple.Parameters.AddWithValue("@ape1", If(_emp_ape1 = "", "%", "%" + _emp_ape1 + "%"))
+                preStateEmple.Parameters.AddWithValue("@ape2", If(_emp_ape2 = "", "%", "%" + _emp_ape2 + "%"))
+                preStateEmple.Parameters.AddWithValue("@rolnom", If(_rol_text = "", "%", "%" + _rol_text + "%"))
+                preStateEmple.Parameters.AddWithValue("@mail", If(_emp_correo = "", "%", "%" + _emp_correo + "%"))
+                preStateEmple.Parameters.AddWithValue("@usu", If(_usuario = "", "%", "%" + _usuario + "%"))
+                miAdapter.SelectCommand = preStateEmple
+                auxDataset.Clear()
+                miAdapter.Fill(auxDataset, "busquedaEmpleados")
+                dg_busqueda.DataSource = auxDataset
+                dg_busqueda.DataMember = "busquedaEmpleados"
 
         End Select
     End Sub

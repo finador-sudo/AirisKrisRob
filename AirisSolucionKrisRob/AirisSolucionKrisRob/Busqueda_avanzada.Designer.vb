@@ -81,7 +81,7 @@ Partial Class Busqueda_avanzada
         Me.pan_empleados = New System.Windows.Forms.Panel()
         Me.lbl_empleados = New System.Windows.Forms.Label()
         Me.tb_correo_emple = New System.Windows.Forms.TextBox()
-        Me.tb_rol_id_emple = New System.Windows.Forms.TextBox()
+        Me.tb_rol_emple = New System.Windows.Forms.TextBox()
         Me.tb_telef_emple = New System.Windows.Forms.TextBox()
         Me.tb_ape2_emple = New System.Windows.Forms.TextBox()
         Me.tb_ape1_emple = New System.Windows.Forms.TextBox()
@@ -102,6 +102,8 @@ Partial Class Busqueda_avanzada
         Me.rb_rol_id = New System.Windows.Forms.TextBox()
         Me.tb_rol_nombre = New System.Windows.Forms.TextBox()
         Me.dg_busqueda = New System.Windows.Forms.DataGridView()
+        Me.tb_usuario_empleado = New System.Windows.Forms.TextBox()
+        Me.lbl_usuario_empleado = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -132,14 +134,14 @@ Partial Class Busqueda_avanzada
         Me.SplitContainer1.Panel1.Controls.Add(Me.pan_divisor)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btn_cerrar)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btn_buscar)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.pan_categorias)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.pan_productos)
         Me.SplitContainer1.Panel1.Controls.Add(Me.lbl_tabla)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.pan_provedores)
         Me.SplitContainer1.Panel1.Controls.Add(Me.cb_tablas)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.pan_clientes)
         Me.SplitContainer1.Panel1.Controls.Add(Me.pan_empleados)
         Me.SplitContainer1.Panel1.Controls.Add(Me.pan_roles)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.pan_categorias)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.pan_productos)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.pan_provedores)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.pan_clientes)
         '
         'SplitContainer1.Panel2
         '
@@ -814,9 +816,11 @@ Partial Class Busqueda_avanzada
         '
         Me.pan_empleados.BackgroundImage = CType(resources.GetObject("pan_empleados.BackgroundImage"), System.Drawing.Image)
         Me.pan_empleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pan_empleados.Controls.Add(Me.tb_usuario_empleado)
+        Me.pan_empleados.Controls.Add(Me.lbl_usuario_empleado)
         Me.pan_empleados.Controls.Add(Me.lbl_empleados)
         Me.pan_empleados.Controls.Add(Me.tb_correo_emple)
-        Me.pan_empleados.Controls.Add(Me.tb_rol_id_emple)
+        Me.pan_empleados.Controls.Add(Me.tb_rol_emple)
         Me.pan_empleados.Controls.Add(Me.tb_telef_emple)
         Me.pan_empleados.Controls.Add(Me.tb_ape2_emple)
         Me.pan_empleados.Controls.Add(Me.tb_ape1_emple)
@@ -859,14 +863,14 @@ Partial Class Busqueda_avanzada
         Me.tb_correo_emple.Size = New System.Drawing.Size(81, 22)
         Me.tb_correo_emple.TabIndex = 20
         '
-        'tb_rol_id_emple
+        'tb_rol_emple
         '
-        Me.tb_rol_id_emple.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_rol_id_emple.Location = New System.Drawing.Point(277, 37)
-        Me.tb_rol_id_emple.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.tb_rol_id_emple.Name = "tb_rol_id_emple"
-        Me.tb_rol_id_emple.Size = New System.Drawing.Size(81, 22)
-        Me.tb_rol_id_emple.TabIndex = 19
+        Me.tb_rol_emple.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_rol_emple.Location = New System.Drawing.Point(277, 37)
+        Me.tb_rol_emple.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.tb_rol_emple.Name = "tb_rol_emple"
+        Me.tb_rol_emple.Size = New System.Drawing.Size(81, 22)
+        Me.tb_rol_emple.TabIndex = 19
         '
         'tb_telef_emple
         '
@@ -961,9 +965,9 @@ Partial Class Busqueda_avanzada
         Me.llb_rol_empleados.Location = New System.Drawing.Point(224, 38)
         Me.llb_rol_empleados.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.llb_rol_empleados.Name = "llb_rol_empleados"
-        Me.llb_rol_empleados.Size = New System.Drawing.Size(49, 16)
+        Me.llb_rol_empleados.Size = New System.Drawing.Size(27, 16)
         Me.llb_rol_empleados.TabIndex = 9
-        Me.llb_rol_empleados.Text = "Rol (ID):"
+        Me.llb_rol_empleados.Text = "Rol:"
         '
         'Label6
         '
@@ -1102,6 +1106,28 @@ Partial Class Busqueda_avanzada
         Me.dg_busqueda.Size = New System.Drawing.Size(435, 227)
         Me.dg_busqueda.TabIndex = 2
         '
+        'tb_usuario_empleado
+        '
+        Me.tb_usuario_empleado.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_usuario_empleado.Location = New System.Drawing.Point(277, 142)
+        Me.tb_usuario_empleado.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.tb_usuario_empleado.Name = "tb_usuario_empleado"
+        Me.tb_usuario_empleado.Size = New System.Drawing.Size(81, 22)
+        Me.tb_usuario_empleado.TabIndex = 23
+        '
+        'lbl_usuario_empleado
+        '
+        Me.lbl_usuario_empleado.AutoSize = True
+        Me.lbl_usuario_empleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(232, Byte), Integer))
+        Me.lbl_usuario_empleado.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_usuario_empleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.lbl_usuario_empleado.Location = New System.Drawing.Point(224, 144)
+        Me.lbl_usuario_empleado.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_usuario_empleado.Name = "lbl_usuario_empleado"
+        Me.lbl_usuario_empleado.Size = New System.Drawing.Size(48, 16)
+        Me.lbl_usuario_empleado.TabIndex = 22
+        Me.lbl_usuario_empleado.Text = "Usuario:"
+        '
         'Busqueda_avanzada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1194,7 +1220,7 @@ Partial Class Busqueda_avanzada
     Friend WithEvents pan_empleados As Panel
     Friend WithEvents lbl_empleados As Label
     Friend WithEvents tb_correo_emple As TextBox
-    Friend WithEvents tb_rol_id_emple As TextBox
+    Friend WithEvents tb_rol_emple As TextBox
     Friend WithEvents tb_telef_emple As TextBox
     Friend WithEvents tb_ape2_emple As TextBox
     Friend WithEvents tb_ape1_emple As TextBox
@@ -1215,4 +1241,6 @@ Partial Class Busqueda_avanzada
     Friend WithEvents rb_rol_id As TextBox
     Friend WithEvents tb_rol_nombre As TextBox
     Friend WithEvents dg_busqueda As DataGridView
+    Friend WithEvents tb_usuario_empleado As TextBox
+    Friend WithEvents lbl_usuario_empleado As Label
 End Class

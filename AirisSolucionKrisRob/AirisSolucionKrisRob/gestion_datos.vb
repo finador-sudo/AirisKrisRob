@@ -6,12 +6,12 @@ Public Class gestion_datos
     'Conexion a la base de datos
     Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=airis_db.accdb")
 
-    Public adaptador_roles As New OleDbDataAdapter("Select * from roles", conexion)
-    Public adaptador_empleados As New OleDbDataAdapter("Select * from empleados", conexion)
-    Public adaptador_clientes As New OleDbDataAdapter("Select * from clientes", conexion)
-    Public adaptador_proveedores As New OleDbDataAdapter("Select * from proveedores", conexion)
-    Public adaptador_productos As New OleDbDataAdapter("Select * from productos", conexion)
-    Public adaptador_categoria_productos As New OleDbDataAdapter("Select * from categorias_prod", conexion)
+    Public adaptador_roles
+    Public adaptador_empleados
+    Public adaptador_clientes
+    Public adaptador_proveedores
+    Public adaptador_productos
+    Public adaptador_categoria_productos
 
     Public dataset_roles As New DataSet
     Public dataset_empleados As New DataSet
@@ -21,6 +21,13 @@ Public Class gestion_datos
     Public dataset_categoria_productos As New DataSet
 
     Private Sub gestion_datos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        adaptador_roles = New OleDbDataAdapter("Select * from roles", conexion)
+        adaptador_empleados = New OleDbDataAdapter(If(logedUser = "admin", "Select * from empleados", "SELECT emp_id, emp_nom, emp_ape1, emp_ape2, rol_id, emp_telefono, emp_correo, usuario FROM empleados"), conexion)
+        adaptador_clientes = New OleDbDataAdapter("Select * from clientes", conexion)
+        adaptador_proveedores = New OleDbDataAdapter("Select * from proveedores", conexion)
+        adaptador_productos = New OleDbDataAdapter("Select * from productos", conexion)
+        adaptador_categoria_productos = New OleDbDataAdapter("Select * from categorias_prod", conexion)
+
 
         adaptador_roles.Fill(dataset_roles, "Tabla_roles")
         adaptador_empleados.Fill(dataset_empleados, "Tabla_empleados")
@@ -55,8 +62,13 @@ Public Class gestion_datos
         tb_emple_tlf.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_telefono")
         tb_emple_correo.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_correo")
         tb_emple_usu.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.usuario")
-        tb_emple_cont.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.cont")
-
+        If (logedUser = "admin") Then
+            tb_emple_cont.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.cont")
+        Else
+            tb_emple_cont.Enabled = False
+            tb_emple_cont.BackColor = Color.FromArgb(233, 233, 233)
+            pb4.BackgroundImage = My.Resources.tb_disabled
+        End If
         tb_roles_id.DataBindings.Add("text", dataset_roles, "Tabla_roles.rol_id")
         tb_roles_rol.DataBindings.Add("text", dataset_roles, "Tabla_roles.rol_nom")
 
@@ -119,11 +131,12 @@ Public Class gestion_datos
     'BOTON ALTA 
     Private Sub tslbl_alta_empleados_Click(sender As Object, e As EventArgs) Handles tslbl_alta_empleados.Click, btn_emp_alta.Click, lbl_alta_empleados.Click
         If (tb_emple_id.Text = "") Then
-            If Not (tb_emple_rol.Text = "" Or tb_emple_usu.Text = "" Or tb_emple_cont.Text = "" Or tb_emple_nom.Text = "" Or tb_emple_ape1.Text = "" Or tb_emple_ape2.Text = "" Or tb_emple_tlf.Text = "" Or tb_emple_correo.Text = "") Then
+            If Not (tb_emple_rol.Text = "" Or tb_emple_usu.Text = "" Or tb_emple_nom.Text = "" Or tb_emple_ape1.Text = "" Or tb_emple_ape2.Text = "" Or tb_emple_tlf.Text = "" Or tb_emple_correo.Text = "") Then
                 'Todos los campos correctos
                 Try
                     conexion.Open()
-                    Dim empInsert As New OleDbCommand("INSERT INTO empleados (emp_nom,emp_ape1,emp_ape2,rol_id,emp_telefono,emp_correo,usuario,cont) VALUES (@nom,@ape,@ape2,@rol,@telefono,@mail,@usu,@pas)", conexion)
+                    Dim empInsert As New OleDbCommand(If(tb_emple_cont.Text <> "", "INSERT INTO empleados (emp_nom,emp_ape1,emp_ape2,rol_id,emp_telefono,emp_correo,usuario,cont) VALUES (@nom,@ape,@ape2,@rol,@telefono,@mail,@usu,@pas)",
+                                                      "INSERT INTO empleados (emp_nom,emp_ape1,emp_ape2,rol_id,emp_telefono,emp_correo,usuario) VALUES (@nom,@ape,@ape2,@rol,@telefono,@mail,@usu)"), conexion)
                     empInsert.Parameters.AddWithValue("@nom", tb_emple_nom.Text.Trim)
                     empInsert.Parameters.AddWithValue("@ape", tb_emple_ape1.Text.Trim)
                     empInsert.Parameters.AddWithValue("@ape2", tb_emple_ape2.Text.Trim)
@@ -131,7 +144,7 @@ Public Class gestion_datos
                     empInsert.Parameters.AddWithValue("@telefono", tb_emple_tlf.Text.Trim)
                     empInsert.Parameters.AddWithValue("@correo", tb_emple_correo.Text.Trim)
                     empInsert.Parameters.AddWithValue("@usu", tb_emple_usu.Text.Trim)
-                    empInsert.Parameters.AddWithValue("@pas", tb_emple_cont.Text.Trim)
+                    If (tb_emple_cont.Text <> "") Then empInsert.Parameters.AddWithValue("@pas", tb_emple_cont.Text.Trim)
                     empInsert.ExecuteNonQuery()
 
                     updateGridEmpleados()
@@ -178,21 +191,28 @@ Public Class gestion_datos
     End Sub
     'BOTON MODIFICAR
     Private Sub tslbl_modificar_empleados_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_empleados.Click, btn_emp_modif.Click, lbl_mod_empleados.Click
-        If Not (tb_emple_id.Text = "" Or tb_emple_rol.Text = "" Or tb_emple_usu.Text = "" Or tb_emple_cont.Text = "" Or tb_emple_nom.Text = "" Or tb_emple_ape1.Text = "" Or tb_emple_ape2.Text = "" Or tb_emple_tlf.Text = "" Or tb_emple_correo.Text = "") Then
+        If Not (tb_emple_id.Text = "" Or tb_emple_rol.Text = "" Or tb_emple_usu.Text = "" Or tb_emple_nom.Text = "" Or tb_emple_ape1.Text = "" Or tb_emple_ape2.Text = "" Or tb_emple_tlf.Text = "" Or tb_emple_correo.Text = "") Then
             Try
-                conexion.Open()
-                Dim updateEmpleados As New OleDbCommand("UPDATE empleados SET emp_nom = @nom, emp_ape1 = @ape1, emp_ape2 = @ape2, rol_id = @rol, emp_telefono = @tlf, emp_correo = @mail, usuario = @usu, cont = @cont WHERE emp_id = @id", conexion)
-                updateEmpleados.Parameters.AddWithValue("@nom", tb_emple_nom.Text.Trim)
-                updateEmpleados.Parameters.AddWithValue("@ape1", tb_emple_ape1.Text.Trim)
-                updateEmpleados.Parameters.AddWithValue("@ape2", tb_emple_ape2.Text.Trim)
-                updateEmpleados.Parameters.AddWithValue("@rol", tb_emple_rol.Text.Trim)
-                updateEmpleados.Parameters.AddWithValue("@tlf", tb_emple_tlf.Text.Trim)
-                updateEmpleados.Parameters.AddWithValue("@mail", tb_emple_correo.Text.Trim)
-                updateEmpleados.Parameters.AddWithValue("@usu", tb_emple_usu.Text.Trim)
-                updateEmpleados.Parameters.AddWithValue("@cont", tb_emple_cont.Text.Trim)
-                updateEmpleados.Parameters.AddWithValue("@id", tb_emple_id.Text.Trim)
-                updateEmpleados.ExecuteNonQuery()
-                updateGridEmpleados()
+                If Not (tb_emple_id.Text = "1") Then
+
+                    conexion.Open()
+                    Dim updateEmpleados As New OleDbCommand(If(logedUser = "admin", "UPDATE empleados SET emp_nom = @nom, emp_ape1 = @ape1, emp_ape2 = @ape2, rol_id = @rol, emp_telefono = @tlf, emp_correo = @mail, usuario = @usu, cont = @cont WHERE emp_id = @id",
+                                                        "UPDATE empleados SET emp_nom = @nom, emp_ape1 = @ape1, emp_ape2 = @ape2, rol_id = @rol, emp_telefono = @tlf, emp_correo = @mail, usuario = @usu WHERE emp_id = @id"),
+                                                        conexion)
+                    updateEmpleados.Parameters.AddWithValue("@nom", tb_emple_nom.Text.Trim)
+                    updateEmpleados.Parameters.AddWithValue("@ape1", tb_emple_ape1.Text.Trim)
+                    updateEmpleados.Parameters.AddWithValue("@ape2", tb_emple_ape2.Text.Trim)
+                    updateEmpleados.Parameters.AddWithValue("@rol", tb_emple_rol.Text.Trim)
+                    updateEmpleados.Parameters.AddWithValue("@tlf", tb_emple_tlf.Text.Trim)
+                    updateEmpleados.Parameters.AddWithValue("@mail", tb_emple_correo.Text.Trim)
+                    updateEmpleados.Parameters.AddWithValue("@usu", tb_emple_usu.Text.Trim)
+                    If (logedUser = "admin") Then updateEmpleados.Parameters.AddWithValue("@cont", tb_emple_cont.Text.Trim)
+                    updateEmpleados.Parameters.AddWithValue("@id", tb_emple_id.Text.Trim)
+                    updateEmpleados.ExecuteNonQuery()
+                    updateGridEmpleados()
+                Else
+                    MsgBox("Registro administrador esta protegido", MsgBoxStyle.Exclamation, "Registro Protegido")
+                End If
             Catch ex As Exception
                 MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al insertar empleados")
                 FileOpen(2, "errores_airis.txt", OpenMode.Append)
@@ -740,13 +760,13 @@ Public Class gestion_datos
 
     'Cerrar y volver
     Private Sub gestion_datos_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Me.Hide()
         inicio.Show()
     End Sub
 
     Private Sub ts_volverimg_Click(sender As Object, e As EventArgs) Handles ts_volverimg.Click
-        Me.Hide()
+
         inicio.Show()
+        Me.Close()
     End Sub
 
     'INFORMES
