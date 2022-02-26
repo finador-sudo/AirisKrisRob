@@ -573,9 +573,42 @@ Public Class gestion_datos
             MsgBox("Campos vacios, por favor revise la informacion.", MsgBoxStyle.Information, "Campos incompletos")
         End If
     End Sub
+    'BOTON IMPRIMIR
+    Private Sub btn_imprimir_Click(sender As Object, e As EventArgs) Handles btn_imprimir.Click, lbl_imprimir.Click
+        Dim printDoc As New PrintDocument
+        AddHandler printDoc.PrintPage, AddressOf print_PrintPage
+        ' Llamamos al emtodo que imprime
+        printDoc.Print()
+        NotifyIcon1.ShowBalloonTip(2)
+    End Sub
 
+    Private Sub print_PrintPage(ByVal sender As Object,
+                            ByVal e As PrintPageEventArgs)
 
+        Dim id, nom, dir, tel, ape1, ape2
+        id = tb_clientes_id.Text
+        nom = tb_clientes_nombre.Text
+        dir = tb_clientes_direccion.Text
+        tel = tb_clientes_telefono.Text
+        ape1 = tb_clientes_ape1.Text
+        ape2 = tb_clientes_ape2.Text
+        Dim prFont As New Font("Arial", 8, FontStyle.Regular)
+        ' la posición superior
 
+        Dim imagen As Bitmap = Image.FromFile("carne.png")
+        e.Graphics.DrawImage(imagen, 0, 0, 500, 560)
+        ' imprimimos la cadena
+        e.Graphics.DrawString(id, prFont, Brushes.Black, 135, 46.5)
+        e.Graphics.DrawString(nom, prFont, Brushes.Black, 135, 72.5)
+        e.Graphics.DrawString(dir, prFont, Brushes.Black, 135, 98)
+        e.Graphics.DrawString(tel, prFont, Brushes.Black, 135, 122)
+        e.Graphics.DrawString(ape1, prFont, Brushes.Black, 375, 46.5)
+        e.Graphics.DrawString(ape2, prFont, Brushes.Black, 375, 72.5)
+        ' indicamos que ya no hay nada más que imprimir
+        ' (el valor predeterminado de esta propiedad es False)
+        e.HasMorePages = False
+
+    End Sub
     '-------------------------------------------------------------------------
     'TAB PROVEEDORES
     '-------------------------------------------------------------------------
