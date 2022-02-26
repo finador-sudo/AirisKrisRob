@@ -753,14 +753,40 @@ Public Class gestion_datos
     '
     'Eventos de teclado y validaciones
     '
-    'Enteros (Id, stock)
-    Private Sub checkEntero(sender As Object, e As EventArgs) Handles tb_emple_rol.TextChanged, tb_productos_stock.TextChanged, tb_clientes_empleadoID.TextAlignChanged, tb_categorias_id.TextChanged
-        Dim strToCheck As String = CType(sender, TextBox).Text
+    'Enteros (rol id de empleado,clientes empleado ID,categoria de producto, stock)
+    Private Sub checkEntero(sender As TextBox, e As EventArgs) Handles tb_emple_rol.TextChanged, tb_clientes_empleadoID.TextChanged, tb_categorias_id.TextChanged, tb_productos_categoriaID.TextChanged, tb_productos_stock.TextChanged
+        Dim strToCheck As String = sender.Text
         If Not (validaciones.allNumbers(strToCheck)) Then
-            CType(sender, TextBox).Text = strToCheck.Substring(0, strToCheck.Length)
-            MsgBox("Error: Valor invalido", MsgBoxStyle.Information, "Se requiere un numero entero")
+            sender.Text = strToCheck.Substring(0, strToCheck.Length)
+            MsgBox("Este campo solo acepta numeros enteros", MsgBoxStyle.Information, "Error: Valor invalido")
         End If
-
     End Sub
+    'Alfanumerico (usuario, nombre de producto,marca ,nombre categoria)
+    Private Sub checkAlfanumerico(sender As TextBox, e As EventArgs) Handles tb_emple_usu.TextChanged, tb_productos_nombre.TextChanged, tb_productos_marca.TextChanged, tb_categorias_nombre.TextChanged
+        Dim strToCheck As String = sender.Text
+        If Not (validaciones.validarAlfanumerico(strToCheck)) Then
+            sender.Text = strToCheck.Substring(0, strToCheck.Length)
+            MsgBox("Este campo solo admite alfanumericos", MsgBoxStyle.Information, "Error: Valor invalido")
+        End If
+    End Sub
+    'Numeros de telefono
+    Private Sub checkNumerotelefonico(sender As TextBox, e As EventArgs) Handles tb_emple_tlf.LostFocus
+        Dim strToCheck As String = sender.Text
+        If Not (validaciones.validarNumeroTelefono(strToCheck)) Then
+
+            sender.Text = strToCheck.Substring(0, strToCheck.Length)
+            MsgBox("Este campo solo admite un formato de numero de telefono", MsgBoxStyle.Information, "Error: Valor invalido")
+        End If
+    End Sub
+    'Solo letras(nombres y apellidos)
+    Private Sub checkSoloLetras(sender As TextBox, e As EventArgs) Handles tb_emple_nom.TextChanged, tb_emple_ape1.TextChanged, tb_emple_ape2.TextChanged, tb_clientes_nombre.TextChanged, tb_clientes_ape1.TextChanged, tb_clientes_ape2.TextChanged
+        Dim strToCheck As String = sender.Text
+        If Not (validaciones.onlyLetter(strToCheck)) Then
+            sender.Text = strToCheck.Substring(0, strToCheck.Length)
+            MsgBox("Este campo solo admite letras", MsgBoxStyle.Information, "Error: Valor invalido")
+        End If
+    End Sub
+
+
 
 End Class

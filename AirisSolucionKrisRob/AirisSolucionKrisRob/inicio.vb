@@ -115,4 +115,10 @@ Public Class inicio
     Private Sub ll_acerca_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_acerca.LinkClicked
         Help.ShowHelp(ll_acerca, "Airis.chm")
     End Sub
+
+    Private Sub tb_usu_KeyDown(sender As Object, e As KeyEventArgs) Handles tb_usu.KeyDown, tb_cont.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btn_entrar_Click(New Object, New EventArgs)
+        End If
+    End Sub
 End Class
