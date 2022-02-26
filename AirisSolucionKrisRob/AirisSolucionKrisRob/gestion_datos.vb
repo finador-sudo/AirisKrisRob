@@ -21,6 +21,7 @@ Public Class gestion_datos
     Public dataset_categoria_productos As New DataSet
 
     Private Sub gestion_datos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         adaptador_roles.Fill(dataset_roles, "Tabla_roles")
         adaptador_empleados.Fill(dataset_empleados, "Tabla_empleados")
         adaptador_clientes.Fill(dataset_clientes, "Tabla_clientes")
@@ -757,36 +758,48 @@ Public Class gestion_datos
     Private Sub checkEntero(sender As TextBox, e As EventArgs) Handles tb_emple_rol.TextChanged, tb_clientes_empleadoID.TextChanged, tb_categorias_id.TextChanged, tb_productos_categoriaID.TextChanged, tb_productos_stock.TextChanged
         Dim strToCheck As String = sender.Text
         If Not (validaciones.allNumbers(strToCheck)) Then
-            sender.Text = strToCheck.Substring(0, strToCheck.Length)
-            MsgBox("Este campo solo acepta numeros enteros", MsgBoxStyle.Information, "Error: Valor invalido")
+            If strToCheck.Length > 0 Then
+                sender.Text = strToCheck.Substring(0, strToCheck.Length - 1)
+                MsgBox("Este campo solo acepta numeros enteros", MsgBoxStyle.Information, "Error: Valor invalido")
+            End If
         End If
     End Sub
     'Alfanumerico (usuario, nombre de producto,marca ,nombre categoria)
     Private Sub checkAlfanumerico(sender As TextBox, e As EventArgs) Handles tb_emple_usu.TextChanged, tb_productos_nombre.TextChanged, tb_productos_marca.TextChanged, tb_categorias_nombre.TextChanged
         Dim strToCheck As String = sender.Text
         If Not (validaciones.validarAlfanumerico(strToCheck)) Then
-            sender.Text = strToCheck.Substring(0, strToCheck.Length)
-            MsgBox("Este campo solo admite alfanumericos", MsgBoxStyle.Information, "Error: Valor invalido")
+            If strToCheck.Length > 0 Then
+                sender.Text = strToCheck.Substring(0, strToCheck.Length - 1)
+                MsgBox("Este campo solo admite alfanumericos", MsgBoxStyle.Information, "Error: Valor invalido")
+            End If
         End If
     End Sub
     'Numeros de telefono
-    Private Sub checkNumerotelefonico(sender As TextBox, e As EventArgs) Handles tb_emple_tlf.LostFocus
+    Private Sub checkNumerotelefonico(sender As TextBox, e As EventArgs) Handles tb_emple_tlf.LostFocus, tb_clientes_telefono.LostFocus
         Dim strToCheck As String = sender.Text
         If Not (validaciones.validarNumeroTelefono(strToCheck)) Then
-
-            sender.Text = strToCheck.Substring(0, strToCheck.Length)
+            sender.Text = ""
             MsgBox("Este campo solo admite un formato de numero de telefono", MsgBoxStyle.Information, "Error: Valor invalido")
         End If
     End Sub
     'Solo letras(nombres y apellidos)
-    Private Sub checkSoloLetras(sender As TextBox, e As EventArgs) Handles tb_emple_nom.TextChanged, tb_emple_ape1.TextChanged, tb_emple_ape2.TextChanged, tb_clientes_nombre.TextChanged, tb_clientes_ape1.TextChanged, tb_clientes_ape2.TextChanged
+    Private Sub checkSoloLetras(sender As TextBox, e As EventArgs) Handles tb_emple_nom.TextChanged, tb_emple_ape1.TextChanged, tb_emple_ape2.TextChanged, tb_clientes_nombre.TextChanged, tb_clientes_ape1.TextChanged, tb_clientes_ape2.TextChanged, tb_proveedores_contacto.TextChanged
         Dim strToCheck As String = sender.Text
         If Not (validaciones.onlyLetter(strToCheck)) Then
-            sender.Text = strToCheck.Substring(0, strToCheck.Length)
-            MsgBox("Este campo solo admite letras", MsgBoxStyle.Information, "Error: Valor invalido")
+            If strToCheck.Length > 0 Then
+                sender.Text = strToCheck.Substring(0, strToCheck.Length - 1)
+                MsgBox("Este campo solo admite letras", MsgBoxStyle.Information, "Error: Valor invalido")
+            End If
         End If
     End Sub
-
-
-
+    'Solo nuemros y decimales (precio)
+    Private Sub checkPrecio(sender As TextBox, e As EventArgs) Handles tb_productos_precio.TextChanged
+        Dim strToCheck As String = sender.Text
+        If Not (validaciones.naturalDecimal(strToCheck)) Then
+            If strToCheck.Length > 0 Then
+                sender.Text = strToCheck.Substring(0, strToCheck.Length - 1)
+                MsgBox("Este campo solo admite enteros o decimales", MsgBoxStyle.Information, "Error: Valor invalido")
+            End If
+        End If
+    End Sub
 End Class

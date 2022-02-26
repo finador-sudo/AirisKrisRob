@@ -1957,7 +1957,7 @@ Partial Class gestion_datos
         Me.tb_productos_nombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_productos_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tb_productos_nombre.Location = New System.Drawing.Point(364, 166)
-        Me.tb_productos_nombre.MaxLength = 15
+        Me.tb_productos_nombre.MaxLength = 35
         Me.tb_productos_nombre.Name = "tb_productos_nombre"
         Me.tb_productos_nombre.Size = New System.Drawing.Size(175, 20)
         Me.tb_productos_nombre.TabIndex = 11
