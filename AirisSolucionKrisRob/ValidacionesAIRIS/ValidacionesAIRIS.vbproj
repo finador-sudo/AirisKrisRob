@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FFB8DBCE-D1A8-4218-B06E-10838B6C01D6}</ProjectGuid>
+    <ProjectGuid>{8CE2C4EF-13BE-4942-B5EB-1CBE8658B1FC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>ValidacionesAIRIS</RootNamespace>
     <AssemblyName>ValidacionesAIRIS</AssemblyName>
@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Validaciones.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
