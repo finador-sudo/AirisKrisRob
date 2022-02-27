@@ -110,6 +110,7 @@ Public Class gestion_datos
     End Sub
 
     Private Sub ts_busqueda_Click(sender As Object, e As EventArgs) Handles ts_busqueda.Click
+        Busqueda_avanzada.Close()
         Busqueda_avanzada.Show()
         Me.Hide()
     End Sub
@@ -857,6 +858,23 @@ Public Class gestion_datos
         End If
     End Sub
 
+    Private Sub checkSoloLetras(sender As Object, e As EventArgs) Handles tb_proveedores_contacto.TextChanged, tb_emple_nom.TextChanged, tb_emple_ape2.TextChanged, tb_emple_ape1.TextChanged, tb_clientes_nombre.TextChanged, tb_clientes_ape2.TextChanged, tb_clientes_ape1.TextChanged
 
+    End Sub
 
+    Private Sub checkEntero(sender As Object, e As EventArgs) Handles tb_productos_stock.TextChanged, tb_productos_categoriaID.TextChanged, tb_emple_rol.TextChanged, tb_clientes_empleadoID.TextChanged, tb_categorias_id.TextChanged
+
+    End Sub
+
+    Private Sub checkNumerotelefonico(sender As Object, e As EventArgs) Handles tb_proveedores_telefono.LostFocus, tb_emple_tlf.LostFocus, tb_clientes_telefono.LostFocus
+
+    End Sub
+
+    Private Sub checkAlfanumerico(sender As Object, e As EventArgs) Handles tb_productos_nombre.TextChanged, tb_productos_marca.TextChanged, tb_emple_usu.TextChanged, tb_categorias_nombre.TextChanged
+
+    End Sub
+
+    Private Sub checkPrecio(sender As Object, e As EventArgs) Handles tb_productos_precio.TextChanged
+
+    End Sub
 End Class

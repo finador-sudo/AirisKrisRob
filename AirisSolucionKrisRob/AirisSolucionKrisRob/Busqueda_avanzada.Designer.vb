@@ -28,10 +28,11 @@ Partial Class Busqueda_avanzada
         Me.lbl_buscar = New System.Windows.Forms.Label()
         Me.lbl_cerrar = New System.Windows.Forms.Label()
         Me.pan_divisor = New System.Windows.Forms.Panel()
-        Me.btn_cerrar = New System.Windows.Forms.PictureBox()
-        Me.btn_buscar = New System.Windows.Forms.PictureBox()
         Me.lbl_tabla = New System.Windows.Forms.Label()
         Me.cb_tablas = New System.Windows.Forms.ComboBox()
+        Me.dg_busqueda = New System.Windows.Forms.DataGridView()
+        Me.btn_cerrar = New System.Windows.Forms.PictureBox()
+        Me.btn_buscar = New System.Windows.Forms.PictureBox()
         Me.pan_empleados = New System.Windows.Forms.Panel()
         Me.tb_usuario_empleado = New System.Windows.Forms.TextBox()
         Me.lbl_usuario_empleado = New System.Windows.Forms.Label()
@@ -103,11 +104,11 @@ Partial Class Busqueda_avanzada
         Me.lbl_ape1_clientes = New System.Windows.Forms.Label()
         Me.tb_ape1_clientes = New System.Windows.Forms.TextBox()
         Me.tb_empleado_id_clientes = New System.Windows.Forms.TextBox()
-        Me.dg_busqueda = New System.Windows.Forms.DataGridView()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        CType(Me.dg_busqueda, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_cerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_buscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pan_empleados.SuspendLayout()
@@ -116,7 +117,6 @@ Partial Class Busqueda_avanzada
         Me.pan_productos.SuspendLayout()
         Me.pan_provedores.SuspendLayout()
         Me.pan_clientes.SuspendLayout()
-        CType(Me.dg_busqueda, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -136,12 +136,12 @@ Partial Class Busqueda_avanzada
         Me.SplitContainer1.Panel1.Controls.Add(Me.btn_buscar)
         Me.SplitContainer1.Panel1.Controls.Add(Me.lbl_tabla)
         Me.SplitContainer1.Panel1.Controls.Add(Me.cb_tablas)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.pan_empleados)
         Me.SplitContainer1.Panel1.Controls.Add(Me.pan_roles)
         Me.SplitContainer1.Panel1.Controls.Add(Me.pan_categorias)
         Me.SplitContainer1.Panel1.Controls.Add(Me.pan_productos)
         Me.SplitContainer1.Panel1.Controls.Add(Me.pan_provedores)
         Me.SplitContainer1.Panel1.Controls.Add(Me.pan_clientes)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.pan_empleados)
         '
         'SplitContainer1.Panel2
         '
@@ -194,26 +194,6 @@ Partial Class Busqueda_avanzada
         Me.pan_divisor.Size = New System.Drawing.Size(720, 3)
         Me.pan_divisor.TabIndex = 23
         '
-        'btn_cerrar
-        '
-        Me.btn_cerrar.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.estandar
-        Me.btn_cerrar.Location = New System.Drawing.Point(12, 12)
-        Me.btn_cerrar.Name = "btn_cerrar"
-        Me.btn_cerrar.Size = New System.Drawing.Size(81, 36)
-        Me.btn_cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btn_cerrar.TabIndex = 22
-        Me.btn_cerrar.TabStop = False
-        '
-        'btn_buscar
-        '
-        Me.btn_buscar.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.Recurso_2_2x
-        Me.btn_buscar.Location = New System.Drawing.Point(430, 88)
-        Me.btn_buscar.Name = "btn_buscar"
-        Me.btn_buscar.Size = New System.Drawing.Size(81, 36)
-        Me.btn_buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btn_buscar.TabIndex = 21
-        Me.btn_buscar.TabStop = False
-        '
         'lbl_tabla
         '
         Me.lbl_tabla.AutoSize = True
@@ -236,6 +216,41 @@ Partial Class Busqueda_avanzada
         Me.cb_tablas.Name = "cb_tablas"
         Me.cb_tablas.Size = New System.Drawing.Size(164, 21)
         Me.cb_tablas.TabIndex = 0
+        '
+        'dg_busqueda
+        '
+        Me.dg_busqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dg_busqueda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dg_busqueda.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.dg_busqueda.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dg_busqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_busqueda.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dg_busqueda.Location = New System.Drawing.Point(0, 0)
+        Me.dg_busqueda.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.dg_busqueda.Name = "dg_busqueda"
+        Me.dg_busqueda.ReadOnly = True
+        Me.dg_busqueda.Size = New System.Drawing.Size(720, 227)
+        Me.dg_busqueda.TabIndex = 2
+        '
+        'btn_cerrar
+        '
+        Me.btn_cerrar.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.estandar
+        Me.btn_cerrar.Location = New System.Drawing.Point(12, 12)
+        Me.btn_cerrar.Name = "btn_cerrar"
+        Me.btn_cerrar.Size = New System.Drawing.Size(81, 36)
+        Me.btn_cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btn_cerrar.TabIndex = 22
+        Me.btn_cerrar.TabStop = False
+        '
+        'btn_buscar
+        '
+        Me.btn_buscar.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.Recurso_2_2x
+        Me.btn_buscar.Location = New System.Drawing.Point(430, 88)
+        Me.btn_buscar.Name = "btn_buscar"
+        Me.btn_buscar.Size = New System.Drawing.Size(81, 36)
+        Me.btn_buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btn_buscar.TabIndex = 21
+        Me.btn_buscar.TabStop = False
         '
         'pan_empleados
         '
@@ -1115,21 +1130,6 @@ Partial Class Busqueda_avanzada
         Me.tb_empleado_id_clientes.Size = New System.Drawing.Size(88, 22)
         Me.tb_empleado_id_clientes.TabIndex = 4
         '
-        'dg_busqueda
-        '
-        Me.dg_busqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dg_busqueda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.dg_busqueda.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.dg_busqueda.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dg_busqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_busqueda.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dg_busqueda.Location = New System.Drawing.Point(0, 0)
-        Me.dg_busqueda.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.dg_busqueda.Name = "dg_busqueda"
-        Me.dg_busqueda.ReadOnly = True
-        Me.dg_busqueda.Size = New System.Drawing.Size(720, 227)
-        Me.dg_busqueda.TabIndex = 2
-        '
         'Busqueda_avanzada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1152,6 +1152,7 @@ Partial Class Busqueda_avanzada
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        CType(Me.dg_busqueda, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_cerrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_buscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pan_empleados.ResumeLayout(False)
@@ -1166,7 +1167,6 @@ Partial Class Busqueda_avanzada
         Me.pan_provedores.PerformLayout()
         Me.pan_clientes.ResumeLayout(False)
         Me.pan_clientes.PerformLayout()
-        CType(Me.dg_busqueda, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

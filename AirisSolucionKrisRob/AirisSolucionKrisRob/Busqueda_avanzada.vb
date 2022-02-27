@@ -134,7 +134,7 @@ Public Class Busqueda_avanzada
                     dg_busqueda.DataMember = "busquedaProveedores"
 
                 Case "Roles"
-                    Dim _rol_id As String = tb_rol_emple.Text
+                    Dim _rol_id As String = rb_rol_id.Text
                     Dim _rol_nom As String = tb_rol_nombre.Text
 
                     Dim preStateRoles As New OleDbCommand(("select * from roles where (rol_id LIKE @rol_id) and (rol_nom LIKE @rol_nom)"), conexion)
