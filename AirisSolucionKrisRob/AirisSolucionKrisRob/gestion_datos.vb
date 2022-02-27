@@ -54,16 +54,17 @@ Public Class gestion_datos
         dg_categorias.DataSource = dataset_categoria_productos
         dg_categorias.DataMember = "Tabla_categoria_productos"
 
-        tb_emple_id.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_id")
-        tb_emple_nom.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_nom")
-        tb_emple_ape1.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_ape1")
-        tb_emple_ape2.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_ape2")
-        tb_emple_rol.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.rol_id")
-        tb_emple_tlf.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_telefono")
-        tb_emple_correo.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_correo")
-        tb_emple_usu.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.usuario")
+
+        tb_emple_id.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_id", False)
+        tb_emple_nom.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_nom", False)
+        tb_emple_ape1.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_ape1", False)
+        tb_emple_ape2.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_ape2", False)
+        tb_emple_rol.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.rol_id", False)
+        tb_emple_tlf.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_telefono", False)
+        tb_emple_correo.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.emp_correo", False)
+        tb_emple_usu.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.usuario", False)
         If (logedUser = "admin") Then
-            tb_emple_cont.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.cont")
+            tb_emple_cont.DataBindings.Add("text", dataset_empleados, "Tabla_empleados.cont", False)
         Else
             tb_emple_cont.Enabled = False
             tb_emple_cont.BackColor = Color.FromArgb(233, 233, 233)
@@ -149,7 +150,7 @@ Public Class gestion_datos
 
                     updateGridEmpleados()
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al insertar empleados")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al insertar empleados")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
                     WriteLine(2, "Error al añadir un empleado: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
@@ -855,4 +856,7 @@ Public Class gestion_datos
             End If
         End If
     End Sub
+
+
+
 End Class
