@@ -173,19 +173,20 @@ Public Class Busqueda_avanzada
                     Dim preStateEmple As New OleDbCommand(If(logedUser = "admin", "SELECT emp_id, emp_nom, emp_ape1, emp_ape2, roles.rol_nom, emp_telefono, emp_correo, usuario, cont
                 FROM empleados, roles 
                 Where roles.rol_id = empleados.rol_id and 
-                (emp_id LIKE @id) and (emp_nom LIKE @nom) and (emp_ape1 LIKE @ape1) and (emp_ape2 LIKE @ape2) and (roles.rol_nom LIKE @rolnom) and (emp_telefono LIKE @mail) and (usuario LIKE @usu)",
+                (emp_id LIKE @id) and (emp_nom LIKE @nom) and (emp_ape1 LIKE @ape1) and (emp_ape2 LIKE @ape2) and (roles.rol_nom LIKE @rolnom) and (emp_telefono LIKE @tlf) and (usuario LIKE @usu) and (emp_correo LIKE @mail)",
                     "SELECT emp_id, emp_nom, emp_ape1, emp_ape2, roles.rol_nom, emp_telefono, emp_correo, usuario
                 FROM empleados, roles 
                 Where roles.rol_id = empleados.rol_id and 
-                (emp_id LIKE @id) and (emp_nom LIKE @nom) and (emp_ape1 LIKE @ape1) and (emp_ape2 LIKE @ape2) and (roles.rol_nom LIKE @rolnom) and (emp_telefono LIKE @mail) and (usuario LIKE @usu)"), conexion)
+                (emp_id LIKE @id) and (emp_nom LIKE @nom) and (emp_ape1 LIKE @ape1) and (emp_ape2 LIKE @ape2) and (roles.rol_nom LIKE @rolnom) and (emp_telefono LIKE @tlf) and (usuario LIKE @usu) and (emp_correo LIKE @mail)"), conexion)
 
                     preStateEmple.Parameters.AddWithValue("@id", If(_emp_id = "", "%", _emp_id))
                     preStateEmple.Parameters.AddWithValue("@nom", If(_emp_nom = "", "%", "%" + _emp_nom + "%"))
                     preStateEmple.Parameters.AddWithValue("@ape1", If(_emp_ape1 = "", "%", "%" + _emp_ape1 + "%"))
                     preStateEmple.Parameters.AddWithValue("@ape2", If(_emp_ape2 = "", "%", "%" + _emp_ape2 + "%"))
                     preStateEmple.Parameters.AddWithValue("@rolnom", If(_rol_text = "", "%", "%" + _rol_text + "%"))
-                    preStateEmple.Parameters.AddWithValue("@mail", If(_emp_correo = "", "%", "%" + _emp_correo + "%"))
+                    preStateEmple.Parameters.AddWithValue("@tlf", If(_emp_telefono = "", "%", "%" + _emp_telefono + "%"))
                     preStateEmple.Parameters.AddWithValue("@usu", If(_usuario = "", "%", "%" + _usuario + "%"))
+                    preStateEmple.Parameters.AddWithValue("@mail", If(_emp_correo = "", "%", "%" + _emp_correo + "%"))
                     miAdapter.SelectCommand = preStateEmple
                     auxDataset.Clear()
                     miAdapter.Fill(auxDataset, "busquedaEmpleados")
