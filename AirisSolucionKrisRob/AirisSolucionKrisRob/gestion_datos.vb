@@ -150,9 +150,9 @@ Public Class gestion_datos
 
                     updateGridEmpleados()
                 Catch ex As Exception
-                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al insertar empleados")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error dando alta registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al añadir un empleado: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al crear registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
 
                 Finally
@@ -169,7 +169,7 @@ Public Class gestion_datos
     'BOTON BAJA
     Private Sub tslbl_baja_empleados_Click(sender As Object, e As EventArgs) Handles tslbl_baja_empleados.Click, btn_emp_baja.Click, lbl_baja_empleados.Click
         If Not (tb_emple_id.Text = "") Then
-            If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") Then
+            If MsgBoxResult.Ok = MsgBox("Confirmar eliminar registro?", MsgBoxStyle.OkCancel, "Confirmar baja") And tb_emple_id.Text <> "1" Then
                 Try
                     conexion.Open()
                     Dim deleteEmpleado As New OleDbCommand("delete from empleados WHERE emp_id = @id", conexion)
@@ -177,18 +177,18 @@ Public Class gestion_datos
                     deleteEmpleado.ExecuteNonQuery()
                     updateGridEmpleados()
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al insertar empleados")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al eliminar registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al añadir un empleado: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al eliminar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
                 Finally
                     conexion.Close()
                 End Try
             Else
-
+                If tb_emple_id.Text = "1" Then MsgBox("Registro administrador esta protegido", MsgBoxStyle.Exclamation, "Registro Protegido")
             End If
 
-        End If
+            End If
     End Sub
     'BOTON MODIFICAR
     Private Sub tslbl_modificar_empleados_Click(sender As Object, e As EventArgs) Handles tslbl_modificar_empleados.Click, btn_emp_modif.Click, lbl_mod_empleados.Click
@@ -215,9 +215,9 @@ Public Class gestion_datos
                     MsgBox("Registro administrador esta protegido", MsgBoxStyle.Exclamation, "Registro Protegido")
                 End If
             Catch ex As Exception
-                MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al insertar empleados")
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al modificar registro")
                 FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                WriteLine(2, "Error al añadir un empleado: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                WriteLine(2, "Error al modificar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                 FileClose(2)
             Finally
                 conexion.Close()
@@ -252,9 +252,9 @@ Public Class gestion_datos
                     updateGridRoles()
 
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al insertar roles")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error dando alta registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al añadir un rol: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al crear registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
                 Finally
                     conexion.Close()
@@ -276,9 +276,9 @@ Public Class gestion_datos
                     rolesDelete.ExecuteNonQuery()
                     updateGridRoles()
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al eliminar registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al eliminar un rol: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al eliminar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
                 Finally
                     conexion.Close()
@@ -303,9 +303,9 @@ Public Class gestion_datos
                     rolesUpdate.ExecuteNonQuery()
                     updateGridRoles()
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al modificar roles")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al modificar registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al modificar un rol: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al modificar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
 
                 Finally
@@ -341,9 +341,9 @@ Public Class gestion_datos
                     conexion.Close()
                     updateGridCategorias()
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error dando alta registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al crear registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
 
                 Finally
@@ -368,9 +368,9 @@ Public Class gestion_datos
                 deleteCategoria.ExecuteNonQuery()
                 updateGridCategorias()
             Catch ex As Exception
-                MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al eliminar registro")
                 FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                WriteLine(2, "Error al eliminar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                 FileClose(2)
             Finally
                 conexion.Close()
@@ -390,9 +390,9 @@ Public Class gestion_datos
                 updateCategoria.ExecuteNonQuery()
                 updateGridCategorias()
             Catch ex As Exception
-                MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al modificar registro")
                 FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                WriteLine(2, "Error al modificar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                 FileClose(2)
             Finally
                 conexion.Close()
@@ -432,9 +432,9 @@ Public Class gestion_datos
                     updateGridProducto()
 
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al insertar roles")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error dando alta registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al añadir un rol: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al crear registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
                 Finally
                     conexion.Close()
@@ -455,9 +455,9 @@ Public Class gestion_datos
                     deleteProducto.ExecuteNonQuery()
                     updateGridProducto()
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al eliminar registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al eliminar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
                 Finally
                     conexion.Close()
@@ -484,9 +484,9 @@ Public Class gestion_datos
                 updateGridProducto()
 
             Catch ex As Exception
-                MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al modificar registro")
                 FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                WriteLine(2, "Error al modificar registro" + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                 FileClose(2)
             Finally
                 conexion.Close()
@@ -528,9 +528,9 @@ Public Class gestion_datos
                     updateGridClientes()
 
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error dando alta registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al crear registro" + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
                 Finally
                     conexion.Close()
@@ -554,9 +554,9 @@ Public Class gestion_datos
                     updateGridClientes()
 
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al eliminar registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al eliminar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
                 Finally
                     conexion.Close()
@@ -582,9 +582,9 @@ Public Class gestion_datos
                 updateCliente.ExecuteNonQuery()
                 updateGridClientes()
             Catch ex As Exception
-                MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al modificar registro")
                 FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                WriteLine(2, "Error al eliminar una categoria: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                 FileClose(2)
 
             Finally
@@ -656,9 +656,9 @@ Public Class gestion_datos
                     updateGridProveedores()
 
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error dando alta registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al crear registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
                 Finally
                     conexion.Close()
@@ -683,9 +683,9 @@ Public Class gestion_datos
                     deleteProveedors.ExecuteNonQuery()
                     updateGridProveedores()
                 Catch ex As Exception
-                    MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al eliminar registro")
                     FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                    WriteLine(2, "Error al eliminar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                     FileClose(2)
                 Finally
                     conexion.Close()
@@ -709,9 +709,9 @@ Public Class gestion_datos
                 updateProveedor.ExecuteNonQuery()
                 updateGridProveedores()
             Catch ex As Exception
-                MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error al eliminar roles")
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al modificar registro")
                 FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                WriteLine(2, "Error al eliminar una categoria: " + ex.StackTrace + ", fecha: " + DateString + "; hora:" + TimeString)
+                WriteLine(2, "Error al mofificar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
                 FileClose(2)
             Finally
                 conexion.Close()
