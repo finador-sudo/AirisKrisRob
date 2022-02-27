@@ -76,7 +76,7 @@ Public Class ValidacionesAIRIS
     Public Function naturalDecimal(numero As String) As Boolean
 
         'Compureba que sea un natural entero o decimal
-        naturalDecimal = (Regex.IsMatch(numero, "^$|^\d*\.?\d+$"))
+        naturalDecimal = (Regex.IsMatch(numero, "^$|^\d*\,?\d+$"))
 
         Return naturalDecimal
 
