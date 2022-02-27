@@ -65,9 +65,8 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="ValidacionesAIRIS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ValidacionesAIRIS\bin\Debug\ValidacionesAIRIS.dll</HintPath>
+    <Reference Include="ValidacionesAIRIS">
+      <HintPath>..\..\ValidacionesAIRIS\ValidacionesAIRIS\bin\Debug\ValidacionesAIRIS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

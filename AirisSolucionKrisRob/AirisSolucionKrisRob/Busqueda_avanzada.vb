@@ -200,4 +200,9 @@ Public Class Busqueda_avanzada
     Private Sub Busqueda_avanzada_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         gestion_datos.Show()
     End Sub
+
+    Private Sub btn_cerrar_Click(sender As Object, e As EventArgs) Handles btn_cerrar.Click, lbl_cerrar.Click
+        Me.Hide()
+        gestion_datos.Show()
+    End Sub
 End Class

@@ -301,7 +301,12 @@ Partial Class inicio
         Me.Controls.Add(Me.pan_presentacion)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(484, 668)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(484, 668)
         Me.Name = "inicio"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Airis Managment Application"
         Me.pan_presentacion.ResumeLayout(False)

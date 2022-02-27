@@ -34,7 +34,6 @@ Partial Class gestion_datos
         Me.ts_info = New System.Windows.Forms.ToolStripDropDownButton()
         Me.info_clie = New System.Windows.Forms.ToolStripMenuItem()
         Me.info_prod = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator13 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ts_cerrar = New System.Windows.Forms.ToolStripLabel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -387,7 +386,7 @@ Partial Class gestion_datos
         '
         Me.toolstrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.toolstrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolstrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ts_volverimg, Me.ToolStripSeparator2, Me.ts_busqueda, Me.ToolStripSeparator1, Me.ts_info, Me.ToolStripSeparator13, Me.ToolStripSeparator5, Me.ts_cerrar})
+        Me.toolstrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ts_volverimg, Me.ToolStripSeparator2, Me.ts_busqueda, Me.ToolStripSeparator1, Me.ts_info, Me.ToolStripSeparator5, Me.ts_cerrar})
         Me.toolstrip.Location = New System.Drawing.Point(0, 0)
         Me.toolstrip.Name = "toolstrip"
         Me.toolstrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
@@ -442,11 +441,6 @@ Partial Class gestion_datos
         Me.info_prod.Name = "info_prod"
         Me.info_prod.Size = New System.Drawing.Size(142, 24)
         Me.info_prod.Text = "Productos"
-        '
-        'ToolStripSeparator13
-        '
-        Me.ToolStripSeparator13.Name = "ToolStripSeparator13"
-        Me.ToolStripSeparator13.Size = New System.Drawing.Size(6, 30)
         '
         'ToolStripSeparator5
         '
@@ -3378,7 +3372,6 @@ Partial Class gestion_datos
     Friend WithEvents ts_volverimg As ToolStripButton
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator13 As ToolStripSeparator
     Friend WithEvents ts_cerrar As ToolStripLabel
     Friend WithEvents tss_usuario As ToolStripStatusLabel
     Friend WithEvents tss_fechahora As ToolStripStatusLabel
