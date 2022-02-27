@@ -65,8 +65,8 @@ Public Class inicio
                 WriteLine(1, "Acceso por parte de " + usu + ", con clave: " + pass + ", fecha: " + DateString + "; hora:" + TimeString)
 
                 FileClose()
-                ll_acerca.Hide()
-                ll_pagoficial.Hide()
+                ll_acerca.Visible = False
+                ll_pagoficial.Visible = False
                 'progressBarAction()
                 logedUser = usu
                 Me.Hide()
@@ -86,6 +86,8 @@ Public Class inicio
                 MsgBox("Usuario o la contraseña es incorrecto.", MsgBoxStyle.Information, "Error de acceso")
             End If
             conexionInicio.Close()
+            tb_cont.Text = ""
+            tb_usu.Text = ""
 
         Catch ex As Exception
             MsgBox(ex.StackTrace, MsgBoxStyle.Critical, "Error critico en la base de datos")

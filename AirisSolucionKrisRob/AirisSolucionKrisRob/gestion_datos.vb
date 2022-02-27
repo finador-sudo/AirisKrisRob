@@ -312,7 +312,7 @@ Public Class gestion_datos
                     conexion.Close()
                 End Try
             Else
-                MsgBox("Campos incorrectos", 0 + MsgBoxStyle.Information, "Campo incorrecto")
+                MsgBox("Campos vacios, por favor revise la informacion.", MsgBoxStyle.Information, "Campos incompletos")
             End If
         Else
             MsgBox("Por favor selecione un rol para eliminar", 0 + MsgBoxStyle.Information, "Seleccion incorrecta")
@@ -350,7 +350,7 @@ Public Class gestion_datos
                     conexion.Close()
                 End Try
             Else
-                MsgBox("Seleccione un elemento", MsgBoxStyle.Information, "Seleccion vacia")
+                MsgBox("Campos vacios, por favor revise la informacion.", MsgBoxStyle.Information, "Campos incompletos")
             End If
         Else
 
@@ -398,7 +398,7 @@ Public Class gestion_datos
                 conexion.Close()
             End Try
         Else
-
+            MsgBox("Campos vacios, por favor revise la informacion.", MsgBoxStyle.Information, "Campos incompletos")
         End If
     End Sub
 
