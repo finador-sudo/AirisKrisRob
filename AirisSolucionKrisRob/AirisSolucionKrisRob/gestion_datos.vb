@@ -601,6 +601,7 @@ Public Class gestion_datos
         AddHandler printDoc.PrintPage, AddressOf print_PrintPage
         ' Llamamos al emtodo que imprime
         printDoc.Print()
+
         NotifyIcon1.ShowBalloonTip(2)
     End Sub
 
