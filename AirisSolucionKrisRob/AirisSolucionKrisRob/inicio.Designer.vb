@@ -113,7 +113,7 @@ Partial Class inicio
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(72, 534)
+        Me.ProgressBar1.Location = New System.Drawing.Point(76, 534)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(322, 56)
         Me.ProgressBar1.TabIndex = 2

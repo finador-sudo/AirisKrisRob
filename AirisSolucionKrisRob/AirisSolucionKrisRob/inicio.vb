@@ -65,8 +65,6 @@ Public Class inicio
                 WriteLine(1, "Acceso por parte de " + usu + ", con clave: " + pass + ", fecha: " + DateString + "; hora:" + TimeString)
 
                 FileClose()
-                ll_acerca.Visible = False
-                ll_pagoficial.Visible = False
                 'progressBarAction()
                 logedUser = usu
                 Me.Hide()
