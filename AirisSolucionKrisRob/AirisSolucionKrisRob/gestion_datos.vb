@@ -829,7 +829,7 @@ Public Class gestion_datos
         End If
     End Sub
     'Numeros de telefono
-    Private Sub checkNumerotelefonico(sender As TextBox, e As EventArgs) Handles tb_emple_tlf.LostFocus, tb_clientes_telefono.LostFocus
+    Private Sub checkNumerotelefonico(sender As TextBox, e As EventArgs) Handles tb_emple_tlf.LostFocus, tb_clientes_telefono.LostFocus, tb_proveedores_telefono.LostFocus
         Dim strToCheck As String = sender.Text
         If Not (validaciones.validarNumeroTelefono(strToCheck)) Then
             sender.Text = ""
