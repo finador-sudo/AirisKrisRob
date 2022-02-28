@@ -21,6 +21,7 @@ Public Class gestion_datos
     Public dataset_categoria_productos As New DataSet
 
     Private Sub gestion_datos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        tss_usuario.Text = "Usuario: " + logedUser
         adaptador_roles = New OleDbDataAdapter("Select * from roles", conexion)
         adaptador_empleados = New OleDbDataAdapter(If(logedUser = "admin", "Select * from empleados", "SELECT emp_id, emp_nom, emp_ape1, emp_ape2, rol_id, emp_telefono, emp_correo, usuario FROM empleados"), conexion)
         adaptador_clientes = New OleDbDataAdapter("Select * from clientes", conexion)
@@ -870,5 +871,9 @@ Public Class gestion_datos
         updateGridProducto()
         updateGridProveedores()
         updateGridRoles()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        tss_fechahora.Text = "Fecha: " + DateString + "  Hora: " + TimeString
     End Sub
 End Class

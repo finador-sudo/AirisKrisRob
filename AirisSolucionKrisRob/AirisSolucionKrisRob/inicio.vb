@@ -65,7 +65,7 @@ Public Class inicio
                 WriteLine(1, "Acceso por parte de " + usu + ", con clave: " + pass + ", fecha: " + DateString + "; hora:" + TimeString)
 
                 FileClose()
-                'progressBarAction()
+                progressBarAction()
                 logedUser = usu
                 Me.Hide()
                 gestion_datos.Close()
@@ -102,9 +102,9 @@ Public Class inicio
         ProgressBar1.Value = 0
         ProgressBar1.Visible = True
         ProgressBar1.Minimum = 0
-        ProgressBar1.Maximum = 1000000
+        ProgressBar1.Maximum = 800000
 
-        For i As Integer = 1 To 1000000
+        For i As Integer = 1 To 800000
 
 
             ProgressBar1.Increment(1)
