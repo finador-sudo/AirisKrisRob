@@ -255,6 +255,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\Debug\carne.png" />
+    <None Include="Resources\lupaIco.png" />
+    <None Include="Resources\referscarIco.png" />
     <None Include="Resources\buscarIco.png" />
     <None Include="Resources\infomeIco.png" />
     <None Include="Resources\tb_largo.png" />

@@ -183,6 +183,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property lupaIco() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("lupaIco", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property pan_datos() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("pan_datos", resourceCulture)
@@ -236,6 +246,16 @@ Namespace My.Resources
         Friend ReadOnly Property Recurso_4_2x() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Recurso 4@2x", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property referscarIco() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("referscarIco", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

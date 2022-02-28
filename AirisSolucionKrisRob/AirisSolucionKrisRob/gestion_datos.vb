@@ -134,33 +134,37 @@ Public Class gestion_datos
     Private Sub tslbl_alta_empleados_Click(sender As Object, e As EventArgs) Handles tslbl_alta_empleados.Click, btn_emp_alta.Click, lbl_alta_empleados.Click
         If (tb_emple_id.Text = "") Then
             If Not (tb_emple_rol.Text = "" Or tb_emple_usu.Text = "" Or tb_emple_nom.Text = "" Or tb_emple_ape1.Text = "" Or tb_emple_ape2.Text = "" Or tb_emple_tlf.Text = "" Or tb_emple_correo.Text = "") Then
-                'Todos los campos correctos
-                Try
-                    conexion.Open()
-                    Dim empInsert As New OleDbCommand(If(tb_emple_cont.Text <> "", "INSERT INTO empleados (emp_nom,emp_ape1,emp_ape2,rol_id,emp_telefono,emp_correo,usuario,cont) VALUES (@nom,@ape,@ape2,@rol,@telefono,@mail,@usu,@pas)",
+                If (tb_emple_cont.Text.Trim <> "" And tb_emple_cont.Text.Trim.Length < 5) Then
+                    MsgBox("Contraseña demasiado corta. Debe ser entre 5 y 15 caracteres", 0 + MsgBoxStyle.Information, "Campo incorrecto")
+                Else
+
+                    Try
+                        conexion.Open()
+                        Dim empInsert As New OleDbCommand(If(tb_emple_cont.Text <> "", "INSERT INTO empleados (emp_nom,emp_ape1,emp_ape2,rol_id,emp_telefono,emp_correo,usuario,cont) VALUES (@nom,@ape,@ape2,@rol,@telefono,@mail,@usu,@pas)",
                                                       "INSERT INTO empleados (emp_nom,emp_ape1,emp_ape2,rol_id,emp_telefono,emp_correo,usuario) VALUES (@nom,@ape,@ape2,@rol,@telefono,@mail,@usu)"), conexion)
-                    empInsert.Parameters.AddWithValue("@nom", tb_emple_nom.Text.Trim)
-                    empInsert.Parameters.AddWithValue("@ape", tb_emple_ape1.Text.Trim)
-                    empInsert.Parameters.AddWithValue("@ape2", tb_emple_ape2.Text.Trim)
-                    empInsert.Parameters.AddWithValue("@rol", tb_emple_rol.Text.Trim)
-                    empInsert.Parameters.AddWithValue("@telefono", tb_emple_tlf.Text.Trim)
-                    empInsert.Parameters.AddWithValue("@correo", tb_emple_correo.Text.Trim)
-                    empInsert.Parameters.AddWithValue("@usu", tb_emple_usu.Text.Trim)
-                    If (tb_emple_cont.Text <> "") Then empInsert.Parameters.AddWithValue("@pas", tb_emple_cont.Text.Trim)
-                    empInsert.ExecuteNonQuery()
+                        empInsert.Parameters.AddWithValue("@nom", tb_emple_nom.Text.Trim)
+                        empInsert.Parameters.AddWithValue("@ape", tb_emple_ape1.Text.Trim)
+                        empInsert.Parameters.AddWithValue("@ape2", tb_emple_ape2.Text.Trim)
+                        empInsert.Parameters.AddWithValue("@rol", tb_emple_rol.Text.Trim)
+                        empInsert.Parameters.AddWithValue("@telefono", tb_emple_tlf.Text.Trim)
+                        empInsert.Parameters.AddWithValue("@correo", tb_emple_correo.Text.Trim)
+                        empInsert.Parameters.AddWithValue("@usu", tb_emple_usu.Text.Trim)
+                        If (tb_emple_cont.Text <> "") Then empInsert.Parameters.AddWithValue("@pas", tb_emple_cont.Text.Trim)
+                        empInsert.ExecuteNonQuery()
 
-                    updateGridEmpleados()
-                Catch ex As Exception
-                    MsgBox(ex.Message, MsgBoxStyle.Critical, "Error dando alta registro")
-                    FileOpen(2, "errores_airis.txt", OpenMode.Append)
-                    WriteLine(2, "Error al crear registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
-                    FileClose(2)
+                        updateGridEmpleados()
+                    Catch ex As Exception
+                        MsgBox(ex.Message, MsgBoxStyle.Critical, "Error dando alta registro")
+                        FileOpen(2, "errores_airis.txt", OpenMode.Append)
+                        WriteLine(2, "Error al crear registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
+                        FileClose(2)
 
-                Finally
-                    conexion.Close()
-                End Try
+                    Finally
+                        conexion.Close()
+                    End Try
+                End If
             Else
-                MsgBox("Campos incompletos", 0 + MsgBoxStyle.Information, "Campo incorrecto")
+                    MsgBox("Campos incompletos", 0 + MsgBoxStyle.Information, "Campo incorrecto")
             End If
         Else
             'indicar que presione "Nuevo" antes
@@ -859,23 +863,12 @@ Public Class gestion_datos
         End If
     End Sub
 
-    Private Sub checkSoloLetras(sender As Object, e As EventArgs) Handles tb_proveedores_contacto.TextChanged, tb_emple_nom.TextChanged, tb_emple_ape2.TextChanged, tb_emple_ape1.TextChanged, tb_clientes_nombre.TextChanged, tb_clientes_ape2.TextChanged, tb_clientes_ape1.TextChanged
-
-    End Sub
-
-    Private Sub checkEntero(sender As Object, e As EventArgs) Handles tb_productos_stock.TextChanged, tb_productos_categoriaID.TextChanged, tb_emple_rol.TextChanged, tb_clientes_empleadoID.TextChanged, tb_categorias_id.TextChanged
-
-    End Sub
-
-    Private Sub checkNumerotelefonico(sender As Object, e As EventArgs) Handles tb_proveedores_telefono.LostFocus, tb_emple_tlf.LostFocus, tb_clientes_telefono.LostFocus
-
-    End Sub
-
-    Private Sub checkAlfanumerico(sender As Object, e As EventArgs) Handles tb_productos_nombre.TextChanged, tb_productos_marca.TextChanged, tb_emple_usu.TextChanged, tb_categorias_nombre.TextChanged
-
-    End Sub
-
-    Private Sub checkPrecio(sender As Object, e As EventArgs) Handles tb_productos_precio.TextChanged
-
+    Private Sub tslbl_refrescar_Click(sender As Object, e As EventArgs) Handles tslbl_refrescar.Click
+        updateGridCategorias()
+        updateGridClientes()
+        updateGridEmpleados()
+        updateGridProducto()
+        updateGridProveedores()
+        updateGridRoles()
     End Sub
 End Class
