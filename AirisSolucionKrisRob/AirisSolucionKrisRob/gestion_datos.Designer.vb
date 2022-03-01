@@ -24,8 +24,8 @@ Partial Class gestion_datos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestion_datos))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.toolstrip = New System.Windows.Forms.ToolStrip()
         Me.ts_volverimg = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -38,6 +38,7 @@ Partial Class gestion_datos
         Me.tslbl_refrescar = New System.Windows.Forms.ToolStripLabel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.tss_usuario = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.tss_separador = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tss_fechahora = New System.Windows.Forms.ToolStripStatusLabel()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.tab_roles = New System.Windows.Forms.TabPage()
@@ -273,7 +274,6 @@ Partial Class gestion_datos
         Me.tslbl_modificar_proveedores = New System.Windows.Forms.ToolStripLabel()
         Me.PictureBox22 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.tss_separador = New System.Windows.Forms.ToolStripStatusLabel()
         Me.toolstrip.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.tab_roles.SuspendLayout()
@@ -436,14 +436,14 @@ Partial Class gestion_datos
         '
         Me.info_clie.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.infomeIco
         Me.info_clie.Name = "info_clie"
-        Me.info_clie.Size = New System.Drawing.Size(142, 24)
+        Me.info_clie.Size = New System.Drawing.Size(184, 26)
         Me.info_clie.Text = "Clientes"
         '
         'info_prod
         '
         Me.info_prod.Image = Global.AirisSolucionKrisRob.My.Resources.Resources.infomeIco
         Me.info_prod.Name = "info_prod"
-        Me.info_prod.Size = New System.Drawing.Size(142, 24)
+        Me.info_prod.Size = New System.Drawing.Size(184, 26)
         Me.info_prod.Text = "Productos"
         '
         'ToolStripSeparator5
@@ -476,6 +476,13 @@ Partial Class gestion_datos
         Me.tss_usuario.Size = New System.Drawing.Size(86, 25)
         Me.tss_usuario.Text = "Usuario: "
         '
+        'tss_separador
+        '
+        Me.tss_separador.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tss_separador.Name = "tss_separador"
+        Me.tss_separador.Size = New System.Drawing.Size(47, 25)
+        Me.tss_separador.Text = "   |   "
+        '
         'tss_fechahora
         '
         Me.tss_fechahora.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -497,7 +504,7 @@ Partial Class gestion_datos
         Me.tab_roles.Location = New System.Drawing.Point(4, 28)
         Me.tab_roles.Name = "tab_roles"
         Me.tab_roles.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_roles.Size = New System.Drawing.Size(1896, 957)
+        Me.tab_roles.Size = New System.Drawing.Size(1896, 949)
         Me.tab_roles.TabIndex = 10
         Me.tab_roles.Text = "Roles"
         Me.tab_roles.UseVisualStyleBackColor = True
@@ -517,7 +524,7 @@ Partial Class gestion_datos
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.pan_dg_rol)
-        Me.SplitContainer2.Size = New System.Drawing.Size(1890, 926)
+        Me.SplitContainer2.Size = New System.Drawing.Size(1890, 918)
         Me.SplitContainer2.SplitterDistance = 1149
         Me.SplitContainer2.TabIndex = 106
         Me.SplitContainer2.TabStop = False
@@ -874,21 +881,21 @@ Partial Class gestion_datos
         '
         'dg_emple
         '
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dg_emple.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dg_emple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_emple.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dg_emple.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.dg_emple.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_emple.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_emple.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dg_emple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_emple.GridColor = System.Drawing.Color.WhiteSmoke
         Me.dg_emple.Location = New System.Drawing.Point(49, 57)
@@ -1454,7 +1461,7 @@ Partial Class gestion_datos
         Me.tab_categorias.Location = New System.Drawing.Point(4, 28)
         Me.tab_categorias.Name = "tab_categorias"
         Me.tab_categorias.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_categorias.Size = New System.Drawing.Size(1896, 957)
+        Me.tab_categorias.Size = New System.Drawing.Size(1896, 949)
         Me.tab_categorias.TabIndex = 11
         Me.tab_categorias.Text = "Categorías productos"
         Me.tab_categorias.UseVisualStyleBackColor = True
@@ -1490,7 +1497,7 @@ Partial Class gestion_datos
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.Panel3)
-        Me.SplitContainer3.Size = New System.Drawing.Size(1890, 926)
+        Me.SplitContainer3.Size = New System.Drawing.Size(1890, 918)
         Me.SplitContainer3.SplitterDistance = 1162
         Me.SplitContainer3.TabIndex = 114
         Me.SplitContainer3.TabStop = False
@@ -1817,7 +1824,7 @@ Partial Class gestion_datos
         Me.tab_productos.Location = New System.Drawing.Point(4, 28)
         Me.tab_productos.Name = "tab_productos"
         Me.tab_productos.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_productos.Size = New System.Drawing.Size(1896, 957)
+        Me.tab_productos.Size = New System.Drawing.Size(1896, 949)
         Me.tab_productos.TabIndex = 12
         Me.tab_productos.Text = "Productos"
         Me.tab_productos.UseVisualStyleBackColor = True
@@ -1839,8 +1846,8 @@ Partial Class gestion_datos
         '
         Me.SplitContainer4.Panel2.Controls.Add(Me.Panel2)
         Me.SplitContainer4.Panel2.Controls.Add(Me.Panel1)
-        Me.SplitContainer4.Size = New System.Drawing.Size(1890, 926)
-        Me.SplitContainer4.SplitterDistance = 445
+        Me.SplitContainer4.Size = New System.Drawing.Size(1890, 918)
+        Me.SplitContainer4.SplitterDistance = 441
         Me.SplitContainer4.TabIndex = 63
         Me.SplitContainer4.TabStop = False
         '
@@ -2315,7 +2322,7 @@ Partial Class gestion_datos
         Me.tb_clientes.Location = New System.Drawing.Point(4, 28)
         Me.tb_clientes.Name = "tb_clientes"
         Me.tb_clientes.Padding = New System.Windows.Forms.Padding(3)
-        Me.tb_clientes.Size = New System.Drawing.Size(1896, 957)
+        Me.tb_clientes.Size = New System.Drawing.Size(1896, 949)
         Me.tb_clientes.TabIndex = 13
         Me.tb_clientes.Text = "Clientes"
         Me.tb_clientes.UseVisualStyleBackColor = True
@@ -2820,7 +2827,7 @@ Partial Class gestion_datos
         Me.tb_proveedores.Location = New System.Drawing.Point(4, 28)
         Me.tb_proveedores.Name = "tb_proveedores"
         Me.tb_proveedores.Padding = New System.Windows.Forms.Padding(3)
-        Me.tb_proveedores.Size = New System.Drawing.Size(1896, 957)
+        Me.tb_proveedores.Size = New System.Drawing.Size(1896, 949)
         Me.tb_proveedores.TabIndex = 14
         Me.tb_proveedores.Text = "Proveedores"
         Me.tb_proveedores.UseVisualStyleBackColor = True
@@ -3218,13 +3225,6 @@ Partial Class gestion_datos
         'Timer1
         '
         Me.Timer1.Enabled = True
-        '
-        'tss_separador
-        '
-        Me.tss_separador.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tss_separador.Name = "tss_separador"
-        Me.tss_separador.Size = New System.Drawing.Size(47, 25)
-        Me.tss_separador.Text = "   |   "
         '
         'gestion_datos
         '

@@ -779,13 +779,27 @@ Public Class gestion_datos
 
     'INFORMES
     Private Sub info_clie_Click(sender As Object, e As EventArgs) Handles info_clie.Click
-        Informe.Show()
-        c = 1
+        Try
+            Informe.Show()
+            c = 1
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al generar informe")
+            FileOpen(2, "errores_airis.txt", OpenMode.Append)
+            WriteLine(2, "Error al mofificar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
+            FileClose(2)
+        End Try
     End Sub
 
     Private Sub info_prod_Click(sender As Object, e As EventArgs) Handles info_prod.Click
-        Informe.Show()
-        c = 2
+        Try
+            Informe.Show()
+            c = 2
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al generar informe")
+            FileOpen(2, "errores_airis.txt", OpenMode.Append)
+            WriteLine(2, "Error al mofificar registro: " + ex.Message + ", fecha: " + DateString + "; hora:" + TimeString)
+            FileClose(2)
+        End Try
     End Sub
     'AYUDAS
     Private Sub ll_ayuda_roles_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ll_ayuda_roles.LinkClicked
